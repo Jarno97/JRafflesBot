@@ -8,6 +8,18 @@ async function getLicense(_0x1b1ec5) {
   return axios['get']('https://api.hyper.co/v4/licenses/' + _0x1b1ec5, { 'headers': { 'Authorization': 'Bearer\x20' + API_KEY } })['then'](_0x202c03 => _0x202c03['data'])['catch'](() => null);
 }
 ;
+const AutoGitUpdate = require('auto-git-update');
+
+const config = {
+  repository: 'https://github.com/Jarno97/JRafflesBot',
+  branch: 'main',
+  fromReleases: false,
+  tempLocation: 'C:/temp/jraffles',
+  exitOnComplete: false
+}
+
+const updater = new AutoGitUpdate(config);
+
 async function checkLicense(_0x54bbf1) {
   console['clear'](), console['log']('Checking\x20license\x20' + licenseKey + '...'), await delay(0x5dc);
   const _0x5b9e5b = await getLicense(_0x54bbf1);
@@ -330,6 +342,8 @@ afewFunction = async (_0x468833, _0x41b47e) => {
   }
 };
 async function main() {
+  console['clear']();
+  await updater.autoUpdate();
   console['clear']();
   if (licenseKey == '') {
     console['log']('No\x20key\x20found\x20in\x20settings.json');
