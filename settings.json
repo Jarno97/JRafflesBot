@@ -1,0 +1,9 @@
+{
+    "licenseKey": "",
+    "captchaKey": "",
+    "AfewDelay": 300000,
+    "MahaDelay": 3000,
+    "footshopDelay": 300000,
+    "verificationDelay": 2000,
+    "catchall": ""
+}
