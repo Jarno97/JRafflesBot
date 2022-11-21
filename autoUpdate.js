@@ -2,6 +2,7 @@ const AutoGitUpdate = require('auto-git-update');
 
 const config = {
     repository: 'https://github.com/Jarno97/JRafflesBot',
+    branch: 'main',
     fromReleases: false,
     tempLocation: 'C:/temp/jraffles',
     executeOnComplete: 'JRaffles.exe',
