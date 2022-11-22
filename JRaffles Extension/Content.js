@@ -19,7 +19,7 @@ chrome.runtime.onMessage.addListener(
                 var mahaCodes = document.querySelectorAll("td > a");
 
                 for (var i = 0; i < mahaCodes.length; i += 1) {
-                    if (mahaCodes[i].innerHTML.indexOf("Confirm Paypal") != -1) {
+                    if (mahaCodes[i].innerHTML.indexOf("CONFIRM") != -1) {
                         codes.push(mahaCodes[i].href);
                     }
                 }
