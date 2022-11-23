@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
           codeField.innerText = links
           for (let i = 0; i < links.length; i++) {
             chrome.tabs.create({ url: links[i], active: false });
-            await delay(1000);
           }
         }
       });
