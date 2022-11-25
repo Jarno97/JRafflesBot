@@ -543,7 +543,7 @@ afewFunction = async (_0xd587b, _0x555aa6) => {
     }
     var _0x27d7d6 = getProxy()[_0x50e6a9]['split'](':');
     const _0x2c5e5b = await puppeteer['launch']({
-      'headless': ![],
+      'headless': !![],
       'args': [
         '--proxy-server=' + _0x27d7d6[0x0] + ':' + _0x27d7d6[0x1],
         '--no-sandbox',
