@@ -1,6 +1,7 @@
 {
     "licenseKey": "",
     "captchaKey": "",
+    "delay": 100000,
     "AfewDelay": 300000,
     "MahaDelay": 3000,
     "footshopDelay": 300000,
