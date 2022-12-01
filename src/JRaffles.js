@@ -924,7 +924,7 @@ async function main() {
   else
     try {
       async function _0x2786e4() {
-        await delay(0x320), console['clear'](), console['log'](getProxy()['length']), console['log']('Welcome\x20to\x20' + chalk['cyan']('JRaffles();') + '\x20' + version), console['log']('Choose\x20a\x20Module\x20to\x20run..\x0a');
+        await delay(0x320), console['clear'](), console['log']('Welcome\x20to\x20' + chalk['cyan']('JRaffles();') + '\x20' + version), console['log']('Choose\x20a\x20Module\x20to\x20run..\x0a');
         for (var _0x4f25a6 = 0x0; _0x4f25a6 < modules['length']; _0x4f25a6++) {
           if (modules[_0x4f25a6]['name'] === 'Reload\x20Settings' || modules[_0x4f25a6]['name'] === 'Change\x20Settings')
             continue;
