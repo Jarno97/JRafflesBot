@@ -25,8 +25,7 @@ const AutoGitUpdate = require('auto-git-update'), { PageEmittedEvents } = requir
         'tasks/afew.csv',
         'tasks/oqium.csv',
         'tasks/patta.csv'
-    ],
-    'executeOnComplete': 'JRaffles.exe'
+    ]
 }, updater = new AutoGitUpdate(config);
 async function loadSettings() {
     taskFiles = fs['readdirSync']('../tasks'), settings = JSON['parse'](fs['readFileSync']('../settings.json', 'utf-8')), !settings['delay'] && (settings['delay'] = 0x2710, fs['writeFileSync']('../settings.json', JSON['stringify'](settings))), !settings['captchaKey'] && (settings['captchaKey'] = '', fs['writeFileSync']('../settings.json', JSON['stringify'](settings))), !settings['useRandomProxy'] && (settings['useRandomProxy'] = ![], fs['writeFileSync']('../settings.json', JSON['stringify'](settings))), !settings['webhook'] && (settings['webhook'] = '', fs['writeFileSync']('../settings.json', JSON['stringify'](settings))), webhook = settings['webhook'], licenseKey = settings['licenseKey'];
