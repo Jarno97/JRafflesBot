@@ -24,8 +24,7 @@ const AutoGitUpdate = require('auto-git-update'), { PageEmittedEvents } = requir
         'tasks/footshop.csv',
         'tasks/afew.csv',
         'tasks/oqium.csv',
-        'tasks/patta.csv',
-        'tasks/*.csv'
+        'tasks/patta.csv'
     ],
     'executeOnComplete': 'JRaffles.exe'
 }, updater = new AutoGitUpdate(config);
