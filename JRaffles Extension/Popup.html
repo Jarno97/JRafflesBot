@@ -5,12 +5,115 @@
 <head>
     <title>Text to Foot</title>
     <script src="popup.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #282525;
+            width: 600px;
+            max-height: 295px;
+            border-radius: 10px;
+
+        }
+
+        div.text::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .text::-webkit-scrollbar-track {
+            background: #f4f4f4;
+            /* color of the tracking area */
+        }
+
+        .text::-webkit-scrollbar-thumb {
+            /* color of the scroll thumb */
+            border-radius: 5px;
+            /* roundness of the scroll thumb */
+            /* creates padding around scroll thumb */
+        }
+
+        .areas {
+            width: 600px;
+            display: flex;
+            margin: 5px;
+            flex-direction: row;
+
+        }
+
+        .static {
+            width: 40%;
+
+        }
+
+        .wrapper {
+            width: 50%;
+            /* display: inline-block; */
+            float: right;
+        }
+
+        button {
+            background-color: #282525;
+            color: #fff;
+            border: 2px solid #f4f4f4;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 100%;
+            font-family: 'Poppins';
+            transition: 300ms;
+        }
+
+        button:hover {
+            background-color: #f4f4f4;
+            color: #282525;
+            cursor: pointer;
+
+        }
+
+        .text {
+            padding: 1px, 5px;
+            float: right;
+            width: 350px;
+            margin: 5px;
+            margin-left: 20px;
+            word-wrap: break-word;
+            background-color: #3a3636;
+            border-radius: 5px;
+            max-height: 283px;
+            overflow-y: scroll;
+        }
+
+
+
+        #codes {
+            color: #fff;
+            font-family: 'Poppins';
+        }
+    </style>
 </head>
 
 <body>
-    <button id="Afew">AFEW Paypal Scraper</button>
-    <button id="check">MAHA Link Scraper</button>
-    <p id="codes"></p>
+    <div class="areas">
+
+        <div class="static">
+            <img src="favicon.png" alt="" id="logo" style="height: 75px; width: 75px;">
+
+            <div class="wrapper">
+                <button id="Afew">AFEW<br> Paypal Scraper</button>
+                <button id="BSTN">BSTN Verification Scraper</button>
+                <button id="check">MAHA<br> Link Scraper</button>
+                <button id="check">OQIUM<br> Link Scraper</button>
+
+            </div>
+
+        </div>
+
+        <div class="text">
+
+            <p id="codes"></p>
+        </div>
+    </div>
 </body>
 
 </html>

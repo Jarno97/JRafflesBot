@@ -26,6 +26,19 @@ chrome.runtime.onMessage.addListener(
             }
             await makeList();
             await sendResponse({ method: "afew", text: codes.join(";") });
+        } else if (request.method == "bstn") {
+            let codes = [];
+            async function makeList() {
+                var mahaCodes = document.querySelectorAll("td > a");
+
+                for (var i = 0; i < mahaCodes.length; i += 1) {
+                    if (mahaCodes[i].innerHTML.indexOf("Confirm Your Account") != -1) {
+                        codes.push(mahaCodes[i].href);
+                    }
+                }
+            }
+            await makeList();
+            await sendResponse({ method: "bstn", text: codes.join(";") });
         }
     }
 )

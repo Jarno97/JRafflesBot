@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
     "name": "JRaffles Extension",
-    "description": "BrickTools extension",
-    "version": "0.0.1",
+    "description": "JRaffles Extension",
+    "version": "0.0.2",
     "content_scripts": [
         {
             "matches": [
