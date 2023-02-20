@@ -1,20 +1,20 @@
-const { EmbedBuilder: _0x59476a } = require('discord.js');
-var _0x5cdc19 = require('exe');
-const { execFile: _0x559675 } = require('child_process'), _0x4baac5 = require('puppeteer-extra'), _0x318e48 = require('puppeteer-extra-plugin-recaptcha'), _0x3f14b2 = require('puppeteer-extra-plugin-stealth'), _0x5ecce5 = require('chalk'), _0x992352 = require('node-bash-title'), _0x536860 = require('fs'), _0x507898 = require('axios'), _0x4e7053 = require('papaparse');
-var _0x26d829 = require('random-name');
-const _0x262614 = require('request');
-var _0x5a99d6 = require('prompt');
-const _0x5d48fa = _0x262614['jar']();
-var _0x5690b2 = {};
-const _0x27c0ac = '1067398661929181186/wvxr1d4nwFDFE-hAKBisU_mVWLloqatitfWvCqqIv38EUYiJMm_Pr3VKsuLsUBKN3PPj', _0x16f894 = '1067398856721051719/2gS-h641y_RoqR-KZ5aOcrnDfvvXNQIz4uQv8eA8A5_nsRSJlaCaStreLwCu5lmUjO4H', _0x1c7136 = '1068515411877957743/t_TXlLhYbeQmPL19hyGeNqi1G0KPT8KCBYOVOcryGMvXPfIUBEpNZRBCC1j7OFRej4A6', _0x1ee905 = '1068519704525807616/luGgvM1ZbR7g1zM5-10y5yceL2OGVCjrlkB6XxQL-hdoHUJ6hwSVAn6vVNyieHWLqPHE', _0x3cf61b = '1070657276525940746/GSfXwIxjuRjwmP3sTDw73M4V2P5OJqMFgZyECtpBwFmtXGINvj1xFsVsZ2KwGBpJNHpn', _0x22b928 = '1072865476457287711/EePVQu0bb06IdHG3FfG7M-JDaE-38prupCPoCqaduP6mG_tsshUSaKidyfyVx0YgNC7e';
-var _0x1b3dd7 = 'https://discord.com/api/webhooks/', _0x4dc254 = '' + _0x1b3dd7 + _0x1c7136, _0x10deb2 = '' + _0x1b3dd7 + _0x1ee905, _0x4c279b = '' + _0x1b3dd7 + _0x27c0ac, _0x51b669 = '' + _0x1b3dd7 + _0x16f894, _0x319480 = '' + _0x1b3dd7 + _0x3cf61b, _0x1ea743 = '' + _0x1b3dd7 + _0x22b928;
-const _0x28ec5f = JSON['parse'](_0x536860['readFileSync']('../package.json', 'utf-8')), _0x2f0e91 = _0x28ec5f['version'];
-var _0x3dc3e8, _0x261ffa, _0x2b953d, _0xe5b247, _0x34c112, _0x51e3af, _0x5746a9, _0x1d9a80;
-const _0x143580 = 'pk_7R7rRwMpveiR8OufEx9xIDMdU8Y95GgvGLF59wWRqklMwhXdpDnh5sN2KfaPHjEe';
-let _0x2f3a5c = ![];
-const _0x5aad92 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', _0x39cea4 = '0123456789';
-var _0x551705 = _0x5aad92['split']('');
-const _0x2221a0 = require('auto-git-update'), { PageEmittedEvents: _0x51b806 } = require('puppeteer'), { getRandomValues: _0x52880e } = require('crypto'), { resolve: _0x4cc56c } = require('path'), { Console: _0xc9b91f } = require('console'), _0x7e2f36 = {
+const { EmbedBuilder: _0x5ad5e2 } = require('discord.js');
+var _0x1747e3 = require('exe');
+const { execFile: _0x134d98 } = require('child_process'), _0x4efd86 = require('puppeteer-extra'), _0x1fedc1 = require('puppeteer-extra-plugin-recaptcha'), _0x202680 = require('puppeteer-extra-plugin-stealth'), _0x1818b9 = require('chalk'), _0x57f604 = require('node-bash-title'), _0x550d6b = require('fs'), _0x7d1ebe = require('axios'), _0x3d999c = require('papaparse');
+var _0x3ed7e7 = require('random-name');
+const _0x19b48a = require('request');
+var _0x8f638f = require('prompt');
+const _0x596f7f = _0x19b48a['jar']();
+var _0x401d1c = {};
+const _0x26965a = '1067398661929181186/wvxr1d4nwFDFE-hAKBisU_mVWLloqatitfWvCqqIv38EUYiJMm_Pr3VKsuLsUBKN3PPj', _0x235f42 = '1067398856721051719/2gS-h641y_RoqR-KZ5aOcrnDfvvXNQIz4uQv8eA8A5_nsRSJlaCaStreLwCu5lmUjO4H', _0x46b00e = '1068515411877957743/t_TXlLhYbeQmPL19hyGeNqi1G0KPT8KCBYOVOcryGMvXPfIUBEpNZRBCC1j7OFRej4A6', _0x542c6e = '1068519704525807616/luGgvM1ZbR7g1zM5-10y5yceL2OGVCjrlkB6XxQL-hdoHUJ6hwSVAn6vVNyieHWLqPHE', _0x4a8fe1 = '1070657276525940746/GSfXwIxjuRjwmP3sTDw73M4V2P5OJqMFgZyECtpBwFmtXGINvj1xFsVsZ2KwGBpJNHpn', _0x3ef102 = '1072865476457287711/EePVQu0bb06IdHG3FfG7M-JDaE-38prupCPoCqaduP6mG_tsshUSaKidyfyVx0YgNC7e';
+var _0x5b0924 = 'https://discord.com/api/webhooks/', _0x3d6b43 = '' + _0x5b0924 + _0x46b00e, _0x3cac51 = '' + _0x5b0924 + _0x542c6e, _0xc8def8 = '' + _0x5b0924 + _0x26965a, _0x51c252 = '' + _0x5b0924 + _0x235f42, _0x45ab34 = '' + _0x5b0924 + _0x4a8fe1, _0x35897b = '' + _0x5b0924 + _0x3ef102;
+const _0x41a6f8 = JSON['parse'](_0x550d6b['readFileSync']('../package.json', 'utf-8')), _0x431e19 = _0x41a6f8['version'];
+var _0xb37a88, _0x39f01a, _0xc653bf, _0x35cde3, _0x4f3e4d, _0x1d3112, _0x54444c, _0x1556f5;
+const _0x2e8651 = 'pk_7R7rRwMpveiR8OufEx9xIDMdU8Y95GgvGLF59wWRqklMwhXdpDnh5sN2KfaPHjEe';
+let _0x51818c = ![];
+const _0x38fc54 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', _0x4f36c9 = '0123456789';
+var _0x3ec733 = _0x38fc54['split']('');
+const _0x48d435 = require('auto-git-update'), { PageEmittedEvents: _0x5f15ae } = require('puppeteer'), { getRandomValues: _0x49ed4d } = require('crypto'), { resolve: _0x36b6fc } = require('path'), { Console: _0x448163 } = require('console'), _0x552d8e = {
     'repository': 'https://github.com/Jarno97/JRafflesBot',
     'branch': 'main',
     'fromReleases': ![],
@@ -32,117 +32,117 @@ const _0x2221a0 = require('auto-git-update'), { PageEmittedEvents: _0x51b806 } =
         'accounts/kickz-verified.csv',
         'accounts/kickz-unverified.csv'
     ]
-}, _0x434fd7 = new _0x2221a0(_0x7e2f36);
-async function _0x21e85f() {
-    _0x34c112 = _0x536860['readdirSync']('../proxies'), _0xe5b247 = _0x536860['readdirSync']('../tasks'), !_0x536860['existsSync']('../accounts/fenom.csv') && _0x536860['writeFileSync']('../accounts/fenom.csv', 'Email,Password\x0a'), !_0x536860['existsSync']('../accounts/bstn.csv') && _0x536860['writeFileSync']('../accounts/bstn.csv', 'Email,Password\x0a'), _0x5690b2 = JSON['parse'](_0x536860['readFileSync']('../settings.json', 'utf-8')), !_0x5690b2['delay'] && (_0x5690b2['delay'] = 0x2710, _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2))), !_0x5690b2['captchaKey'] && (_0x5690b2['captchaKey'] = '', _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2))), !_0x5690b2['useRandomProxy'] && (_0x5690b2['useRandomProxy'] = !![], _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2))), !_0x5690b2['webhook'] && (_0x5690b2['webhook'] = '', _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2))), _0x5690b2['MahaDelay'] = _0x5690b2['delay'], _0x1b3dd7 = _0x5690b2['webhook'], _0x51e3af = _0x5690b2['licenseKey'];
+}, _0xf2c255 = new _0x48d435(_0x552d8e);
+async function _0x45abb1() {
+    _0x4f3e4d = _0x550d6b['readdirSync']('../proxies'), _0x35cde3 = _0x550d6b['readdirSync']('../tasks'), !_0x550d6b['existsSync']('../accounts/fenom.csv') && _0x550d6b['writeFileSync']('../accounts/fenom.csv', 'Email,Password\x0a'), !_0x550d6b['existsSync']('../accounts/bstn.csv') && _0x550d6b['writeFileSync']('../accounts/bstn.csv', 'Email,Password\x0a'), _0x401d1c = JSON['parse'](_0x550d6b['readFileSync']('../settings.json', 'utf-8')), !_0x401d1c['delay'] && (_0x401d1c['delay'] = 0x2710, _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c))), !_0x401d1c['captchaKey'] && (_0x401d1c['captchaKey'] = '', _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c))), !_0x401d1c['useRandomProxy'] && (_0x401d1c['useRandomProxy'] = !![], _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c))), !_0x401d1c['webhook'] && (_0x401d1c['webhook'] = '', _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c))), _0x401d1c['MahaDelay'] = _0x401d1c['delay'], _0x5b0924 = _0x401d1c['webhook'], _0x1d3112 = _0x401d1c['licenseKey'];
 }
-let _0x3347fc, _0x1752eb = [], _0x374e33;
-const _0x73378f = _0x369a6d => new Promise(_0x2fe693 => setTimeout(_0x2fe693, _0x369a6d));
-function _0x45f419(_0x2004e3, _0x580d32) {
-    return Math['floor'](Math['random']() * (_0x580d32 - _0x2004e3 + 0x1) + _0x2004e3);
+let _0x18d6ce, _0x444382 = [], _0x16a8df;
+const _0x491ae3 = _0x47bc4d => new Promise(_0x27bdaf => setTimeout(_0x27bdaf, _0x47bc4d));
+function _0x15dd0d(_0x49de92, _0x31ece3) {
+    return Math['floor'](Math['random']() * (_0x31ece3 - _0x49de92 + 0x1) + _0x49de92);
 }
-async function _0x5c679c(_0x417d32) {
-    return _0x507898['get']('https://api.hyper.co/v4/licenses/' + _0x417d32, { 'headers': { 'Authorization': 'Bearer\x20' + _0x143580 } })['then'](_0x44868f => _0x44868f['data'])['catch'](() => null);
+async function _0x3bbbc4(_0x1645a2) {
+    return _0x7d1ebe['get']('https://api.hyper.co/v4/licenses/' + _0x1645a2, { 'headers': { 'Authorization': 'Bearer\x20' + _0x2e8651 } })['then'](_0x12bbf9 => _0x12bbf9['data'])['catch'](() => null);
 }
 ;
-async function _0x35d023(_0x185555) {
+async function _0x5f1152(_0x52f8f9) {
     console['clear']();
-    if (_0x185555 == 'AWGH-0N92-JE6S-HOHU') {
+    if (_0x52f8f9 == 'AWGH-0N92-JE6S-HOHU') {
         console['log']('Please\x20paste\x20your\x20key\x20here:');
-        var _0x8cf7 = await _0x5a99d6['get']('License');
-        if (_0x8cf7['License'] == 'AWGH-0N92-JE6S-HOHU')
-            return console['log']('Error\x20please\x20use\x20the\x20key\x20on\x20the\x20JRaffles\x20dashboard'), await _0x73378f(0xbb8), _0x35d023(_0x185555);
-        _0x185555 = _0x8cf7['License'], _0x5690b2['licenseKey'] = _0x185555, _0x51e3af = _0x185555, _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2));
+        var _0x550152 = await _0x8f638f['get']('License');
+        if (_0x550152['License'] == 'AWGH-0N92-JE6S-HOHU')
+            return console['log']('Error\x20please\x20use\x20the\x20key\x20on\x20the\x20JRaffles\x20dashboard'), await _0x491ae3(0xbb8), _0x5f1152(_0x52f8f9);
+        _0x52f8f9 = _0x550152['License'], _0x401d1c['licenseKey'] = _0x52f8f9, _0x1d3112 = _0x52f8f9, _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c));
     }
-    console['log']('Checking\x20license\x20' + _0x51e3af + '...'), await _0x73378f(0x320);
-    const _0x4f7e72 = await _0x5c679c(_0x185555);
-    _0x5746a9 = JSON['stringify'](_0x4f7e72['user']['discord']['username'])['substring'](0x1)['slice'](0x0, -0x1), _0x1d9a80 = JSON['stringify'](_0x4f7e72['user']['discord']['avatar'])['substring'](0x1)['slice'](0x0, -0x1);
-    if (!_0x4f7e72)
+    console['log']('Checking\x20license\x20' + _0x1d3112 + '...'), await _0x491ae3(0x320);
+    const _0x153b6e = await _0x3bbbc4(_0x52f8f9);
+    _0x54444c = JSON['stringify'](_0x153b6e['user']['discord']['username'])['substring'](0x1)['slice'](0x0, -0x1), _0x1556f5 = JSON['stringify'](_0x153b6e['user']['discord']['avatar'])['substring'](0x1)['slice'](0x0, -0x1);
+    if (!_0x153b6e)
         return console['log']('License\x20not\x20found');
-    if (!_0x4f7e72['user'])
+    if (!_0x153b6e['user'])
         return console['log']('License\x20not\x20bound');
-    return _0x4f7e72['status'] === 'active' ? (console['log']('License\x20is\x20good\x20to\x20go!'), _0x2f3a5c = !![]) : (console['log']('Could\x20not\x20find\x20license..'), _0x2f3a5c = ![]);
+    return _0x153b6e['status'] === 'active' ? (console['log']('License\x20is\x20good\x20to\x20go!'), _0x51818c = !![]) : (console['log']('Could\x20not\x20find\x20license..'), _0x51818c = ![]);
 }
-async function _0x502364() {
-    var _0x2a71d9 = await _0x5a99d6['get']('Module');
-    return console['clear'](), _0x2a71d9['Module'];
+async function _0x36de3b() {
+    var _0x26a913 = await _0x8f638f['get']('Module');
+    return console['clear'](), _0x26a913['Module'];
 }
 ;
-async function _0x4f1171() {
-    var _0x3ed31f = await _0x5a99d6['get']('Setting');
-    return console['clear'](), _0x3ed31f['Setting'];
+async function _0xdd8676() {
+    var _0x2f7773 = await _0x8f638f['get']('Setting');
+    return console['clear'](), _0x2f7773['Setting'];
 }
-async function _0x54b010() {
+async function _0x4ba3ca() {
     console['clear'](), console['log']('Choose\x20A\x20File\x20to\x20Run\x20\x0a');
-    for (var _0xe3847e = 0x0; _0xe3847e < _0xe5b247['length']; _0xe3847e++) {
-        console['log']('\x20(' + _0xe3847e + ')\x20' + _0xe5b247[_0xe3847e]);
+    for (var _0x2be4dc = 0x0; _0x2be4dc < _0x35cde3['length']; _0x2be4dc++) {
+        console['log']('\x20(' + _0x2be4dc + ')\x20' + _0x35cde3[_0x2be4dc]);
     }
     console['log']('');
-    var _0x57df40 = await _0x5a99d6['get']('Task');
-    if (_0x57df40['Task'] > _0xe5b247['length'] - 0x1 || isNaN(_0x57df40['Task']) == !![])
-        return console['log']('Invalid\x20selection'), await _0x73378f(0x3e8), _0x54b010();
-    var _0x57c2c4 = _0x536860['readFileSync']('../tasks/' + _0xe5b247[_0x57df40['Task']], 'utf-8');
-    return _0x2b953d = _0x4e7053['parse'](_0x57c2c4, { 'header': !![] })['data'], console['clear'](), console['log']('Running\x20' + _0x5ecce5['blue'](_0xe5b247[_0x57df40['Task']])), _0x3dc3e8 = _0xe5b247[_0x57df40['Task']], _0x2b953d;
+    var _0x1c66f4 = await _0x8f638f['get']('Task');
+    if (_0x1c66f4['Task'] > _0x35cde3['length'] - 0x1 || isNaN(_0x1c66f4['Task']) == !![])
+        return console['log']('Invalid\x20selection'), await _0x491ae3(0x3e8), _0x4ba3ca();
+    var _0x56e107 = _0x550d6b['readFileSync']('../tasks/' + _0x35cde3[_0x1c66f4['Task']], 'utf-8');
+    return _0xc653bf = _0x3d999c['parse'](_0x56e107, { 'header': !![] })['data'], console['clear'](), console['log']('Running\x20' + _0x1818b9['blue'](_0x35cde3[_0x1c66f4['Task']])), _0xb37a88 = _0x35cde3[_0x1c66f4['Task']], _0xc653bf;
 }
-async function _0xaeb791() {
+async function _0x5c29d8() {
     console['clear'](), console['log']('Choose\x20Proxies\x20to\x20Use\x20\x0a');
-    for (var _0xc1ed2d = 0x0; _0xc1ed2d < _0x34c112['length']; _0xc1ed2d++) {
-        console['log']('\x20(' + _0xc1ed2d + ')\x20' + _0x34c112[_0xc1ed2d]);
+    for (var _0x187bbf = 0x0; _0x187bbf < _0x4f3e4d['length']; _0x187bbf++) {
+        console['log']('\x20(' + _0x187bbf + ')\x20' + _0x4f3e4d[_0x187bbf]);
     }
     console['log']('');
-    var _0x2a274d = await _0x5a99d6['get']('Proxies');
-    if (_0x2a274d['Proxies'] > _0x34c112['length'] - 0x1 || isNaN(_0x2a274d['Proxies']) == !![])
-        return console['log']('Invalid\x20selection'), await _0x73378f(0x3e8), _0xaeb791();
-    var _0x3dbea4 = _0x536860['readFileSync']('../proxies/' + _0x34c112[_0x2a274d['Proxies']], 'utf-8')['split']('\x0a');
-    let _0x3b0942 = _0x3dbea4['map']((_0x1b5839, _0x30d808) => {
-        sanatizeProxy = _0x1b5839['replace']('\x0d', '');
-        if (_0x3dbea4[_0x30d808 + 0x1] != undefined)
+    var _0x43a911 = await _0x8f638f['get']('Proxies');
+    if (_0x43a911['Proxies'] > _0x4f3e4d['length'] - 0x1 || isNaN(_0x43a911['Proxies']) == !![])
+        return console['log']('Invalid\x20selection'), await _0x491ae3(0x3e8), _0x5c29d8();
+    var _0x188748 = _0x550d6b['readFileSync']('../proxies/' + _0x4f3e4d[_0x43a911['Proxies']], 'utf-8')['split']('\x0a');
+    let _0x56cc0a = _0x188748['map']((_0x41e284, _0x304e60) => {
+        sanatizeProxy = _0x41e284['replace']('\x0d', '');
+        if (_0x188748[_0x304e60 + 0x1] != undefined)
             return '' + sanatizeProxy;
         return '' + sanatizeProxy;
     });
-    return _0x261ffa = _0x34c112[_0x2a274d['Proxies']], console['clear'](), _0x3b0942;
+    return _0x39f01a = _0x4f3e4d[_0x43a911['Proxies']], console['clear'](), _0x56cc0a;
 }
-async function _0x37d15c() {
-    var _0x5941d8 = await _0x5a99d6['get']('Value');
-    return console['clear'](), _0x5941d8['Value'];
+async function _0x493ea4() {
+    var _0x24654d = await _0x8f638f['get']('Value');
+    return console['clear'](), _0x24654d['Value'];
 }
-async function _0x58a2a4(_0x483dd9) {
+async function _0x11fa5a(_0x385bf9) {
     console['clear'](), console['log']('What\x20would\x20you\x20like\x20to\x20do?\x20\x0a');
-    for (var _0x88d7de = 0x0; _0x88d7de < _0x483dd9['length']; _0x88d7de++) {
-        console['log']('\x20(' + _0x88d7de + ')\x20[' + _0x483dd9[_0x88d7de]['name'] + ']');
+    for (var _0x1885b7 = 0x0; _0x1885b7 < _0x385bf9['length']; _0x1885b7++) {
+        console['log']('\x20(' + _0x1885b7 + ')\x20[' + _0x385bf9[_0x1885b7]['name'] + ']');
     }
     ;
     console['log']('');
-    var _0x3bab26 = await _0x5a99d6['get']('Module');
-    return _0x3bab26['Module'];
+    var _0x2b7785 = await _0x8f638f['get']('Module');
+    return _0x2b7785['Module'];
 }
-async function _0x33f141() {
-    var _0x324276 = await _0x5a99d6['get']('Password');
-    return console['clear'](), _0x324276['Password'];
-}
-;
-async function _0x3bf6be() {
-    var _0x2479cd = await _0x5a99d6['get']('Links');
-    return _0x2479cd['Links'];
+async function _0x1db984() {
+    var _0x2735e8 = await _0x8f638f['get']('Password');
+    return console['clear'](), _0x2735e8['Password'];
 }
 ;
-async function _0x1feb93() {
+async function _0x5213c7() {
+    var _0x19b446 = await _0x8f638f['get']('Links');
+    return _0x19b446['Links'];
+}
+;
+async function _0x251601() {
     console['log']('Choose\x20a\x20Raffle\x20to\x20enter:\x20\x0a');
-    for (var _0xa0a26c = 0x0; _0xa0a26c < _0x1752eb['length']; _0xa0a26c++) {
-        console['log']('\x20(' + _0xa0a26c + ')\x20' + _0x1752eb[_0xa0a26c]);
+    for (var _0x5528aa = 0x0; _0x5528aa < _0x444382['length']; _0x5528aa++) {
+        console['log']('\x20(' + _0x5528aa + ')\x20' + _0x444382[_0x5528aa]);
     }
     ;
     console['log']();
-    let _0x3d333f = await _0x5a99d6['get']('Product');
-    return console['clear'](), _0x3d333f['Product'];
+    let _0x1d0bb6 = await _0x8f638f['get']('Product');
+    return console['clear'](), _0x1d0bb6['Product'];
 }
 ;
-function _0x18cf54() {
-    var _0x4701f4 = new Date(Date['now']())['toLocaleTimeString']();
-    return _0x4701f4;
+function _0x1e4ea5() {
+    var _0x41e399 = new Date(Date['now']())['toLocaleTimeString']();
+    return _0x41e399;
 }
 ;
-const _0x49a3de = [
+const _0x461b58 = [
     {
         'name': 'AFEW\x20Store',
         'modules': [{
@@ -330,8 +330,8 @@ const _0x49a3de = [
                     'data': {
                         'type': 'subscription',
                         'attributes': {
-                            'list_id': 'WdVw7N',
-                            'custom_source': 'DV3742-021',
+                            'list_id': 'SQ43yf',
+                            'custom_source': 'DZ5485-052',
                             'email': '',
                             'properties': {
                                 '$first_name': '',
@@ -345,8 +345,8 @@ const _0x49a3de = [
                                 '$country': '',
                                 'Accepts\x20Marketing': ['NoByRaffle'],
                                 '$consent_method': 'Klaviyo\x20Form',
-                                '$consent_form_id': 'S8GH2D',
-                                '$consent_form_version': 0x7d9216,
+                                '$consent_form_id': 'WLQk7t',
+                                '$consent_form_version': 0x7f71d6,
                                 'services': '{\x22shopify\x22:{\x22source\x22:\x22form\x22}}',
                                 '$timezone_offset': 0x1
                             }
@@ -452,221 +452,221 @@ const _0x49a3de = [
     { 'name': 'Change\x20Settings' },
     { 'name': 'Reload\x20Settings' }
 ];
-async function _0x278fc0(_0x3373b6, _0x269e95) {
-    let _0x254f9d = { 'headers': { 'content-type': 'application/json' } };
-    if (_0x2f0e91 != 'devkey') {
-        await _0x507898['post'](_0x3373b6, _0x269e95, _0x254f9d);
+async function _0xafb19d(_0x2f0c1a, _0x2cf2f5) {
+    let _0x7d1a18 = { 'headers': { 'content-type': 'application/json' } };
+    if (_0x431e19 != 'devkey') {
+        await _0x7d1ebe['post'](_0x2f0c1a, _0x2cf2f5, _0x7d1a18);
         return;
     }
     return console['log']('devkey\x20settings\x20enabled,\x20not\x20sending\x20webhooks');
 }
 ;
-async function _0x3553d9(_0x2f4482, _0x243f02, _0x44f31b, _0xbddd5e, _0x3d0e3f) {
-    if (!_0xbddd5e && _0x44f31b == 'dev') {
-        var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Raffle\x20Entry')['setAuthor']({
+async function _0x344cc9(_0xbb67fd, _0x23e012, _0x7307a1, _0x2b9419, _0x5e649e) {
+    if (!_0x2b9419 && _0x7307a1 == 'dev') {
+        var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Raffle\x20Entry')['setAuthor']({
             'name': 'JRaffles',
             'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
             'url': 'https://twitter.com/JRaffles_'
-        })['setThumbnail'](_0x243f02['logo'])['addFields']({
+        })['setThumbnail'](_0x23e012['logo'])['addFields']({
             'name': 'Store',
-            'value': '' + _0x243f02['store'],
+            'value': '' + _0x23e012['store'],
             'inline': !![]
         })['addFields']({
             'name': 'Size',
-            'value': '' + _0x2f4482['Size'],
+            'value': '' + _0xbb67fd['Size'],
             'inline': !![]
         })['addFields']({
             'name': 'Delay',
-            'value': '' + _0x5690b2['delay'],
+            'value': '' + _0x401d1c['delay'],
             'inline': !![]
         })['addFields']({
             'name': 'User',
-            'value': '' + _0x5746a9,
+            'value': '' + _0x54444c,
             'inline': !![]
         })['addFields']({
             'name': 'URL',
-            'value': '' + _0x2f4482['Url'],
+            'value': '' + _0xbb67fd['Url'],
             'inline': !![]
         })['setTimestamp']()['setFooter']({
-            'text': 'JRaffles\x20v' + _0x2f0e91,
+            'text': 'JRaffles\x20v' + _0x431e19,
             'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
         });
-        return _0x432547['data'];
+        return _0x19dfef['data'];
     } else {
-        if (_0xbddd5e && _0x44f31b == 'dev') {
-            var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Failed\x20Raffle\x20Entry')['setAuthor']({
+        if (_0x2b9419 && _0x7307a1 == 'dev') {
+            var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Failed\x20Raffle\x20Entry')['setAuthor']({
                 'name': 'JRaffles',
                 'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                 'url': 'https://twitter.com/JRaffles_'
-            })['setThumbnail'](_0x243f02['logo'])['addFields']({
+            })['setThumbnail'](_0x23e012['logo'])['addFields']({
                 'name': 'User',
-                'value': '' + _0x5746a9,
+                'value': '' + _0x54444c,
                 'inline': !![]
             }, {
                 'name': 'Store',
-                'value': '' + _0x243f02['store'],
+                'value': '' + _0x23e012['store'],
                 'inline': !![]
             }, {
                 'name': 'Size',
-                'value': '' + _0x2f4482['Size'],
+                'value': '' + _0xbb67fd['Size'],
                 'inline': !![]
             }, {
                 'name': 'Delay',
-                'value': '' + _0x5690b2['delay'],
+                'value': '' + _0x401d1c['delay'],
                 'inline': !![]
             })['addFields']({
                 'name': 'ERROR',
-                'value': '' + _0x3d0e3f,
+                'value': '' + _0x5e649e,
                 'inline': !![]
             })['addFields']({
                 'name': 'URL',
-                'value': '' + _0x2f4482['Url']
+                'value': '' + _0xbb67fd['Url']
             })['setTimestamp']()['setFooter']({
-                'text': 'JRaffles\x20v' + _0x2f0e91,
+                'text': 'JRaffles\x20v' + _0x431e19,
                 'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
             });
-            return _0x432547['data'];
+            return _0x19dfef['data'];
         } else {
-            if (_0x44f31b == 'pub') {
-                var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Succesful\x20Raffle\x20Entry')['setAuthor']({
+            if (_0x7307a1 == 'pub') {
+                var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Succesful\x20Raffle\x20Entry')['setAuthor']({
                     'name': 'JRaffles',
                     'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                     'url': 'https://twitter.com/JRaffles_'
-                })['setThumbnail'](_0x243f02['logo'])['addFields']({
+                })['setThumbnail'](_0x23e012['logo'])['addFields']({
                     'name': 'Store',
-                    'value': '' + _0x243f02['store'],
+                    'value': '' + _0x23e012['store'],
                     'inline': !![]
                 }, {
                     'name': 'Size',
-                    'value': '' + _0x2f4482['Size'],
+                    'value': '' + _0xbb67fd['Size'],
                     'inline': !![]
                 }, {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay'],
+                    'value': '' + _0x401d1c['delay'],
                     'inline': !![]
                 })['addFields']({
                     'name': 'URL',
-                    'value': '||' + _0x2f4482['Url'] + '||'
+                    'value': '||' + _0xbb67fd['Url'] + '||'
                 })['setTimestamp']()['setFooter']({
-                    'text': 'JRaffles\x20v' + _0x2f0e91,
+                    'text': 'JRaffles\x20v' + _0x431e19,
                     'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                 });
-                return _0x432547['data'];
+                return _0x19dfef['data'];
             } else {
-                if (_0x44f31b == 'acc' && !_0xbddd5e) {
-                    var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generated')['setAuthor']({
+                if (_0x7307a1 == 'acc' && !_0x2b9419) {
+                    var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generated')['setAuthor']({
                         'name': 'JRaffles',
                         'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                         'url': 'https://twitter.com/JRaffles_'
-                    })['setThumbnail'](_0x243f02['logo'])['addFields']({
+                    })['setThumbnail'](_0x23e012['logo'])['addFields']({
                         'name': 'User',
-                        'value': '' + _0x5746a9,
+                        'value': '' + _0x54444c,
                         'inline': !![]
                     }, {
                         'name': 'Store',
-                        'value': '' + _0x243f02['store'],
+                        'value': '' + _0x23e012['store'],
                         'inline': !![]
                     }, {
                         'name': 'Delay',
-                        'value': '' + _0x5690b2['delay'],
+                        'value': '' + _0x401d1c['delay'],
                         'inline': !![]
                     })['setTimestamp']()['setFooter']({
-                        'text': 'JRaffles\x20v' + _0x2f0e91,
+                        'text': 'JRaffles\x20v' + _0x431e19,
                         'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                     });
-                    return _0x432547['data'];
+                    return _0x19dfef['data'];
                 } else {
-                    if (_0x44f31b == 'acc' && _0xbddd5e) {
-                        var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generation\x20Failed')['setAuthor']({
+                    if (_0x7307a1 == 'acc' && _0x2b9419) {
+                        var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generation\x20Failed')['setAuthor']({
                             'name': 'JRaffles',
                             'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                             'url': 'https://twitter.com/JRaffles_'
-                        })['setThumbnail'](_0x243f02['logo'])['addFields']({
+                        })['setThumbnail'](_0x23e012['logo'])['addFields']({
                             'name': 'User',
-                            'value': '' + _0x5746a9,
+                            'value': '' + _0x54444c,
                             'inline': !![]
                         }, {
                             'name': 'Error',
-                            'value': '' + _0x3d0e3f,
+                            'value': '' + _0x5e649e,
                             'inline': !![]
                         }, {
                             'name': 'Store',
-                            'value': '' + _0x243f02['store'],
+                            'value': '' + _0x23e012['store'],
                             'inline': !![]
                         }, {
                             'name': 'Delay',
-                            'value': '' + _0x5690b2['delay'],
+                            'value': '' + _0x401d1c['delay'],
                             'inline': !![]
                         })['setTimestamp']()['setFooter']({
-                            'text': 'JRaffles\x20v' + _0x2f0e91,
+                            'text': 'JRaffles\x20v' + _0x431e19,
                             'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                         });
-                        return _0x432547['data'];
+                        return _0x19dfef['data'];
                     } else {
-                        if (_0x44f31b == 'open') {
-                            var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('User\x20Opened\x20JRaffles')['setAuthor']({
+                        if (_0x7307a1 == 'open') {
+                            var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('User\x20Opened\x20JRaffles')['setAuthor']({
                                 'name': 'JRaffles',
                                 'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                                 'url': 'https://twitter.com/JRaffles_'
-                            })['setThumbnail'](_0x1d9a80)['addFields']({
+                            })['setThumbnail'](_0x1556f5)['addFields']({
                                 'name': 'User',
-                                'value': '' + _0x5746a9,
+                                'value': '' + _0x54444c,
                                 'inline': !![]
                             })['setTimestamp']()['setFooter']({
-                                'text': 'JRaffles\x20v' + _0x2f0e91,
+                                'text': 'JRaffles\x20v' + _0x431e19,
                                 'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                             });
-                            return _0x432547['data'];
+                            return _0x19dfef['data'];
                         } else {
-                            if (!_0xbddd5e && _0x44f31b == 'ver') {
-                                var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Verification')['setAuthor']({
+                            if (!_0x2b9419 && _0x7307a1 == 'ver') {
+                                var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Verification')['setAuthor']({
                                     'name': 'JRaffles',
                                     'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                                     'url': 'https://twitter.com/JRaffles_'
-                                })['setThumbnail'](_0x243f02['logo'])['addFields']({
+                                })['setThumbnail'](_0x23e012['logo'])['addFields']({
                                     'name': 'User',
-                                    'value': '' + _0x5746a9,
+                                    'value': '' + _0x54444c,
                                     'inline': !![]
                                 }, {
                                     'name': 'Store',
-                                    'value': '' + _0x243f02['store'],
+                                    'value': '' + _0x23e012['store'],
                                     'inline': !![]
                                 }, {
                                     'name': 'Delay',
-                                    'value': '' + _0x5690b2['delay'],
+                                    'value': '' + _0x401d1c['delay'],
                                     'inline': !![]
                                 })['setTimestamp']()['setFooter']({
-                                    'text': 'JRaffles\x20v' + _0x2f0e91,
+                                    'text': 'JRaffles\x20v' + _0x431e19,
                                     'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                                 });
-                                return _0x432547['data'];
+                                return _0x19dfef['data'];
                             } else {
-                                if (_0xbddd5e && _0x44f31b == 'ver') {
-                                    var _0x432547 = new _0x59476a()['setColor'](0xc0d6d6)['setTitle']('Verification\x20Failed')['setAuthor']({
+                                if (_0x2b9419 && _0x7307a1 == 'ver') {
+                                    var _0x19dfef = new _0x5ad5e2()['setColor'](0xc0d6d6)['setTitle']('Verification\x20Failed')['setAuthor']({
                                         'name': 'JRaffles',
                                         'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
                                         'url': 'https://twitter.com/JRaffles_'
-                                    })['setThumbnail'](_0x243f02['logo'])['addFields']({
+                                    })['setThumbnail'](_0x23e012['logo'])['addFields']({
                                         'name': 'User',
-                                        'value': '' + _0x5746a9,
+                                        'value': '' + _0x54444c,
                                         'inline': !![]
                                     }, {
                                         'name': 'Error',
-                                        'value': '' + _0x3d0e3f,
+                                        'value': '' + _0x5e649e,
                                         'inline': !![]
                                     }, {
                                         'name': 'Store',
-                                        'value': '' + _0x243f02['store'],
+                                        'value': '' + _0x23e012['store'],
                                         'inline': !![]
                                     }, {
                                         'name': 'Delay',
-                                        'value': '' + _0x5690b2['delay'],
+                                        'value': '' + _0x401d1c['delay'],
                                         'inline': !![]
                                     })['setTimestamp']()['setFooter']({
-                                        'text': 'JRaffles\x20v' + _0x2f0e91,
+                                        'text': 'JRaffles\x20v' + _0x431e19,
                                         'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
                                     });
-                                    return _0x432547['data'];
+                                    return _0x19dfef['data'];
                                 }
                             }
                         }
@@ -676,147 +676,147 @@ async function _0x3553d9(_0x2f4482, _0x243f02, _0x44f31b, _0xbddd5e, _0x3d0e3f) 
         }
     }
 }
-async function _0x3e6cb2(_0x386c5f, _0x1e33e4) {
-    var _0x138916 = _0x386c5f[_0x1e33e4]['Address1']['split'](''), _0x4ec6c6 = _0x386c5f[_0x1e33e4]['Address2']['split'](''), _0x351af8 = _0x386c5f[_0x1e33e4]['Email']['split']('@');
-    for (var _0xc2cb99 = 0x0; _0xc2cb99 < _0x138916['length']; _0xc2cb99++) {
-        if (_0x138916[_0xc2cb99] == 'X') {
-            var _0x32968b = Math['round'](Math['random']() * (_0x5aad92['length'] - 0x1));
-            _0x138916[_0xc2cb99] = _0x551705[_0x32968b];
+async function _0x238b3c(_0x170120, _0x3b7d04) {
+    var _0x46ba49 = _0x170120[_0x3b7d04]['Address1']['split'](''), _0x413ba2 = _0x170120[_0x3b7d04]['Address2']['split'](''), _0x566fe4 = _0x170120[_0x3b7d04]['Email']['split']('@');
+    for (var _0x2cca05 = 0x0; _0x2cca05 < _0x46ba49['length']; _0x2cca05++) {
+        if (_0x46ba49[_0x2cca05] == 'X') {
+            var _0x58b15a = Math['round'](Math['random']() * (_0x38fc54['length'] - 0x1));
+            _0x46ba49[_0x2cca05] = _0x3ec733[_0x58b15a];
         }
     }
     ;
-    for (var _0xc2cb99 = 0x0; _0xc2cb99 < _0x4ec6c6['length']; _0xc2cb99++) {
-        if (_0x4ec6c6[_0xc2cb99] == 'X') {
-            var _0x32968b = Math['round'](Math['random']() * (_0x5aad92['length'] - 0x1));
-            _0x4ec6c6[_0xc2cb99] = _0x551705[_0x32968b];
+    for (var _0x2cca05 = 0x0; _0x2cca05 < _0x413ba2['length']; _0x2cca05++) {
+        if (_0x413ba2[_0x2cca05] == 'X') {
+            var _0x58b15a = Math['round'](Math['random']() * (_0x38fc54['length'] - 0x1));
+            _0x413ba2[_0x2cca05] = _0x3ec733[_0x58b15a];
         }
     }
     ;
-    _0x386c5f[_0x1e33e4]['FirstName'] == 'RANDOM' && (_0x386c5f[_0x1e33e4]['FirstName'] = _0x26d829['first']());
-    _0x386c5f[_0x1e33e4]['LastName'] == 'RANDOM' && (_0x386c5f[_0x1e33e4]['LastName'] = _0x26d829['last']());
-    _0x351af8[0x0] == 'RANDOM' ? _0x351af8[0x0] = '' + _0x26d829['first']() + _0x26d829['last']() + '@' : _0x351af8[0x0] = _0x351af8[0x0] + '@';
-    _0x386c5f[_0x1e33e4]['Email'] = _0x351af8['join'](''), _0x386c5f[_0x1e33e4]['Address1'] = _0x138916['join'](''), _0x386c5f[_0x1e33e4]['Address2'] = _0x4ec6c6['join']('');
-    _0x386c5f[_0x1e33e4]['Phone'] == 'RANDOM' && (_0x386c5f[_0x1e33e4]['Phone'] = '0' + _0x45f419(0x5f5e100, 0x3b9ac9ff));
-    if (_0x386c5f[_0x1e33e4]['Follower'] == 'RANDOM') {
-        var _0x50e882 = _0x45f419(0x1, 0x270f);
-        _0x386c5f[_0x1e33e4]['Follower'] = '' + _0x26d829['first']() + _0x26d829['last']() + _0x50e882 + '\x20';
+    _0x170120[_0x3b7d04]['FirstName'] == 'RANDOM' && (_0x170120[_0x3b7d04]['FirstName'] = _0x3ed7e7['first']());
+    _0x170120[_0x3b7d04]['LastName'] == 'RANDOM' && (_0x170120[_0x3b7d04]['LastName'] = _0x3ed7e7['last']());
+    _0x566fe4[0x0] == 'RANDOM' ? _0x566fe4[0x0] = '' + _0x3ed7e7['first']() + _0x3ed7e7['last']() + '@' : _0x566fe4[0x0] = _0x566fe4[0x0] + '@';
+    _0x170120[_0x3b7d04]['Email'] = _0x566fe4['join'](''), _0x170120[_0x3b7d04]['Address1'] = _0x46ba49['join'](''), _0x170120[_0x3b7d04]['Address2'] = _0x413ba2['join']('');
+    _0x170120[_0x3b7d04]['Phone'] == 'RANDOM' && (_0x170120[_0x3b7d04]['Phone'] = '0' + _0x15dd0d(0x5f5e100, 0x3b9ac9ff));
+    if (_0x170120[_0x3b7d04]['Follower'] == 'RANDOM') {
+        var _0x4d44ad = _0x15dd0d(0x1, 0x270f);
+        _0x170120[_0x3b7d04]['Follower'] = '' + _0x3ed7e7['first']() + _0x3ed7e7['last']() + _0x4d44ad + '\x20';
     }
-    _0x386c5f[_0x1e33e4]['HouseNumber'] == 'RANDOM' && (_0x386c5f[_0x1e33e4]['HouseNumber'] = _0x45f419(0x1, 0xc8));
-    if (_0x386c5f[_0x1e33e4]['Address1'] == 'RANDOM') {
-        var _0x482596 = Math['round'](Math['random']() * (_0x5aad92['length'] - 0x1)), _0x5bfbbb = _0x551705[_0x482596];
-        _0x386c5f[_0x1e33e4]['Address1'] = _0x26d829['last']() + 'straat', _0x386c5f[_0x1e33e4]['Zip'] == '' && (_0x386c5f[_0x1e33e4]['Postcode'] = _0x45f419(0x3e8, 0x270f) + '\x20' + _0x5bfbbb + _0x5bfbbb, _0x386c5f[_0x1e33e4]['Zip'] = _0x386c5f[_0x1e33e4]['Postcode']), _0x386c5f[_0x1e33e4]['HouseNumber'] = '' + _0x45f419(0x1, 0xc8);
+    _0x170120[_0x3b7d04]['HouseNumber'] == 'RANDOM' && (_0x170120[_0x3b7d04]['HouseNumber'] = _0x15dd0d(0x1, 0xc8));
+    if (_0x170120[_0x3b7d04]['Address1'] == 'RANDOM') {
+        var _0x510269 = Math['round'](Math['random']() * (_0x38fc54['length'] - 0x1)), _0x5c62cf = _0x3ec733[_0x510269];
+        _0x170120[_0x3b7d04]['Address1'] = _0x3ed7e7['last']() + 'straat', _0x170120[_0x3b7d04]['Zip'] == '' && (_0x170120[_0x3b7d04]['Postcode'] = _0x15dd0d(0x3e8, 0x270f) + '\x20' + _0x5c62cf + _0x5c62cf, _0x170120[_0x3b7d04]['Zip'] = _0x170120[_0x3b7d04]['Postcode']), _0x170120[_0x3b7d04]['HouseNumber'] = '' + _0x15dd0d(0x1, 0xc8);
     }
     return;
 }
 ;
-function _0x35d507() {
-    let _0x33e53c = proxyFile['split']('\x0a'), _0x3b58ad = _0x33e53c['map']((_0x482fcc, _0x1079ec) => {
-        sanatizeProxy = _0x482fcc['replace']('\x0d', '');
-        if (_0x33e53c[_0x1079ec + 0x1] != undefined)
+function _0x536d43() {
+    let _0x29ab4b = proxyFile['split']('\x0a'), _0x138351 = _0x29ab4b['map']((_0x1689ad, _0x476539) => {
+        sanatizeProxy = _0x1689ad['replace']('\x0d', '');
+        if (_0x29ab4b[_0x476539 + 0x1] != undefined)
             return '' + sanatizeProxy;
         return '' + sanatizeProxy;
     });
-    return _0x3b58ad;
+    return _0x138351;
 }
 ;
-async function _0x1c2fb2(_0x4862a) {
-    var _0x516f77 = _0x4862a[0x1]['split'](':');
-    const _0x205501 = await _0x4baac5['launch']({
+async function _0x48b206(_0x39b2ec) {
+    var _0x5bef83 = _0x39b2ec[0x1]['split'](':');
+    const _0x1d54e9 = await _0x4efd86['launch']({
         'headless': !![],
-        'args': ['--proxy-server=' + _0x516f77[0x0] + ':' + _0x516f77[0x1] + ',--no-sandbox\x27,\x0a\x20\x20\x20\x20\x20\x20\x27--disable-setuid-sandbox,--force-device-scale-factor=0.3']
+        'args': ['--proxy-server=' + _0x5bef83[0x0] + ':' + _0x5bef83[0x1] + ',--no-sandbox\x27,\x0a\x20\x20\x20\x20\x20\x20\x27--disable-setuid-sandbox,--force-device-scale-factor=0.3']
     });
     try {
-        const _0x143b1c = await _0x205501['newPage']();
-        await _0x143b1c['authenticate']({
-            'username': '' + _0x516f77[0x2],
-            'password': '' + _0x516f77[0x3]
-        }), console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Afew\x20Scraper\x20started'), await _0x143b1c['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x143b1c['setRequestInterception'](!![]), _0x143b1c['on']('request', _0x4d1920 => {
-            _0x4d1920['resourceType']() === 'image' || _0x4d1920['resourceType']() === 'font' || _0x4d1920['resourceType']() === 'media' ? _0x4d1920['abort']() : _0x4d1920['continue']();
-        }), await _0x143b1c['goto']('https://en.afew-store.com/collections/sneaker-raffles'), console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Looking\x20for\x20Raffles'), await _0x143b1c['waitForTimeout'](0xbb8), await _0x143b1c['waitForSelector']('.product-card');
-        const _0x28e7a8 = await _0x143b1c['$$eval']('a.product-card', _0x1da694 => {
-            return _0x1da694['map'](_0x290f9d => _0x290f9d['href']);
+        const _0x5722cc = await _0x1d54e9['newPage']();
+        await _0x5722cc['authenticate']({
+            'username': '' + _0x5bef83[0x2],
+            'password': '' + _0x5bef83[0x3]
+        }), console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Afew\x20Scraper\x20started'), await _0x5722cc['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x5722cc['setRequestInterception'](!![]), _0x5722cc['on']('request', _0x179077 => {
+            _0x179077['resourceType']() === 'image' || _0x179077['resourceType']() === 'font' || _0x179077['resourceType']() === 'media' ? _0x179077['abort']() : _0x179077['continue']();
+        }), await _0x5722cc['goto']('https://en.afew-store.com/collections/sneaker-raffles'), console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Looking\x20for\x20Raffles'), await _0x5722cc['waitForTimeout'](0xbb8), await _0x5722cc['waitForSelector']('.product-card');
+        const _0x51ed25 = await _0x5722cc['$$eval']('a.product-card', _0x20044a => {
+            return _0x20044a['map'](_0x2b5703 => _0x2b5703['href']);
         });
-        return _0x1752eb = _0x28e7a8;
-    } catch (_0x5d7051) {
-        console['log']('\x20' + _0x5d7051);
+        return _0x444382 = _0x51ed25;
+    } catch (_0x1557d7) {
+        console['log']('\x20' + _0x1557d7);
     } finally {
-        _0x205501['close'](), console['clear']();
+        _0x1d54e9['close'](), console['clear']();
     }
 }
 ;
-async function _0x4ba913(_0x3cbf01, _0x30d0d7, _0x324da6, _0x16b007, _0x31df1a) {
-    _0x30d0d7 != 'ver' && await _0x3e6cb2(_0x16b007, _0x3cbf01);
-    if (_0x5690b2['useRandomProxy'] = ![])
-        var _0x3f3c5d = _0x31df1a[_0x3cbf01]['split'](':');
+async function _0x56bfed(_0x343d50, _0x52d8dd, _0x572525, _0x545c84, _0x1e47dc) {
+    _0x52d8dd != 'ver' && await _0x238b3c(_0x545c84, _0x343d50);
+    if (_0x401d1c['useRandomProxy'] = ![])
+        var _0x37833e = _0x1e47dc[_0x343d50]['split'](':');
     else
-        var _0x1b3653 = Math['round'](Math['random']() * (_0x31df1a['length'] - 0x1)), _0x3f3c5d = _0x31df1a[_0x1b3653]['split'](':');
-    var _0x115bb0 = _0x324da6['data'];
-    _0x30d0d7 != 'ver' && (_0x115bb0['data']['attributes']['properties']['$first_name'] = '' + _0x16b007[_0x3cbf01]['FirstName'], _0x115bb0['data']['attributes']['properties']['$last_name'] = '' + _0x16b007[_0x3cbf01]['LastName'], _0x115bb0['data']['attributes']['properties']['$address1'] = _0x16b007[_0x3cbf01]['Address1'] + '\x20' + _0x16b007[_0x3cbf01]['HouseNumber'] + '\x20' + _0x16b007[_0x3cbf01]['Address2'], _0x115bb0['data']['attributes']['properties']['$zip'] = '' + _0x16b007[_0x3cbf01]['Zip'], _0x115bb0['data']['attributes']['properties']['$city'] = '' + _0x16b007[_0x3cbf01]['City'], _0x115bb0['data']['attributes']['properties']['$country'] = '' + _0x16b007[_0x3cbf01]['Country'], _0x115bb0['data']['attributes']['properties']['Size'] = '' + _0x16b007[_0x3cbf01]['Size'], _0x115bb0['data']['attributes']['properties']['Instagram\x20Handle'] = '' + _0x16b007[_0x3cbf01]['Follower'], _0x30d0d7 == 'exp' ? _0x115bb0['data']['attributes']['email'] = '' + _0x16b007[_0x3cbf01]['FirstName'] + _0x16b007[_0x3cbf01]['LastName'] + _0x5690b2['catchall'] : _0x115bb0['data']['attributes']['email'] = '' + _0x16b007[_0x3cbf01]['Email']);
-    var _0x25dbe3 = {
-        'jar': _0x5d48fa,
+        var _0x54257b = Math['round'](Math['random']() * (_0x1e47dc['length'] - 0x1)), _0x37833e = _0x1e47dc[_0x54257b]['split'](':');
+    var _0x4ce81f = _0x572525['data'];
+    _0x52d8dd != 'ver' && (_0x4ce81f['data']['attributes']['properties']['$first_name'] = '' + _0x545c84[_0x343d50]['FirstName'], _0x4ce81f['data']['attributes']['properties']['$last_name'] = '' + _0x545c84[_0x343d50]['LastName'], _0x4ce81f['data']['attributes']['properties']['$address1'] = _0x545c84[_0x343d50]['Address1'] + '\x20' + _0x545c84[_0x343d50]['HouseNumber'] + '\x20' + _0x545c84[_0x343d50]['Address2'], _0x4ce81f['data']['attributes']['properties']['$zip'] = '' + _0x545c84[_0x343d50]['Zip'], _0x4ce81f['data']['attributes']['properties']['$city'] = '' + _0x545c84[_0x343d50]['City'], _0x4ce81f['data']['attributes']['properties']['$country'] = '' + _0x545c84[_0x343d50]['Country'], _0x4ce81f['data']['attributes']['properties']['Size'] = '' + _0x545c84[_0x343d50]['Size'], _0x4ce81f['data']['attributes']['properties']['Instagram\x20Handle'] = '' + _0x545c84[_0x343d50]['Follower'], _0x52d8dd == 'exp' ? _0x4ce81f['data']['attributes']['email'] = '' + _0x545c84[_0x343d50]['FirstName'] + _0x545c84[_0x343d50]['LastName'] + _0x401d1c['catchall'] : _0x4ce81f['data']['attributes']['email'] = '' + _0x545c84[_0x343d50]['Email']);
+    var _0x4950f0 = {
+        'jar': _0x596f7f,
         'followAllRedirects': !![],
         'method': 'POST',
-        'url': _0x324da6['url'],
-        'headers': _0x324da6['headers'],
-        'body': JSON['stringify'](_0x115bb0),
-        'proxy': 'http://' + _0x3f3c5d[0x2] + ':' + _0x3f3c5d[0x3] + '@' + _0x3f3c5d[0x0] + ':' + _0x3f3c5d[0x1]
+        'url': _0x572525['url'],
+        'headers': _0x572525['headers'],
+        'body': JSON['stringify'](_0x4ce81f),
+        'proxy': 'http://' + _0x37833e[0x2] + ':' + _0x37833e[0x3] + '@' + _0x37833e[0x0] + ':' + _0x37833e[0x1]
     };
-    return _0x30d0d7 === 'ver' && (_0x25dbe3['method'] = 'GET'), new Promise(function (_0x37bd45, _0x2cf5da) {
-        callback = async (_0x23bbd3, _0x230c78, _0x54d3c2) => {
-            if (!_0x23bbd3 && _0x230c78['statusCode'] == 0xca || !_0x23bbd3 && _0x230c78['statusCode'] == 0xc8) {
-                _0x37bd45(console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x324da6['name'] + ']\x20Task\x20' + (_0x3cbf01 + 0x1) + ':\x20Raffle\x20Entered!')));
-                if (_0x30d0d7 != 'ver') {
-                    var _0x27ab50 = await _0x3553d9(_0x16b007[_0x3cbf01], _0x324da6, 'dev', ![]), _0x94ad0 = await _0x3553d9(_0x16b007[_0x3cbf01], _0x324da6, 'pub', ![]);
-                    const _0x378115 = {
-                        'succesDEVMSG': { 'embeds': [_0x27ab50] },
-                        'succesPUBMSG': { 'embeds': [_0x94ad0] }
+    return _0x52d8dd === 'ver' && (_0x4950f0['method'] = 'GET'), new Promise(function (_0x544abe, _0x324d51) {
+        callback = async (_0x25da31, _0x3a3df2, _0x227d19) => {
+            if (!_0x25da31 && _0x3a3df2['statusCode'] == 0xca || !_0x25da31 && _0x3a3df2['statusCode'] == 0xc8) {
+                _0x544abe(console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x572525['name'] + ']\x20Task\x20' + (_0x343d50 + 0x1) + ':\x20Raffle\x20Entered!')));
+                if (_0x52d8dd != 'ver') {
+                    var _0x25aad7 = await _0x344cc9(_0x545c84[_0x343d50], _0x572525, 'dev', ![]), _0x31a4ec = await _0x344cc9(_0x545c84[_0x343d50], _0x572525, 'pub', ![]);
+                    const _0x795156 = {
+                        'succesDEVMSG': { 'embeds': [_0x25aad7] },
+                        'succesPUBMSG': { 'embeds': [_0x31a4ec] }
                     };
-                    if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+                    if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
                         try {
-                            await _0x278fc0(_0x5690b2['webhook'], _0x378115['succesDEVMSG']);
+                            await _0xafb19d(_0x401d1c['webhook'], _0x795156['succesDEVMSG']);
                         } catch {
                         }
-                    await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x378115['succesDEVMSG']), await _0x73378f(0xc8);
+                    await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x795156['succesDEVMSG']), await _0x491ae3(0xc8);
                     try {
-                        await _0x278fc0(_0x319480, _0x378115['succesPUBMSG']);
+                        await _0xafb19d(_0x45ab34, _0x795156['succesPUBMSG']);
                     } catch {
                     }
                 } else {
-                    if (_0x30d0d7 == 'ver') {
-                        var _0x27ab50 = await _0x3553d9(null, _0x324da6, 'ver', ![]);
-                        const _0x551f06 = {
-                            'succesDEVMSG': { 'embeds': [_0x27ab50] },
-                            'succesPUBMSG': { 'embeds': [_0x94ad0] }
+                    if (_0x52d8dd == 'ver') {
+                        var _0x25aad7 = await _0x344cc9(null, _0x572525, 'ver', ![]);
+                        const _0x2b50c9 = {
+                            'succesDEVMSG': { 'embeds': [_0x25aad7] },
+                            'succesPUBMSG': { 'embeds': [_0x31a4ec] }
                         };
-                        await _0x278fc0(_0x1ea743, _0x551f06['succesDEVMSG']);
+                        await _0xafb19d(_0x35897b, _0x2b50c9['succesDEVMSG']);
                     }
                 }
             } else {
-                if (_0x30d0d7 != 'ver') {
-                    var _0x760a63 = '' + _0x23bbd3, _0x13684a = await _0x3553d9(_0x16b007[_0x3cbf01], _0x324da6, 'dev', !![], _0x760a63), _0x2629a9 = {};
-                    _0x2629a9['errorDEV'] = { 'embeds': [_0x13684a] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x2629a9['errorDEV']), await _0x278fc0(_0x51b669, _0x2629a9['errorDEV']);
+                if (_0x52d8dd != 'ver') {
+                    var _0x42fbaf = '' + _0x25da31, _0xc6d6bb = await _0x344cc9(_0x545c84[_0x343d50], _0x572525, 'dev', !![], _0x42fbaf), _0x491816 = {};
+                    _0x491816['errorDEV'] = { 'embeds': [_0xc6d6bb] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x491816['errorDEV']), await _0xafb19d(_0x51c252, _0x491816['errorDEV']);
                 }
-                _0x2cf5da(console['log'](_0x18cf54() + '\x20[' + _0x324da6['name'] + ']\x20Task\x20' + (_0x3cbf01 + 0x1) + ':\x20' + _0x23bbd3));
+                _0x324d51(console['log'](_0x1e4ea5() + '\x20[' + _0x572525['name'] + ']\x20Task\x20' + (_0x343d50 + 0x1) + ':\x20' + _0x25da31));
             }
         };
         try {
-            _0x30d0d7 === 'ver' ? console['log'](_0x18cf54() + '\x20[' + _0x324da6['name'] + ']\x20Task\x20' + (_0x3cbf01 + 0x1) + ':\x20Verifying.') : console['log'](_0x18cf54() + '\x20[' + _0x324da6['name'] + ']\x20Task\x20' + (_0x3cbf01 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x115bb0['data']['attributes']['email']), _0x262614(_0x25dbe3, callback);
-        } catch (_0x3d3e8f) {
-            console['log'](_0x18cf54() + '\x20Task\x20' + (_0x3cbf01 + 0x1) + ':\x20' + _0x3d3e8f);
+            _0x52d8dd === 'ver' ? console['log'](_0x1e4ea5() + '\x20[' + _0x572525['name'] + ']\x20Task\x20' + (_0x343d50 + 0x1) + ':\x20Verifying.') : console['log'](_0x1e4ea5() + '\x20[' + _0x572525['name'] + ']\x20Task\x20' + (_0x343d50 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x4ce81f['data']['attributes']['email']), _0x19b48a(_0x4950f0, callback);
+        } catch (_0x4f7638) {
+            console['log'](_0x1e4ea5() + '\x20Task\x20' + (_0x343d50 + 0x1) + ':\x20' + _0x4f7638);
         }
     });
 }
 ;
-async function _0x5309d5(_0x3905b9, _0xeac9f8, _0x501a96) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x585537(_0x4843e1, _0x31b332, _0x4d9bed) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x399354 = 0x0; _0x399354 < _0x3905b9['length']; _0x399354++) {
-        var _0x50df95, _0x558a61 = '', _0x4c329b = 0x0, _0x4c3d47 = [{
+    for (var _0x38ab13 = 0x0; _0x38ab13 < _0x4843e1['length']; _0x38ab13++) {
+        var _0x58dc0c, _0x53641f = '', _0xccf84e = 0x0, _0x37473a = [{
             'type': 'rich',
             'title': 'Succesful\x20Footshop\x20entry',
             'description': '',
@@ -824,270 +824,270 @@ async function _0x5309d5(_0x3905b9, _0xeac9f8, _0x501a96) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Product',
-                    'value': '' + _0x3905b9[_0x399354]['Url']
+                    'value': '' + _0x4843e1[_0x38ab13]['Url']
                 },
                 {
                     'name': 'Size',
-                    'value': '' + _0x3905b9[_0x399354]['Size']
+                    'value': '' + _0x4843e1[_0x38ab13]['Size']
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['footshopDelay']
+                    'value': '' + _0x401d1c['footshopDelay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
-        }], _0x54e0d3 = await _0x3553d9(_0x3905b9[_0x399354], _0x501a96, 'dev', ![]), _0x3f0689 = await _0x3553d9(_0x3905b9[_0x399354], _0x501a96, 'pub', ![]);
-        const _0x2a0198 = {
-            'succesDEVMSG': { 'embeds': [_0x54e0d3] },
-            'succesPUBMSG': { 'embeds': [_0x3f0689] }
-        }, _0x15d987 = { 'embeds': _0x4c3d47 };
-        await _0x3e6cb2(_0x3905b9, _0x399354);
-        if (_0x3905b9[_0x399354]['Email'] == '' || _0x3905b9[_0x399354]['FirstName'] == '' || _0x3905b9[_0x399354]['LastName'] == '' || _0x3905b9[_0x399354]['Country'] == '' || _0x3905b9[_0x399354]['Size'] == '' || _0x3905b9[_0x399354]['Address1'] == '' || _0x3905b9[_0x399354]['Zip'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        }], _0x42c6bd = await _0x344cc9(_0x4843e1[_0x38ab13], _0x4d9bed, 'dev', ![]), _0x1f05e5 = await _0x344cc9(_0x4843e1[_0x38ab13], _0x4d9bed, 'pub', ![]);
+        const _0x1fe81a = {
+            'succesDEVMSG': { 'embeds': [_0x42c6bd] },
+            'succesPUBMSG': { 'embeds': [_0x1f05e5] }
+        }, _0x2f2b80 = { 'embeds': _0x37473a };
+        await _0x238b3c(_0x4843e1, _0x38ab13);
+        if (_0x4843e1[_0x38ab13]['Email'] == '' || _0x4843e1[_0x38ab13]['FirstName'] == '' || _0x4843e1[_0x38ab13]['LastName'] == '' || _0x4843e1[_0x38ab13]['Country'] == '' || _0x4843e1[_0x38ab13]['Size'] == '' || _0x4843e1[_0x38ab13]['Address1'] == '' || _0x4843e1[_0x38ab13]['Zip'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x3905b9[_0x399354]['Email'] == '' || _0x3905b9[_0x399354]['FirstName'] == '' || _0x3905b9[_0x399354]['LastName'] == '' || _0x3905b9[_0x399354]['Country'] == '' || _0x3905b9[_0x399354]['Size'] == '' || _0x3905b9[_0x399354]['Address1'] == '' || _0x3905b9[_0x399354]['Zip'] == '' || _0x3905b9[_0x399354]['Phone'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        if (_0x4843e1[_0x38ab13]['Email'] == '' || _0x4843e1[_0x38ab13]['FirstName'] == '' || _0x4843e1[_0x38ab13]['LastName'] == '' || _0x4843e1[_0x38ab13]['Country'] == '' || _0x4843e1[_0x38ab13]['Size'] == '' || _0x4843e1[_0x38ab13]['Address1'] == '' || _0x4843e1[_0x38ab13]['Zip'] == '' || _0x4843e1[_0x38ab13]['Phone'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        const _0x410fce = '' + _0x3905b9[_0x399354]['Url'];
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x25ba9e = _0xeac9f8[_0x399354]['split'](':');
+        const _0x2c6673 = '' + _0x4843e1[_0x38ab13]['Url'];
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x56dba5 = _0x31b332[_0x38ab13]['split'](':');
         else
-            var _0x399f80 = Math['round'](Math['random']() * (_0xeac9f8['length'] - 0x1)), _0x25ba9e = _0xeac9f8[_0x399f80]['split'](':');
-        const _0x58296c = await _0x4baac5['launch']({
+            var _0xb8250f = Math['round'](Math['random']() * (_0x31b332['length'] - 0x1)), _0x56dba5 = _0x31b332[_0xb8250f]['split'](':');
+        const _0x110cee = await _0x4efd86['launch']({
             'headless': !![],
-            'args': ['--proxy-server=' + _0x25ba9e[0x0] + ':' + _0x25ba9e[0x1]]
+            'args': ['--proxy-server=' + _0x56dba5[0x0] + ':' + _0x56dba5[0x1]]
         });
         try {
-            const _0x37928c = await _0x58296c['newPage']();
-            await _0x37928c['authenticate']({
-                'username': '' + _0x25ba9e[0x2],
-                'password': '' + _0x25ba9e[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x37928c['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x37928c['setRequestInterception'](!![]), _0x37928c['on']('request', _0x10fe21 => {
-                _0x10fe21['resourceType']() === 'image' || _0x10fe21['resourceType']() === 'font' || _0x10fe21['resourceType']() === 'media' ? _0x10fe21['abort']() : _0x10fe21['continue']();
-            }), await _0x37928c['goto'](_0x410fce), await _0x73378f(0xbb8), await _0x37928c['waitForSelector']('.control__JhutY'), await _0x37928c['click']('.control__JhutY'), await _0x73378f(0x1f4);
-            if (_0x3905b9[_0x399354]['Size'] != 'RANDOM')
+            const _0x25e697 = await _0x110cee['newPage']();
+            await _0x25e697['authenticate']({
+                'username': '' + _0x56dba5[0x2],
+                'password': '' + _0x56dba5[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x25e697['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x25e697['setRequestInterception'](!![]), _0x25e697['on']('request', _0x4daf48 => {
+                _0x4daf48['resourceType']() === 'image' || _0x4daf48['resourceType']() === 'font' || _0x4daf48['resourceType']() === 'media' ? _0x4daf48['abort']() : _0x4daf48['continue']();
+            }), await _0x25e697['goto'](_0x2c6673), await _0x491ae3(0xbb8), await _0x25e697['waitForSelector']('.control__JhutY'), await _0x25e697['click']('.control__JhutY'), await _0x491ae3(0x1f4);
+            if (_0x4843e1[_0x38ab13]['Size'] != 'RANDOM')
                 try {
-                    const _0x671c9a = await _0x37928c['$x']('//div[contains(text(),\x20\x27' + _0x3905b9[_0x399354]['Size'] + '\x27)]');
-                    await _0x671c9a[0x0]['click']();
+                    const _0x2dd5e9 = await _0x25e697['$x']('//div[contains(text(),\x20\x27' + _0x4843e1[_0x38ab13]['Size'] + '\x27)]');
+                    await _0x2dd5e9[0x0]['click']();
                 } catch {
-                    console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Size\x20Not\x20Found'));
+                    console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Size\x20Not\x20Found'));
                     continue;
                 }
             else {
-                const _0x4cbffe = await _0x37928c['$$']('.options__3UQpT\x20>\x20div.row');
-                var _0x4a76ad = Math['round'](Math['random']() * (_0x4cbffe['length'] - 0x1));
-                await _0x4cbffe[_0x4a76ad]['click']();
+                const _0x9065b6 = await _0x25e697['$$']('.options__3UQpT\x20>\x20div.row');
+                var _0x9fe120 = Math['round'](Math['random']() * (_0x9065b6['length'] - 0x1));
+                await _0x9065b6[_0x9fe120]['click']();
             }
-            await _0x73378f(0x4b0);
-            const _0x112ef8 = await _0x37928c['$x']('//span[contains(text(),\x20\x27Enter\x20raffle\x20now\x27)]');
-            await _0x112ef8[0x0]['click'](), await _0x37928c['waitForSelector']('input[name=\x22email\x22]'), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Filling\x20Entry\x20Credentials'), await _0x37928c['type']('input[name=\x22email\x22]', '' + _0x3905b9[_0x399354]['Email']), await _0x73378f(0x640), await _0x37928c['type']('input[name=\x22phone\x22]', '' + _0x3905b9[_0x399354]['Phone']), await _0x73378f(0x4b0), await _0x37928c['click']('button.btn.continue-button__1RtsS'), await _0x73378f(0x4b0);
+            await _0x491ae3(0x4b0);
+            const _0x4124c4 = await _0x25e697['$x']('//span[contains(text(),\x20\x27Enter\x20raffle\x20now\x27)]');
+            await _0x4124c4[0x0]['click'](), await _0x25e697['waitForSelector']('input[name=\x22email\x22]'), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Filling\x20Entry\x20Credentials'), await _0x25e697['type']('input[name=\x22email\x22]', '' + _0x4843e1[_0x38ab13]['Email']), await _0x491ae3(0x640), await _0x25e697['type']('input[name=\x22phone\x22]', '' + _0x4843e1[_0x38ab13]['Phone']), await _0x491ae3(0x4b0), await _0x25e697['click']('button.btn.continue-button__1RtsS'), await _0x491ae3(0x4b0);
             try {
-                await _0x37928c['type']('input[name=\x22firstName\x22]', '' + _0x3905b9[_0x399354]['FirstName']), await _0x73378f(0x258);
+                await _0x25e697['type']('input[name=\x22firstName\x22]', '' + _0x4843e1[_0x38ab13]['FirstName']), await _0x491ae3(0x258);
             } catch {
-                const _0x53e537 = await _0x37928c['$$eval']('.invalid-feedback\x20>\x20div', _0x4e66b7 => {
-                    return _0x4e66b7['map'](_0x4153cb => _0x4153cb['innerText']);
+                const _0x2f34a7 = await _0x25e697['$$eval']('.invalid-feedback\x20>\x20div', _0x556006 => {
+                    return _0x556006['map'](_0x245c02 => _0x245c02['innerText']);
                 });
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20' + _0x53e537));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20' + _0x2f34a7));
                 continue;
             }
-            await _0x37928c['type']('input[name=\x22lastName\x22]', '' + _0x3905b9[_0x399354]['LastName']), await _0x73378f(0xc8), await _0x37928c['type']('input[name=\x22instagramUsername\x22]', '' + _0x3905b9[_0x399354]['Follower']), await _0x73378f(0x4b0), await _0x37928c['click']('button.btn.continue-button__1RtsS'), await _0x73378f(0x3e8), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Filling\x20Shipping'), await _0x37928c['select']('select[name=\x22country\x22]', '' + _0x3905b9[_0x399354]['Country']), await _0x73378f(0x2bc), await _0x37928c['type']('input[name=\x22streetName\x22]', '' + _0x3905b9[_0x399354]['Address1']), await _0x73378f(0x258), await _0x37928c['type']('input[name=\x22houseNumber\x22]', _0x3905b9[_0x399354]['HouseNumber'] + '\x20' + _0x3905b9[_0x399354]['Address2']), await _0x73378f(0xc8), await _0x37928c['type']('input[name=\x22postalCode\x22]', '' + _0x3905b9[_0x399354]['Zip']), await _0x73378f(0x1f4), await _0x37928c['type']('input[name=\x22city\x22]', '' + _0x3905b9[_0x399354]['City']), await _0x73378f(0x4b0), await _0x37928c['click']('input[name=\x22consent::privacy-policy-101\x22]'), await _0x73378f(0x4b0), await _0x37928c['click']('button.btn.continue-button__1RtsS'), await _0x73378f(0x4b0), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Solving\x20hCaptcha'), await _0x37928c['solveRecaptchas'](), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20hCaptcha\x20solved'), await _0x73378f(0xbb8), await _0x37928c['click']('button.btn.continue-button__1RtsS'), await _0x73378f(0x1388), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Solving\x20Adyen'), await _0x37928c['waitForSelector']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x37928c['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x73378f(0x4b0), await _0x37928c['type']('span[data-cse=\x22encryptedCardNumber\x22]', '' + _0x3905b9[_0x399354]['CardNumber']), await _0x73378f(0x320), await _0x37928c['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0x37928c['type']('span[data-cse=\x22encryptedExpiryDate\x22]', '' + _0x3905b9[_0x399354]['ExpiryDate']), await _0x73378f(0x4b0), await _0x37928c['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0x37928c['type']('span[data-cse=\x22encryptedSecurityCode\x22]', '' + _0x3905b9[_0x399354]['CVV']), await _0x73378f(0x226), await _0x37928c['type']('input[name=\x22holderName\x22]', '' + _0x3905b9[_0x399354]['NameOnCard']), await _0x73378f(0x226), await _0x37928c['click']('button.adyen-checkout__button'), console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Awaiting\x203DS');
+            await _0x25e697['type']('input[name=\x22lastName\x22]', '' + _0x4843e1[_0x38ab13]['LastName']), await _0x491ae3(0xc8), await _0x25e697['type']('input[name=\x22instagramUsername\x22]', '' + _0x4843e1[_0x38ab13]['Follower']), await _0x491ae3(0x4b0), await _0x25e697['click']('button.btn.continue-button__1RtsS'), await _0x491ae3(0x3e8), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Filling\x20Shipping'), await _0x25e697['select']('select[name=\x22country\x22]', '' + _0x4843e1[_0x38ab13]['Country']), await _0x491ae3(0x2bc), await _0x25e697['type']('input[name=\x22streetName\x22]', '' + _0x4843e1[_0x38ab13]['Address1']), await _0x491ae3(0x258), await _0x25e697['type']('input[name=\x22houseNumber\x22]', _0x4843e1[_0x38ab13]['HouseNumber'] + '\x20' + _0x4843e1[_0x38ab13]['Address2']), await _0x491ae3(0xc8), await _0x25e697['type']('input[name=\x22postalCode\x22]', '' + _0x4843e1[_0x38ab13]['Zip']), await _0x491ae3(0x1f4), await _0x25e697['type']('input[name=\x22city\x22]', '' + _0x4843e1[_0x38ab13]['City']), await _0x491ae3(0x4b0), await _0x25e697['click']('input[name=\x22consent::privacy-policy-101\x22]'), await _0x491ae3(0x4b0), await _0x25e697['click']('button.btn.continue-button__1RtsS'), await _0x491ae3(0x4b0), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Solving\x20hCaptcha'), await _0x25e697['solveRecaptchas'](), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20hCaptcha\x20solved'), await _0x491ae3(0xbb8), await _0x25e697['click']('button.btn.continue-button__1RtsS'), await _0x491ae3(0x1388), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Solving\x20Adyen'), await _0x25e697['waitForSelector']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x25e697['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x491ae3(0x4b0), await _0x25e697['type']('span[data-cse=\x22encryptedCardNumber\x22]', '' + _0x4843e1[_0x38ab13]['CardNumber']), await _0x491ae3(0x320), await _0x25e697['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0x25e697['type']('span[data-cse=\x22encryptedExpiryDate\x22]', '' + _0x4843e1[_0x38ab13]['ExpiryDate']), await _0x491ae3(0x4b0), await _0x25e697['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0x25e697['type']('span[data-cse=\x22encryptedSecurityCode\x22]', '' + _0x4843e1[_0x38ab13]['CVV']), await _0x491ae3(0x226), await _0x25e697['type']('input[name=\x22holderName\x22]', '' + _0x4843e1[_0x38ab13]['NameOnCard']), await _0x491ae3(0x226), await _0x25e697['click']('button.adyen-checkout__button'), console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Awaiting\x203DS');
             try {
-                await _0x37928c['waitForSelector']('.thank-you__1AwOo', { 'timeout': 0x493e0 }), await _0x73378f(0xbb8);
-            } catch (_0x40df4f) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x203DS\x20Failed')), _0x50df95 = '3DS\x20Error\x20' + _0x40df4f;
-                var _0x17c92b = await _0x3553d9(_0x3905b9[_0x399354], _0x501a96, 'dev', !![], _0x50df95);
-                _0x2a0198['errorDEV'] = { 'embeds': [_0x17c92b] };
-                _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x2a0198['errorDEV']);
-                await _0x278fc0(_0x51b669, _0x2a0198['errorDEV']);
+                await _0x25e697['waitForSelector']('.thank-you__1AwOo', { 'timeout': 0x493e0 }), await _0x491ae3(0xbb8);
+            } catch (_0x2f6059) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x203DS\x20Failed')), _0x58dc0c = '3DS\x20Error\x20' + _0x2f6059;
+                var _0x47b5e7 = await _0x344cc9(_0x4843e1[_0x38ab13], _0x4d9bed, 'dev', !![], _0x58dc0c);
+                _0x1fe81a['errorDEV'] = { 'embeds': [_0x47b5e7] };
+                _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x1fe81a['errorDEV']);
+                await _0xafb19d(_0x51c252, _0x1fe81a['errorDEV']);
                 continue;
             }
-            console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-            if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+            console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+            if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
                 try {
-                    await _0x278fc0(_0x5690b2['webhook'], _0x2a0198['succesDEVMSG']);
+                    await _0xafb19d(_0x401d1c['webhook'], _0x1fe81a['succesDEVMSG']);
                 } catch {
                 }
-            await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x2a0198['succesDEVMSG']), await _0x73378f(0xc8);
+            await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x1fe81a['succesDEVMSG']), await _0x491ae3(0xc8);
             try {
-                await _0x278fc0(_0x319480, _0x2a0198['succesPUBMSG']);
+                await _0xafb19d(_0x45ab34, _0x1fe81a['succesPUBMSG']);
             } catch {
             }
-        } catch (_0x13a483) {
-            console['log'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20' + _0x13a483), _0x50df95 = '' + _0x13a483;
-            var _0x17c92b = await _0x3553d9(_0x3905b9[_0x399354], _0x501a96, 'dev', !![], _0x50df95);
-            _0x2a0198['errorDEV'] = { 'embeds': [_0x17c92b] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x2a0198['errorDEV']), await _0x278fc0(_0x51b669, _0x2a0198['errorDEV']), _0x558a61 = 'yes';
+        } catch (_0x435219) {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20' + _0x435219), _0x58dc0c = '' + _0x435219;
+            var _0x47b5e7 = await _0x344cc9(_0x4843e1[_0x38ab13], _0x4d9bed, 'dev', !![], _0x58dc0c);
+            _0x1fe81a['errorDEV'] = { 'embeds': [_0x47b5e7] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x1fe81a['errorDEV']), await _0xafb19d(_0x51c252, _0x1fe81a['errorDEV']), _0x53641f = 'yes';
         } finally {
-            _0x58296c['close']();
-            if (_0x558a61 == 'yes' && _0x4c329b != 0x5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x501a96['name'] + ']\x20Task\x20' + (_0x399354 + 0x1) + '\x20:\x20Retrying')), _0x399354 = _0x399354 - 0x1, _0x4c329b = _0x4c329b + 0x1;
+            _0x110cee['close']();
+            if (_0x53641f == 'yes' && _0xccf84e != 0x5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x4d9bed['name'] + ']\x20Task\x20' + (_0x38ab13 + 0x1) + '\x20:\x20Retrying')), _0x38ab13 = _0x38ab13 - 0x1, _0xccf84e = _0xccf84e + 0x1;
                 continue;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['footshopDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['footshopDelay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['footshopDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['footshopDelay']);
         }
     }
 }
-afewFunction = async (_0x4576ce, _0x4f9f5d, _0x5a2f7f, _0x2db2ad, _0x4c6ee7) => {
-    for (var _0x313d04 = 0x0; _0x313d04 < _0x2db2ad['length']; _0x313d04++) {
-        _0x5690b2['AfewDelay'] = _0x5690b2['delay'];
-        var _0x378cbe, _0xb49b77 = '', _0x24e263 = 0x0;
-        _0x2db2ad[_0x313d04]['Url'] = _0x4576ce, _0x992352(_0x5a2f7f['name'] + '\x20Task\x20' + (_0x313d04 + 0x1) + '\x20/\x20' + _0x2db2ad['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x2db2ad, _0x313d04);
-        var _0x3c2fa2 = await _0x3553d9(_0x2db2ad[_0x313d04], _0x5a2f7f, 'dev', ![]), _0x4e6e37 = await _0x3553d9(_0x2db2ad[_0x313d04], _0x5a2f7f, 'pub', ![]);
-        const _0x19c51a = {
-            'succesDEVMSG': { 'embeds': [_0x3c2fa2] },
-            'succesPUBMSG': { 'embeds': [_0x4e6e37] }
+afewFunction = async (_0xf60c62, _0x22746f, _0x1b393f, _0x56fc89, _0xb3940) => {
+    for (var _0x51c551 = 0x0; _0x51c551 < _0x56fc89['length']; _0x51c551++) {
+        _0x401d1c['AfewDelay'] = _0x401d1c['delay'];
+        var _0x46f573, _0x495723 = '', _0x4f8413 = 0x0;
+        _0x56fc89[_0x51c551]['Url'] = _0xf60c62, _0x57f604(_0x1b393f['name'] + '\x20Task\x20' + (_0x51c551 + 0x1) + '\x20/\x20' + _0x56fc89['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x56fc89, _0x51c551);
+        var _0x2332de = await _0x344cc9(_0x56fc89[_0x51c551], _0x1b393f, 'dev', ![]), _0x37cc22 = await _0x344cc9(_0x56fc89[_0x51c551], _0x1b393f, 'pub', ![]);
+        const _0x3c4d2f = {
+            'succesDEVMSG': { 'embeds': [_0x2332de] },
+            'succesPUBMSG': { 'embeds': [_0x37cc22] }
         };
-        if (_0x2db2ad[_0x313d04]['Email'] == '' || _0x2db2ad[_0x313d04]['FirstName'] == '' || _0x2db2ad[_0x313d04]['LastName'] == '' || _0x2db2ad[_0x313d04]['Country'] == '' || _0x2db2ad[_0x313d04]['Size'] == '' || _0x2db2ad[_0x313d04]['Address1'] == '' || _0x2db2ad[_0x313d04]['Zip'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        if (_0x56fc89[_0x51c551]['Email'] == '' || _0x56fc89[_0x51c551]['FirstName'] == '' || _0x56fc89[_0x51c551]['LastName'] == '' || _0x56fc89[_0x51c551]['Country'] == '' || _0x56fc89[_0x51c551]['Size'] == '' || _0x56fc89[_0x51c551]['Address1'] == '' || _0x56fc89[_0x51c551]['Zip'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x125936 = _0x4c6ee7[_0x313d04]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x1a9561 = _0xb3940[_0x51c551]['split'](':');
         else
-            var _0xa12bf2 = Math['round'](Math['random']() * (_0x4c6ee7['length'] - 0x1)), _0x125936 = _0x4c6ee7[_0xa12bf2]['split'](':');
-        const _0x43911d = await _0x4baac5['launch']({
+            var _0xf5be77 = Math['round'](Math['random']() * (_0xb3940['length'] - 0x1)), _0x1a9561 = _0xb3940[_0xf5be77]['split'](':');
+        const _0x257758 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x125936[0x0] + ':' + _0x125936[0x1],
+                '--proxy-server=' + _0x1a9561[0x0] + ':' + _0x1a9561[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x58eaef = await _0x43911d['newPage']();
-            await _0x58eaef['setDefaultNavigationTimeout'](0x1d4c0), await _0x58eaef['authenticate']({
-                'username': '' + _0x125936[0x2],
-                'password': '' + _0x125936[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x58eaef['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x58eaef['setRequestInterception'](!![]), _0x58eaef['on']('request', _0x1098a0 => {
-                _0x1098a0['resourceType']() === 'image' || _0x1098a0['resourceType']() === 'font' || _0x1098a0['resourceType']() === 'media' ? _0x1098a0['abort']() : _0x1098a0['continue']();
-            }), await _0x58eaef['goto'](_0x4576ce, { 'waitUntil': 'networkidle2' }), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Gathering\x20cookies'), await _0x58eaef['waitForTimeout'](0xfa0), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Cookies\x20received'), await _0x58eaef['waitForTimeout'](0x320);
-            if (_0x2db2ad[_0x313d04]['Size'] == 'RANDOM') {
-                console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Choosing\x20random\x20size');
-                const _0x461703 = await _0x58eaef['$$eval']('div.size-picker.mt-2\x20>\x20ul\x20>\x20li\x20>\x20a', _0x18f8a7 => {
-                    return _0x18f8a7['map'](_0x483bd0 => _0x483bd0['href']);
+            const _0x3446d6 = await _0x257758['newPage']();
+            await _0x3446d6['setDefaultNavigationTimeout'](0x1d4c0), await _0x3446d6['authenticate']({
+                'username': '' + _0x1a9561[0x2],
+                'password': '' + _0x1a9561[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x3446d6['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x3446d6['setRequestInterception'](!![]), _0x3446d6['on']('request', _0x57419d => {
+                _0x57419d['resourceType']() === 'image' || _0x57419d['resourceType']() === 'font' || _0x57419d['resourceType']() === 'media' ? _0x57419d['abort']() : _0x57419d['continue']();
+            }), await _0x3446d6['goto'](_0xf60c62, { 'waitUntil': 'networkidle2' }), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Gathering\x20cookies'), await _0x3446d6['waitForTimeout'](0xfa0), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Cookies\x20received'), await _0x3446d6['waitForTimeout'](0x320);
+            if (_0x56fc89[_0x51c551]['Size'] == 'RANDOM') {
+                console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Choosing\x20random\x20size');
+                const _0x51f427 = await _0x3446d6['$$eval']('div.size-picker.mt-2\x20>\x20ul\x20>\x20li\x20>\x20a', _0x47d908 => {
+                    return _0x47d908['map'](_0x2ddb6a => _0x2ddb6a['href']);
                 });
-                var _0x55ae2d = Math['round'](Math['random']() * (_0x461703['length'] - 0x1));
-                await _0x58eaef['goto']('' + _0x461703[_0x55ae2d]);
+                var _0x471e4c = Math['round'](Math['random']() * (_0x51f427['length'] - 0x1));
+                await _0x3446d6['goto']('' + _0x51f427[_0x471e4c]);
             } else {
-                console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x2db2ad[_0x313d04]['Size']);
+                console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x56fc89[_0x51c551]['Size']);
                 try {
-                    const _0x1e5d36 = await _0x58eaef['$$eval']('li[data-original-title=\x22Größe\x20in\x20EU:\x20' + _0x2db2ad[_0x313d04]['Size'] + '\x22]\x20>\x20a', _0x5eb28e => {
-                        return _0x5eb28e['map'](_0x1ed65b => _0x1ed65b['href']);
+                    const _0x32bcc0 = await _0x3446d6['$$eval']('li[data-original-title=\x22Größe\x20in\x20EU:\x20' + _0x56fc89[_0x51c551]['Size'] + '\x22]\x20>\x20a', _0x181a12 => {
+                        return _0x181a12['map'](_0x4bcd5c => _0x4bcd5c['href']);
                     });
-                    await _0x58eaef['goto']('' + _0x1e5d36[0x0], { 'waitUntil': 'networkidle2' });
-                } catch (_0x2d2f6a) {
-                    console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20' + _0x2d2f6a + '\x20Size\x20not\x20found')), _0x378cbe = 'Size\x20Not\x20Found';
-                    var _0x4406fd = await _0x3553d9(_0x2db2ad[_0x313d04], _0x5a2f7f, 'dev', !![], _0x378cbe);
-                    _0x19c51a['errorDEV'] = { 'embeds': [_0x4406fd] };
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x19c51a['errorDEV']);
-                    await _0x278fc0(_0x51b669, _0x19c51a['errorDEV']);
+                    await _0x3446d6['goto']('' + _0x32bcc0[0x0], { 'waitUntil': 'networkidle2' });
+                } catch (_0x29b210) {
+                    console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20' + _0x29b210 + '\x20Size\x20not\x20found')), _0x46f573 = 'Size\x20Not\x20Found';
+                    var _0x17acf8 = await _0x344cc9(_0x56fc89[_0x51c551], _0x1b393f, 'dev', !![], _0x46f573);
+                    _0x3c4d2f['errorDEV'] = { 'embeds': [_0x17acf8] };
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x3c4d2f['errorDEV']);
+                    await _0xafb19d(_0x51c252, _0x3c4d2f['errorDEV']);
                     continue;
                 }
             }
-            await _0x58eaef['waitForTimeout'](0x258), await _0x58eaef['type']('#raffle-instagram', '' + _0x2db2ad[_0x313d04]['Follower'], { 'delay': 0x64 }), await _0x58eaef['waitForTimeout'](0x384), await _0x58eaef['click']('#raffle-terms'), await _0x58eaef['waitForTimeout'](0x384), await _0x58eaef['evaluate'](() => {
-                const _0x39dc87 = document['querySelector']('button.btn[name=\x27add\x27]');
-                _0x39dc87['click']();
-            }), await _0x58eaef['waitForTimeout'](0xbb8), await _0x58eaef['waitForSelector']('#checkout_email'), await _0x73378f(0x3e8), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Filling\x20Information');
-            _0x4f9f5d == 'sec' ? await _0x58eaef['type']('#checkout_email', '' + _0x2db2ad[_0x313d04]['FirstName'] + _0x2db2ad[_0x313d04]['LastName'] + _0x5690b2['catchall'], 0x32) : await _0x58eaef['type']('#checkout_email', '' + _0x2db2ad[_0x313d04]['Email'], 0x32);
-            await _0x73378f(0x320), await _0x58eaef['select']('#checkout_shipping_address_country', '' + _0x2db2ad[_0x313d04]['Country']), await _0x58eaef['waitForTimeout'](0x258), await _0x58eaef['type']('#checkout_shipping_address_first_name', '' + _0x2db2ad[_0x313d04]['FirstName']), await _0x58eaef['waitForTimeout'](0x320), await _0x58eaef['type']('#checkout_shipping_address_last_name', '' + _0x2db2ad[_0x313d04]['LastName']), await _0x58eaef['waitForTimeout'](0x2bc), await _0x58eaef['type']('#checkout_shipping_address_address1', _0x2db2ad[_0x313d04]['Address1'] + '\x20' + _0x2db2ad[_0x313d04]['HouseNumber']), await _0x58eaef['waitForTimeout'](0x2bc), await _0x58eaef['type']('#checkout_shipping_address_address2', '' + _0x2db2ad[_0x313d04]['Address2']), await _0x58eaef['waitForTimeout'](0x2bc);
-            _0x2db2ad[_0x313d04]['Postcode'] == undefined ? await _0x58eaef['type']('#checkout_shipping_address_zip', '' + _0x2db2ad[_0x313d04]['Zip']) : await _0x58eaef['type']('#checkout_shipping_address_zip', '' + _0x2db2ad[_0x313d04]['Postcode']);
-            await _0x58eaef['waitForTimeout'](0x2bc), await _0x58eaef['type']('#checkout_shipping_address_city', '' + _0x2db2ad[_0x313d04]['City']), await _0x58eaef['waitForTimeout'](0x2bc), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Getting\x20Shipping'), await _0x58eaef, _0x58eaef['evaluate'](() => {
-                const _0x27c47c = document['querySelector']('#continue_button');
-                for (var _0x2711e8 = 0x0; _0x2711e8 < 0x5; _0x2711e8++) {
-                    if (_0x27c47c) {
-                        _0x27c47c['click'](), _0x27c47c['click']();
+            await _0x3446d6['waitForTimeout'](0x258), await _0x3446d6['type']('#raffle-instagram', '' + _0x56fc89[_0x51c551]['Follower'], { 'delay': 0x64 }), await _0x3446d6['waitForTimeout'](0x384), await _0x3446d6['click']('#raffle-terms'), await _0x3446d6['waitForTimeout'](0x384), await _0x3446d6['evaluate'](() => {
+                const _0x45c53c = document['querySelector']('button.btn[name=\x27add\x27]');
+                _0x45c53c['click']();
+            }), await _0x3446d6['waitForTimeout'](0xbb8), await _0x3446d6['waitForSelector']('#checkout_email'), await _0x491ae3(0x3e8), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Filling\x20Information');
+            _0x22746f == 'sec' ? await _0x3446d6['type']('#checkout_email', '' + _0x56fc89[_0x51c551]['FirstName'] + _0x56fc89[_0x51c551]['LastName'] + _0x401d1c['catchall'], 0x32) : await _0x3446d6['type']('#checkout_email', '' + _0x56fc89[_0x51c551]['Email'], 0x32);
+            await _0x491ae3(0x320), await _0x3446d6['select']('#checkout_shipping_address_country', '' + _0x56fc89[_0x51c551]['Country']), await _0x3446d6['waitForTimeout'](0x258), await _0x3446d6['type']('#checkout_shipping_address_first_name', '' + _0x56fc89[_0x51c551]['FirstName']), await _0x3446d6['waitForTimeout'](0x320), await _0x3446d6['type']('#checkout_shipping_address_last_name', '' + _0x56fc89[_0x51c551]['LastName']), await _0x3446d6['waitForTimeout'](0x2bc), await _0x3446d6['type']('#checkout_shipping_address_address1', _0x56fc89[_0x51c551]['Address1'] + '\x20' + _0x56fc89[_0x51c551]['HouseNumber']), await _0x3446d6['waitForTimeout'](0x2bc), await _0x3446d6['type']('#checkout_shipping_address_address2', '' + _0x56fc89[_0x51c551]['Address2']), await _0x3446d6['waitForTimeout'](0x2bc);
+            _0x56fc89[_0x51c551]['Postcode'] == undefined ? await _0x3446d6['type']('#checkout_shipping_address_zip', '' + _0x56fc89[_0x51c551]['Zip']) : await _0x3446d6['type']('#checkout_shipping_address_zip', '' + _0x56fc89[_0x51c551]['Postcode']);
+            await _0x3446d6['waitForTimeout'](0x2bc), await _0x3446d6['type']('#checkout_shipping_address_city', '' + _0x56fc89[_0x51c551]['City']), await _0x3446d6['waitForTimeout'](0x2bc), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Getting\x20Shipping'), await _0x3446d6, _0x3446d6['evaluate'](() => {
+                const _0x2c3d29 = document['querySelector']('#continue_button');
+                for (var _0x40dc44 = 0x0; _0x40dc44 < 0x5; _0x40dc44++) {
+                    if (_0x2c3d29) {
+                        _0x2c3d29['click'](), _0x2c3d29['click']();
                         break;
                     } else
-                        _0x73378f(0xfa0);
+                        _0x491ae3(0xfa0);
                 }
-            }), await _0x58eaef['waitForTimeout'](0x1194);
+            }), await _0x3446d6['waitForTimeout'](0x1194);
             try {
-                await _0x58eaef['waitForSelector']('div.radio-wrapper', { 'timeout': 0x186a0 });
+                await _0x3446d6['waitForSelector']('div.radio-wrapper', { 'timeout': 0x186a0 });
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Proxy\x20Error'));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Proxy\x20Error'));
                 continue;
             }
-            _0x58eaef['evaluate'](() => {
-                const _0x396037 = document['querySelector']('#continue_button');
-                for (var _0x3afb8e = 0x0; _0x3afb8e < 0x5; _0x3afb8e++) {
-                    if (_0x396037) {
-                        _0x396037['click']();
+            _0x3446d6['evaluate'](() => {
+                const _0x284dc6 = document['querySelector']('#continue_button');
+                for (var _0x3a3be7 = 0x0; _0x3a3be7 < 0x5; _0x3a3be7++) {
+                    if (_0x284dc6) {
+                        _0x284dc6['click']();
                         break;
                     } else
-                        _0x73378f(0xfa0);
+                        _0x491ae3(0xfa0);
                 }
-            }), await _0x58eaef['waitForTimeout'](0x7d0), console['log'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x58eaef['waitForSelector']('#continue_button', { 'timeout': 0x186a0 }), _0x58eaef['evaluate'](() => {
-                const _0x3a7150 = document['querySelector']('#continue_button');
-                for (var _0x50caae = 0x0; _0x50caae < 0x5; _0x50caae++) {
-                    if (_0x3a7150) {
-                        _0x3a7150['click']();
+            }), await _0x3446d6['waitForTimeout'](0x7d0), console['log'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x3446d6['waitForSelector']('#continue_button', { 'timeout': 0x186a0 }), _0x3446d6['evaluate'](() => {
+                const _0x4e7383 = document['querySelector']('#continue_button');
+                for (var _0x27b07d = 0x0; _0x27b07d < 0x5; _0x27b07d++) {
+                    if (_0x4e7383) {
+                        _0x4e7383['click']();
                         break;
                     } else
-                        _0x73378f(0xfa0);
+                        _0x491ae3(0xfa0);
                 }
-            }), await _0x58eaef['waitForTimeout'](0x1194), await _0x58eaef['waitForSelector']('#continue_button'), _0x58eaef['evaluate'](() => {
-                const _0x354c9c = document['querySelector']('#continue_button');
-                for (var _0x1debcf = 0x0; _0x1debcf < 0x5; _0x1debcf++) {
-                    if (_0x354c9c) {
-                        _0x354c9c['click']();
+            }), await _0x3446d6['waitForTimeout'](0x1194), await _0x3446d6['waitForSelector']('#continue_button'), _0x3446d6['evaluate'](() => {
+                const _0xe315b9 = document['querySelector']('#continue_button');
+                for (var _0x4a1527 = 0x0; _0x4a1527 < 0x5; _0x4a1527++) {
+                    if (_0xe315b9) {
+                        _0xe315b9['click']();
                         break;
                     } else
-                        _0x73378f(0xfa0);
+                        _0x491ae3(0xfa0);
                 }
             });
             try {
-                await _0x58eaef['waitForSelector']('div[data-step=\x22thank_you\x22]'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-                if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+                await _0x3446d6['waitForSelector']('div[data-step=\x22thank_you\x22]'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
                     try {
-                        await _0x278fc0(_0x5690b2['webhook'], _0x19c51a['succesDEVMSG']);
+                        await _0xafb19d(_0x401d1c['webhook'], _0x3c4d2f['succesDEVMSG']);
                     } catch {
                     }
-                await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x19c51a['succesDEVMSG']), await _0x73378f(0xc8);
+                await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x3c4d2f['succesDEVMSG']), await _0x491ae3(0xc8);
                 try {
-                    await _0x278fc0(_0x319480, _0x19c51a['succesPUBMSG']);
+                    await _0xafb19d(_0x45ab34, _0x3c4d2f['succesPUBMSG']);
                 } catch {
                 }
-            } catch (_0x59caa5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Entry\x20Failed:\x20' + _0x59caa5));
+            } catch (_0x16618e) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Entry\x20Failed:\x20' + _0x16618e));
             }
-        } catch (_0x452198) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20' + _0x452198)), _0x378cbe = '' + _0x452198;
-            var _0x4406fd = await _0x3553d9(_0x2db2ad[_0x313d04], _0x5a2f7f, 'dev', !![], _0x378cbe);
-            _0x19c51a['errorDEV'] = { 'embeds': [_0x4406fd] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x19c51a['errorDEV']), await _0x278fc0(_0x51b669, _0x19c51a['errorDEV']), _0xb49b77 = 'yes';
+        } catch (_0xd8c5f7) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20' + _0xd8c5f7)), _0x46f573 = '' + _0xd8c5f7;
+            var _0x17acf8 = await _0x344cc9(_0x56fc89[_0x51c551], _0x1b393f, 'dev', !![], _0x46f573);
+            _0x3c4d2f['errorDEV'] = { 'embeds': [_0x17acf8] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x3c4d2f['errorDEV']), await _0xafb19d(_0x51c252, _0x3c4d2f['errorDEV']), _0x495723 = 'yes';
         } finally {
-            _0x43911d && _0x43911d['close']();
-            if (_0xb49b77 == 'yes' && _0x24e263 != 0x5 && _0x378cbe != 'Size\x20Not\x20Found') {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a2f7f['name'] + ']\x20Task\x20' + (_0x313d04 + 0x1) + '\x20:\x20Retrying')), _0x313d04 = _0x313d04 - 0x1, _0x24e263 = _0x24e263 + 0x1;
+            _0x257758 && _0x257758['close']();
+            if (_0x495723 == 'yes' && _0x4f8413 != 0x5 && _0x46f573 != 'Size\x20Not\x20Found') {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1b393f['name'] + ']\x20Task\x20' + (_0x51c551 + 0x1) + '\x20:\x20Retrying')), _0x51c551 = _0x51c551 - 0x1, _0x4f8413 = _0x4f8413 + 0x1;
                 continue;
             }
-            if (_0x313d04 + 0x1 == _0x2db2ad['length']) {
-                console['log'](_0x5ecce5['green']('Finished\x20tasks,\x20returning\x20to\x20Main\x20Menu')), await _0x73378f(0x7d0);
+            if (_0x51c551 + 0x1 == _0x56fc89['length']) {
+                console['log'](_0x1818b9['green']('Finished\x20tasks,\x20returning\x20to\x20Main\x20Menu')), await _0x491ae3(0x7d0);
                 break;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['AfewDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['AfewDelay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['AfewDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['AfewDelay']);
         }
     }
 };
-async function _0x441c87(_0x61c05, _0x54566e, _0x181592, _0x2b705d) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x5b6e3c(_0x29dcc3, _0x1577fc, _0x4d054d, _0x2366c3) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x39d5c9 = 0x0; _0x39d5c9 < _0x181592['length']; _0x39d5c9++) {
-        var _0x2676d7 = '', _0x139b44 = 0x0;
-        _0x992352(_0x54566e['name'] + '\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20/\x20' + _0x181592['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x181592, _0x39d5c9);
-        var _0x39f8b1 = [{
+    for (var _0x5c8b41 = 0x0; _0x5c8b41 < _0x4d054d['length']; _0x5c8b41++) {
+        var _0x3224c8 = '', _0x1bc18d = 0x0;
+        _0x57f604(_0x1577fc['name'] + '\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20/\x20' + _0x4d054d['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x4d054d, _0x5c8b41);
+        var _0x12640f = [{
             'type': 'rich',
             'title': 'Succesful\x20Kickz\x20Account\x20Generated',
             'description': '',
@@ -1095,102 +1095,102 @@ async function _0x441c87(_0x61c05, _0x54566e, _0x181592, _0x2b705d) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
         }];
-        const _0x4f5048 = { 'embeds': _0x39f8b1 };
-        var _0x12abea = await _0x3553d9(_0x181592[_0x39d5c9], _0x54566e, 'acc', ![]);
-        const _0x27f62f = { 'succesDEVMSG': { 'embeds': [_0x12abea] } };
-        if (_0x181592[_0x39d5c9]['Email'] == '' || _0x181592[_0x39d5c9]['FirstName'] == '' || _0x181592[_0x39d5c9]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        const _0x57d781 = { 'embeds': _0x12640f };
+        var _0x346d02 = await _0x344cc9(_0x4d054d[_0x5c8b41], _0x1577fc, 'acc', ![]);
+        const _0x27bcfe = { 'succesDEVMSG': { 'embeds': [_0x346d02] } };
+        if (_0x4d054d[_0x5c8b41]['Email'] == '' || _0x4d054d[_0x5c8b41]['FirstName'] == '' || _0x4d054d[_0x5c8b41]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        _0x181592[_0x39d5c9]['Password'] == '' && (_0x181592[_0x39d5c9]['Password'] = 'JRaffles23!');
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x1b5f7e = _0x2b705d[_0x39d5c9]['split'](':');
+        _0x4d054d[_0x5c8b41]['Password'] == '' && (_0x4d054d[_0x5c8b41]['Password'] = 'JRaffles23!');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x4ce9f6 = _0x2366c3[_0x5c8b41]['split'](':');
         else
-            var _0x35f227 = Math['round'](Math['random']() * (_0x2b705d['length'] - 0x1)), _0x1b5f7e = _0x2b705d[_0x35f227]['split'](':');
-        const _0x5c66ff = await _0x4baac5['launch']({
+            var _0x3a2e14 = Math['round'](Math['random']() * (_0x2366c3['length'] - 0x1)), _0x4ce9f6 = _0x2366c3[_0x3a2e14]['split'](':');
+        const _0x1419b4 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x1b5f7e[0x0] + ':' + _0x1b5f7e[0x1],
+                '--proxy-server=' + _0x4ce9f6[0x0] + ':' + _0x4ce9f6[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0xa235d9 = await _0x5c66ff['newPage']();
-            await _0xa235d9['authenticate']({
-                'username': '' + _0x1b5f7e[0x2],
-                'password': '' + _0x1b5f7e[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Getting\x20Session'), await _0xa235d9['setRequestInterception'](!![]), _0xa235d9['on']('request', _0x4bd4a6 => {
-                _0x4bd4a6['resourceType']() === 'image' || _0x4bd4a6['resourceType']() === 'font' || _0x4bd4a6['resourceType']() === 'media' ? _0x4bd4a6['abort']() : _0x4bd4a6['continue']();
-            }), await _0xa235d9['goto'](_0x61c05), await _0x73378f(0xbb8), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Starting\x20Registration'), await _0xa235d9['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0xa235d9['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0xa235d9['waitForSelector']('#button-register'), await _0x73378f(0x7d0), await _0xa235d9['evaluate'](() => {
-                const _0x3d1e6b = document['querySelector']('#button-register');
-                _0x3d1e6b['click']();
-            }), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Setting\x20Credentials'), await _0x73378f(0x1388), await _0xa235d9['waitForSelector']('#customer_salutation'), await _0xa235d9['select']('#customer_salutation', 'mr'), await _0x73378f(0x7d0), await _0xa235d9['waitForSelector']('#customer_firstname'), await _0xa235d9['type']('#customer_firstname', '' + _0x181592[_0x39d5c9]['FirstName']), await _0x73378f(0x352), await _0xa235d9['waitForSelector']('#customer_lastname'), await _0xa235d9['type']('#customer_lastname', '' + _0x181592[_0x39d5c9]['LastName']), await _0x73378f(0x352), await _0xa235d9['type']('#email-input', '' + _0x181592[_0x39d5c9]['Email']), await _0x73378f(0x352), await _0xa235d9['type']('#email-confirm-input', '' + _0x181592[_0x39d5c9]['Email']), await _0x73378f(0x352), await _0xa235d9['type']('#register-password', '' + _0x181592[_0x39d5c9]['Password']), await _0x73378f(0x352), await _0xa235d9['type']('#password-confirm', '' + _0x181592[_0x39d5c9]['Password']), await _0x73378f(0x352), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Sending\x20Credentials'), await _0xa235d9['click']('#consent'), await _0x73378f(0x1f4);
-            const _0x1f2bec = await _0xa235d9['$']('div.inputErrorMsg.b-form_section-message');
-            if (_0x1f2bec) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Your\x20password\x20must\x20contain\x20at\x20least\x20one\x20uppercase\x20&\x20one\x20lowercase\x20letter,\x20one\x20number\x20and\x20one\x20special\x20character.'));
+            const _0x1a35e6 = await _0x1419b4['newPage']();
+            await _0x1a35e6['authenticate']({
+                'username': '' + _0x4ce9f6[0x2],
+                'password': '' + _0x4ce9f6[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1a35e6['setRequestInterception'](!![]), _0x1a35e6['on']('request', _0x526a27 => {
+                _0x526a27['resourceType']() === 'image' || _0x526a27['resourceType']() === 'font' || _0x526a27['resourceType']() === 'media' ? _0x526a27['abort']() : _0x526a27['continue']();
+            }), await _0x1a35e6['goto'](_0x29dcc3), await _0x491ae3(0xbb8), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Starting\x20Registration'), await _0x1a35e6['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x1a35e6['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x1a35e6['waitForSelector']('#button-register'), await _0x491ae3(0x7d0), await _0x1a35e6['evaluate'](() => {
+                const _0x2aee08 = document['querySelector']('#button-register');
+                _0x2aee08['click']();
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Setting\x20Credentials'), await _0x491ae3(0x1388), await _0x1a35e6['waitForSelector']('#customer_salutation'), await _0x1a35e6['select']('#customer_salutation', 'mr'), await _0x491ae3(0x7d0), await _0x1a35e6['waitForSelector']('#customer_firstname'), await _0x1a35e6['type']('#customer_firstname', '' + _0x4d054d[_0x5c8b41]['FirstName']), await _0x491ae3(0x352), await _0x1a35e6['waitForSelector']('#customer_lastname'), await _0x1a35e6['type']('#customer_lastname', '' + _0x4d054d[_0x5c8b41]['LastName']), await _0x491ae3(0x352), await _0x1a35e6['type']('#email-input', '' + _0x4d054d[_0x5c8b41]['Email']), await _0x491ae3(0x352), await _0x1a35e6['type']('#email-confirm-input', '' + _0x4d054d[_0x5c8b41]['Email']), await _0x491ae3(0x352), await _0x1a35e6['type']('#register-password', '' + _0x4d054d[_0x5c8b41]['Password']), await _0x491ae3(0x352), await _0x1a35e6['type']('#password-confirm', '' + _0x4d054d[_0x5c8b41]['Password']), await _0x491ae3(0x352), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Sending\x20Credentials'), await _0x1a35e6['click']('#consent'), await _0x491ae3(0x1f4);
+            const _0x1f3311 = await _0x1a35e6['$']('div.inputErrorMsg.b-form_section-message');
+            if (_0x1f3311) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Your\x20password\x20must\x20contain\x20at\x20least\x20one\x20uppercase\x20&\x20one\x20lowercase\x20letter,\x20one\x20number\x20and\x20one\x20special\x20character.'));
                 continue;
             }
-            await _0xa235d9['click']('#buttonRegister');
+            await _0x1a35e6['click']('#buttonRegister');
             try {
-                await _0xa235d9['waitForSelector']('#verificationCode');
+                await _0x1a35e6['waitForSelector']('#verificationCode');
             } catch {
                 throw new Error('Account\x20already\x20registered');
             }
-            console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Account\x20' + _0x181592[_0x39d5c9]['Email'] + '\x20Generated!')), console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20A\x20verification\x20code\x20has\x20been\x20sent\x20to\x20' + _0x181592[_0x39d5c9]['Email'])), await _0x73378f(0x4b0);
-            async function _0x447787() {
-                console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Paste\x20your\x20verification\x20code\x20here:'));
-                var _0x4d7ba7 = await _0x5a99d6['get']('Code');
-                return _0x4d7ba7['Code'];
+            console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Account\x20' + _0x4d054d[_0x5c8b41]['Email'] + '\x20Generated!')), console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20A\x20verification\x20code\x20has\x20been\x20sent\x20to\x20' + _0x4d054d[_0x5c8b41]['Email'])), await _0x491ae3(0x4b0);
+            async function _0xcbdf10() {
+                console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Paste\x20your\x20verification\x20code\x20here:'));
+                var _0x364835 = await _0x8f638f['get']('Code');
+                return _0x364835['Code'];
             }
             ;
-            code = await _0x447787(), _0x73378f(0x320), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Verifying..'), await _0xa235d9['type']('#verificationCode', code), await _0x73378f(0x1f4), await _0xa235d9['click']('#buttonVerify'), await _0x73378f(0x190), await _0xa235d9['click']('#buttonVerify'), await _0x73378f(0x3e8);
+            code = await _0xcbdf10(), _0x491ae3(0x320), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Verifying..'), await _0x1a35e6['type']('#verificationCode', code), await _0x491ae3(0x1f4), await _0x1a35e6['click']('#buttonVerify'), await _0x491ae3(0x190), await _0x1a35e6['click']('#buttonVerify'), await _0x491ae3(0x3e8);
             try {
-                await _0xa235d9['waitForSelector']('div.b-user_greeting'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Account\x20' + _0x181592[_0x39d5c9]['Email'] + '\x20Generated\x20&\x20Verified!')), _0x536860['appendFileSync']('../accounts/kickz-verified.csv', '\x0a' + _0x181592[_0x39d5c9]['Email'] + ',' + _0x181592[_0x39d5c9]['Password'] + ','), console['log'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Account\x20' + _0x181592[_0x39d5c9]['Email'] + '\x20Saved\x20in\x20\x27accounts/kickz-verified.csv\x27');
+                await _0x1a35e6['waitForSelector']('div.b-user_greeting'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Account\x20' + _0x4d054d[_0x5c8b41]['Email'] + '\x20Generated\x20&\x20Verified!')), _0x550d6b['appendFileSync']('../accounts/kickz-verified.csv', '\x0a' + _0x4d054d[_0x5c8b41]['Email'] + ',' + _0x4d054d[_0x5c8b41]['Password'] + ','), console['log'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Account\x20' + _0x4d054d[_0x5c8b41]['Email'] + '\x20Saved\x20in\x20\x27accounts/kickz-verified.csv\x27');
                 try {
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x27f62f['succesDEVMSG']);
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x27bcfe['succesDEVMSG']);
                 } catch {
                 }
-                await _0x278fc0(_0x10deb2, _0x27f62f['succesDEVMSG']);
+                await _0xafb19d(_0x3cac51, _0x27bcfe['succesDEVMSG']);
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Verification\x20failed')), console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Account\x20saved\x20in\x20\x27accounts/kickz-unverified.csv\x27'));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Verification\x20failed')), console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Account\x20saved\x20in\x20\x27accounts/kickz-unverified.csv\x27'));
             }
-        } catch (_0x5cb50d) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20' + _0x5cb50d)), _0x39f8b1[0x0]['title'] = 'Failed\x20kickz\x20Acc\x20Gen', _0x39f8b1[0x0]['description'] = '' + _0x5cb50d, await _0x278fc0(_0x51b669, _0x4f5048), _0x2676d7 = 'yes';
+        } catch (_0x37e0e4) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20' + _0x37e0e4)), _0x12640f[0x0]['title'] = 'Failed\x20kickz\x20Acc\x20Gen', _0x12640f[0x0]['description'] = '' + _0x37e0e4, await _0xafb19d(_0x51c252, _0x57d781), _0x3224c8 = 'yes';
         } finally {
-            _0x5c66ff && _0x5c66ff['close']();
-            if (_0x2676d7 == 'yes' && _0x139b44 != 0x5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x54566e['name'] + ']\x20Task\x20' + (_0x39d5c9 + 0x1) + '\x20:\x20Retrying')), _0x39d5c9 = _0x39d5c9 - 0x1, _0x139b44 = _0x139b44 + 0x1;
+            _0x1419b4 && _0x1419b4['close']();
+            if (_0x3224c8 == 'yes' && _0x1bc18d != 0x5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x1577fc['name'] + ']\x20Task\x20' + (_0x5c8b41 + 0x1) + '\x20:\x20Retrying')), _0x5c8b41 = _0x5c8b41 - 0x1, _0x1bc18d = _0x1bc18d + 0x1;
                 continue;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x147c4d(_0x22dd9d, _0x55666d, _0x423a6d) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x36008b(_0xb9719d, _0x1398d4, _0x20de7c) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x21ffe4 = 0x0; _0x21ffe4 < _0x55666d['length']; _0x21ffe4++) {
-        var _0x2c5ef8, _0x3ffeba = '', _0x14cfff = 0x0;
-        _0x992352(_0x22dd9d['name'] + '\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20/\x20' + _0x55666d['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        var _0x2fca01 = [{
+    for (var _0x14cbec = 0x0; _0x14cbec < _0x1398d4['length']; _0x14cbec++) {
+        var _0x227942, _0x3e517c = '', _0x5da9bf = 0x0;
+        _0x57f604(_0xb9719d['name'] + '\x20Task\x20' + (_0x14cbec + 0x1) + '\x20/\x20' + _0x1398d4['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        var _0x1a6f48 = [{
             'type': 'rich',
             'title': 'Succesful\x20Kickz\x20Entry',
             'description': '',
@@ -1198,158 +1198,158 @@ async function _0x147c4d(_0x22dd9d, _0x55666d, _0x423a6d) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Product',
-                    'value': '' + _0x55666d[_0x21ffe4]['Url']
+                    'value': '' + _0x1398d4[_0x14cbec]['Url']
                 },
                 {
                     'name': 'Size',
-                    'value': '' + _0x55666d[_0x21ffe4]['Size']
+                    'value': '' + _0x1398d4[_0x14cbec]['Size']
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
-        }], _0x2eca83 = await _0x3553d9(_0x55666d[_0x21ffe4], _0x22dd9d, 'dev', ![]), _0x6abab0 = await _0x3553d9(_0x55666d[_0x21ffe4], _0x22dd9d, 'pub', ![]);
-        const _0x389f26 = {
-            'succesDEVMSG': { 'embeds': [_0x2eca83] },
-            'succesPUBMSG': { 'embeds': [_0x6abab0] }
+        }], _0x484790 = await _0x344cc9(_0x1398d4[_0x14cbec], _0xb9719d, 'dev', ![]), _0x22fa9f = await _0x344cc9(_0x1398d4[_0x14cbec], _0xb9719d, 'pub', ![]);
+        const _0x32034a = {
+            'succesDEVMSG': { 'embeds': [_0x484790] },
+            'succesPUBMSG': { 'embeds': [_0x22fa9f] }
         };
-        await _0x3e6cb2(_0x55666d, _0x21ffe4);
-        if (_0x55666d[_0x21ffe4]['Email'] == '' || _0x55666d[_0x21ffe4]['Password'] == '' || _0x55666d[_0x21ffe4]['FirstName'] == '' || _0x55666d[_0x21ffe4]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        await _0x238b3c(_0x1398d4, _0x14cbec);
+        if (_0x1398d4[_0x14cbec]['Email'] == '' || _0x1398d4[_0x14cbec]['Password'] == '' || _0x1398d4[_0x14cbec]['FirstName'] == '' || _0x1398d4[_0x14cbec]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x4285b5 = _0x423a6d[_0x21ffe4]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x5680ce = _0x20de7c[_0x14cbec]['split'](':');
         else
-            var _0x49e02b = Math['round'](Math['random']() * (_0x423a6d['length'] - 0x1)), _0x4285b5 = _0x423a6d[_0x49e02b]['split'](':');
-        const _0x2e8828 = await _0x4baac5['launch']({
+            var _0x23ac0f = Math['round'](Math['random']() * (_0x20de7c['length'] - 0x1)), _0x5680ce = _0x20de7c[_0x23ac0f]['split'](':');
+        const _0x41ed10 = await _0x4efd86['launch']({
             'headless': ![],
             'args': [
-                '--proxy-server=' + _0x4285b5[0x0] + ':' + _0x4285b5[0x1],
+                '--proxy-server=' + _0x5680ce[0x0] + ':' + _0x5680ce[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x1ffa59 = await _0x2e8828['newPage']();
-            await _0x1ffa59['authenticate']({
-                'username': '' + _0x4285b5[0x2],
-                'password': '' + _0x4285b5[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1ffa59['setRequestInterception'](!![]), _0x1ffa59['on']('request', _0x222c8e => {
-                _0x222c8e['resourceType']() === 'image' || _0x222c8e['resourceType']() === 'font' || _0x222c8e['resourceType']() === 'media' ? _0x222c8e['abort']() : _0x222c8e['continue']();
-            }), await _0x1ffa59['goto']('' + _0x55666d[_0x21ffe4]['Url'], { 'waitUntil': 'networkidle2' }), await _0x73378f(0x12c);
+            const _0x4f35f3 = await _0x41ed10['newPage']();
+            await _0x4f35f3['authenticate']({
+                'username': '' + _0x5680ce[0x2],
+                'password': '' + _0x5680ce[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4f35f3['setRequestInterception'](!![]), _0x4f35f3['on']('request', _0x120f9d => {
+                _0x120f9d['resourceType']() === 'image' || _0x120f9d['resourceType']() === 'font' || _0x120f9d['resourceType']() === 'media' ? _0x120f9d['abort']() : _0x120f9d['continue']();
+            }), await _0x4f35f3['goto']('' + _0x1398d4[_0x14cbec]['Url'], { 'waitUntil': 'networkidle2' }), await _0x491ae3(0x12c);
             try {
-                await _0x1ffa59['click']('a[title=\x22Sign\x20In\x22]');
+                await _0x4f35f3['click']('a[title=\x22Sign\x20In\x22]');
             } catch {
-                await _0x1ffa59['click']('a[title=\x22sign\x20in\x22]');
+                await _0x4f35f3['click']('a[title=\x22sign\x20in\x22]');
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Logging\x20in'), await _0x1ffa59['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x1ffa59['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x1ffa59['waitForSelector']('#username'), await _0x1ffa59['type']('#username', _0x55666d[_0x21ffe4]['Email']), await _0x1ffa59['waitForSelector']('#password'), await _0x1ffa59['type']('#password', _0x55666d[_0x21ffe4]['Password']), await _0x73378f(0x190), await _0x1ffa59['click']('#buttonSubmit'), await _0x1ffa59['waitForSelector']('div.b-user_greeting'), console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Getting\x20Product'), await _0x73378f(0x1f4), await _0x1ffa59['goto']('' + _0x55666d[_0x21ffe4]['Url'], { 'waitUntil': 'networkidle2' }), console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Choosing\x20size\x20' + _0x55666d[_0x21ffe4]['Size']);
-            let _0x268e7e = _0x55666d[_0x21ffe4]['Size']['replace']('.5', '\x201/2');
-            await _0x1ffa59['click']('button[title=\x22' + _0x268e7e + '\x22]'), await _0x73378f(0x1f4);
+            console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Logging\x20in'), await _0x4f35f3['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x4f35f3['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x4f35f3['waitForSelector']('#username'), await _0x4f35f3['type']('#username', _0x1398d4[_0x14cbec]['Email']), await _0x4f35f3['waitForSelector']('#password'), await _0x4f35f3['type']('#password', _0x1398d4[_0x14cbec]['Password']), await _0x491ae3(0x190), await _0x4f35f3['click']('#buttonSubmit'), await _0x4f35f3['waitForSelector']('div.b-user_greeting'), console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Getting\x20Product'), await _0x491ae3(0x1f4), await _0x4f35f3['goto']('' + _0x1398d4[_0x14cbec]['Url'], { 'waitUntil': 'networkidle2' }), console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Choosing\x20size\x20' + _0x1398d4[_0x14cbec]['Size']);
+            let _0x2a167e = _0x1398d4[_0x14cbec]['Size']['replace']('.5', '\x201/2');
+            await _0x4f35f3['click']('button[title=\x22' + _0x2a167e + '\x22]'), await _0x491ae3(0x1f4);
             try {
-                await _0x1ffa59['click']('button[data-tau=\x22add_new_address\x22]');
+                await _0x4f35f3['click']('button[data-tau=\x22add_new_address\x22]');
             } catch {
             }
-            await _0x73378f(0x12c), console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x1ffa59['select']('#dwfrm_raffle_addressFields_salutation', 'mr'), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_firstName', _0x55666d[_0x21ffe4]['FirstName']), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_lastName', _0x55666d[_0x21ffe4]['LastName']), await _0x73378f(0x12c), await _0x1ffa59['select']('#dwfrm_raffle_addressFields_country', _0x55666d[_0x21ffe4]['Country']), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_city', _0x55666d[_0x21ffe4]['City']), await _0x73378f(0x12c);
-            _0x55666d[_0x21ffe4]['Postcode'] == undefined && (_0x55666d[_0x21ffe4]['Postcode'] = _0x55666d[_0x21ffe4]['Zip']);
-            await _0x1ffa59['type']('#dwfrm_raffle_addressFields_postalCode', _0x55666d[_0x21ffe4]['Postcode']), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_address1', _0x55666d[_0x21ffe4]['Address1']), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_address2', _0x55666d[_0x21ffe4]['HouseNumber']), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_addressFields_additionalAddressInfo', _0x55666d[_0x21ffe4]['Address2']), await _0x73378f(0x12c), await _0x1ffa59['click']('#dwfrm_raffle_addressFields_saveAddress'), await _0x73378f(0x12c), await _0x1ffa59['type']('#dwfrm_raffle_raffleSpecificFields_instagramAccount', _0x55666d[_0x21ffe4]['Follower']), await _0x73378f(0x1f4), await _0x1ffa59['click']('#dwfrm_raffle_raffleSpecificFields_consentOnConditions'), await _0x73378f(0x1f4), console['log'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20' + _0x5ecce5['blue']('Awaiting\x20Paypal\x20Payment')), await _0x1ffa59['click']('.b-paypal_button');
+            await _0x491ae3(0x12c), console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Filling\x20Information'), await _0x4f35f3['select']('#dwfrm_raffle_addressFields_salutation', 'mr'), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_firstName', _0x1398d4[_0x14cbec]['FirstName']), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_lastName', _0x1398d4[_0x14cbec]['LastName']), await _0x491ae3(0x12c), await _0x4f35f3['select']('#dwfrm_raffle_addressFields_country', _0x1398d4[_0x14cbec]['Country']), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_city', _0x1398d4[_0x14cbec]['City']), await _0x491ae3(0x12c);
+            _0x1398d4[_0x14cbec]['Postcode'] == undefined && (_0x1398d4[_0x14cbec]['Postcode'] = _0x1398d4[_0x14cbec]['Zip']);
+            await _0x4f35f3['type']('#dwfrm_raffle_addressFields_postalCode', _0x1398d4[_0x14cbec]['Postcode']), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_address1', _0x1398d4[_0x14cbec]['Address1']), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_address2', _0x1398d4[_0x14cbec]['HouseNumber']), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_addressFields_additionalAddressInfo', _0x1398d4[_0x14cbec]['Address2']), await _0x491ae3(0x12c), await _0x4f35f3['click']('#dwfrm_raffle_addressFields_saveAddress'), await _0x491ae3(0x12c), await _0x4f35f3['type']('#dwfrm_raffle_raffleSpecificFields_instagramAccount', _0x1398d4[_0x14cbec]['Follower']), await _0x491ae3(0x1f4), await _0x4f35f3['click']('#dwfrm_raffle_raffleSpecificFields_consentOnConditions'), await _0x491ae3(0x1f4), console['log'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20' + _0x1818b9['blue']('Awaiting\x20Paypal\x20Payment')), await _0x4f35f3['click']('.b-paypal_button');
             try {
-                await _0x1ffa59['waitForSelector']('.b-raffle-message.m-success', { 'timeout': 0x493e0 }), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Raffle\x20Entered!')), _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x389f26['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x389f26['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x319480, _0x389f26['succesPUBMSG']);
-            } catch (_0x10af69) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Paypal\x20Error:\x20' + _0x10af69)), _0x2c5ef8 = 'Error\x20while\x20entering\x20Paypal:\x20' + _0x10af69;
-                var _0x37054d = await _0x3553d9(_0x55666d[_0x21ffe4], _0x22dd9d, 'dev', !![], _0x2c5ef8);
-                _0x389f26['errorDEV'] = { 'embeds': [_0x37054d] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x389f26['errorDEV']), await _0x278fc0(_0x51b669, _0x389f26['errorDEV']);
+                await _0x4f35f3['waitForSelector']('.b-raffle-message.m-success', { 'timeout': 0x493e0 }), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Raffle\x20Entered!')), _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x32034a['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x32034a['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0x45ab34, _0x32034a['succesPUBMSG']);
+            } catch (_0x45d934) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Paypal\x20Error:\x20' + _0x45d934)), _0x227942 = 'Error\x20while\x20entering\x20Paypal:\x20' + _0x45d934;
+                var _0x1316d4 = await _0x344cc9(_0x1398d4[_0x14cbec], _0xb9719d, 'dev', !![], _0x227942);
+                _0x32034a['errorDEV'] = { 'embeds': [_0x1316d4] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x32034a['errorDEV']), await _0xafb19d(_0x51c252, _0x32034a['errorDEV']);
             }
-        } catch (_0xf3d841) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20' + _0xf3d841)), _0x2c5ef8 = '' + _0xf3d841;
-            var _0x37054d = await _0x3553d9(_0x55666d[_0x21ffe4], _0x22dd9d, 'dev', !![], _0x2c5ef8);
-            _0x389f26['errorDEV'] = { 'embeds': [_0x37054d] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x389f26['errorDEV']), await _0x278fc0(_0x51b669, _0x389f26['errorDEV']), _0x3ffeba = 'yes';
+        } catch (_0x503ba5) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20' + _0x503ba5)), _0x227942 = '' + _0x503ba5;
+            var _0x1316d4 = await _0x344cc9(_0x1398d4[_0x14cbec], _0xb9719d, 'dev', !![], _0x227942);
+            _0x32034a['errorDEV'] = { 'embeds': [_0x1316d4] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x32034a['errorDEV']), await _0xafb19d(_0x51c252, _0x32034a['errorDEV']), _0x3e517c = 'yes';
         } finally {
-            _0x2e8828 && _0x2e8828['close']();
-            if (_0x3ffeba == 'yes' && _0x14cfff != 0x5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x22dd9d['name'] + ']\x20Task\x20' + (_0x21ffe4 + 0x1) + '\x20:\x20Retrying')), _0x21ffe4 = _0x21ffe4 - 0x1, _0x14cfff = _0x14cfff + 0x1;
+            _0x41ed10 && _0x41ed10['close']();
+            if (_0x3e517c == 'yes' && _0x5da9bf != 0x5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0xb9719d['name'] + ']\x20Task\x20' + (_0x14cbec + 0x1) + '\x20:\x20Retrying')), _0x14cbec = _0x14cbec - 0x1, _0x5da9bf = _0x5da9bf + 0x1;
                 continue;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['AfewDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['AfewDelay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['AfewDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['AfewDelay']);
         }
     }
 }
-async function _0x5de0be(_0x1136d5, _0x196767) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x54f966(_0x1d44fa, _0xa96462) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x457d75 = 0x0; _0x457d75 < bouncewear['length']; _0x457d75++) {
-        await _0x3e6cb2(bouncewear, _0x457d75);
-        if (bouncewear[_0x457d75]['Email'] == '' || bouncewear[_0x457d75]['Password'] == '' || bouncewear[_0x457d75]['FirstName'] == '' || bouncewear[_0x457d75]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Invalid\x20CSV');
+    for (var _0x616518 = 0x0; _0x616518 < bouncewear['length']; _0x616518++) {
+        await _0x238b3c(bouncewear, _0x616518);
+        if (bouncewear[_0x616518]['Email'] == '' || bouncewear[_0x616518]['Password'] == '' || bouncewear[_0x616518]['FirstName'] == '' || bouncewear[_0x616518]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0xebc4b1 = _0x35d507()[_0x457d75]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x353db9 = _0x536d43()[_0x616518]['split'](':');
         else
-            var _0x5d62a5 = Math['round'](Math['random']() * (_0x35d507()['length'] - 0x1)), _0xebc4b1 = _0x35d507()[_0x5d62a5]['split'](':');
-        const _0x4f4ad7 = await _0x4baac5['launch']({
+            var _0x4a4973 = Math['round'](Math['random']() * (_0x536d43()['length'] - 0x1)), _0x353db9 = _0x536d43()[_0x4a4973]['split'](':');
+        const _0xb42d32 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0xebc4b1[0x0] + ':' + _0xebc4b1[0x1],
+                '--proxy-server=' + _0x353db9[0x0] + ':' + _0x353db9[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x15620c = await _0x4f4ad7['newPage']();
-            await _0x15620c['authenticate']({
-                'username': '' + _0xebc4b1[0x2],
-                'password': '' + _0xebc4b1[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x15620c['setRequestInterception'](!![]), _0x15620c['on']('request', _0x417c48 => {
-                _0x417c48['resourceType']() === 'image' || _0x417c48['resourceType']() === 'font' || _0x417c48['resourceType']() === 'media' ? _0x417c48['abort']() : _0x417c48['continue']();
-            }), await _0x15620c['goto'](_0x1136d5), await _0x73378f(0xbb8), await _0x15620c['waitForSelector']('#RegisterForm-FirstName'), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Filling\x20information'), await _0x15620c['type']('#RegisterForm-FirstName', '' + bouncewear[_0x457d75]['FirstName']), await _0x73378f(0x226), await _0x15620c['type']('#RegisterForm-LastName', '' + bouncewear[_0x457d75]['LastName']), await _0x73378f(0x226), await _0x15620c['type']('#RegisterForm-email', '' + bouncewear[_0x457d75]['Email']), await _0x73378f(0x226), await _0x15620c['type']('#RegisterForm-password', '' + bouncewear[_0x457d75]['Password']), await _0x73378f(0x226), await _0x15620c['click']('#marketing'), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Submitting..'), await _0x15620c['$eval']('#RegisterForm', _0x59e85d => _0x59e85d['submit']()), await _0x73378f(0x1f40), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Solving\x20Captcha'), await _0x15620c['solveRecaptchas'](), await _0x15620c['click']('.shopify-challenge__button.btn');
-            async function _0x4da228() {
-                for (var _0x51a235 = 0x0; _0x51a235 < 0x4; _0x51a235++) {
+            const _0x4b5b2b = await _0xb42d32['newPage']();
+            await _0x4b5b2b['authenticate']({
+                'username': '' + _0x353db9[0x2],
+                'password': '' + _0x353db9[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4b5b2b['setRequestInterception'](!![]), _0x4b5b2b['on']('request', _0x384fcc => {
+                _0x384fcc['resourceType']() === 'image' || _0x384fcc['resourceType']() === 'font' || _0x384fcc['resourceType']() === 'media' ? _0x384fcc['abort']() : _0x384fcc['continue']();
+            }), await _0x4b5b2b['goto'](_0x1d44fa), await _0x491ae3(0xbb8), await _0x4b5b2b['waitForSelector']('#RegisterForm-FirstName'), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Filling\x20information'), await _0x4b5b2b['type']('#RegisterForm-FirstName', '' + bouncewear[_0x616518]['FirstName']), await _0x491ae3(0x226), await _0x4b5b2b['type']('#RegisterForm-LastName', '' + bouncewear[_0x616518]['LastName']), await _0x491ae3(0x226), await _0x4b5b2b['type']('#RegisterForm-email', '' + bouncewear[_0x616518]['Email']), await _0x491ae3(0x226), await _0x4b5b2b['type']('#RegisterForm-password', '' + bouncewear[_0x616518]['Password']), await _0x491ae3(0x226), await _0x4b5b2b['click']('#marketing'), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Submitting..'), await _0x4b5b2b['$eval']('#RegisterForm', _0x4c89c9 => _0x4c89c9['submit']()), await _0x491ae3(0x1f40), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Solving\x20Captcha'), await _0x4b5b2b['solveRecaptchas'](), await _0x4b5b2b['click']('.shopify-challenge__button.btn');
+            async function _0x752a9() {
+                for (var _0x1c8a2f = 0x0; _0x1c8a2f < 0x4; _0x1c8a2f++) {
                     try {
-                        console['log']('try'), await _0x15620c['waitForSelector']('.shopify-challenge__error', { 'timeout': 0x1388 }), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20' + _0x5ecce5['red']('Catpcha\x20failed,\x20retrying..')), await _0x15620c['solveRecaptchas'](), await _0x15620c['click']('.shopify-challenge__button.btn');
+                        console['log']('try'), await _0x4b5b2b['waitForSelector']('.shopify-challenge__error', { 'timeout': 0x1388 }), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20' + _0x1818b9['red']('Catpcha\x20failed,\x20retrying..')), await _0x4b5b2b['solveRecaptchas'](), await _0x4b5b2b['click']('.shopify-challenge__button.btn');
                     } catch {
                         console['log']('catch');
                         break;
                     }
                 }
             }
-            await _0x4da228(), console['log'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Captcha\x20Solved'), await _0x73378f(0x1f4);
+            await _0x752a9(), console['log'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Captcha\x20Solved'), await _0x491ae3(0x1f4);
             try {
-                await _0x15620c['waitForSelector']('.featured-title'), await _0x73378f(0x1f4), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Account\x20' + bouncewear[_0x457d75]['Email'] + '\x20Generated!')), _0x536860['appendFileSync']('../accounts/bouncewear.csv', '\x0a' + bouncewear[_0x457d75]['Email'] + ',' + bouncewear[_0x457d75]['Password']), console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x196767['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Account\x20' + bouncewear[_0x457d75]['Email'] + '\x20Saved\x20in\x20\x27accounts/bouncewear.csv\x27'));
-            } catch (_0x218759) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x218759));
+                await _0x4b5b2b['waitForSelector']('.featured-title'), await _0x491ae3(0x1f4), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Account\x20' + bouncewear[_0x616518]['Email'] + '\x20Generated!')), _0x550d6b['appendFileSync']('../accounts/bouncewear.csv', '\x0a' + bouncewear[_0x616518]['Email'] + ',' + bouncewear[_0x616518]['Password']), console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0xa96462['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Account\x20' + bouncewear[_0x616518]['Email'] + '\x20Saved\x20in\x20\x27accounts/bouncewear.csv\x27'));
+            } catch (_0x3d6c2a) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x3d6c2a));
             }
-        } catch (_0x1b8fa9) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x457d75 + 0x1) + '\x20:\x20' + _0x1b8fa9));
+        } catch (_0x2d400a) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x616518 + 0x1) + '\x20:\x20' + _0x2d400a));
         } finally {
-            _0x4f4ad7 && _0x4f4ad7['close'](), console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0xb42d32 && _0xb42d32['close'](), console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x32eccf(_0x44a2f5, _0x2bab09, _0xeb45d1, _0x9470c5) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x1662c3(_0x5af9ce, _0xe60a04, _0x3a89e8, _0x3dc785) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0xe2b5c9 = 0x0; _0xe2b5c9 < _0xeb45d1['length']; _0xe2b5c9++) {
-        var _0x2d9554 = [{
+    for (var _0x2cea47 = 0x0; _0x2cea47 < _0x3a89e8['length']; _0x2cea47++) {
+        var _0x2a684a = [{
             'type': 'rich',
             'title': 'Succesful\x20Patta\x20Account\x20Generated',
             'description': '',
@@ -1357,162 +1357,162 @@ async function _0x32eccf(_0x44a2f5, _0x2bab09, _0xeb45d1, _0x9470c5) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
         }];
-        const _0x371087 = { 'embeds': _0x2d9554 };
-        _0x992352(_0x2bab09['name'] + '\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20/\x20' + _0xeb45d1['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0xeb45d1, _0xe2b5c9);
-        var _0x1ece34 = await _0x3553d9(_0xeb45d1[_0xe2b5c9], _0x2bab09, 'acc', ![]);
-        const _0x3942c4 = { 'succesDEVMSG': { 'embeds': [_0x1ece34] } };
-        if (_0xeb45d1[_0xe2b5c9]['Email'] == '' || _0xeb45d1[_0xe2b5c9]['FirstName'] == '' || _0xeb45d1[_0xe2b5c9]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x73378f(0x7d0);
+        const _0x5b9026 = { 'embeds': _0x2a684a };
+        _0x57f604(_0xe60a04['name'] + '\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20/\x20' + _0x3a89e8['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x3a89e8, _0x2cea47);
+        var _0x134968 = await _0x344cc9(_0x3a89e8[_0x2cea47], _0xe60a04, 'acc', ![]);
+        const _0x412f52 = { 'succesDEVMSG': { 'embeds': [_0x134968] } };
+        if (_0x3a89e8[_0x2cea47]['Email'] == '' || _0x3a89e8[_0x2cea47]['FirstName'] == '' || _0x3a89e8[_0x2cea47]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x491ae3(0x7d0);
             continue;
         }
-        (_0xeb45d1[_0xe2b5c9]['Password'] == '' || _0xeb45d1[_0xe2b5c9] == undefined) && _0xeb45d1[_0xe2b5c9]['Password'] == 'JRaffles23!';
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x5a4f77 = _0x9470c5[_0xe2b5c9]['split'](':');
+        (_0x3a89e8[_0x2cea47]['Password'] == '' || _0x3a89e8[_0x2cea47] == undefined) && _0x3a89e8[_0x2cea47]['Password'] == 'JRaffles23!';
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x493a41 = _0x3dc785[_0x2cea47]['split'](':');
         else
-            var _0x484e5a = Math['round'](Math['random']() * (_0x9470c5['length'] - 0x1)), _0x5a4f77 = _0x9470c5[_0x484e5a]['split'](':');
-        const _0x426468 = await _0x4baac5['launch']({
+            var _0x5bcc1f = Math['round'](Math['random']() * (_0x3dc785['length'] - 0x1)), _0x493a41 = _0x3dc785[_0x5bcc1f]['split'](':');
+        const _0x3a90db = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x5a4f77[0x0] + ':' + _0x5a4f77[0x1],
+                '--proxy-server=' + _0x493a41[0x0] + ':' + _0x493a41[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x3d3598 = await _0x426468['newPage']();
-            await _0x3d3598['authenticate']({
-                'username': '' + _0x5a4f77[0x2],
-                'password': '' + _0x5a4f77[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x2bab09['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x3d3598['setRequestInterception'](!![]), _0x3d3598['on']('request', _0x3bb202 => {
-                _0x3bb202['resourceType']() === 'image' || _0x3bb202['resourceType']() === 'font' || _0x3bb202['resourceType']() === 'media' ? _0x3bb202['abort']() : _0x3bb202['continue']();
-            }), await _0x3d3598['goto'](_0x44a2f5), await _0x73378f(0xbb8), await _0x3d3598['waitForSelector']('#RegisterForm-FirstName'), console['log'](_0x18cf54() + '\x20[' + _0x2bab09['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Filling\x20information'), await _0x3d3598['type']('#RegisterForm-FirstName', '' + _0xeb45d1[_0xe2b5c9]['FirstName']), await _0x73378f(0x226), await _0x3d3598['type']('#RegisterForm-LastName', '' + _0xeb45d1[_0xe2b5c9]['LastName']), await _0x73378f(0x226), await _0x3d3598['type']('#RegisterForm-email', '' + _0xeb45d1[_0xe2b5c9]['Email']), await _0x73378f(0x226), await _0x3d3598['type']('#RegisterForm-password', '' + _0xeb45d1[_0xe2b5c9]['Password']), await _0x73378f(0x226), console['log'](_0x18cf54() + '\x20[' + _0x2bab09['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Submitting..'), await _0x3d3598['$eval']('#RegisterForm', _0x2b997d => _0x2b997d['submit']()), await _0x73378f(0x1f40);
+            const _0x28a3c7 = await _0x3a90db['newPage']();
+            await _0x28a3c7['authenticate']({
+                'username': '' + _0x493a41[0x2],
+                'password': '' + _0x493a41[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0xe60a04['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x28a3c7['setRequestInterception'](!![]), _0x28a3c7['on']('request', _0x181c29 => {
+                _0x181c29['resourceType']() === 'image' || _0x181c29['resourceType']() === 'font' || _0x181c29['resourceType']() === 'media' ? _0x181c29['abort']() : _0x181c29['continue']();
+            }), await _0x28a3c7['goto'](_0x5af9ce), await _0x491ae3(0xbb8), await _0x28a3c7['waitForSelector']('#RegisterForm-FirstName'), console['log'](_0x1e4ea5() + '\x20[' + _0xe60a04['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Filling\x20information'), await _0x28a3c7['type']('#RegisterForm-FirstName', '' + _0x3a89e8[_0x2cea47]['FirstName']), await _0x491ae3(0x226), await _0x28a3c7['type']('#RegisterForm-LastName', '' + _0x3a89e8[_0x2cea47]['LastName']), await _0x491ae3(0x226), await _0x28a3c7['type']('#RegisterForm-email', '' + _0x3a89e8[_0x2cea47]['Email']), await _0x491ae3(0x226), await _0x28a3c7['type']('#RegisterForm-password', '' + _0x3a89e8[_0x2cea47]['Password']), await _0x491ae3(0x226), console['log'](_0x1e4ea5() + '\x20[' + _0xe60a04['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Submitting..'), await _0x28a3c7['$eval']('#RegisterForm', _0x16ae5f => _0x16ae5f['submit']()), await _0x491ae3(0x1f40);
             try {
-                await _0x3d3598['waitForSelector']('.home-page-grid__collection'), await _0x73378f(0x1f4), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x2bab09['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Account\x20' + _0xeb45d1[_0xe2b5c9]['Email'] + '\x20Generated!')), _0x536860['appendFileSync']('../accounts/patta.csv', '\x0a' + _0xeb45d1[_0xe2b5c9]['Email'] + ',' + _0xeb45d1[_0xe2b5c9]['Password']), console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x2bab09['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Account\x20' + _0xeb45d1[_0xe2b5c9]['Email'] + '\x20Saved\x20in\x20\x27accounts/patta.csv\x27'));
+                await _0x28a3c7['waitForSelector']('.home-page-grid__collection'), await _0x491ae3(0x1f4), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0xe60a04['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Account\x20' + _0x3a89e8[_0x2cea47]['Email'] + '\x20Generated!')), _0x550d6b['appendFileSync']('../accounts/patta.csv', '\x0a' + _0x3a89e8[_0x2cea47]['Email'] + ',' + _0x3a89e8[_0x2cea47]['Password']), console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0xe60a04['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Account\x20' + _0x3a89e8[_0x2cea47]['Email'] + '\x20Saved\x20in\x20\x27accounts/patta.csv\x27'));
                 try {
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x3942c4['succesDEVMSG']);
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x412f52['succesDEVMSG']);
                 } catch {
                 }
-                await _0x278fc0(_0x10deb2, _0x3942c4['succesDEVMSG']);
-            } catch (_0x7a1c15) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x7a1c15));
+                await _0xafb19d(_0x3cac51, _0x412f52['succesDEVMSG']);
+            } catch (_0x37b774) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x37b774));
             }
-        } catch (_0x4c32b5) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0xe2b5c9 + 0x1) + '\x20:\x20' + _0x4c32b5));
+        } catch (_0x3680c1) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2cea47 + 0x1) + '\x20:\x20' + _0x3680c1));
         } finally {
-            _0x426468 && _0x426468['close'](), console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x3a90db && _0x3a90db['close'](), console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x45785c(_0x3a5004, _0x209b2b, _0x16deed, _0x1ee291) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x5015ef(_0x5e6176, _0x48e7ff, _0x1f0375, _0x39ca1a) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x190bc5 = 0x0; _0x190bc5 < _0x16deed['length']; _0x190bc5++) {
-        var _0x126943, _0x2402a9 = '', _0x3d1d4a = 0x0;
-        _0x992352(_0x209b2b['name'] + '\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20/\x20' + _0x16deed['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x16deed, _0x190bc5);
-        if (_0x16deed[_0x190bc5]['Email'] == '' || _0x16deed[_0x190bc5]['Password'] == '' || _0x16deed[_0x190bc5]['FirstName'] == '' || _0x16deed[_0x190bc5]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Invalid\x20CSV');
+    for (var _0x2e71e5 = 0x0; _0x2e71e5 < _0x1f0375['length']; _0x2e71e5++) {
+        var _0x3c6a0c, _0x1d860f = '', _0x4c5cfc = 0x0;
+        _0x57f604(_0x48e7ff['name'] + '\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20/\x20' + _0x1f0375['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x1f0375, _0x2e71e5);
+        if (_0x1f0375[_0x2e71e5]['Email'] == '' || _0x1f0375[_0x2e71e5]['Password'] == '' || _0x1f0375[_0x2e71e5]['FirstName'] == '' || _0x1f0375[_0x2e71e5]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x1c709f = _0x1ee291[_0x190bc5]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x35794c = _0x39ca1a[_0x2e71e5]['split'](':');
         else
-            var _0x31e900 = Math['round'](Math['random']() * (_0x1ee291['length'] - 0x1)), _0x1c709f = _0x1ee291[_0x31e900]['split'](':');
-        const _0x1eab90 = await _0x4baac5['launch']({
+            var _0x6ce13a = Math['round'](Math['random']() * (_0x39ca1a['length'] - 0x1)), _0x35794c = _0x39ca1a[_0x6ce13a]['split'](':');
+        const _0x183b90 = await _0x4efd86['launch']({
             'headless': ![],
             'args': [
-                '--proxy-server=' + _0x1c709f[0x0] + ':' + _0x1c709f[0x1],
+                '--proxy-server=' + _0x35794c[0x0] + ':' + _0x35794c[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x50f25f = await _0x1eab90['newPage']();
-            await _0x50f25f['authenticate']({
-                'username': '' + _0x1c709f[0x2],
-                'password': '' + _0x1c709f[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x50f25f['setRequestInterception'](!![]), _0x50f25f['on']('request', _0x51da9 => {
-                _0x51da9['resourceType']() === 'image' || _0x51da9['resourceType']() === 'font' || _0x51da9['resourceType']() === 'media' ? _0x51da9['abort']() : _0x51da9['continue']();
-            }), await _0x50f25f['goto']('https://www.patta.nl/nl/account/login', {
+            const _0x1cd215 = await _0x183b90['newPage']();
+            await _0x1cd215['authenticate']({
+                'username': '' + _0x35794c[0x2],
+                'password': '' + _0x35794c[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1cd215['setRequestInterception'](!![]), _0x1cd215['on']('request', _0x538ff2 => {
+                _0x538ff2['resourceType']() === 'image' || _0x538ff2['resourceType']() === 'font' || _0x538ff2['resourceType']() === 'media' ? _0x538ff2['abort']() : _0x538ff2['continue']();
+            }), await _0x1cd215['goto']('https://www.patta.nl/nl/account/login', {
                 'waitUntil': 'networkidle2',
                 'timeout': 0xea60
-            }), await _0x50f25f['waitForSelector']('#CustomerEmail'), console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Logging\x20in..'), await _0x50f25f['type']('#CustomerEmail', '' + _0x16deed[_0x190bc5]['Email']), await _0x73378f(0x12c), await _0x50f25f['type']('#CustomerPassword', '' + _0x16deed[_0x190bc5]['Password']), await _0x73378f(0x226), await _0x50f25f['$eval']('#customer_login', _0x3372b0 => _0x3372b0['submit']());
+            }), await _0x1cd215['waitForSelector']('#CustomerEmail'), console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Logging\x20in..'), await _0x1cd215['type']('#CustomerEmail', '' + _0x1f0375[_0x2e71e5]['Email']), await _0x491ae3(0x12c), await _0x1cd215['type']('#CustomerPassword', '' + _0x1f0375[_0x2e71e5]['Password']), await _0x491ae3(0x226), await _0x1cd215['$eval']('#customer_login', _0x4ea46c => _0x4ea46c['submit']());
             try {
-                await _0x50f25f['waitForSelector']('#orders'), await _0x73378f(0x4b0);
+                await _0x1cd215['waitForSelector']('#orders'), await _0x491ae3(0x4b0);
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
                 continue;
             }
-            await _0x50f25f['goto']('' + _0x16deed[_0x190bc5]['Url'], {
+            await _0x1cd215['goto']('' + _0x1f0375[_0x2e71e5]['Url'], {
                 'waitUntil': 'networkidle2',
                 'timeout': 0xea60
-            }), await _0x73378f(0xbb8), console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Starting\x20Entry');
+            }), await _0x491ae3(0xbb8), console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Starting\x20Entry');
             try {
-                await _0x50f25f['waitForSelector']('#email');
+                await _0x1cd215['waitForSelector']('#email');
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Duplicate\x20entry/\x20Account\x20error'));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Duplicate\x20entry/\x20Account\x20error'));
             }
-            await _0x50f25f['type']('#email', '' + _0x16deed[_0x190bc5]['Email']), await _0x73378f(0x384), await _0x50f25f['type']('#first_name', '' + _0x16deed[_0x190bc5]['FirstName']), await _0x73378f(0x514), await _0x50f25f['type']('#last_name', '' + _0x16deed[_0x190bc5]['LastName']), await _0x73378f(0x514), await _0x50f25f['type']('#street_address', _0x16deed[_0x190bc5]['Address1'] + '\x20' + _0x16deed[_0x190bc5]['HouseNumber'] + '\x20' + _0x16deed[_0x190bc5]['Address2']), await _0x73378f(0x2bc);
-            _0x16deed[_0x190bc5]['Postcode'] == undefined && (_0x16deed[_0x190bc5]['Postcode'] = _0x16deed[_0x190bc5]['Zip']);
-            await _0x50f25f['type']('#zip_code', '' + _0x16deed[_0x190bc5]['Postcode']), await _0x73378f(0x320), await _0x50f25f['type']('#city', '' + _0x16deed[_0x190bc5]['City']), await _0x73378f(0x320), await _0x50f25f['type']('#bday', '01/01/1994'), await _0x73378f(0x320), await _0x50f25f['type']('#instagram', '' + _0x16deed[_0x190bc5]['Follower']), await _0x73378f(0x352);
-            if (_0x16deed[_0x190bc5]['Size'] == 'RANDOM') {
-                const _0x8ec1ce = await _0x50f25f['$$eval']('div[id=\x22raffle__size-selector-container\x22]\x20>\x20label', _0x1f8194 => {
-                    return _0x1f8194['map'](_0x3bbeb5 => _0x3bbeb5['textContent']);
+            await _0x1cd215['type']('#email', '' + _0x1f0375[_0x2e71e5]['Email']), await _0x491ae3(0x384), await _0x1cd215['type']('#first_name', '' + _0x1f0375[_0x2e71e5]['FirstName']), await _0x491ae3(0x514), await _0x1cd215['type']('#last_name', '' + _0x1f0375[_0x2e71e5]['LastName']), await _0x491ae3(0x514), await _0x1cd215['type']('#street_address', _0x1f0375[_0x2e71e5]['Address1'] + '\x20' + _0x1f0375[_0x2e71e5]['HouseNumber'] + '\x20' + _0x1f0375[_0x2e71e5]['Address2']), await _0x491ae3(0x2bc);
+            _0x1f0375[_0x2e71e5]['Postcode'] == undefined && (_0x1f0375[_0x2e71e5]['Postcode'] = _0x1f0375[_0x2e71e5]['Zip']);
+            await _0x1cd215['type']('#zip_code', '' + _0x1f0375[_0x2e71e5]['Postcode']), await _0x491ae3(0x320), await _0x1cd215['type']('#city', '' + _0x1f0375[_0x2e71e5]['City']), await _0x491ae3(0x320), await _0x1cd215['type']('#bday', '01/01/1994'), await _0x491ae3(0x320), await _0x1cd215['type']('#instagram', '' + _0x1f0375[_0x2e71e5]['Follower']), await _0x491ae3(0x352);
+            if (_0x1f0375[_0x2e71e5]['Size'] == 'RANDOM') {
+                const _0x4eb6e7 = await _0x1cd215['$$eval']('div[id=\x22raffle__size-selector-container\x22]\x20>\x20label', _0x5f240 => {
+                    return _0x5f240['map'](_0x20289a => _0x20289a['textContent']);
                 });
-                var _0x23d43b = Math['round'](Math['random']() * (_0x8ec1ce['length'] - 0x1));
-                console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Picking\x20Random\x20Size\x20' + _0x8ec1ce[_0x23d43b]), await _0x50f25f['click']('label[data-eu-size=\x22' + _0x8ec1ce[_0x23d43b] + '\x22]');
+                var _0x23af35 = Math['round'](Math['random']() * (_0x4eb6e7['length'] - 0x1));
+                console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Picking\x20Random\x20Size\x20' + _0x4eb6e7[_0x23af35]), await _0x1cd215['click']('label[data-eu-size=\x22' + _0x4eb6e7[_0x23af35] + '\x22]');
             } else {
-                console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Picking\x20Size\x20' + _0x16deed[_0x190bc5]['Size']);
+                console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Picking\x20Size\x20' + _0x1f0375[_0x2e71e5]['Size']);
                 try {
-                    await _0x50f25f['click']('label[data-eu-size=\x22' + _0x16deed[_0x190bc5]['Size'] + '\x22]');
+                    await _0x1cd215['click']('label[data-eu-size=\x22' + _0x1f0375[_0x2e71e5]['Size'] + '\x22]');
                 } catch {
-                    await _0x50f25f['click']('label[data-eu-size=\x22' + _0x16deed[_0x190bc5]['Size'] + '.0\x22]');
+                    await _0x1cd215['click']('label[data-eu-size=\x22' + _0x1f0375[_0x2e71e5]['Size'] + '.0\x22]');
                 }
             }
-            await _0x73378f(0xbb8), await _0x50f25f['$$eval']('.raffle__checkbox-label', _0xf87aae => _0xf87aae['forEach'](_0x62fb14 => _0x62fb14['click']())), await _0x73378f(0x7d0), console['log'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Submitting\x20Entry'), await _0x50f25f['click']('#raffle__form-submit'), await _0x73378f(0x1388);
+            await _0x491ae3(0xbb8), await _0x1cd215['$$eval']('.raffle__checkbox-label', _0x16bee7 => _0x16bee7['forEach'](_0x3a00ea => _0x3a00ea['click']())), await _0x491ae3(0x7d0), console['log'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Submitting\x20Entry'), await _0x1cd215['click']('#raffle__form-submit'), await _0x491ae3(0x1388);
             try {
-                await _0x50f25f['waitForSelector']('#raffle__confirmation-message-container'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-            } catch (_0x47558f) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Raffle\x20entry\x20failed.\x20' + _0x47558f));
+                await _0x1cd215['waitForSelector']('#raffle__confirmation-message-container'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+            } catch (_0x4220a2) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Raffle\x20entry\x20failed.\x20' + _0x4220a2));
             }
-        } catch (_0x38562b) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20' + _0x38562b)), _0x2402a9 = 'yes';
+        } catch (_0xfe00cf) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20' + _0xfe00cf)), _0x1d860f = 'yes';
         } finally {
-            _0x1eab90 && _0x1eab90['close']();
-            if (_0x2402a9 == 'yes' && _0x3d1d4a != 0x5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x209b2b['name'] + ']\x20Task\x20' + (_0x190bc5 + 0x1) + '\x20:\x20Retrying')), _0x190bc5 = _0x190bc5 - 0x1, _0x3d1d4a = _0x3d1d4a + 0x1;
+            _0x183b90 && _0x183b90['close']();
+            if (_0x1d860f == 'yes' && _0x4c5cfc != 0x5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x48e7ff['name'] + ']\x20Task\x20' + (_0x2e71e5 + 0x1) + '\x20:\x20Retrying')), _0x2e71e5 = _0x2e71e5 - 0x1, _0x4c5cfc = _0x4c5cfc + 0x1;
                 continue;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x3d8232(_0x56b05a, _0x3274d4, _0xc13730, _0x4f6037) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x4085e5(_0x1390da, _0x39b6ea, _0x2d7444, _0x5d77ab) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x79b59e = 0x0; _0x79b59e < _0xc13730['length']; _0x79b59e++) {
-        var _0x551cdb = [{
+    for (var _0x4693aa = 0x0; _0x4693aa < _0x2d7444['length']; _0x4693aa++) {
+        var _0x1f3d23 = [{
             'type': 'rich',
             'title': 'Succesful\x20Patta\x20Account\x20Generated',
             'description': '',
@@ -1520,87 +1520,87 @@ async function _0x3d8232(_0x56b05a, _0x3274d4, _0xc13730, _0x4f6037) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
         }];
-        const _0x1bc032 = { 'embeds': _0x551cdb };
-        _0x992352(_0x3274d4['name'] + '\x20Task\x20' + (_0x79b59e + 0x1) + '\x20/\x20' + _0xc13730['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0xc13730, _0x79b59e);
-        var _0x21cbaa = await _0x3553d9(_0xc13730[_0x79b59e], _0x3274d4, 'acc', ![]);
-        const _0x4eae09 = { 'succesDEVMSG': { 'embeds': [_0x21cbaa] } };
-        if (_0xc13730[_0x79b59e]['Email'] == '' || _0xc13730[_0x79b59e]['FirstName'] == '' || _0xc13730[_0x79b59e]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x73378f(0x7d0);
+        const _0x161d35 = { 'embeds': _0x1f3d23 };
+        _0x57f604(_0x39b6ea['name'] + '\x20Task\x20' + (_0x4693aa + 0x1) + '\x20/\x20' + _0x2d7444['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x2d7444, _0x4693aa);
+        var _0x346b88 = await _0x344cc9(_0x2d7444[_0x4693aa], _0x39b6ea, 'acc', ![]);
+        const _0xf42de0 = { 'succesDEVMSG': { 'embeds': [_0x346b88] } };
+        if (_0x2d7444[_0x4693aa]['Email'] == '' || _0x2d7444[_0x4693aa]['FirstName'] == '' || _0x2d7444[_0x4693aa]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x491ae3(0x7d0);
             continue;
         }
-        (_0xc13730[_0x79b59e]['Password'] == '' || _0xc13730[_0x79b59e] == undefined) && _0xc13730[_0x79b59e]['Password'] == 'JRaffles23!';
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x4e15e0 = _0x4f6037[_0x79b59e]['split'](':');
+        (_0x2d7444[_0x4693aa]['Password'] == '' || _0x2d7444[_0x4693aa] == undefined) && _0x2d7444[_0x4693aa]['Password'] == 'JRaffles23!';
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x24512b = _0x5d77ab[_0x4693aa]['split'](':');
         else
-            var _0x54069b = Math['round'](Math['random']() * (_0x4f6037['length'] - 0x1)), _0x4e15e0 = _0x4f6037[_0x54069b]['split'](':');
-        const _0xe2d736 = await _0x4baac5['launch']({
+            var _0x38aaad = Math['round'](Math['random']() * (_0x5d77ab['length'] - 0x1)), _0x24512b = _0x5d77ab[_0x38aaad]['split'](':');
+        const _0x1ac074 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x4e15e0[0x0] + ':' + _0x4e15e0[0x1],
+                '--proxy-server=' + _0x24512b[0x0] + ':' + _0x24512b[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x3cd1f7 = await _0xe2d736['newPage']();
-            await _0x3cd1f7['authenticate']({
-                'username': '' + _0x4e15e0[0x2],
-                'password': '' + _0x4e15e0[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Getting\x20Session'), await _0x3cd1f7['setRequestInterception'](!![]), _0x3cd1f7['on']('request', _0x42a3e3 => {
-                _0x42a3e3['resourceType']() === 'image' || _0x42a3e3['resourceType']() === 'font' || _0x42a3e3['resourceType']() === 'media' ? _0x42a3e3['abort']() : _0x42a3e3['continue']();
-            }), await _0x3cd1f7['goto']('https://drop.slamjam.com/account/register'), await _0x73378f(0xbb8), await _0x3cd1f7['waitForSelector']('#FirstName'), await _0x3cd1f7['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x3cd1f7['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), console['log'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Filling\x20information'), await _0x73378f(0x4b0), await _0x3cd1f7['type']('#FirstName', '' + _0xc13730[_0x79b59e]['FirstName']), await _0x73378f(0x226), await _0x3cd1f7['type']('#LastName', '' + _0xc13730[_0x79b59e]['LastName']), await _0x73378f(0x226), await _0x3cd1f7['type']('#Email', '' + _0xc13730[_0x79b59e]['Email']), await _0x73378f(0x2ee), await _0x3cd1f7['type']('#ConfirmEmail', '' + _0xc13730[_0x79b59e]['Email']), await _0x73378f(0x2ee), await _0x3cd1f7['type']('#CreatePassword', '' + _0xc13730[_0x79b59e]['Password']), await _0x73378f(0x2ee), await _0x3cd1f7['type']('#CreateConfirmPassword', '' + _0xc13730[_0x79b59e]['Password']), await _0x73378f(0x226), console['log'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Submitting..'), await _0x3cd1f7['$eval']('#create_customer', _0x433f9d => _0x433f9d['submit']()), await _0x73378f(0x1388), console['log'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20' + _0x5ecce5['cyan']('Solving\x20Captcha')), await _0x3cd1f7['solveRecaptchas'](), console['log'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Captcha\x20solved'), await _0x3cd1f7['$eval']('.shopify-challenge__container\x20>\x20form', _0x319664 => _0x319664['submit']());
+            const _0x4c882b = await _0x1ac074['newPage']();
+            await _0x4c882b['authenticate']({
+                'username': '' + _0x24512b[0x2],
+                'password': '' + _0x24512b[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4c882b['setRequestInterception'](!![]), _0x4c882b['on']('request', _0x91e846 => {
+                _0x91e846['resourceType']() === 'image' || _0x91e846['resourceType']() === 'font' || _0x91e846['resourceType']() === 'media' ? _0x91e846['abort']() : _0x91e846['continue']();
+            }), await _0x4c882b['goto']('https://drop.slamjam.com/account/register'), await _0x491ae3(0xbb8), await _0x4c882b['waitForSelector']('#FirstName'), await _0x4c882b['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x4c882b['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), console['log'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Filling\x20information'), await _0x491ae3(0x4b0), await _0x4c882b['type']('#FirstName', '' + _0x2d7444[_0x4693aa]['FirstName']), await _0x491ae3(0x226), await _0x4c882b['type']('#LastName', '' + _0x2d7444[_0x4693aa]['LastName']), await _0x491ae3(0x226), await _0x4c882b['type']('#Email', '' + _0x2d7444[_0x4693aa]['Email']), await _0x491ae3(0x2ee), await _0x4c882b['type']('#ConfirmEmail', '' + _0x2d7444[_0x4693aa]['Email']), await _0x491ae3(0x2ee), await _0x4c882b['type']('#CreatePassword', '' + _0x2d7444[_0x4693aa]['Password']), await _0x491ae3(0x2ee), await _0x4c882b['type']('#CreateConfirmPassword', '' + _0x2d7444[_0x4693aa]['Password']), await _0x491ae3(0x226), console['log'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Submitting..'), await _0x4c882b['$eval']('#create_customer', _0xd6f85a => _0xd6f85a['submit']()), await _0x491ae3(0x1388), console['log'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20' + _0x1818b9['cyan']('Solving\x20Captcha')), await _0x4c882b['solveRecaptchas'](), console['log'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Captcha\x20solved'), await _0x4c882b['$eval']('.shopify-challenge__container\x20>\x20form', _0x40c5fb => _0x40c5fb['submit']());
             try {
-                await _0x3cd1f7['waitForSelector']('.product-card__image'), await _0x73378f(0x1f4), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Account\x20' + _0xc13730[_0x79b59e]['Email'] + '\x20Generated!')), _0x536860['appendFileSync']('../accounts/slamjam.csv', '\x0a' + _0xc13730[_0x79b59e]['Email'] + ',' + _0xc13730[_0x79b59e]['Password']), console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x3274d4['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Account\x20' + _0xc13730[_0x79b59e]['Email'] + '\x20Saved\x20in\x20\x27accounts/slamjam.csv\x27'));
+                await _0x4c882b['waitForSelector']('.product-card__image'), await _0x491ae3(0x1f4), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Account\x20' + _0x2d7444[_0x4693aa]['Email'] + '\x20Generated!')), _0x550d6b['appendFileSync']('../accounts/slamjam.csv', '\x0a' + _0x2d7444[_0x4693aa]['Email'] + ',' + _0x2d7444[_0x4693aa]['Password']), console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x39b6ea['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Account\x20' + _0x2d7444[_0x4693aa]['Email'] + '\x20Saved\x20in\x20\x27accounts/slamjam.csv\x27'));
                 try {
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x4eae09['succesDEVMSG']);
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0xf42de0['succesDEVMSG']);
                 } catch {
                 }
-                await _0x278fc0(_0x10deb2, _0x4eae09['succesDEVMSG']);
-            } catch (_0x5161ef) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x5161ef));
+                await _0xafb19d(_0x3cac51, _0xf42de0['succesDEVMSG']);
+            } catch (_0x22f4c5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x22f4c5));
             }
-        } catch (_0xcd8ec4) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x79b59e + 0x1) + '\x20:\x20' + _0xcd8ec4));
+        } catch (_0x33924c) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x4693aa + 0x1) + '\x20:\x20' + _0x33924c));
         } finally {
-            _0xe2d736 && _0xe2d736['close'](), console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x1ac074 && _0x1ac074['close'](), console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x4c1e3c(_0x2525d5, _0x144124, _0x5e562f, _0xbbbcac) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x1cc55b(_0x147918, _0x10671f, _0x4fa2dd, _0x59a2da) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x2487cd = 0x0; _0x2487cd < _0x5e562f['length']; _0x2487cd++) {
-        var _0x5efe91, _0x4b20c9 = '', _0x3aa948 = 0x0;
-        _0x992352(_0x144124['name'] + '\x20Task\x20' + (_0x2487cd + 0x1) + '\x20/\x20' + _0x5e562f['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x5e562f, _0x2487cd);
-        if (_0x5e562f[_0x2487cd]['Email'] == '' || _0x5e562f[_0x2487cd]['Password'] == '' || _0x5e562f[_0x2487cd]['FirstName'] == '' || _0x5e562f[_0x2487cd]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Invalid\x20CSV');
+    for (var _0x379ae1 = 0x0; _0x379ae1 < _0x4fa2dd['length']; _0x379ae1++) {
+        var _0x2c06db, _0x40f88d = '', _0x10037a = 0x0;
+        _0x57f604(_0x10671f['name'] + '\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20/\x20' + _0x4fa2dd['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x4fa2dd, _0x379ae1);
+        if (_0x4fa2dd[_0x379ae1]['Email'] == '' || _0x4fa2dd[_0x379ae1]['Password'] == '' || _0x4fa2dd[_0x379ae1]['FirstName'] == '' || _0x4fa2dd[_0x379ae1]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x296795 = _0xbbbcac[_0x2487cd]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x40ca62 = _0x59a2da[_0x379ae1]['split'](':');
         else
-            var _0x53c72c = Math['round'](Math['random']() * (_0xbbbcac['length'] - 0x1)), _0x296795 = _0xbbbcac[_0x53c72c]['split'](':');
-        const _0x55e6a1 = await _0x4baac5['launch']({
+            var _0x294f26 = Math['round'](Math['random']() * (_0x59a2da['length'] - 0x1)), _0x40ca62 = _0x59a2da[_0x294f26]['split'](':');
+        const _0x320880 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x296795[0x0] + ':' + _0x296795[0x1],
+                '--proxy-server=' + _0x40ca62[0x0] + ':' + _0x40ca62[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
                 '--disable-web-security',
@@ -1609,80 +1609,80 @@ async function _0x4c1e3c(_0x2525d5, _0x144124, _0x5e562f, _0xbbbcac) {
             ]
         });
         try {
-            const _0x458d5b = await _0x55e6a1['newPage']();
-            await _0x458d5b['authenticate']({
-                'username': '' + _0x296795[0x2],
-                'password': '' + _0x296795[0x3]
-            }), await _0x458d5b['setViewport']({
+            const _0x571961 = await _0x320880['newPage']();
+            await _0x571961['authenticate']({
+                'username': '' + _0x40ca62[0x2],
+                'password': '' + _0x40ca62[0x3]
+            }), await _0x571961['setViewport']({
                 'width': 0x500,
                 'height': 0x2d0
-            }), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Getting\x20Session'), await _0x458d5b['setRequestInterception'](!![]), _0x458d5b['on']('request', _0x1746af => {
-                _0x1746af['resourceType']() === 'image' || _0x1746af['resourceType']() === 'font' || _0x1746af['resourceType']() === 'media' ? _0x1746af['abort']() : _0x1746af['continue']();
-            }), await _0x458d5b['goto']('https://drop.slamjam.com/account/login', {
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x571961['setRequestInterception'](!![]), _0x571961['on']('request', _0x3b3e84 => {
+                _0x3b3e84['resourceType']() === 'image' || _0x3b3e84['resourceType']() === 'font' || _0x3b3e84['resourceType']() === 'media' ? _0x3b3e84['abort']() : _0x3b3e84['continue']();
+            }), await _0x571961['goto']('https://drop.slamjam.com/account/login', {
                 'waitUntil': 'networkidle2',
                 'timeout': 0xea60
-            }), await _0x458d5b['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x458d5b['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x73378f(0x258), await _0x458d5b['waitForSelector']('#CustomerEmail'), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Logging\x20in..'), await _0x458d5b['type']('#CustomerEmail', '' + _0x5e562f[_0x2487cd]['Email']), await _0x73378f(0x12c), await _0x458d5b['type']('#CustomerPassword', '' + _0x5e562f[_0x2487cd]['Password']), await _0x73378f(0x226), await _0x458d5b['$eval']('#customer_login', _0x4271b7 => _0x4271b7['submit']()), await _0x73378f(0x7d0), await _0x458d5b['waitForSelector']('iframe[title=\x22reCAPTCHA\x22]'), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20' + _0x5ecce5['cyan']('Solving\x20Captcha')), await _0x458d5b['solveRecaptchas'](), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Captcha\x20Solved'), await _0x458d5b['$eval']('.shopify-challenge__container\x20>\x20form', _0x1c4f02 => _0x1c4f02['submit']());
+            }), await _0x571961['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x571961['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x491ae3(0x258), await _0x571961['waitForSelector']('#CustomerEmail'), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Logging\x20in..'), await _0x571961['type']('#CustomerEmail', '' + _0x4fa2dd[_0x379ae1]['Email']), await _0x491ae3(0x12c), await _0x571961['type']('#CustomerPassword', '' + _0x4fa2dd[_0x379ae1]['Password']), await _0x491ae3(0x226), await _0x571961['$eval']('#customer_login', _0x31f3c6 => _0x31f3c6['submit']()), await _0x491ae3(0x7d0), await _0x571961['waitForSelector']('iframe[title=\x22reCAPTCHA\x22]'), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20' + _0x1818b9['cyan']('Solving\x20Captcha')), await _0x571961['solveRecaptchas'](), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Captcha\x20Solved'), await _0x571961['$eval']('.shopify-challenge__container\x20>\x20form', _0x2ee0db => _0x2ee0db['submit']());
             try {
-                await _0x458d5b['waitForSelector']('.nav-account'), await _0x73378f(0x4b0);
+                await _0x571961['waitForSelector']('.nav-account'), await _0x491ae3(0x4b0);
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
                 continue;
             }
-            await _0x458d5b['goto']('' + _0x5e562f[_0x2487cd]['Url'], {
+            await _0x571961['goto']('' + _0x4fa2dd[_0x379ae1]['Url'], {
                 'waitUntil': 'networkidle2',
                 'timeout': 0xea60
-            }), await _0x73378f(0xbb8), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Starting\x20Entry');
+            }), await _0x491ae3(0xbb8), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Starting\x20Entry');
             try {
-                await _0x458d5b['waitForSelector']('#ProductSelect-product-template-raffle');
+                await _0x571961['waitForSelector']('#ProductSelect-product-template-raffle');
             } catch {
             }
-            await _0x458d5b['click']('.product-select-variant-wrapper'), await _0x73378f(0x320), await _0x458d5b['click']('li.product-select-variant__value[data-size=\x22' + _0x5e562f[_0x2487cd]['Size'] + '\x22]'), await _0x73378f(0x384), await _0x458d5b['$eval']('#AddToCartForm-product-template-raffle', _0x1dd66a => _0x1dd66a['submit']()), await _0x458d5b['waitForSelector']('.cart-order-summary__content'), await _0x73378f(0x514), await _0x458d5b['goto']('https://drop.slamjam.com/checkout'), await _0x73378f(0x514), await _0x458d5b['waitForSelector']('#checkout_shipping_address_country'), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Filling\x20Information'), await _0x458d5b['select']('#checkout_shipping_address_country', '' + _0x5e562f[_0x2487cd]['Country']), await _0x73378f(0x200), await _0x458d5b['waitForSelector']('#checkout_shipping_address_first_name'), await _0x458d5b['type']('#checkout_shipping_address_first_name', '' + _0x5e562f[_0x2487cd]['FirstName']), await _0x73378f(0x237), await _0x458d5b['type']('#checkout_shipping_address_last_name', '' + _0x5e562f[_0x2487cd]['LastName']), await _0x73378f(0x1e0), await _0x458d5b['type']('#checkout_shipping_address_address1', _0x5e562f[_0x2487cd]['Address1'] + '\x20' + _0x5e562f[_0x2487cd]['HouseNumber']), await _0x73378f(0x514), await _0x458d5b['type']('#checkout_shipping_address_address2', '' + _0x5e562f[_0x2487cd]['Address2']), await _0x73378f(0x514);
-            _0x5e562f[_0x2487cd]['Postcode'] == undefined && (_0x5e562f[_0x2487cd]['Postcode'] = _0x5e562f[_0x2487cd]['Zip']);
-            await _0x458d5b['type']('#checkout_shipping_address_zip', '' + _0x5e562f[_0x2487cd]['Postcode']), await _0x73378f(0x2bc), await _0x458d5b['type']('#checkout_shipping_address_city', '' + _0x5e562f[_0x2487cd]['City']), await _0x73378f(0x320), await _0x458d5b['type']('#checkout_shipping_address_phone', '' + _0x5e562f[_0x2487cd]['Phone']), await _0x73378f(0x320), await _0x458d5b['click']('#continue_button'), await _0x73378f(0xbb8), await _0x458d5b['waitForSelector']('.summary-title'), await _0x73378f(0x320), await _0x458d5b['click']('#continue_button'), await _0x73378f(0x320), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Finishing\x20Checkout'), await _0x458d5b['waitForSelector']('#checkout_credit_card_vault'), await _0x73378f(0x3e8);
-            var _0x5adf74 = await _0x458d5b['$']('iframe[title=\x22Field\x20container\x20for:\x20Card\x20number\x22]'), _0x3ae87c = await _0x5adf74['contentFrame']();
-            await _0x3ae87c['click']('#number'), await _0x73378f(0x3e8), await _0x3ae87c['type']('#number', '' + _0x5e562f[_0x2487cd]['CardNumber'], { 'delay': 0x78 }), _0x5adf74 = await _0x458d5b['$']('iframe[title=\x22Field\x20container\x20for:\x20Name\x20on\x20card\x22]'), _0x3ae87c = await _0x5adf74['contentFrame'](), await _0x73378f(0x1c2), await _0x3ae87c['click']('#name'), await _0x73378f(0x1f4), await _0x3ae87c['type']('#name', '' + _0x5e562f[_0x2487cd]['NameOnCard'], { 'delay': 0x78 }), _0x5adf74 = await _0x458d5b['$']('iframe[title=\x22Field\x20container\x20for:\x20Expiration\x20date\x20(MM\x20/\x20YY)\x22]'), _0x3ae87c = await _0x5adf74['contentFrame'](), await _0x73378f(0x1c2), await _0x3ae87c['click']('#expiry'), await _0x73378f(0x1f4), await _0x3ae87c['type']('#expiry', '' + _0x5e562f[_0x2487cd]['ExpiryDate'], { 'delay': 0x78 }), _0x5adf74 = await _0x458d5b['$']('iframe[title=\x22Field\x20container\x20for:\x20Security\x20code\x22]'), _0x3ae87c = await _0x5adf74['contentFrame'](), await _0x73378f(0x1c2), await _0x3ae87c['click']('#verification_value'), await _0x73378f(0x1f4), await _0x3ae87c['type']('#verification_value', '' + _0x5e562f[_0x2487cd]['CVV'], { 'delay': 0x78 }), await _0x458d5b['$eval']('#accepts-flag-raffle', _0x41f5a9 => _0x41f5a9['click']()), await _0x73378f(0x7d0), console['log'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Processing\x20Order'), await _0x458d5b['$eval']('#continue_button', _0x336a71 => _0x336a71['click']()), await _0x73378f(0x1b58), await _0x458d5b['waitForSelector']('.edit_checkout.animate-floating-labels'), await _0x458d5b['$eval']('.edit_checkout.animate-floating-labels', _0x510790 => _0x510790['submit']()), await _0x73378f(0x7d0);
+            await _0x571961['click']('.product-select-variant-wrapper'), await _0x491ae3(0x320), await _0x571961['click']('li.product-select-variant__value[data-size=\x22' + _0x4fa2dd[_0x379ae1]['Size'] + '\x22]'), await _0x491ae3(0x384), await _0x571961['$eval']('#AddToCartForm-product-template-raffle', _0x5cc220 => _0x5cc220['submit']()), await _0x571961['waitForSelector']('.cart-order-summary__content'), await _0x491ae3(0x514), await _0x571961['goto']('https://drop.slamjam.com/checkout'), await _0x491ae3(0x514), await _0x571961['waitForSelector']('#checkout_shipping_address_country'), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x571961['select']('#checkout_shipping_address_country', '' + _0x4fa2dd[_0x379ae1]['Country']), await _0x491ae3(0x200), await _0x571961['waitForSelector']('#checkout_shipping_address_first_name'), await _0x571961['type']('#checkout_shipping_address_first_name', '' + _0x4fa2dd[_0x379ae1]['FirstName']), await _0x491ae3(0x237), await _0x571961['type']('#checkout_shipping_address_last_name', '' + _0x4fa2dd[_0x379ae1]['LastName']), await _0x491ae3(0x1e0), await _0x571961['type']('#checkout_shipping_address_address1', _0x4fa2dd[_0x379ae1]['Address1'] + '\x20' + _0x4fa2dd[_0x379ae1]['HouseNumber']), await _0x491ae3(0x514), await _0x571961['type']('#checkout_shipping_address_address2', '' + _0x4fa2dd[_0x379ae1]['Address2']), await _0x491ae3(0x514);
+            _0x4fa2dd[_0x379ae1]['Postcode'] == undefined && (_0x4fa2dd[_0x379ae1]['Postcode'] = _0x4fa2dd[_0x379ae1]['Zip']);
+            await _0x571961['type']('#checkout_shipping_address_zip', '' + _0x4fa2dd[_0x379ae1]['Postcode']), await _0x491ae3(0x2bc), await _0x571961['type']('#checkout_shipping_address_city', '' + _0x4fa2dd[_0x379ae1]['City']), await _0x491ae3(0x320), await _0x571961['type']('#checkout_shipping_address_phone', '' + _0x4fa2dd[_0x379ae1]['Phone']), await _0x491ae3(0x320), await _0x571961['click']('#continue_button'), await _0x491ae3(0xbb8), await _0x571961['waitForSelector']('.summary-title'), await _0x491ae3(0x320), await _0x571961['click']('#continue_button'), await _0x491ae3(0x320), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Finishing\x20Checkout'), await _0x571961['waitForSelector']('#checkout_credit_card_vault'), await _0x491ae3(0x3e8);
+            var _0xb19cc = await _0x571961['$']('iframe[title=\x22Field\x20container\x20for:\x20Card\x20number\x22]'), _0x413b5c = await _0xb19cc['contentFrame']();
+            await _0x413b5c['click']('#number'), await _0x491ae3(0x3e8), await _0x413b5c['type']('#number', '' + _0x4fa2dd[_0x379ae1]['CardNumber'], { 'delay': 0x78 }), _0xb19cc = await _0x571961['$']('iframe[title=\x22Field\x20container\x20for:\x20Name\x20on\x20card\x22]'), _0x413b5c = await _0xb19cc['contentFrame'](), await _0x491ae3(0x1c2), await _0x413b5c['click']('#name'), await _0x491ae3(0x1f4), await _0x413b5c['type']('#name', '' + _0x4fa2dd[_0x379ae1]['NameOnCard'], { 'delay': 0x78 }), _0xb19cc = await _0x571961['$']('iframe[title=\x22Field\x20container\x20for:\x20Expiration\x20date\x20(MM\x20/\x20YY)\x22]'), _0x413b5c = await _0xb19cc['contentFrame'](), await _0x491ae3(0x1c2), await _0x413b5c['click']('#expiry'), await _0x491ae3(0x1f4), await _0x413b5c['type']('#expiry', '' + _0x4fa2dd[_0x379ae1]['ExpiryDate'], { 'delay': 0x78 }), _0xb19cc = await _0x571961['$']('iframe[title=\x22Field\x20container\x20for:\x20Security\x20code\x22]'), _0x413b5c = await _0xb19cc['contentFrame'](), await _0x491ae3(0x1c2), await _0x413b5c['click']('#verification_value'), await _0x491ae3(0x1f4), await _0x413b5c['type']('#verification_value', '' + _0x4fa2dd[_0x379ae1]['CVV'], { 'delay': 0x78 }), await _0x571961['$eval']('#accepts-flag-raffle', _0x1fb4fb => _0x1fb4fb['click']()), await _0x491ae3(0x7d0), console['log'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Processing\x20Order'), await _0x571961['$eval']('#continue_button', _0x35d358 => _0x35d358['click']()), await _0x491ae3(0x1b58), await _0x571961['waitForSelector']('.edit_checkout.animate-floating-labels'), await _0x571961['$eval']('.edit_checkout.animate-floating-labels', _0x4d85b2 => _0x4d85b2['submit']()), await _0x491ae3(0x7d0);
             try {
-                await _0x458d5b['waitForSelector']('div[data-step=\x22thank_you\x22]', { 'timeout': 0x493e0 }), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-            } catch (_0x3a201e) {
-                throw new Error('Error\x20Processing\x20Order:\x20' + _0x3a201e['message']);
+                await _0x571961['waitForSelector']('div[data-step=\x22thank_you\x22]', { 'timeout': 0x493e0 }), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+            } catch (_0x2a090f) {
+                throw new Error('Error\x20Processing\x20Order:\x20' + _0x2a090f['message']);
             }
-            var _0x181b4f = await _0x3553d9(_0x5e562f[_0x2487cd], _0x144124, 'dev', ![]), _0xea0c94 = await _0x3553d9(_0x5e562f[_0x2487cd], _0x144124, 'pub', ![]);
-            const _0x357d36 = {
-                'succesDEVMSG': { 'embeds': [_0x181b4f] },
-                'succesPUBMSG': { 'embeds': [_0xea0c94] }
+            var _0x5b2ea6 = await _0x344cc9(_0x4fa2dd[_0x379ae1], _0x10671f, 'dev', ![]), _0x4f2fa4 = await _0x344cc9(_0x4fa2dd[_0x379ae1], _0x10671f, 'pub', ![]);
+            const _0x58d313 = {
+                'succesDEVMSG': { 'embeds': [_0x5b2ea6] },
+                'succesPUBMSG': { 'embeds': [_0x4f2fa4] }
             };
             try {
-                _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x357d36['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x357d36['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x319480, _0x357d36['succesPUBMSG']);
-            } catch (_0x460eeb) {
-                console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x460eeb));
+                _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x58d313['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x58d313['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0x45ab34, _0x58d313['succesPUBMSG']);
+            } catch (_0x3e6621) {
+                console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x3e6621));
             }
-        } catch (_0x1937f4) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20' + _0x1937f4)), _0x5efe91 = '' + _0x1937f4;
-            var _0x5882cf = await _0x3553d9(kickz[_0x2487cd], _0x144124, 'dev', !![], _0x5efe91);
-            EMBEDS['errorDEV'] = { 'embeds': [_0x5882cf] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], EMBEDS['errorDEV']), await _0x278fc0(_0x51b669, EMBEDS['errorDEV']), _0x4b20c9 = 'yes';
+        } catch (_0xfc785) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20' + _0xfc785)), _0x2c06db = '' + _0xfc785;
+            var _0x92bc8d = await _0x344cc9(kickz[_0x379ae1], _0x10671f, 'dev', !![], _0x2c06db);
+            EMBEDS['errorDEV'] = { 'embeds': [_0x92bc8d] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], EMBEDS['errorDEV']), await _0xafb19d(_0x51c252, EMBEDS['errorDEV']), _0x40f88d = 'yes';
         } finally {
-            _0x55e6a1 && _0x55e6a1['close']();
-            if (_0x4b20c9 == 'yes' && _0x3aa948 != 0x5) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x144124['name'] + ']\x20Task\x20' + (_0x2487cd + 0x1) + '\x20:\x20Retrying')), _0x2487cd = _0x2487cd - 0x1, _0x3aa948 = _0x3aa948 + 0x1;
+            _0x320880 && _0x320880['close']();
+            if (_0x40f88d == 'yes' && _0x10037a != 0x5) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x10671f['name'] + ']\x20Task\x20' + (_0x379ae1 + 0x1) + '\x20:\x20Retrying')), _0x379ae1 = _0x379ae1 - 0x1, _0x10037a = _0x10037a + 0x1;
                 continue;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x1e19cb(_0x35ac9e, _0x4a43d3, _0x4d72af) {
-    var _0x152bbe = ![], _0x21a4ba = ![];
-    if (_0x5690b2['captchaKey'] == '' || _0x5690b2['captchaKey'] == undefined)
-        return console['log'](_0x5ecce5['yellow']('No\x202Captcha\x20key\x20found\x20in\x20settings.json')), console['log']('Returning\x20to\x20Menu'), menu();
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x2084d5(_0x5852f6, _0x99070a, _0x2847f4) {
+    var _0x111de4 = ![], _0x576cd4 = ![];
+    if (_0x401d1c['captchaKey'] == '' || _0x401d1c['captchaKey'] == undefined)
+        return console['log'](_0x1818b9['yellow']('No\x202Captcha\x20key\x20found\x20in\x20settings.json')), console['log']('Returning\x20to\x20Menu'), menu();
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x528c43 = 0x0; _0x528c43 < _0x4a43d3['length']; _0x528c43++) {
-        var _0x580934, _0x5581db = [{
+    for (var _0x4f9bd9 = 0x0; _0x4f9bd9 < _0x99070a['length']; _0x4f9bd9++) {
+        var _0x3b9839, _0xf17774 = [{
             'type': 'rich',
             'title': 'Succesful\x20JD\x20entry',
             'description': '',
@@ -1690,165 +1690,165 @@ async function _0x1e19cb(_0x35ac9e, _0x4a43d3, _0x4d72af) {
             'fields': [
                 {
                     'name': 'Product',
-                    'value': '' + _0x4a43d3[_0x528c43]['Url']
+                    'value': '' + _0x99070a[_0x4f9bd9]['Url']
                 },
                 {
                     'name': 'Size',
-                    'value': '' + _0x4a43d3[_0x528c43]['Size']
+                    'value': '' + _0x99070a[_0x4f9bd9]['Size']
                 },
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
         }];
-        const _0x40f1a4 = { 'embeds': _0x5581db };
-        _0x992352(_0x35ac9e['name'] + '\x20Task\x20' + (_0x528c43 + 0x1) + '\x20/\x20' + _0x4a43d3['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x4a43d3, _0x528c43);
-        var _0x506805 = await _0x3553d9(_0x4a43d3[_0x528c43], _0x35ac9e, 'dev', ![]), _0x593015 = await _0x3553d9(_0x4a43d3[_0x528c43], _0x35ac9e, 'pub', ![]);
-        const _0x5e1d93 = {
-            'succesDEVMSG': { 'embeds': [_0x506805] },
-            'succesPUBMSG': { 'embeds': [_0x593015] }
+        const _0x2a0d27 = { 'embeds': _0xf17774 };
+        _0x57f604(_0x5852f6['name'] + '\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20/\x20' + _0x99070a['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x99070a, _0x4f9bd9);
+        var _0x463d36 = await _0x344cc9(_0x99070a[_0x4f9bd9], _0x5852f6, 'dev', ![]), _0x12be57 = await _0x344cc9(_0x99070a[_0x4f9bd9], _0x5852f6, 'pub', ![]);
+        const _0x3085a0 = {
+            'succesDEVMSG': { 'embeds': [_0x463d36] },
+            'succesPUBMSG': { 'embeds': [_0x12be57] }
         };
-        if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+        if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
             try {
-                await _0x278fc0(_0x5690b2['webhook'], _0x5e1d93['succesDEVMSG']);
+                await _0xafb19d(_0x401d1c['webhook'], _0x3085a0['succesDEVMSG']);
             } catch {
             }
-        await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x5e1d93['succesDEVMSG']), await _0x73378f(0xc8);
+        await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x3085a0['succesDEVMSG']), await _0x491ae3(0xc8);
         try {
-            await _0x278fc0(_0x319480, _0x5e1d93['succesPUBMSG']);
+            await _0xafb19d(_0x45ab34, _0x3085a0['succesPUBMSG']);
         } catch {
         }
-        if (_0x4a43d3[_0x528c43]['Email'] == '' || _0x4a43d3[_0x528c43]['Url'] == '' || _0x4a43d3[_0x528c43]['FirstName'] == '' || _0x4a43d3[_0x528c43]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        if (_0x99070a[_0x4f9bd9]['Email'] == '' || _0x99070a[_0x4f9bd9]['Url'] == '' || _0x99070a[_0x4f9bd9]['FirstName'] == '' || _0x99070a[_0x4f9bd9]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x5b895c = _0x4d72af[_0x528c43]['split'](':');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x18d3c0 = _0x2847f4[_0x4f9bd9]['split'](':');
         else
-            var _0x27cea0 = Math['round'](Math['random']() * (_0x4d72af['length'] - 0x1)), _0x5b895c = _0x4d72af[_0x27cea0]['split'](':');
-        const _0x14a851 = await _0x4baac5['launch']({
+            var _0x2067a2 = Math['round'](Math['random']() * (_0x2847f4['length'] - 0x1)), _0x18d3c0 = _0x2847f4[_0x2067a2]['split'](':');
+        const _0x3c65b8 = await _0x4efd86['launch']({
             'headless': ![],
             'args': [
-                '--proxy-server=' + _0x5b895c[0x0] + ':' + _0x5b895c[0x1],
+                '--proxy-server=' + _0x18d3c0[0x0] + ':' + _0x18d3c0[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x196280 = await _0x14a851['newPage']();
-            await _0x196280['authenticate']({
-                'username': '' + _0x5b895c[0x2],
-                'password': '' + _0x5b895c[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x196280['setRequestInterception'](!![]), _0x196280['on']('request', _0x1381f1 => {
-                _0x1381f1['resourceType']() === 'image' || _0x1381f1['resourceType']() === 'font' || _0x1381f1['resourceType']() === 'media' ? _0x1381f1['abort']() : _0x1381f1['continue']();
-            }), await _0x196280['goto']('' + _0x4a43d3[_0x528c43]['Url'], {
+            const _0xc1115d = await _0x3c65b8['newPage']();
+            await _0xc1115d['authenticate']({
+                'username': '' + _0x18d3c0[0x2],
+                'password': '' + _0x18d3c0[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Getting\x20Session'), await _0xc1115d['setRequestInterception'](!![]), _0xc1115d['on']('request', _0x1f14b1 => {
+                _0x1f14b1['resourceType']() === 'image' || _0x1f14b1['resourceType']() === 'font' || _0x1f14b1['resourceType']() === 'media' ? _0x1f14b1['abort']() : _0x1f14b1['continue']();
+            }), await _0xc1115d['goto']('' + _0x99070a[_0x4f9bd9]['Url'], {
                 'waitUntil': 'networkidle2',
                 'timeout': 0xea60
             });
             try {
-                await _0x196280['waitForSelector']('#comp_firstname', { 'timeout': 0x7530 });
+                await _0xc1115d['waitForSelector']('#comp_firstname', { 'timeout': 0x7530 });
             } catch {
                 throw new Error('Not\x20an\x20Active\x20Raffle');
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x196280['type']('#comp_firstname', '' + _0x4a43d3[_0x528c43]['FirstName']), await _0x196280['waitForSelector']('#comp_lastname'), await _0x196280['type']('#comp_lastname', '' + _0x4a43d3[_0x528c43]['LastName']), await _0x196280['waitForSelector']('#comp_email'), await _0x196280['type']('#comp_email', '' + _0x4a43d3[_0x528c43]['Email']), await _0x196280['waitForSelector']('#comp_paypalemail'), await _0x196280['type']('#comp_paypalemail', '' + _0x4a43d3[_0x528c43]['Email']), await _0x196280['waitForSelector']('#comp_mobile_end'), await _0x196280['type']('#comp_mobile_end', '' + _0x4a43d3[_0x528c43]['Phone']), await _0x196280['waitForSelector']('#comp_dob'), await _0x196280['type']('#comp_dob', '08/09/1992'), console['log'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Choosing\x20Size');
-            if (_0x4a43d3[_0x528c43]['Size'] == 'RANDOM') {
-                const _0x59f481 = await _0x196280['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x593921 => {
-                    return _0x593921['map'](_0x4d3df6 => _0x4d3df6['value']);
+            console['log'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Filling\x20Information'), await _0xc1115d['type']('#comp_firstname', '' + _0x99070a[_0x4f9bd9]['FirstName']), await _0xc1115d['waitForSelector']('#comp_lastname'), await _0xc1115d['type']('#comp_lastname', '' + _0x99070a[_0x4f9bd9]['LastName']), await _0xc1115d['waitForSelector']('#comp_email'), await _0xc1115d['type']('#comp_email', '' + _0x99070a[_0x4f9bd9]['Email']), await _0xc1115d['waitForSelector']('#comp_paypalemail'), await _0xc1115d['type']('#comp_paypalemail', '' + _0x99070a[_0x4f9bd9]['Email']), await _0xc1115d['waitForSelector']('#comp_mobile_end'), await _0xc1115d['type']('#comp_mobile_end', '' + _0x99070a[_0x4f9bd9]['Phone']), await _0xc1115d['waitForSelector']('#comp_dob'), await _0xc1115d['type']('#comp_dob', '08/09/1992'), console['log'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Choosing\x20Size');
+            if (_0x99070a[_0x4f9bd9]['Size'] == 'RANDOM') {
+                const _0x30108b = await _0xc1115d['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x3df6fe => {
+                    return _0x3df6fe['map'](_0x2bf2c5 => _0x2bf2c5['value']);
                 });
-                var _0xabe4b6 = Math['round'](Math['random']() * (_0x59f481['length'] - 0x2));
-                await _0x196280['select']('#shoesize', _0x59f481[_0xabe4b6 + 0x1]), await _0x73378f(0x3e8);
+                var _0x32cd3f = Math['round'](Math['random']() * (_0x30108b['length'] - 0x2));
+                await _0xc1115d['select']('#shoesize', _0x30108b[_0x32cd3f + 0x1]), await _0x491ae3(0x3e8);
             } else {
-                const _0x2a0749 = await _0x196280['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x4b17cc => {
-                    return _0x4b17cc['map'](_0x1ed50f => _0x1ed50f['innerText']);
-                }), _0xa04962 = await _0x196280['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x468678 => {
-                    return _0x468678['map'](_0x8b1f2f => _0x8b1f2f['value']);
+                const _0x4d4152 = await _0xc1115d['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x377733 => {
+                    return _0x377733['map'](_0x5a49dc => _0x5a49dc['innerText']);
+                }), _0x43919f = await _0xc1115d['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x344bac => {
+                    return _0x344bac['map'](_0x152118 => _0x152118['value']);
                 });
-                var _0x4d4512 = _0x4a43d3[_0x528c43]['Size'];
-                for (var _0x281368 = 0x1; _0x281368 < _0xa04962['length']; _0x281368++) {
-                    var _0x5f1c72 = _0x2a0749[_0x281368]['split']('\x20')[0x0];
-                    if (_0x5f1c72 == _0x4d4512) {
-                        await _0x196280['select']('#shoesize', _0xa04962[_0x281368]);
+                var _0x504aff = _0x99070a[_0x4f9bd9]['Size'];
+                for (var _0x212ef2 = 0x1; _0x212ef2 < _0x43919f['length']; _0x212ef2++) {
+                    var _0x19875d = _0x4d4152[_0x212ef2]['split']('\x20')[0x0];
+                    if (_0x19875d == _0x504aff) {
+                        await _0xc1115d['select']('#shoesize', _0x43919f[_0x212ef2]);
                         break;
                     } else {
-                        if (_0x281368 + 0x1 == _0xa04962['length'])
+                        if (_0x212ef2 + 0x1 == _0x43919f['length'])
                             throw new Error('Size\x20Not\x20Found..');
                     }
                 }
             }
-            await _0x196280['waitForSelector']('#comp_address1'), await _0x196280['type']('#comp_address1', _0x4a43d3[_0x528c43]['Address1'] + '\x20' + _0x4a43d3[_0x528c43]['HouseNumber']), await _0x196280['waitForSelector']('#comp_address2'), await _0x196280['type']('#comp_address2', '' + _0x4a43d3[_0x528c43]['Address2']), await _0x196280['waitForSelector']('#comp_address2'), await _0x196280['type']('#comp_address3', '' + _0x4a43d3[_0x528c43]['City']), await _0x196280['waitForSelector']('#comp_postcode'), await _0x196280['type']('#comp_postcode', '' + _0x4a43d3[_0x528c43]['Zip']), console['log'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Sending\x20Entry'), await _0x73378f(0x4b0), await _0x196280['click']('label#emailhold'), await _0x73378f(0x5dc), await _0x196280['click']('#preauth_tandc_email\x20>\x20label'), await _0x73378f(0x5dc), await _0x196280['click']('#submit'), await _0x196280['waitForSelector']('#paymentWrap'), console['log'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20' + _0x5ecce5['blue']('Awaiting\x20Paypal\x20Payment')), _0x14a851['on']('targetcreated', async _0x248551 => {
-                if (_0x248551['type']() === 'page') {
-                    const _0x188311 = await _0x248551['page']();
-                    async function _0x55f23e() {
+            await _0xc1115d['waitForSelector']('#comp_address1'), await _0xc1115d['type']('#comp_address1', _0x99070a[_0x4f9bd9]['Address1'] + '\x20' + _0x99070a[_0x4f9bd9]['HouseNumber']), await _0xc1115d['waitForSelector']('#comp_address2'), await _0xc1115d['type']('#comp_address2', '' + _0x99070a[_0x4f9bd9]['Address2']), await _0xc1115d['waitForSelector']('#comp_address2'), await _0xc1115d['type']('#comp_address3', '' + _0x99070a[_0x4f9bd9]['City']), await _0xc1115d['waitForSelector']('#comp_postcode'), await _0xc1115d['type']('#comp_postcode', '' + _0x99070a[_0x4f9bd9]['Zip']), console['log'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Sending\x20Entry'), await _0x491ae3(0x4b0), await _0xc1115d['click']('label#emailhold'), await _0x491ae3(0x5dc), await _0xc1115d['click']('#preauth_tandc_email\x20>\x20label'), await _0x491ae3(0x5dc), await _0xc1115d['click']('#submit'), await _0xc1115d['waitForSelector']('#paymentWrap'), console['log'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20' + _0x1818b9['blue']('Awaiting\x20Paypal\x20Payment')), _0x3c65b8['on']('targetcreated', async _0x187060 => {
+                if (_0x187060['type']() === 'page') {
+                    const _0x54be82 = await _0x187060['page']();
+                    async function _0x1a04f2() {
                         try {
-                            await _0x196280['waitForSelector']('#error_message', { 'timeout': 0x493e0 }), _0x21a4ba = !![];
+                            await _0xc1115d['waitForSelector']('#error_message', { 'timeout': 0x493e0 }), _0x576cd4 = !![];
                             return;
                         } catch {
                         }
                     }
-                    async function _0x387a7c() {
+                    async function _0x5684b3() {
                         try {
-                            await _0x196280['waitForSelector']('#successMessage', { 'timeout': 0x493e0 }), _0x152bbe = !![];
+                            await _0xc1115d['waitForSelector']('#successMessage', { 'timeout': 0x493e0 }), _0x111de4 = !![];
                             return;
                         } catch {
                         }
                     }
-                    _0x387a7c(), _0x55f23e(), await _0x73378f(0x493e0);
+                    _0x5684b3(), _0x1a04f2(), await _0x491ae3(0x493e0);
                 }
             });
-            async function _0x3a0903() {
-                for (let _0xa7a346 = 0x0; _0xa7a346 < 0x12c; _0xa7a346++) {
-                    if (_0x152bbe == !![]) {
-                        console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-                        if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+            async function _0x16be0d() {
+                for (let _0x4ee2c6 = 0x0; _0x4ee2c6 < 0x12c; _0x4ee2c6++) {
+                    if (_0x111de4 == !![]) {
+                        console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                        if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
                             try {
-                                await _0x278fc0(_0x5690b2['webhook'], _0x5e1d93['succesDEVMSG']);
+                                await _0xafb19d(_0x401d1c['webhook'], _0x3085a0['succesDEVMSG']);
                             } catch {
                             }
-                        await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x5e1d93['succesDEVMSG']), await _0x73378f(0xc8);
+                        await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x3085a0['succesDEVMSG']), await _0x491ae3(0xc8);
                         try {
-                            await _0x278fc0(_0x319480, _0x5e1d93['succesPUBMSG']);
+                            await _0xafb19d(_0x45ab34, _0x3085a0['succesPUBMSG']);
                         } catch {
                         }
                         return;
                     } else {
-                        if (_0x21a4ba)
+                        if (_0x576cd4)
                             throw new Error('Paypal\x20Error:\x20Target\x20closed');
                         else
-                            await _0x73378f(0x3e8);
+                            await _0x491ae3(0x3e8);
                     }
                 }
                 throw new Error('Paypal\x20Error');
             }
-            await _0x73378f(0xbb8), await _0x196280['click']('.zoid-outlet'), await _0x73378f(0x7d0), await _0x3a0903();
-        } catch (_0x59fe93) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x35ac9e['name'] + ']\x20Task\x20' + (_0x528c43 + 0x1) + '\x20:\x20' + _0x59fe93)), _0x580934 = '' + _0x59fe93;
-            var _0x3099b6 = await _0x3553d9(_0x4a43d3[_0x528c43], _0x35ac9e, 'dev', !![], _0x580934);
-            _0x5e1d93['errorDEV'] = { 'embeds': [_0x3099b6] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x5e1d93['errorDEV']), await _0x278fc0(_0x51b669, _0x5e1d93['errorDEV']);
+            await _0x491ae3(0xbb8), await _0xc1115d['click']('.zoid-outlet'), await _0x491ae3(0x7d0), await _0x16be0d();
+        } catch (_0x4f5f65) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x5852f6['name'] + ']\x20Task\x20' + (_0x4f9bd9 + 0x1) + '\x20:\x20' + _0x4f5f65)), _0x3b9839 = '' + _0x4f5f65;
+            var _0x4c6142 = await _0x344cc9(_0x99070a[_0x4f9bd9], _0x5852f6, 'dev', !![], _0x3b9839);
+            _0x3085a0['errorDEV'] = { 'embeds': [_0x4c6142] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x3085a0['errorDEV']), await _0xafb19d(_0x51c252, _0x3085a0['errorDEV']);
         } finally {
-            _0x14a851 && _0x14a851['close'](), console['log']('Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x3c65b8 && _0x3c65b8['close'](), console['log']('Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x563862(_0x37fcf3, _0x3d7a6f, _0x2de4aa) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x319e76(_0x3b2796, _0x5902fd, _0x419dce) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0xf686c4 = 0x0; _0xf686c4 < _0x3d7a6f['length']; _0xf686c4++) {
-        _0x992352(_0x37fcf3['name'] + '\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20/\x20' + _0x3d7a6f['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        var _0x467250 = [{
+    for (var _0x2159fc = 0x0; _0x2159fc < _0x5902fd['length']; _0x2159fc++) {
+        _0x57f604(_0x3b2796['name'] + '\x20Task\x20' + (_0x2159fc + 0x1) + '\x20/\x20' + _0x5902fd['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        var _0x7f1b73 = [{
             'type': 'rich',
             'title': 'Succesful\x20SevenStore\x20Entry',
             'description': '',
@@ -1856,41 +1856,41 @@ async function _0x563862(_0x37fcf3, _0x3d7a6f, _0x2de4aa) {
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Product',
-                    'value': '' + _0x3d7a6f[_0xf686c4]['Url']
+                    'value': '' + _0x5902fd[_0x2159fc]['Url']
                 },
                 {
                     'name': 'Size',
-                    'value': '' + _0x3d7a6f[_0xf686c4]['Size']
+                    'value': '' + _0x5902fd[_0x2159fc]['Size']
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x5690b2['version']
+                    'value': '' + _0x401d1c['version']
                 }
             ]
         }];
-        const _0x291d48 = { 'embeds': _0x467250 };
-        await _0x3e6cb2(_0x3d7a6f, _0xf686c4);
-        if (_0x3d7a6f[_0xf686c4]['Email'] == '' || _0x3d7a6f[_0xf686c4]['Password'] == '' || _0x3d7a6f[_0xf686c4]['FirstName'] == '' || _0x3d7a6f[_0xf686c4]['LastName'] == '') {
-            console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Invalid\x20CSV');
+        const _0x44ea39 = { 'embeds': _0x7f1b73 };
+        await _0x238b3c(_0x5902fd, _0x2159fc);
+        if (_0x5902fd[_0x2159fc]['Email'] == '' || _0x5902fd[_0x2159fc]['Password'] == '' || _0x5902fd[_0x2159fc]['FirstName'] == '' || _0x5902fd[_0x2159fc]['LastName'] == '') {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Invalid\x20CSV');
             continue;
         }
-        (_0x3d7a6f[_0xf686c4]['Password'] == '' || _0x3d7a6f[_0xf686c4]['Password'] == undefined) && (_0x3d7a6f[_0xf686c4]['Password'] = 'ErehsaWonRaj1!');
-        if (_0x5690b2['useRandomProxy'] = ![])
-            var _0x1891fe = _0x2de4aa[_0xf686c4]['split'](':');
+        (_0x5902fd[_0x2159fc]['Password'] == '' || _0x5902fd[_0x2159fc]['Password'] == undefined) && (_0x5902fd[_0x2159fc]['Password'] = 'ErehsaWonRaj1!');
+        if (_0x401d1c['useRandomProxy'] = ![])
+            var _0x208c1a = _0x419dce[_0x2159fc]['split'](':');
         else
-            var _0x3cd962 = Math['round'](Math['random']() * (_0x2de4aa['length'] - 0x1)), _0x1891fe = _0x2de4aa[_0x3cd962]['split'](':');
-        const _0x3ae8d1 = await _0x4baac5['launch']({
+            var _0x2ce195 = Math['round'](Math['random']() * (_0x419dce['length'] - 0x1)), _0x208c1a = _0x419dce[_0x2ce195]['split'](':');
+        const _0x1bdaaf = await _0x4efd86['launch']({
             'headless': ![],
             'args': [
-                '--proxy-server=' + _0x1891fe[0x0] + ':' + _0x1891fe[0x1],
+                '--proxy-server=' + _0x208c1a[0x0] + ':' + _0x208c1a[0x1],
                 '--no-sandbox',
                 '--incognito',
                 '--disable-web-security',
@@ -1900,75 +1900,75 @@ async function _0x563862(_0x37fcf3, _0x3d7a6f, _0x2de4aa) {
             ]
         });
         try {
-            const _0x51ea50 = await _0x3ae8d1['newPage']();
-            await _0x51ea50['authenticate']({
-                'username': '' + _0x1891fe[0x2],
-                'password': '' + _0x1891fe[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x51ea50['setRequestInterception'](!![]), _0x51ea50['on']('request', _0x1505f2 => {
-                _0x1505f2['resourceType']() === 'image' || _0x1505f2['resourceType']() === 'font' || _0x1505f2['resourceType']() === 'media' ? _0x1505f2['abort']() : _0x1505f2['continue']();
-            }), await _0x51ea50['setViewport']({
+            const _0x1ac6f4 = await _0x1bdaaf['newPage']();
+            await _0x1ac6f4['authenticate']({
+                'username': '' + _0x208c1a[0x2],
+                'password': '' + _0x208c1a[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1ac6f4['setRequestInterception'](!![]), _0x1ac6f4['on']('request', _0x15967c => {
+                _0x15967c['resourceType']() === 'image' || _0x15967c['resourceType']() === 'font' || _0x15967c['resourceType']() === 'media' ? _0x15967c['abort']() : _0x15967c['continue']();
+            }), await _0x1ac6f4['setViewport']({
                 'width': 0x500,
                 'height': 0x2d0
-            }), await _0x51ea50['goto']('' + _0x3d7a6f[_0xf686c4]['Url'], {
+            }), await _0x1ac6f4['goto']('' + _0x5902fd[_0x2159fc]['Url'], {
                 'waitUntil': 'networkidle2',
                 'timeout': 0x1d4c0
-            }), await _0x51ea50['waitForSelector']('#btnPdpAtb'), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Choosing\x20size\x20' + _0x3d7a6f[_0xf686c4]['Size']);
-            const _0x5d9b16 = await _0x51ea50['$$eval']('div.pointer.pdpsizeoption.f-12.f-color3', _0x312736 => {
-                return _0x312736['map'](_0x38dd67 => _0x38dd67['innerText']);
-            }), _0x3f6182 = await _0x51ea50['$$']('div.pointer.pdpsizeoption.f-12.f-color3'), _0x253d84 = ![];
-            if (_0x3d7a6f[_0xf686c4]['Size'] == 'RANDOM') {
-                var _0x559230 = Math['round'](Math['random']() * (_0x3f6182['length'] - 0x1));
-                await _0x3f6182[_0x559230]['click']();
+            }), await _0x1ac6f4['waitForSelector']('#btnPdpAtb'), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Choosing\x20size\x20' + _0x5902fd[_0x2159fc]['Size']);
+            const _0x1f1da1 = await _0x1ac6f4['$$eval']('div.pointer.pdpsizeoption.f-12.f-color3', _0x25dac7 => {
+                return _0x25dac7['map'](_0x40fdf4 => _0x40fdf4['innerText']);
+            }), _0x26a86a = await _0x1ac6f4['$$']('div.pointer.pdpsizeoption.f-12.f-color3'), _0x3037b9 = ![];
+            if (_0x5902fd[_0x2159fc]['Size'] == 'RANDOM') {
+                var _0x1ebd46 = Math['round'](Math['random']() * (_0x26a86a['length'] - 0x1));
+                await _0x26a86a[_0x1ebd46]['click']();
             } else
-                for (var _0x5a5d8c = 0x0; _0x5a5d8c < _0x5d9b16['length']; _0x5a5d8c++) {
-                    if (_0x5d9b16[_0x5a5d8c] != _0x3d7a6f[_0xf686c4]['Size'])
+                for (var _0x5ea739 = 0x0; _0x5ea739 < _0x1f1da1['length']; _0x5ea739++) {
+                    if (_0x1f1da1[_0x5ea739] != _0x5902fd[_0x2159fc]['Size'])
                         continue;
                     try {
-                        await _0x3f6182[_0x5a5d8c]['click']();
+                        await _0x26a86a[_0x5ea739]['click']();
                     } catch {
-                        console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Size\x20Not\x20Found')), _0x253d84 = !![];
+                        console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Size\x20Not\x20Found')), _0x3037b9 = !![];
                     }
                 }
-            if (_0x253d84)
+            if (_0x3037b9)
                 continue;
-            await _0x73378f(0x578), await _0x51ea50['click']('#btnPdpAtb'), await _0x51ea50['waitForSelector']('.fa.fa-check-circle.f-color8.f-30.valign-middle-important'), await _0x73378f(0x3e8), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Getting\x20Checkout\x20Session'), await _0x51ea50['goto']('https://www.sevenstore.com/login/?target=checkout'), await _0x51ea50['waitForSelector']('#email'), await _0x51ea50['type']('#email', _0x3d7a6f[_0xf686c4]['Email']), await _0x73378f(0x226), await _0x51ea50['click']('#guest-submit'), await _0x73378f(0x1b58), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x51ea50['waitForSelector']('#firstname'), await _0x51ea50['type']('#firstname', _0x3d7a6f[_0xf686c4]['FirstName'], 0x1f4), await _0x73378f(0x190), await _0x51ea50['waitForSelector']('#surname'), await _0x51ea50['type']('#surname', _0x3d7a6f[_0xf686c4]['LastName'], 0x1f4), await _0x73378f(0x190), await _0x51ea50['waitForSelector']('#mobile'), await _0x51ea50['type']('#mobile', _0x3d7a6f[_0xf686c4]['Phone'], 0x1f4), await _0x73378f(0x190), await _0x51ea50['click']('#enterManualDiv'), await _0x73378f(0x5dc), await _0x51ea50['waitForSelector']('#address1'), await _0x51ea50['type']('#address1', _0x3d7a6f[_0xf686c4]['Address1'] + '\x20' + _0x3d7a6f[_0xf686c4]['HouseNumber'], 0x226), await _0x73378f(0x384), await _0x51ea50['waitForSelector']('#address2'), await _0x51ea50['type']('#address2', '' + _0x3d7a6f[_0xf686c4]['Address2'], 0x226), await _0x73378f(0x320);
-            const _0x428251 = await _0x51ea50['$$eval']('#countryselect_view3\x20>\x20option', _0x31d090 => {
-                return _0x31d090['map'](_0xf91cb6 => _0xf91cb6['value']);
+            await _0x491ae3(0x578), await _0x1ac6f4['click']('#btnPdpAtb'), await _0x1ac6f4['waitForSelector']('.fa.fa-check-circle.f-color8.f-30.valign-middle-important'), await _0x491ae3(0x3e8), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Getting\x20Checkout\x20Session'), await _0x1ac6f4['goto']('https://www.sevenstore.com/login/?target=checkout'), await _0x1ac6f4['waitForSelector']('#email'), await _0x1ac6f4['type']('#email', _0x5902fd[_0x2159fc]['Email']), await _0x491ae3(0x226), await _0x1ac6f4['click']('#guest-submit'), await _0x491ae3(0x1b58), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Filling\x20Information'), await _0x1ac6f4['waitForSelector']('#firstname'), await _0x1ac6f4['type']('#firstname', _0x5902fd[_0x2159fc]['FirstName'], 0x1f4), await _0x491ae3(0x190), await _0x1ac6f4['waitForSelector']('#surname'), await _0x1ac6f4['type']('#surname', _0x5902fd[_0x2159fc]['LastName'], 0x1f4), await _0x491ae3(0x190), await _0x1ac6f4['waitForSelector']('#mobile'), await _0x1ac6f4['type']('#mobile', _0x5902fd[_0x2159fc]['Phone'], 0x1f4), await _0x491ae3(0x190), await _0x1ac6f4['click']('#enterManualDiv'), await _0x491ae3(0x5dc), await _0x1ac6f4['waitForSelector']('#address1'), await _0x1ac6f4['type']('#address1', _0x5902fd[_0x2159fc]['Address1'] + '\x20' + _0x5902fd[_0x2159fc]['HouseNumber'], 0x226), await _0x491ae3(0x384), await _0x1ac6f4['waitForSelector']('#address2'), await _0x1ac6f4['type']('#address2', '' + _0x5902fd[_0x2159fc]['Address2'], 0x226), await _0x491ae3(0x320);
+            const _0x56e4b1 = await _0x1ac6f4['$$eval']('#countryselect_view3\x20>\x20option', _0x53a2cc => {
+                return _0x53a2cc['map'](_0x5ef65e => _0x5ef65e['value']);
             });
-            var _0x20f264;
-            for (var _0x4ee4a0 = 0x0; _0x4ee4a0 < _0x428251['length']; _0x4ee4a0++) {
-                if (_0x428251[_0x4ee4a0]['startsWith']('' + _0x3d7a6f[_0xf686c4]['Country'])) {
-                    _0x20f264 = _0x428251[_0x4ee4a0];
+            var _0x36f9ac;
+            for (var _0x3a937d = 0x0; _0x3a937d < _0x56e4b1['length']; _0x3a937d++) {
+                if (_0x56e4b1[_0x3a937d]['startsWith']('' + _0x5902fd[_0x2159fc]['Country'])) {
+                    _0x36f9ac = _0x56e4b1[_0x3a937d];
                     break;
                 }
                 continue;
             }
-            await _0x51ea50['select']('#countryselect_view3', '' + _0x20f264), await _0x51ea50['waitForSelector']('#address4'), await _0x51ea50['type']('#address4', '' + _0x3d7a6f[_0xf686c4]['City'], 0x1f4), await _0x73378f(0x384), await _0x51ea50['waitForSelector']('#postcode'), await _0x51ea50['type']('#postcode', '' + _0x3d7a6f[_0xf686c4]['Zip'], 0x1f4), await _0x73378f(0x4b0);
-            const _0x4f3d2f = await _0x51ea50['url']();
-            console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Submitting\x20Entry');
-            const _0x5708d6 = _0x4f3d2f['split']('?')[0x1], _0x9a3986 = await _0x51ea50['$']('#co_address_submit');
-            await _0x9a3986['evaluate'](_0x3c231b => _0x3c231b['click']()), await _0x73378f(0x1388), await _0x51ea50['goto']('https://www.sevenstore.com/checkout/pay/?' + _0x5708d6), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Getting\x20Payment\x20session'), await _0x51ea50['waitForSelector']('#paymentbuttons'), await _0x73378f(0x1388), await _0x51ea50['click']('#paymentbuttons\x20>\x20div'), await _0x73378f(0x1c2), await _0x51ea50['waitForSelector']('#card-number'), await _0x51ea50['waitForSelector']('#card-number\x20>\x20div\x20>\x20iframe');
-            const _0x1383da = await _0x51ea50['$']('#card-number\x20>\x20div\x20>\x20iframe'), _0x51c314 = await _0x1383da['contentFrame']();
-            await _0x51c314['waitForSelector']('.InputContainer'), await _0x51c314['click']('.InputContainer\x20>\x20input'), await _0x73378f(0x578), await _0x51ea50['type']('#card-number', '' + _0x3d7a6f[_0xf686c4]['CreditNumber']), await _0x73378f(0xfa), await _0x51ea50['type']('#card-expiry', '' + _0x3d7a6f[_0xf686c4]['ExpiryDate']), await _0x73378f(0xfa), await _0x51ea50['type']('#card-cvc', '' + _0x3d7a6f[_0xf686c4]['CVV']), await _0x73378f(0x7d0), await _0x51ea50['click']('#card-button'), console['log'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Awaiting\x203DS');
+            await _0x1ac6f4['select']('#countryselect_view3', '' + _0x36f9ac), await _0x1ac6f4['waitForSelector']('#address4'), await _0x1ac6f4['type']('#address4', '' + _0x5902fd[_0x2159fc]['City'], 0x1f4), await _0x491ae3(0x384), await _0x1ac6f4['waitForSelector']('#postcode'), await _0x1ac6f4['type']('#postcode', '' + _0x5902fd[_0x2159fc]['Zip'], 0x1f4), await _0x491ae3(0x4b0);
+            const _0x29426b = await _0x1ac6f4['url']();
+            console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Submitting\x20Entry');
+            const _0x3652bb = _0x29426b['split']('?')[0x1], _0x2edecf = await _0x1ac6f4['$']('#co_address_submit');
+            await _0x2edecf['evaluate'](_0x528010 => _0x528010['click']()), await _0x491ae3(0x1388), await _0x1ac6f4['goto']('https://www.sevenstore.com/checkout/pay/?' + _0x3652bb), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Getting\x20Payment\x20session'), await _0x1ac6f4['waitForSelector']('#paymentbuttons'), await _0x491ae3(0x1388), await _0x1ac6f4['click']('#paymentbuttons\x20>\x20div'), await _0x491ae3(0x1c2), await _0x1ac6f4['waitForSelector']('#card-number'), await _0x1ac6f4['waitForSelector']('#card-number\x20>\x20div\x20>\x20iframe');
+            const _0x76a3ba = await _0x1ac6f4['$']('#card-number\x20>\x20div\x20>\x20iframe'), _0x5638c0 = await _0x76a3ba['contentFrame']();
+            await _0x5638c0['waitForSelector']('.InputContainer'), await _0x5638c0['click']('.InputContainer\x20>\x20input'), await _0x491ae3(0x578), await _0x1ac6f4['type']('#card-number', '' + _0x5902fd[_0x2159fc]['CreditNumber']), await _0x491ae3(0xfa), await _0x1ac6f4['type']('#card-expiry', '' + _0x5902fd[_0x2159fc]['ExpiryDate']), await _0x491ae3(0xfa), await _0x1ac6f4['type']('#card-cvc', '' + _0x5902fd[_0x2159fc]['CVV']), await _0x491ae3(0x7d0), await _0x1ac6f4['click']('#card-button'), console['log'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Awaiting\x203DS');
             try {
-                await _0x51ea50['waitForSelector']('.btn-auxilliary.btn-sub.fullwidth', { 'timeout': 0x493e0 }), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20Raffle\x20Entered!')), await _0x278fc0(_0x4c279b, _0x291d48);
+                await _0x1ac6f4['waitForSelector']('.btn-auxilliary.btn-sub.fullwidth', { 'timeout': 0x493e0 }), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20Raffle\x20Entered!')), await _0xafb19d(_0xc8def8, _0x44ea39);
             } catch {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x203DS\x20Failed')), _0x467250[0x0]['title'] = 'Failed\x20Seven\x20Entry', _0x467250[0x0]['description'] = '3DS\x20Failed', await _0x278fc0(_0x51b669, _0x291d48);
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x203DS\x20Failed')), _0x7f1b73[0x0]['title'] = 'Failed\x20Seven\x20Entry', _0x7f1b73[0x0]['description'] = '3DS\x20Failed', await _0xafb19d(_0x51c252, _0x44ea39);
             }
-        } catch (_0x241715) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x37fcf3['name'] + ']\x20Task\x20' + (_0xf686c4 + 0x1) + '\x20:\x20' + _0x241715)), _0x467250[0x0]['title'] = 'Failed\x20Seven\x20Entry', _0x467250[0x0]['description'] = '' + _0x241715, await _0x278fc0(_0x51b669, _0x291d48);
+        } catch (_0x1c2c01) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x3b2796['name'] + ']\x20Task\x20' + (_0x2159fc + 0x1) + '\x20:\x20' + _0x1c2c01)), _0x7f1b73[0x0]['title'] = 'Failed\x20Seven\x20Entry', _0x7f1b73[0x0]['description'] = '' + _0x1c2c01, await _0xafb19d(_0x51c252, _0x44ea39);
         } finally {
-            _0x3ae8d1 && _0x3ae8d1['close']();
-            if (_0xf686c4 + 0x1 == _0x3d7a6f['length']) {
-                console['log'](_0x5ecce5['green']('Finished\x20tasks,\x20returning\x20to\x20Main\x20Menu')), await _0x73378f(0x7d0);
+            _0x1bdaaf && _0x1bdaaf['close']();
+            if (_0x2159fc + 0x1 == _0x5902fd['length']) {
+                console['log'](_0x1818b9['green']('Finished\x20tasks,\x20returning\x20to\x20Main\x20Menu')), await _0x491ae3(0x7d0);
                 break;
             }
-            console['log']('Waiting\x20for\x20' + _0x5690b2['AfewDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['AfewDelay']);
+            console['log']('Waiting\x20for\x20' + _0x401d1c['AfewDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['AfewDelay']);
         }
     }
 }
-async function _0x14f394(_0x210c76, _0x5e61c5, _0x7a7fae, _0x20e9a5, _0x3b5433) {
-    var _0xe254c3, _0x43775a = {}, _0x1f692f = [], _0xb371de = {}, _0x5b215c = [
+async function _0x164a5f(_0x145998, _0x26313b, _0x4917b3, _0x50768a, _0x2775a7) {
+    var _0x18728a, _0x353b6e = {}, _0x581e3c = [], _0x4dd227 = {}, _0x12a20f = [
         '40',
         '40,5',
         '41',
@@ -1983,9 +1983,9 @@ async function _0x14f394(_0x210c76, _0x5e61c5, _0x7a7fae, _0x20e9a5, _0x3b5433) 
         '47,5',
         '48'
     ];
-    !_0x20e9a5 && (_0x20e9a5 = {});
-    if (_0x5e61c5 != 'ver') {
-        _0x992352(_0x7a7fae['name'] + '\x20Task\x20' + (_0x210c76 + 0x1) + '\x20/\x20' + _0x20e9a5['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa), await _0x3e6cb2(_0x20e9a5, _0x210c76), _0x1f692f = [{
+    !_0x50768a && (_0x50768a = {});
+    if (_0x26313b != 'ver') {
+        _0x57f604(_0x4917b3['name'] + '\x20Task\x20' + (_0x145998 + 0x1) + '\x20/\x20' + _0x50768a['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a), await _0x238b3c(_0x50768a, _0x145998), _0x581e3c = [{
             'type': 'rich',
             'title': 'Succesful\x20OQIUM\x20Entry',
             'description': '',
@@ -1993,85 +1993,85 @@ async function _0x14f394(_0x210c76, _0x5e61c5, _0x7a7fae, _0x20e9a5, _0x3b5433) 
             'fields': [
                 {
                     'name': 'User',
-                    'value': '' + _0x5746a9
+                    'value': '' + _0x54444c
                 },
                 {
                     'name': 'Size',
-                    'value': '' + _0x20e9a5[_0x210c76]['Size']
+                    'value': '' + _0x50768a[_0x145998]['Size']
                 },
                 {
                     'name': 'Delay',
-                    'value': '' + _0x5690b2['delay']
+                    'value': '' + _0x401d1c['delay']
                 },
                 {
                     'name': 'Version',
-                    'value': '' + _0x2f0e91
+                    'value': '' + _0x431e19
                 }
             ]
-        }], _0xb371de = { 'embeds': _0x1f692f }, _0x43775a = _0x7a7fae['data'];
-        _0x5e61c5 == 'exp' ? _0x43775a['data']['attributes']['email'] = '' + _0x20e9a5[_0x210c76]['FirstName'] + _0x20e9a5[_0x210c76]['LastName'] + _0x5690b2['catchall'] : _0x43775a['data']['attributes']['email'] = '' + _0x20e9a5[_0x210c76]['Email'];
-        if (_0x20e9a5[_0x210c76]['Size'] == 'RANDOM') {
+        }], _0x4dd227 = { 'embeds': _0x581e3c }, _0x353b6e = _0x4917b3['data'];
+        _0x26313b == 'exp' ? _0x353b6e['data']['attributes']['email'] = '' + _0x50768a[_0x145998]['FirstName'] + _0x50768a[_0x145998]['LastName'] + _0x401d1c['catchall'] : _0x353b6e['data']['attributes']['email'] = '' + _0x50768a[_0x145998]['Email'];
+        if (_0x50768a[_0x145998]['Size'] == 'RANDOM') {
         }
-        _0x43775a['data']['attributes']['properties']['$first_name'] = '' + _0x20e9a5[_0x210c76]['FirstName'], _0x43775a['data']['attributes']['properties']['$last_name'] = '' + _0x20e9a5[_0x210c76]['LastName'], _0x43775a['data']['attributes']['properties']['$address1'] = _0x20e9a5[_0x210c76]['Address1'] + '\x20' + _0x20e9a5[_0x210c76]['Address2'] + '\x20' + _0x20e9a5[_0x210c76]['HouseNumber'], _0x43775a['data']['attributes']['properties']['$zip'] = '' + _0x20e9a5[_0x210c76]['Zip'], _0x43775a['data']['attributes']['properties']['$city'] = '' + _0x20e9a5[_0x210c76]['City'], _0x43775a['data']['attributes']['properties']['$country'] = '' + _0x20e9a5[_0x210c76]['Country'], _0x43775a['data']['attributes']['properties']['Size'] = '' + _0x20e9a5[_0x210c76]['Size'], _0x43775a['data']['attributes']['properties']['$phone_number'] = '' + _0x20e9a5[_0x210c76]['Phone'], _0x43775a['data']['attributes']['properties']['Instagram\x20Account'] = '' + _0x20e9a5[_0x210c76]['Follower'];
+        _0x353b6e['data']['attributes']['properties']['$first_name'] = '' + _0x50768a[_0x145998]['FirstName'], _0x353b6e['data']['attributes']['properties']['$last_name'] = '' + _0x50768a[_0x145998]['LastName'], _0x353b6e['data']['attributes']['properties']['$address1'] = _0x50768a[_0x145998]['Address1'] + '\x20' + _0x50768a[_0x145998]['Address2'] + '\x20' + _0x50768a[_0x145998]['HouseNumber'], _0x353b6e['data']['attributes']['properties']['$zip'] = '' + _0x50768a[_0x145998]['Zip'], _0x353b6e['data']['attributes']['properties']['$city'] = '' + _0x50768a[_0x145998]['City'], _0x353b6e['data']['attributes']['properties']['$country'] = '' + _0x50768a[_0x145998]['Country'], _0x353b6e['data']['attributes']['properties']['Size'] = '' + _0x50768a[_0x145998]['Size'], _0x353b6e['data']['attributes']['properties']['$phone_number'] = '' + _0x50768a[_0x145998]['Phone'], _0x353b6e['data']['attributes']['properties']['Instagram\x20Account'] = '' + _0x50768a[_0x145998]['Follower'];
     }
-    if (_0x5690b2['useRandomProxy'] = ![])
-        var _0x50346b = _0x3b5433[_0x210c76]['split'](':');
+    if (_0x401d1c['useRandomProxy'] = ![])
+        var _0x2936cb = _0x2775a7[_0x145998]['split'](':');
     else
-        var _0x30fae4 = Math['round'](Math['random']() * (_0x3b5433['length'] - 0x1)), _0x50346b = _0x3b5433[_0x30fae4]['split'](':');
-    var _0x5647fe = {
-        'jar': _0x5d48fa,
+        var _0x5a8ffc = Math['round'](Math['random']() * (_0x2775a7['length'] - 0x1)), _0x2936cb = _0x2775a7[_0x5a8ffc]['split'](':');
+    var _0x55e3c7 = {
+        'jar': _0x596f7f,
         'followAllRedirects': !![],
         'method': 'POST',
-        'url': _0x7a7fae['url'],
-        'headers': _0x7a7fae['headers'],
-        'body': JSON['stringify'](_0x43775a),
-        'proxy': 'http://' + _0x50346b[0x2] + ':' + _0x50346b[0x3] + '@' + _0x50346b[0x0] + ':' + _0x50346b[0x1]
+        'url': _0x4917b3['url'],
+        'headers': _0x4917b3['headers'],
+        'body': JSON['stringify'](_0x353b6e),
+        'proxy': 'http://' + _0x2936cb[0x2] + ':' + _0x2936cb[0x3] + '@' + _0x2936cb[0x0] + ':' + _0x2936cb[0x1]
     };
-    return _0x5e61c5 != 'ver' && (_0x5647fe['url'] = _0x7a7fae['url'], _0x5647fe['headers'] = _0x7a7fae['headers']), _0x5e61c5 == 'ver' && (_0x5647fe['method'] = 'GET'), new Promise(function (_0x350d23, _0x2f53d4) {
-        callback = async (_0x143794, _0x3e30e3, _0x1d38f2) => {
-            if (!_0x143794 && _0x3e30e3['statusCode'] == 0xca || !_0x143794 && _0x3e30e3['statusCode'] == 0xc8) {
-                if (_0x5e61c5 != 'ver') {
-                    var _0x2ad6cd = await _0x3553d9(_0x20e9a5[_0x210c76], _0x7a7fae, 'dev', ![]), _0x212fe6 = await _0x3553d9(_0x20e9a5[_0x210c76], _0x7a7fae, 'pub', ![]);
-                    const _0xf21f7a = {
-                        'succesDEVMSG': { 'embeds': [_0x2ad6cd] },
-                        'succesPUBMSG': { 'embeds': [_0x212fe6] }
+    return _0x26313b != 'ver' && (_0x55e3c7['url'] = _0x4917b3['url'], _0x55e3c7['headers'] = _0x4917b3['headers']), _0x26313b == 'ver' && (_0x55e3c7['method'] = 'GET'), new Promise(function (_0x5ee4a9, _0x4e1bf0) {
+        callback = async (_0x3dc5, _0x2da3fb, _0x4d3d85) => {
+            if (!_0x3dc5 && _0x2da3fb['statusCode'] == 0xca || !_0x3dc5 && _0x2da3fb['statusCode'] == 0xc8) {
+                if (_0x26313b != 'ver') {
+                    var _0x40f231 = await _0x344cc9(_0x50768a[_0x145998], _0x4917b3, 'dev', ![]), _0x323fbc = await _0x344cc9(_0x50768a[_0x145998], _0x4917b3, 'pub', ![]);
+                    const _0x59c14a = {
+                        'succesDEVMSG': { 'embeds': [_0x40f231] },
+                        'succesPUBMSG': { 'embeds': [_0x323fbc] }
                     };
-                    if (_0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '')
+                    if (_0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '')
                         try {
-                            await _0x278fc0(_0x5690b2['webhook'], _0xf21f7a['succesDEVMSG']);
+                            await _0xafb19d(_0x401d1c['webhook'], _0x59c14a['succesDEVMSG']);
                         } catch {
                         }
-                    await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0xf21f7a['succesDEVMSG']), await _0x73378f(0xc8);
+                    await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x59c14a['succesDEVMSG']), await _0x491ae3(0xc8);
                     try {
-                        await _0x278fc0(_0x319480, _0xf21f7a['succesPUBMSG']);
+                        await _0xafb19d(_0x45ab34, _0x59c14a['succesPUBMSG']);
                     } catch {
                     }
                 }
-                _0x350d23(console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x7a7fae['name'] + ']\x20Task\x20' + (_0x210c76 + 0x1) + ':\x20Raffle\x20Entered!')));
+                _0x5ee4a9(console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x4917b3['name'] + ']\x20Task\x20' + (_0x145998 + 0x1) + ':\x20Raffle\x20Entered!')));
             } else {
-                if (_0x5e61c5 != 'ver') {
-                    var _0x4b65fc = '' + _0x143794, _0xb601a7 = await _0x3553d9(_0x20e9a5[_0x210c76], _0x7a7fae, 'dev', !![], _0x4b65fc), _0x5e6d1e = {};
-                    _0x5e6d1e['errorDEV'] = { 'embeds': [_0xb601a7] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x5e6d1e['errorDEV']), await _0x278fc0(_0x51b669, _0x5e6d1e['errorDEV']);
+                if (_0x26313b != 'ver') {
+                    var _0x301c64 = '' + _0x3dc5, _0x6f399 = await _0x344cc9(_0x50768a[_0x145998], _0x4917b3, 'dev', !![], _0x301c64), _0x2b160d = {};
+                    _0x2b160d['errorDEV'] = { 'embeds': [_0x6f399] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x2b160d['errorDEV']), await _0xafb19d(_0x51c252, _0x2b160d['errorDEV']);
                 }
-                _0x2f53d4(console['log'](_0x18cf54() + '\x20[' + _0x7a7fae['name'] + ']\x20Task\x20' + (_0x210c76 + 0x1) + ':\x20' + _0x143794));
+                _0x4e1bf0(console['log'](_0x1e4ea5() + '\x20[' + _0x4917b3['name'] + ']\x20Task\x20' + (_0x145998 + 0x1) + ':\x20' + _0x3dc5));
             }
         };
         try {
-            _0x5e61c5 != 'ver' && console['log'](_0x18cf54() + '\x20[' + _0x7a7fae['name'] + ']\x20Task\x20' + (_0x210c76 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x43775a['data']['attributes']['email']), _0x262614(_0x5647fe, callback);
-        } catch (_0x1e3ea2) {
-            console['log'](_0x18cf54() + '\x20Task\x20' + (_0x210c76 + 0x1) + ':\x20' + _0x1e3ea2);
+            _0x26313b != 'ver' && console['log'](_0x1e4ea5() + '\x20[' + _0x4917b3['name'] + ']\x20Task\x20' + (_0x145998 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x353b6e['data']['attributes']['email']), _0x19b48a(_0x55e3c7, callback);
+        } catch (_0x3e07f3) {
+            console['log'](_0x1e4ea5() + '\x20Task\x20' + (_0x145998 + 0x1) + ':\x20' + _0x3e07f3);
         }
     });
 }
 ;
-async function _0x409f21(_0x5e0847, _0x5a7330, _0x1dca31) {
-    var _0x4fd990;
-    _0x992352('' + _0x5a7330);
-    var _0x44b2f8 = _0x1dca31[0x0]['split'](':');
-    const _0x20e2cc = await _0x4baac5['launch']({
+async function _0x4b6c5f(_0x3ce391, _0x5a7cbe, _0x97fc79) {
+    var _0x15176e;
+    _0x57f604('' + _0x5a7cbe);
+    var _0x33ca6e = _0x97fc79[0x0]['split'](':');
+    const _0x59682e = await _0x4efd86['launch']({
         'headless': ![],
         'args': [
-            '--proxy-server=' + _0x44b2f8[0x0] + ':' + _0x44b2f8[0x1],
+            '--proxy-server=' + _0x33ca6e[0x0] + ':' + _0x33ca6e[0x1],
             '--no-sandbox',
             '--disable-setuid-sandbox',
             '--disable-web-security',
@@ -2080,175 +2080,175 @@ async function _0x409f21(_0x5e0847, _0x5a7330, _0x1dca31) {
         ]
     });
     try {
-        console['log'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Getting\x20Session');
-        const _0x2e35c1 = JSON['parse'](_0x536860['readFileSync']('sessions/log.json')), _0x59d595 = await _0x20e2cc['newPage']();
-        await _0x59d595['authenticate']({
-            'username': '' + _0x44b2f8[0x2],
-            'password': '' + _0x44b2f8[0x3]
-        }), await _0x59d595['setViewport']({
+        console['log'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Getting\x20Session');
+        const _0x26ab44 = JSON['parse'](_0x550d6b['readFileSync']('sessions/log.json')), _0x28af50 = await _0x59682e['newPage']();
+        await _0x28af50['authenticate']({
+            'username': '' + _0x33ca6e[0x2],
+            'password': '' + _0x33ca6e[0x3]
+        }), await _0x28af50['setViewport']({
             'width': 0x230,
             'height': 0x2d0
-        }), await _0x59d595, await _0x59d595['goto']('https://www.paypal.com/signin');
+        }), await _0x28af50, await _0x28af50['goto']('https://www.paypal.com/signin');
         try {
-            console['log'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Log\x20in\x20to\x20your\x20Paypal\x20account..'), await _0x59d595['waitForSelector']('#cwBalance', { 'timeout': 0x493e0 }), console['log'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Successfully\x20logged\x20in'), await _0x73378f(0x2710), _0x4fd990 = await _0x59d595['cookies'](), _0x536860['writeFileSync']('sessions/log.json', '' + JSON['stringify'](_0x4fd990));
-        } catch (_0x28b39a) {
-            throw new Error('Login\x20session\x20expired\x20' + _0x28b39a);
+            console['log'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Log\x20in\x20to\x20your\x20Paypal\x20account..'), await _0x28af50['waitForSelector']('#cwBalance', { 'timeout': 0x493e0 }), console['log'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Successfully\x20logged\x20in'), await _0x491ae3(0x2710), _0x15176e = await _0x28af50['cookies'](), _0x550d6b['writeFileSync']('sessions/log.json', '' + JSON['stringify'](_0x15176e));
+        } catch (_0x2bdcf6) {
+            throw new Error('Login\x20session\x20expired\x20' + _0x2bdcf6);
         }
-        for (var _0x8decc5 = 0x0; _0x8decc5 < _0x5e0847['length']; _0x8decc5++) {
-            console['log'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Task\x20' + (_0x8decc5 + 0x1) + '\x20:\x20Starting\x20Verification'), _0x992352(_0x5a7330 + '\x20Task\x20' + (_0x8decc5 + 0x1) + '\x20/\x20' + _0x5e0847['length']);
-            const _0x1bd258 = await _0x20e2cc['newPage']();
-            await _0x1bd258['goto']('' + _0x5e0847[_0x8decc5], { 'waitUntil': 'networkidle2' }), await _0x73378f(0xbb8);
+        for (var _0x5012d6 = 0x0; _0x5012d6 < _0x3ce391['length']; _0x5012d6++) {
+            console['log'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Task\x20' + (_0x5012d6 + 0x1) + '\x20:\x20Starting\x20Verification'), _0x57f604(_0x5a7cbe + '\x20Task\x20' + (_0x5012d6 + 0x1) + '\x20/\x20' + _0x3ce391['length']);
+            const _0xe47b71 = await _0x59682e['newPage']();
+            await _0xe47b71['goto']('' + _0x3ce391[_0x5012d6], { 'waitUntil': 'networkidle2' }), await _0x491ae3(0xbb8);
             try {
-                const _0x1781c1 = await _0x1bd258['$']('#challenge-heading');
-                _0x1781c1 && (console['log'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Task\x20' + (_0x8decc5 + 0x1) + '\x20:\x20' + _0x5ecce5['yellow']('2FA\x20Required')), await _0x1bd258['waitForSelector']('.CheckoutButton_buttonWrapper_2VloF', { 'timeout': 0x493e0 }));
-                await _0x73378f(0x61a8), await _0x1bd258['waitForSelector']('#payment-submit-btn'), await _0x1bd258['$eval']('#payment-submit-btn', _0x261945 => _0x261945['click']()), await _0x1bd258['click']('#payment-submit-btn');
+                const _0x2c550f = await _0xe47b71['$']('#challenge-heading');
+                _0x2c550f && (console['log'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Task\x20' + (_0x5012d6 + 0x1) + '\x20:\x20' + _0x1818b9['yellow']('2FA\x20Required')), await _0xe47b71['waitForSelector']('.CheckoutButton_buttonWrapper_2VloF', { 'timeout': 0x493e0 }));
+                await _0x491ae3(0x61a8), await _0xe47b71['waitForSelector']('#payment-submit-btn'), await _0xe47b71['$eval']('#payment-submit-btn', _0x3d9ceb => _0x3d9ceb['click']()), await _0xe47b71['click']('#payment-submit-btn');
                 try {
-                    await _0x1bd258['waitForSelector']('img[alt=\x22AFEW\x20STORE\x22]'), await _0x73378f(0x5dc), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Task\x20' + (_0x8decc5 + 0x1) + '\x20:\x20Link\x20Verified'));
-                } catch (_0x3983f4) {
-                    throw new Error('Payment\x20Rejected:\x20' + _0x3983f4['message']);
+                    await _0xe47b71['waitForSelector']('img[alt=\x22AFEW\x20STORE\x22]'), await _0x491ae3(0x5dc), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Task\x20' + (_0x5012d6 + 0x1) + '\x20:\x20Link\x20Verified'));
+                } catch (_0x10de50) {
+                    throw new Error('Payment\x20Rejected:\x20' + _0x10de50['message']);
                 } finally {
-                    await _0x1bd258['close'](), await _0x73378f(0x4650);
+                    await _0xe47b71['close'](), await _0x491ae3(0x4650);
                 }
-            } catch (_0x5e1c10) {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x5a7330 + ']\x20Task\x20' + (_0x8decc5 + 0x1) + '\x20:\x20' + _0x5e1c10));
+            } catch (_0x91ae35) {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x5a7cbe + ']\x20Task\x20' + (_0x5012d6 + 0x1) + '\x20:\x20' + _0x91ae35));
             }
         }
-    } catch (_0x3a58e0) {
-        console['log'](_0x5ecce5['red']('' + _0x3a58e0));
+    } catch (_0x55f1eb) {
+        console['log'](_0x1818b9['red']('' + _0x55f1eb));
     } finally {
-        await _0x20e2cc['close']();
+        await _0x59682e['close']();
     }
 }
-async function _0x4cfe38(_0x5e3bab, _0x36c012, _0x18023b) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x4daae3(_0xc44f0c, _0x5728a5, _0x5712fb) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x1bd1cf = 0x0; _0x1bd1cf < _0x5e3bab['length']; _0x1bd1cf++) {
-        var _0x215907;
-        await _0x3e6cb2(_0x5e3bab, _0x1bd1cf), _0x992352(_0x18023b['name'] + '\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20/\x20' + _0x5e3bab['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        var _0x59e310 = await _0x3553d9(_0x5e3bab[_0x1bd1cf], _0x18023b, 'acc', ![]);
-        const _0x539abc = { 'succesDEVMSG': { 'embeds': [_0x59e310] } }, _0x16891d = 'https://www.bstn.com/eu_en/customer/account/';
-        var _0x13fab6 = Math['round'](Math['random']() * (_0x36c012['length'] - 0x1)), _0xd15240 = _0x36c012[_0x13fab6]['split'](':');
-        const _0x3b201b = await _0x4baac5['launch']({
+    for (var _0x2341b0 = 0x0; _0x2341b0 < _0xc44f0c['length']; _0x2341b0++) {
+        var _0x378906;
+        await _0x238b3c(_0xc44f0c, _0x2341b0), _0x57f604(_0x5712fb['name'] + '\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20/\x20' + _0xc44f0c['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        var _0x4996b6 = await _0x344cc9(_0xc44f0c[_0x2341b0], _0x5712fb, 'acc', ![]);
+        const _0x2562dd = { 'succesDEVMSG': { 'embeds': [_0x4996b6] } }, _0x4f7218 = 'https://www.bstn.com/eu_en/customer/account/';
+        var _0x3397a3 = Math['round'](Math['random']() * (_0x5728a5['length'] - 0x1)), _0x3a572a = _0x5728a5[_0x3397a3]['split'](':');
+        const _0x1efa7e = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0xd15240[0x0] + ':' + _0xd15240[0x1],
+                '--proxy-server=' + _0x3a572a[0x0] + ':' + _0x3a572a[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox',
                 '--force-device-scale-factor=0.3'
             ]
         });
         try {
-            const _0x41b112 = await _0x3b201b['newPage']();
-            await _0x41b112['authenticate']({
-                'username': '' + _0xd15240[0x2],
-                'password': '' + _0xd15240[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20Getting\x20Session'), await _0x41b112['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x41b112['setRequestInterception'](!![]), _0x41b112['on']('request', _0x25101e => {
-                _0x25101e['resourceType']() === 'image' ? _0x25101e['abort']() : _0x25101e['continue']();
-            }), await _0x41b112['goto']('' + _0x16891d), await _0x41b112['waitForSelector']('button[class=\x22cf2Lf6\x22]'), await _0x41b112['click']('button[class=\x22cf2Lf6\x22]'), await _0x41b112['waitForSelector']('a.action.create.primary.social-login'), console['log'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x73378f(0x7d0), await _0x41b112['click']('a.action.create.primary.social-login'), await _0x73378f(0x7d0), await _0x41b112['click']('button.button.dashboard-actions-toolbar__item'), console['log'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x73378f(0x190), await _0x41b112['type']('#firstname', _0x5e3bab[_0x1bd1cf]['FirstName'], { 'delay': 0xf0 }), await _0x73378f(0x190), await _0x41b112['type']('#lastname', _0x5e3bab[_0x1bd1cf]['LastName'], { 'delay': 0xe6 }), await _0x73378f(0x190), await _0x41b112['type']('#bss_email_address', _0x5e3bab[_0x1bd1cf]['Email'], { 'delay': 0x122 }), await _0x73378f(0x190), await _0x41b112['type']('#password', _0x5e3bab[_0x1bd1cf]['Password'], { 'delay': 0x1e0 }), console['log'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20Sending\x20Request'), await _0x73378f(0x2bc), await _0x41b112['click']('#bt-social-create'), await _0x41b112['click']('#bt-social-create'), await _0x73378f(0x1388);
-            const _0x439727 = await _0x41b112['$']('#bss_email_address-error');
-            if (_0x439727)
+            const _0x177f1d = await _0x1efa7e['newPage']();
+            await _0x177f1d['authenticate']({
+                'username': '' + _0x3a572a[0x2],
+                'password': '' + _0x3a572a[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x177f1d['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x177f1d['setRequestInterception'](!![]), _0x177f1d['on']('request', _0x1158d2 => {
+                _0x1158d2['resourceType']() === 'image' ? _0x1158d2['abort']() : _0x1158d2['continue']();
+            }), await _0x177f1d['goto']('' + _0x4f7218), await _0x177f1d['waitForSelector']('button[class=\x22cf2Lf6\x22]'), await _0x177f1d['click']('button[class=\x22cf2Lf6\x22]'), await _0x177f1d['waitForSelector']('a.action.create.primary.social-login'), console['log'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x491ae3(0x7d0), await _0x177f1d['click']('a.action.create.primary.social-login'), await _0x491ae3(0x7d0), await _0x177f1d['click']('button.button.dashboard-actions-toolbar__item'), console['log'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x491ae3(0x190), await _0x177f1d['type']('#firstname', _0xc44f0c[_0x2341b0]['FirstName'], { 'delay': 0xf0 }), await _0x491ae3(0x190), await _0x177f1d['type']('#lastname', _0xc44f0c[_0x2341b0]['LastName'], { 'delay': 0xe6 }), await _0x491ae3(0x190), await _0x177f1d['type']('#bss_email_address', _0xc44f0c[_0x2341b0]['Email'], { 'delay': 0x122 }), await _0x491ae3(0x190), await _0x177f1d['type']('#password', _0xc44f0c[_0x2341b0]['Password'], { 'delay': 0x1e0 }), console['log'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20Sending\x20Request'), await _0x491ae3(0x2bc), await _0x177f1d['click']('#bt-social-create'), await _0x177f1d['click']('#bt-social-create'), await _0x491ae3(0x1388);
+            const _0x201079 = await _0x177f1d['$']('#bss_email_address-error');
+            if (_0x201079)
                 throw new Error('Invalid\x20Email');
-            const _0x1ac2ce = await _0x41b112['$']('#password-error');
-            if (_0x1ac2ce)
+            const _0x338906 = await _0x177f1d['$']('#password-error');
+            if (_0x338906)
                 throw new Error('Invalid\x20Password');
-            await _0x41b112['waitForSelector']('div.mesg-success'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20Account\x20' + _0x5e3bab[_0x1bd1cf]['Email'] + '\x20Generated')), _0x536860['appendFileSync']('../accounts/bstn.csv', '\x0a' + _0x5e3bab[_0x1bd1cf]['Email'] + ',' + _0x5e3bab[_0x1bd1cf]['Password']);
+            await _0x177f1d['waitForSelector']('div.mesg-success'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20Account\x20' + _0xc44f0c[_0x2341b0]['Email'] + '\x20Generated')), _0x550d6b['appendFileSync']('../accounts/bstn.csv', '\x0a' + _0xc44f0c[_0x2341b0]['Email'] + ',' + _0xc44f0c[_0x2341b0]['Password']);
             try {
-                _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x539abc['succesDEVMSG']);
+                _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x2562dd['succesDEVMSG']);
             } catch {
             }
-            await _0x278fc0(_0x10deb2, _0x539abc['succesDEVMSG']), console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20After\x20your\x20all\x20tasks\x20are\x20finished,\x20use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20verify'));
-        } catch (_0x1e5ddf) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Task\x20' + (_0x1bd1cf + 0x1) + '\x20:\x20' + _0x1e5ddf)), _0x215907 = '' + _0x1e5ddf;
-            var _0x4c4a3d = await _0x3553d9(_0x5e3bab[_0x1bd1cf], _0x18023b, 'acc', !![], _0x215907);
-            _0x539abc['errorDEV'] = { 'embeds': [_0x4c4a3d] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x539abc['errorDEV']), await _0x278fc0(_0x51b669, _0x539abc['errorDEV']);
+            await _0xafb19d(_0x3cac51, _0x2562dd['succesDEVMSG']), console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20After\x20your\x20all\x20tasks\x20are\x20finished,\x20use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20verify'));
+        } catch (_0x172842) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Task\x20' + (_0x2341b0 + 0x1) + '\x20:\x20' + _0x172842)), _0x378906 = '' + _0x172842;
+            var _0x339b86 = await _0x344cc9(_0xc44f0c[_0x2341b0], _0x5712fb, 'acc', !![], _0x378906);
+            _0x2562dd['errorDEV'] = { 'embeds': [_0x339b86] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x2562dd['errorDEV']), await _0xafb19d(_0x51c252, _0x2562dd['errorDEV']);
         } finally {
-            _0x3b201b['close'](), console['log'](_0x18cf54() + '\x20[' + _0x18023b['name'] + ']\x20Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x1efa7e['close'](), console['log'](_0x1e4ea5() + '\x20[' + _0x5712fb['name'] + ']\x20Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x9f879(_0x1e1453, _0x14c1d8, _0x383d77) {
-    _0x4baac5['use'](_0x3f14b2());
-    for (var _0x3a6bcc = 0x0; _0x3a6bcc < _0x1e1453['length']; _0x3a6bcc++) {
-        var _0x534125 = Math['round'](Math['random']() * (_0x14c1d8['length'] - 0x1)), _0x491968 = _0x14c1d8[_0x534125]['split'](':');
-        const _0x55c831 = await _0x4baac5['launch']({
+async function _0x452980(_0x537812, _0x48d4a2, _0x436511) {
+    _0x4efd86['use'](_0x202680());
+    for (var _0x1ce1cd = 0x0; _0x1ce1cd < _0x537812['length']; _0x1ce1cd++) {
+        var _0x1d97c7 = Math['round'](Math['random']() * (_0x48d4a2['length'] - 0x1)), _0x266c85 = _0x48d4a2[_0x1d97c7]['split'](':');
+        const _0x29f015 = await _0x4efd86['launch']({
             'headless': !![],
             'args': [
-                '--proxy-server=' + _0x491968[0x0] + ':' + _0x491968[0x1],
+                '--proxy-server=' + _0x266c85[0x0] + ':' + _0x266c85[0x1],
                 '--no-sandbox',
                 '--disable-setuid-sandbox'
             ]
         });
         try {
-            const _0x1d5245 = await _0x55c831['newPage']();
-            await _0x1d5245['authenticate']({
-                'username': '' + _0x491968[0x2],
-                'password': '' + _0x491968[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Task\x20' + (_0x3a6bcc + 0x1) + '\x20:\x20Starting\x20Verification'), await _0x1d5245['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x1d5245['setRequestInterception'](!![]), _0x1d5245['on']('request', _0x502a03 => {
-                _0x502a03['resourceType']() === 'image' || _0x502a03['resourceType']() === 'font' || _0x502a03['resourceType']() === 'media' ? _0x502a03['abort']() : _0x502a03['continue']();
-            }), console['log'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Task\x20' + (_0x3a6bcc + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1d5245['goto'](_0x1e1453[_0x3a6bcc]), console['log'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Task\x20' + (_0x3a6bcc + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x1d5245['waitForTimeout'](0xbb8);
+            const _0x37dfa4 = await _0x29f015['newPage']();
+            await _0x37dfa4['authenticate']({
+                'username': '' + _0x266c85[0x2],
+                'password': '' + _0x266c85[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Task\x20' + (_0x1ce1cd + 0x1) + '\x20:\x20Starting\x20Verification'), await _0x37dfa4['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x37dfa4['setRequestInterception'](!![]), _0x37dfa4['on']('request', _0x305304 => {
+                _0x305304['resourceType']() === 'image' || _0x305304['resourceType']() === 'font' || _0x305304['resourceType']() === 'media' ? _0x305304['abort']() : _0x305304['continue']();
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Task\x20' + (_0x1ce1cd + 0x1) + '\x20:\x20Getting\x20Session'), await _0x37dfa4['goto'](_0x537812[_0x1ce1cd]), console['log'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Task\x20' + (_0x1ce1cd + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x37dfa4['waitForTimeout'](0xbb8);
             try {
-                await _0x1d5245['waitForSelector']('.dashboard-main_title'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Task\x20' + (_0x3a6bcc + 0x1) + '\x20:\x20Verification\x20Successful'));
-                var _0x489b62 = await _0x3553d9(null, _0x383d77, 'ver', ![]);
-                const _0x53fc53 = { 'succesDEVMSG': { 'embeds': [_0x489b62] } };
-                await _0x278fc0(_0x1ea743, _0x53fc53['succesDEVMSG']);
-            } catch (_0x68d787) {
-                throw new Error(_0x68d787);
+                await _0x37dfa4['waitForSelector']('.dashboard-main_title'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Task\x20' + (_0x1ce1cd + 0x1) + '\x20:\x20Verification\x20Successful'));
+                var _0x14df88 = await _0x344cc9(null, _0x436511, 'ver', ![]);
+                const _0x42f468 = { 'succesDEVMSG': { 'embeds': [_0x14df88] } };
+                await _0xafb19d(_0x35897b, _0x42f468['succesDEVMSG']);
+            } catch (_0x31e9a0) {
+                throw new Error(_0x31e9a0);
             }
-        } catch (_0x231fe9) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Task\x20' + (_0x3a6bcc + 0x1) + '\x20:\x20' + _0x231fe9));
-            var _0x403d27 = _0x231fe9, _0x12b9cb = await _0x3553d9(null, _0x383d77, 'ver', !![], _0x403d27);
-            const _0x207b42 = { 'errorDEVMSG': { 'embeds': [_0x12b9cb] } };
-            _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x207b42['errorDEVMSG']), await _0x278fc0(_0x51b669, _0x207b42['errorDEVMSG']);
+        } catch (_0x42af46) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Task\x20' + (_0x1ce1cd + 0x1) + '\x20:\x20' + _0x42af46));
+            var _0x418d1e = _0x42af46, _0x55556b = await _0x344cc9(null, _0x436511, 'ver', !![], _0x418d1e);
+            const _0x2e01c0 = { 'errorDEVMSG': { 'embeds': [_0x55556b] } };
+            _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x2e01c0['errorDEVMSG']), await _0xafb19d(_0x51c252, _0x2e01c0['errorDEVMSG']);
         } finally {
-            _0x55c831['close'](), console['log'](_0x18cf54() + '\x20[' + _0x383d77['name'] + ']\x20Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x29f015['close'](), console['log'](_0x1e4ea5() + '\x20[' + _0x436511['name'] + ']\x20Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x3f49ef(_0x3b08ce, _0x3b5334, _0x418270) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x2194b5(_0x7e31a9, _0x3e263d, _0x37e397) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x3dcc31 = 0x0; _0x3dcc31 < _0x3b08ce['length']; _0x3dcc31++) {
-        var _0x51f943;
-        await _0x3e6cb2(_0x3b08ce, _0x3dcc31), _0x992352(_0x418270['name'] + '\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20/\x20' + _0x3b08ce['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        var _0x1142ea = Math['round'](Math['random']() * (_0x3b5334['length'] - 0x1)), _0x49d4e7 = _0x3b5334[_0x1142ea]['split'](':'), _0x417f30;
+    for (var _0x40362d = 0x0; _0x40362d < _0x7e31a9['length']; _0x40362d++) {
+        var _0x2a531e;
+        await _0x238b3c(_0x7e31a9, _0x40362d), _0x57f604(_0x37e397['name'] + '\x20Task\x20' + (_0x40362d + 0x1) + '\x20/\x20' + _0x7e31a9['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        var _0x3e03bb = Math['round'](Math['random']() * (_0x3e263d['length'] - 0x1)), _0x1c3594 = _0x3e263d[_0x3e03bb]['split'](':'), _0x288965;
         try {
-            _0x417f30 = await _0x4baac5['launch']({
+            _0x288965 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x49d4e7[0x0] + ':' + _0x49d4e7[0x1],
+                    '--proxy-server=' + _0x1c3594[0x0] + ':' + _0x1c3594[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         } catch {
-            _0x417f30 = await _0x4baac5['launch']({
+            _0x288965 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x49d4e7[0x0] + ':' + _0x49d4e7[0x1],
+                    '--proxy-server=' + _0x1c3594[0x0] + ':' + _0x1c3594[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         }
         try {
-            const _0x4c53d8 = await _0x417f30['newPage'](), _0x4aebfc = await _0x4c53d8['target']()['createCDPSession'](), { windowId: _0x959a71 } = await _0x4aebfc['send']('Browser.getWindowForTarget');
-            await _0x4c53d8['setViewport']({
+            const _0x405286 = await _0x288965['newPage'](), _0x3afa81 = await _0x405286['target']()['createCDPSession'](), { windowId: _0x5595d3 } = await _0x3afa81['send']('Browser.getWindowForTarget');
+            await _0x405286['setViewport']({
                 'width': 0x501,
                 'height': 0x2d0
             });
-            var _0x1b917f = [{
+            var _0x10f42e = [{
                 'name': 'cf_clearance',
                 'value': 'uyuh7Wo9shR3zcpWvbWJ04mG0iNC2N25mhp1FNAbHYY-1676282182-0-1-9764d0ee.e7bea100.c0658f0e-160',
                 'domain': '.bstn.com',
@@ -2257,267 +2257,267 @@ async function _0x3f49ef(_0x3b08ce, _0x3b5334, _0x418270) {
                 'httpOnly': !![],
                 'secure': !![]
             }];
-            await _0x4c53d8['authenticate']({
-                'username': '' + _0x49d4e7[0x2],
-                'password': '' + _0x49d4e7[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4c53d8['goto']('' + _0x3b08ce[_0x3dcc31]['Url']), console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x4c53d8['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L'), await _0x4aebfc['send']('Browser.setWindowBounds', {
-                'windowId': _0x959a71,
+            await _0x405286['authenticate']({
+                'username': '' + _0x1c3594[0x2],
+                'password': '' + _0x1c3594[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Getting\x20Session'), await _0x405286['goto']('' + _0x7e31a9[_0x40362d]['Url']), console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x405286['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L'), await _0x3afa81['send']('Browser.setWindowBounds', {
+                'windowId': _0x5595d3,
                 'bounds': { 'windowState': 'minimized' }
-            }), await _0x73378f(0x1388), await _0x4c53d8['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x4c53d8['focus']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x73378f(0x1f4), console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Logging\x20in'), await _0x4c53d8['$eval']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb', _0x33c5f9 => _0x33c5f9['click']()), await _0x4c53d8['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x4c53d8['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x73378f(0x7d0), await _0x4c53d8['waitForSelector']('#email-login'), await _0x4c53d8['type']('#email-login', '' + _0x3b08ce[_0x3dcc31]['Email']), await _0x73378f(0x1f4), await _0x4c53d8['waitForSelector']('#password'), await _0x4c53d8['type']('#password', '' + _0x3b08ce[_0x3dcc31]['Password']), await _0x73378f(0x1f4);
+            }), await _0x491ae3(0x1388), await _0x405286['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x405286['focus']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x491ae3(0x1f4), console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Logging\x20in'), await _0x405286['$eval']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb', _0x117d02 => _0x117d02['click']()), await _0x405286['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x405286['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x491ae3(0x7d0), await _0x405286['waitForSelector']('#email-login'), await _0x405286['type']('#email-login', '' + _0x7e31a9[_0x40362d]['Email']), await _0x491ae3(0x1f4), await _0x405286['waitForSelector']('#password'), await _0x405286['type']('#password', '' + _0x7e31a9[_0x40362d]['Password']), await _0x491ae3(0x1f4);
             try {
-                await _0x4c53d8['$eval']('.login_accountInfo__FCIxY\x20>\x20button[type=\x22submit\x22]', _0x523582 => _0x523582['click']()), await _0x4c53d8['click']('.login_accountInfo__FCIxY\x20>\x20button[type=\x22submit\x22]');
+                await _0x405286['$eval']('.login_accountInfo__FCIxY\x20>\x20button[type=\x22submit\x22]', _0x43c22e => _0x43c22e['click']()), await _0x405286['click']('.login_accountInfo__FCIxY\x20>\x20button[type=\x22submit\x22]');
             } catch {
             }
             try {
-                await _0x4c53d8['waitForSelector']('.swatchOptions_sizeTiles__Lizc2');
-            } catch (_0x42e82a) {
+                await _0x405286['waitForSelector']('.swatchOptions_sizeTiles__Lizc2');
+            } catch (_0x23a7b8) {
             }
-            await _0x73378f(0x3e8);
-            const _0x1d7b1f = await _0x4c53d8['$']('.enteredDraw_container__2KmQ_');
-            if (_0x1d7b1f)
+            await _0x491ae3(0x3e8);
+            const _0x21613d = await _0x405286['$']('.enteredDraw_container__2KmQ_');
+            if (_0x21613d)
                 throw new Error('Duplicate\x20Entry');
-            console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x3b08ce[_0x3dcc31]['Size']);
-            if (_0x3b08ce[_0x3dcc31]['Size'] != 'RANDOM') {
-                var _0x3a3e74 = _0x3b08ce[_0x3dcc31]['Size']['replace']('.', ',');
-                const _0x41dd36 = await _0x4c53d8['$x']('//div[contains(text(),\x20' + _0x3a3e74 + ')]');
-                await _0x41dd36[0x0]['click']();
+            console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x7e31a9[_0x40362d]['Size']);
+            if (_0x7e31a9[_0x40362d]['Size'] != 'RANDOM') {
+                var _0x17124c = _0x7e31a9[_0x40362d]['Size']['replace']('.', ',');
+                const _0x36a8e6 = await _0x405286['$x']('//div[contains(text(),\x20' + _0x17124c + ')]');
+                await _0x36a8e6[0x0]['click']();
             } else {
-                const _0x326b6a = await _0x4c53d8['$$']('div.swatchTile_tile__IRH9Q');
-                var _0x57450a = Math['round'](Math['random']() * (_0x326b6a['length'] - 0x1));
-                await _0x326b6a[_0x57450a]['click']();
+                const _0x14bbcf = await _0x405286['$$']('div.swatchTile_tile__IRH9Q');
+                var _0x30d710 = Math['round'](Math['random']() * (_0x14bbcf['length'] - 0x1));
+                await _0x14bbcf[_0x30d710]['click']();
             }
-            await _0x73378f(0x1f4);
-            const _0x5af78d = await _0x4c53d8['$']('.addressList_addressItem__LE2PB');
-            if (_0x5af78d) {
+            await _0x491ae3(0x1f4);
+            const _0xb6f2fb = await _0x405286['$']('.addressList_addressItem__LE2PB');
+            if (_0xb6f2fb) {
             } else
-                console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Filling\x20Address'), await _0x4c53d8['click']('div.product_shipping__zEfqd\x20>\x20div\x20>\x20div.legend_legend__sQIiF\x20>\x20div.legend_header__iHZIh\x20>\x20div\x20>\x20button'), await _0x73378f(0x5dc), await _0x4c53d8['waitForSelector']('#firstname'), await _0x4c53d8['type']('#firstname', '' + _0x3b08ce[_0x3dcc31]['FirstName']), await _0x73378f(0x1f4), await _0x4c53d8['waitForSelector']('#firstname'), await _0x4c53d8['type']('#lastname', '' + _0x3b08ce[_0x3dcc31]['LastName']), await _0x73378f(0x1f4), await _0x4c53d8['waitForSelector']('#firstname'), await _0x4c53d8['type']('#street', '' + _0x3b08ce[_0x3dcc31]['Address1']), await _0x73378f(0x1f4), await _0x4c53d8['waitForSelector']('#firstname'), await _0x4c53d8['type']('#houseNumber', _0x3b08ce[_0x3dcc31]['HouseNumber'] + '\x20' + _0x3b08ce[_0x3dcc31]['Address2']), await _0x73378f(0x1f4), await _0x4c53d8['waitForSelector']('#firstname'), await _0x4c53d8['select']('#country_code', '' + _0x3b08ce[_0x3dcc31]['Country']), await _0x73378f(0x1f4), await _0x4c53d8['type']('#postcode', '' + _0x3b08ce[_0x3dcc31]['Zip']), await _0x73378f(0x1f4), await _0x4c53d8['type']('#city', '' + _0x3b08ce[_0x3dcc31]['City']), await _0x73378f(0x1f4), await _0x4c53d8['type']('#telephone', '' + _0x3b08ce[_0x3dcc31]['Phone']), await _0x73378f(0x1f4), await _0x4c53d8['click']('.addressModal_submit__dOiL4\x20>\x20button[type=\x22submit\x22]');
-            await _0x73378f(0x9c4);
+                console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Filling\x20Address'), await _0x405286['click']('div.product_shipping__zEfqd\x20>\x20div\x20>\x20div.legend_legend__sQIiF\x20>\x20div.legend_header__iHZIh\x20>\x20div\x20>\x20button'), await _0x491ae3(0x5dc), await _0x405286['waitForSelector']('#firstname'), await _0x405286['type']('#firstname', '' + _0x7e31a9[_0x40362d]['FirstName']), await _0x491ae3(0x1f4), await _0x405286['waitForSelector']('#firstname'), await _0x405286['type']('#lastname', '' + _0x7e31a9[_0x40362d]['LastName']), await _0x491ae3(0x1f4), await _0x405286['waitForSelector']('#firstname'), await _0x405286['type']('#street', '' + _0x7e31a9[_0x40362d]['Address1']), await _0x491ae3(0x1f4), await _0x405286['waitForSelector']('#firstname'), await _0x405286['type']('#houseNumber', _0x7e31a9[_0x40362d]['HouseNumber'] + '\x20' + _0x7e31a9[_0x40362d]['Address2']), await _0x491ae3(0x1f4), await _0x405286['waitForSelector']('#firstname'), await _0x405286['select']('#country_code', '' + _0x7e31a9[_0x40362d]['Country']), await _0x491ae3(0x1f4), await _0x405286['type']('#postcode', '' + _0x7e31a9[_0x40362d]['Zip']), await _0x491ae3(0x1f4), await _0x405286['type']('#city', '' + _0x7e31a9[_0x40362d]['City']), await _0x491ae3(0x1f4), await _0x405286['type']('#telephone', '' + _0x7e31a9[_0x40362d]['Phone']), await _0x491ae3(0x1f4), await _0x405286['click']('.addressModal_submit__dOiL4\x20>\x20button[type=\x22submit\x22]');
+            await _0x491ae3(0x9c4);
             try {
-                await _0x4c53d8['type']('#instagram_name', '' + _0x3b08ce[_0x3dcc31]['Follower']), await _0x4c53d8['click']('.note_groupBtn__WLDwH\x20>\x20button');
+                await _0x405286['type']('#instagram_name', '' + _0x7e31a9[_0x40362d]['Follower']), await _0x405286['click']('.note_groupBtn__WLDwH\x20>\x20button');
             } catch {
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x73378f(0x5dc), await _0x4c53d8['click']('.checkBox_boxHolder__wLGVe'), await _0x73378f(0x1f4), await _0x4c53d8['click']('.termConditions_TC__hll9k\x20>\x20button'), await _0x73378f(0x1388), await _0x4c53d8['waitForSelector']('.success_msg__2HjJY'), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-            var _0x34f4b0 = await _0x3553d9(_0x3b08ce[_0x3dcc31], _0x418270, 'dev', ![]), _0x9dd419 = await _0x3553d9(_0x3b08ce[_0x3dcc31], _0x418270, 'pub', ![]);
-            const _0x17b36c = {
-                'succesDEVMSG': { 'embeds': [_0x34f4b0] },
-                'succesPUBMSG': { 'embeds': [_0x9dd419] }
+            console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x491ae3(0x5dc), await _0x405286['click']('.checkBox_boxHolder__wLGVe'), await _0x491ae3(0x1f4), await _0x405286['click']('.termConditions_TC__hll9k\x20>\x20button'), await _0x491ae3(0x1388), await _0x405286['waitForSelector']('.success_msg__2HjJY'), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+            var _0x2e75f2 = await _0x344cc9(_0x7e31a9[_0x40362d], _0x37e397, 'dev', ![]), _0x4dc522 = await _0x344cc9(_0x7e31a9[_0x40362d], _0x37e397, 'pub', ![]);
+            const _0x17d1fb = {
+                'succesDEVMSG': { 'embeds': [_0x2e75f2] },
+                'succesPUBMSG': { 'embeds': [_0x4dc522] }
             };
             try {
-                _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x17b36c['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x17b36c['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x319480, _0x17b36c['succesPUBMSG']);
-            } catch (_0x4ef885) {
-                console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x4ef885));
+                _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x17d1fb['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x17d1fb['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0x45ab34, _0x17d1fb['succesPUBMSG']);
+            } catch (_0x11ece7) {
+                console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x11ece7));
             }
-        } catch (_0x291318) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Task\x20' + (_0x3dcc31 + 0x1) + '\x20:\x20' + _0x291318)), _0x51f943 = '' + _0x291318;
-            var _0x6f50a0 = await _0x3553d9(_0x3b08ce[_0x3dcc31], _0x418270, 'dev', !![], _0x51f943), _0x34f4b0 = await _0x3553d9(_0x3b08ce[_0x3dcc31], _0x418270, 'dev', ![]), _0x9dd419 = await _0x3553d9(_0x3b08ce[_0x3dcc31], _0x418270, 'pub', ![]);
-            const _0x2d8acc = {
-                'succesDEVMSG': { 'embeds': [_0x34f4b0] },
-                'succesPUBMSG': { 'embeds': [_0x9dd419] }
+        } catch (_0x199c2b) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Task\x20' + (_0x40362d + 0x1) + '\x20:\x20' + _0x199c2b)), _0x2a531e = '' + _0x199c2b;
+            var _0x5b241d = await _0x344cc9(_0x7e31a9[_0x40362d], _0x37e397, 'dev', !![], _0x2a531e), _0x2e75f2 = await _0x344cc9(_0x7e31a9[_0x40362d], _0x37e397, 'dev', ![]), _0x4dc522 = await _0x344cc9(_0x7e31a9[_0x40362d], _0x37e397, 'pub', ![]);
+            const _0x147d59 = {
+                'succesDEVMSG': { 'embeds': [_0x2e75f2] },
+                'succesPUBMSG': { 'embeds': [_0x4dc522] }
             };
-            _0x2d8acc['errorDEV'] = { 'embeds': [_0x6f50a0] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x2d8acc['errorDEV']), await _0x278fc0(_0x51b669, _0x2d8acc['errorDEV']);
+            _0x147d59['errorDEV'] = { 'embeds': [_0x5b241d] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x147d59['errorDEV']), await _0xafb19d(_0x51c252, _0x147d59['errorDEV']);
         } finally {
-            _0x417f30['close'](), console['log'](_0x18cf54() + '\x20[' + _0x418270['name'] + ']\x20Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            _0x288965['close'](), console['log'](_0x1e4ea5() + '\x20[' + _0x37e397['name'] + ']\x20Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x1ed827(_0x10424d, _0x2d1ae0, _0x4e42ac) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0xa1d532(_0x2475ac, _0x19089c, _0x292fbe) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x24b5c2 = 0x0; _0x24b5c2 < _0x10424d['length']; _0x24b5c2++) {
-        var _0x1fe5e8 = '', _0x381039 = 0x0, _0x1a0083;
-        await _0x3e6cb2(_0x10424d, _0x24b5c2), _0x992352(_0x4e42ac['name'] + '\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20/\x20' + _0x10424d['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        var _0x3e5d52 = await _0x3553d9(_0x10424d[_0x24b5c2], _0x4e42ac, 'acc', ![]);
-        const _0x5182f1 = { 'succesDEVMSG': { 'embeds': [_0x3e5d52] } }, _0x223424 = 'https://www.fenom.com/en/authentication?create_account=1';
-        var _0x208d68 = Math['round'](Math['random']() * (_0x2d1ae0['length'] - 0x1)), _0x40f8a7 = _0x2d1ae0[_0x208d68]['split'](':'), _0x30567e;
+    for (var _0x71ceba = 0x0; _0x71ceba < _0x2475ac['length']; _0x71ceba++) {
+        var _0xca41a = '', _0x54de4e = 0x0, _0x30275c;
+        await _0x238b3c(_0x2475ac, _0x71ceba), _0x57f604(_0x292fbe['name'] + '\x20Task\x20' + (_0x71ceba + 0x1) + '\x20/\x20' + _0x2475ac['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        var _0x23c55f = await _0x344cc9(_0x2475ac[_0x71ceba], _0x292fbe, 'acc', ![]);
+        const _0x1d2156 = { 'succesDEVMSG': { 'embeds': [_0x23c55f] } }, _0x25899c = 'https://www.fenom.com/en/authentication?create_account=1';
+        var _0x2b4e7c = Math['round'](Math['random']() * (_0x19089c['length'] - 0x1)), _0x237d37 = _0x19089c[_0x2b4e7c]['split'](':'), _0x30ea90;
         try {
-            _0x30567e = await _0x4baac5['launch']({
+            _0x30ea90 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x40f8a7[0x0] + ':' + _0x40f8a7[0x1],
+                    '--proxy-server=' + _0x237d37[0x0] + ':' + _0x237d37[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         } catch {
-            _0x30567e = await _0x4baac5['launch']({
+            _0x30ea90 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x40f8a7[0x0] + ':' + _0x40f8a7[0x1],
+                    '--proxy-server=' + _0x237d37[0x0] + ':' + _0x237d37[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         }
         try {
-            const _0x34d874 = await _0x30567e['newPage']();
-            await _0x34d874['setViewport']({
-                'width': 0x500 + _0x45f419(0x1, 0x32),
-                'height': 0x2d9 + _0x45f419(0x1, 0x32)
+            const _0x4a7f67 = await _0x30ea90['newPage']();
+            await _0x4a7f67['setViewport']({
+                'width': 0x500 + _0x15dd0d(0x1, 0x32),
+                'height': 0x2d9 + _0x15dd0d(0x1, 0x32)
             });
-            const _0x138340 = await _0x34d874['target']()['createCDPSession'](), { windowId: _0x47bc49 } = await _0x138340['send']('Browser.getWindowForTarget');
-            await _0x34d874['authenticate']({
-                'username': '' + _0x40f8a7[0x2],
-                'password': '' + _0x40f8a7[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x34d874['goto']('' + _0x223424, { 'waitUntil': 'networkidle2' }), await _0x73378f(0x1388), console['log'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Solving\x20Cloudflare');
+            const _0x57ae16 = await _0x4a7f67['target']()['createCDPSession'](), { windowId: _0x316b8c } = await _0x57ae16['send']('Browser.getWindowForTarget');
+            await _0x4a7f67['authenticate']({
+                'username': '' + _0x237d37[0x2],
+                'password': '' + _0x237d37[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4a7f67['goto']('' + _0x25899c, { 'waitUntil': 'networkidle2' }), await _0x491ae3(0x1388), console['log'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Solving\x20Cloudflare');
             try {
-                const _0x52b4d4 = await _0x34d874['$eval']('input[value=\x22Verify\x20you\x20are\x20human\x22]');
-                _0x52b4d4 && await _0x52b4d4['click']();
+                const _0x246266 = await _0x4a7f67['$eval']('input[value=\x22Verify\x20you\x20are\x20human\x22]');
+                _0x246266 && await _0x246266['click']();
             } catch {
             }
-            await _0x138340['send']('Browser.setWindowBounds', {
-                'windowId': _0x47bc49,
+            await _0x57ae16['send']('Browser.setWindowBounds', {
+                'windowId': _0x316b8c,
                 'bounds': { 'windowState': 'minimized' }
             });
             try {
-                await _0x34d874['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x1d4c0 }), await _0x73378f(0xfa0);
+                await _0x4a7f67['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x1d4c0 }), await _0x491ae3(0xfa0);
             } catch {
                 throw new Error('Blocked\x20by\x20cloudflare');
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x34d874['type']('input[name=\x22firstname\x22]', '' + _0x10424d[_0x24b5c2]['FirstName']), await _0x73378f(0x1f4), await _0x34d874['type']('input[name=\x22lastname\x22]', '' + _0x10424d[_0x24b5c2]['LastName']), await _0x73378f(0x1f4), await _0x34d874['type']('input[name=\x22email\x22]', '' + _0x10424d[_0x24b5c2]['Email']), await _0x73378f(0x1f4), await _0x34d874['type']('input[name=\x22password\x22]', '' + _0x10424d[_0x24b5c2]['Password']), await _0x73378f(0x258), await _0x34d874['$eval']('input[name=\x22psgdpr\x22]', _0x1b523b => _0x1b523b['click']()), await _0x73378f(0x1f4), console['log'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Sending\x20Request'), await _0x34d874['$eval']('#customer-form', _0x4ba6ad => _0x4ba6ad['submit']());
+            console['log'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x4a7f67['type']('input[name=\x22firstname\x22]', '' + _0x2475ac[_0x71ceba]['FirstName']), await _0x491ae3(0x1f4), await _0x4a7f67['type']('input[name=\x22lastname\x22]', '' + _0x2475ac[_0x71ceba]['LastName']), await _0x491ae3(0x1f4), await _0x4a7f67['type']('input[name=\x22email\x22]', '' + _0x2475ac[_0x71ceba]['Email']), await _0x491ae3(0x1f4), await _0x4a7f67['type']('input[name=\x22password\x22]', '' + _0x2475ac[_0x71ceba]['Password']), await _0x491ae3(0x258), await _0x4a7f67['$eval']('input[name=\x22psgdpr\x22]', _0x1f7e00 => _0x1f7e00['click']()), await _0x491ae3(0x1f4), console['log'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Sending\x20Request'), await _0x4a7f67['$eval']('#customer-form', _0x3b7b7a => _0x3b7b7a['submit']());
             try {
-                await _0x34d874['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 }), console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Account\x20' + _0x10424d[_0x24b5c2]['Email'] + '\x20Generated')), _0x536860['appendFileSync']('../accounts/fenom.csv', '\x0a' + _0x10424d[_0x24b5c2]['Email'] + ',' + _0x10424d[_0x24b5c2]['Password']);
+                await _0x4a7f67['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 }), console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Account\x20' + _0x2475ac[_0x71ceba]['Email'] + '\x20Generated')), _0x550d6b['appendFileSync']('../accounts/fenom.csv', '\x0a' + _0x2475ac[_0x71ceba]['Email'] + ',' + _0x2475ac[_0x71ceba]['Password']);
                 try {
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x5182f1['succesDEVMSG']);
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x1d2156['succesDEVMSG']);
                 } catch {
                 }
-                await _0x278fc0(_0x10deb2, _0x5182f1['succesDEVMSG']);
-            } catch (_0x3f05df) {
-                throw new Error('Account\x20generation\x20failed:\x20' + _0x3f05df);
+                await _0xafb19d(_0x3cac51, _0x1d2156['succesDEVMSG']);
+            } catch (_0x48239d) {
+                throw new Error('Account\x20generation\x20failed:\x20' + _0x48239d);
             }
-        } catch (_0x860bb6) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20' + _0x860bb6)), _0x1a0083 = '' + _0x860bb6;
-            var _0x51df30 = await _0x3553d9(_0x10424d[_0x24b5c2], _0x4e42ac, 'acc', !![], _0x1a0083);
-            _0x5182f1['errorDEV'] = { 'embeds': [_0x51df30] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x5182f1['errorDEV']), await _0x278fc0(_0x51b669, _0x5182f1['errorDEV']), _0x1fe5e8 = 'yes';
+        } catch (_0x56e065) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20' + _0x56e065)), _0x30275c = '' + _0x56e065;
+            var _0x2d3549 = await _0x344cc9(_0x2475ac[_0x71ceba], _0x292fbe, 'acc', !![], _0x30275c);
+            _0x1d2156['errorDEV'] = { 'embeds': [_0x2d3549] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x1d2156['errorDEV']), await _0xafb19d(_0x51c252, _0x1d2156['errorDEV']), _0xca41a = 'yes';
         } finally {
-            _0x30567e['close']();
-            if (_0x1fe5e8 == 'yes' && _0x381039 != 0x5 && _0x1a0083 != 'Size\x20Not\x20Found') {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Task\x20' + (_0x24b5c2 + 0x1) + '\x20:\x20Retrying')), _0x24b5c2 = _0x24b5c2 - 0x1, _0x381039 = _0x381039 + 0x1;
+            _0x30ea90['close']();
+            if (_0xca41a == 'yes' && _0x54de4e != 0x5 && _0x30275c != 'Size\x20Not\x20Found') {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Task\x20' + (_0x71ceba + 0x1) + '\x20:\x20Retrying')), _0x71ceba = _0x71ceba - 0x1, _0x54de4e = _0x54de4e + 0x1;
                 continue;
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x4e42ac['name'] + ']\x20Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            console['log'](_0x1e4ea5() + '\x20[' + _0x292fbe['name'] + ']\x20Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x478ef8(_0x3b3fac, _0x139a53, _0x2d6ecd) {
-    _0x4baac5['use'](_0x3f14b2()), _0x4baac5['use'](_0x318e48({
+async function _0x283add(_0x3b3e75, _0x136c21, _0x5c6052) {
+    _0x4efd86['use'](_0x202680()), _0x4efd86['use'](_0x1fedc1({
         'provider': {
             'id': '2captcha',
-            'token': '' + _0x5690b2['captchaKey']
+            'token': '' + _0x401d1c['captchaKey']
         },
         'visualFeedback': !![]
     }));
-    for (var _0x483d81 = 0x0; _0x483d81 < _0x3b3fac['length']; _0x483d81++) {
-        var _0xee1c26 = '', _0x58d12b = 0x0, _0x52f65f;
-        await _0x3e6cb2(_0x3b3fac, _0x483d81), _0x992352(_0x2d6ecd['name'] + '\x20Task\x20' + (_0x483d81 + 0x1) + '\x20/\x20' + _0x3b3fac['length'] + '\x20||\x20File:\x20' + _0x3dc3e8 + '\x20Proxies:\x20' + _0x261ffa);
-        const _0x27375c = 'https://www.fenom.com/en/authentication?create_account=1';
-        var _0x196ed4 = Math['round'](Math['random']() * (_0x139a53['length'] - 0x1)), _0x3b0fa4 = _0x139a53[_0x196ed4]['split'](':'), _0x488a97;
+    for (var _0x6e4fe5 = 0x0; _0x6e4fe5 < _0x3b3e75['length']; _0x6e4fe5++) {
+        var _0x1d4290 = '', _0x43dbb8 = 0x0, _0x559188;
+        await _0x238b3c(_0x3b3e75, _0x6e4fe5), _0x57f604(_0x5c6052['name'] + '\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20/\x20' + _0x3b3e75['length'] + '\x20||\x20File:\x20' + _0xb37a88 + '\x20Proxies:\x20' + _0x39f01a);
+        const _0x1995e3 = 'https://www.fenom.com/en/authentication?create_account=1';
+        var _0x3743c5 = Math['round'](Math['random']() * (_0x136c21['length'] - 0x1)), _0x27f259 = _0x136c21[_0x3743c5]['split'](':'), _0x46f6a1;
         try {
-            _0x488a97 = await _0x4baac5['launch']({
+            _0x46f6a1 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x3b0fa4[0x0] + ':' + _0x3b0fa4[0x1],
+                    '--proxy-server=' + _0x27f259[0x0] + ':' + _0x27f259[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         } catch {
-            _0x488a97 = await _0x4baac5['launch']({
+            _0x46f6a1 = await _0x4efd86['launch']({
                 'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
                 'headless': ![],
                 'args': [
-                    '--proxy-server=' + _0x3b0fa4[0x0] + ':' + _0x3b0fa4[0x1],
+                    '--proxy-server=' + _0x27f259[0x0] + ':' + _0x27f259[0x1],
                     '--no-sandbox',
                     '--disable-setuid-sandbox'
                 ]
             });
         }
         try {
-            const _0x4c9be7 = await _0x488a97['newPage'](), _0x6eafd3 = await _0x4c9be7['target']()['createCDPSession'](), { windowId: _0x6a4d42 } = await _0x6eafd3['send']('Browser.getWindowForTarget');
-            await _0x4c9be7['authenticate']({
-                'username': '' + _0x3b0fa4[0x2],
-                'password': '' + _0x3b0fa4[0x3]
-            }), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x4c9be7['goto']('https://www.fenom.com/en/authentication', { 'waitUntil': 'networkidle2' }), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x73378f(0xbb8), await _0x6eafd3['send']('Browser.setWindowBounds', {
-                'windowId': _0x6a4d42,
+            const _0x599dec = await _0x46f6a1['newPage'](), _0x11f1fb = await _0x599dec['target']()['createCDPSession'](), { windowId: _0xdc305c } = await _0x11f1fb['send']('Browser.getWindowForTarget');
+            await _0x599dec['authenticate']({
+                'username': '' + _0x27f259[0x2],
+                'password': '' + _0x27f259[0x3]
+            }), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x599dec['goto']('https://www.fenom.com/en/authentication', { 'waitUntil': 'networkidle2' }), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x491ae3(0xbb8), await _0x11f1fb['send']('Browser.setWindowBounds', {
+                'windowId': _0xdc305c,
                 'bounds': { 'windowState': 'minimized' }
-            }), await _0x73378f(0x1f40);
+            }), await _0x491ae3(0x1f40);
             try {
-                await _0x4c9be7['waitForSelector']('input[name=\x22email\x22]', { 'timeout': 0x1d4c0 });
+                await _0x599dec['waitForSelector']('input[name=\x22email\x22]', { 'timeout': 0x1d4c0 });
             } catch {
                 throw new Error('Blocked\x20by\x20cloudflare');
             }
-            await _0x73378f(0x1388), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Logging\x20in'), await _0x4c9be7['type']('input[name=\x22email\x22]', '' + _0x3b3fac[_0x483d81]['Email']), await _0x73378f(0x1f4), await _0x4c9be7['type']('input[name=\x22password\x22]', '' + _0x3b3fac[_0x483d81]['Password']), await _0x73378f(0x258), await _0x4c9be7['$eval']('#login-form', _0x30da58 => _0x30da58['submit']()), await _0x4c9be7['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 }), await _0x73378f(0x1f4), await _0x4c9be7['goto']('' + _0x3b3fac[_0x483d81]['Url']), await _0x4c9be7['waitForSelector']('#product-images'), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x3b3fac[_0x483d81]['Size']);
-            if (_0x3b3fac[_0x483d81]['Size'] != 'RANDOM') {
-                var _0x527249 = '\x20' + _0x3b3fac[_0x483d81]['Size'] + '\x20';
-                const _0x2d52d0 = await _0x4c9be7['$x']('//span[contains(text(),\x20' + _0x527249 + ')]');
-                await _0x2d52d0[0x0]['click']();
+            await _0x491ae3(0x1388), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Logging\x20in'), await _0x599dec['type']('input[name=\x22email\x22]', '' + _0x3b3e75[_0x6e4fe5]['Email']), await _0x491ae3(0x1f4), await _0x599dec['type']('input[name=\x22password\x22]', '' + _0x3b3e75[_0x6e4fe5]['Password']), await _0x491ae3(0x258), await _0x599dec['$eval']('#login-form', _0x177a38 => _0x177a38['submit']()), await _0x599dec['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 }), await _0x491ae3(0x1f4), await _0x599dec['goto']('' + _0x3b3e75[_0x6e4fe5]['Url']), await _0x599dec['waitForSelector']('.prod-variant\x20>\x20ul\x20>\x20li'), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x3b3e75[_0x6e4fe5]['Size']);
+            if (_0x3b3e75[_0x6e4fe5]['Size'] != 'RANDOM') {
+                var _0x677bfe = '\x20' + _0x3b3e75[_0x6e4fe5]['Size'] + '\x20';
+                const _0xa6f9a5 = await _0x599dec['$x']('//span[contains(text(),\x20' + _0x677bfe + ')]');
+                await _0xa6f9a5[0x0]['click']();
             } else {
-                const _0x1ca178 = await _0x4c9be7['$$']('.prod-variant\x20>\x20ul\x20>\x20li');
-                var _0x1f6a83 = Math['round'](Math['random']() * (_0x1ca178['length'] - 0x1));
-                await _0x1ca178[_0x1f6a83]['click']();
+                const _0x4ab492 = await _0x599dec['$$']('.prod-variant\x20>\x20ul\x20>\x20li');
+                var _0x2664ce = Math['round'](Math['random']() * (_0x4ab492['length'] - 0x1));
+                await _0x4ab492[_0x2664ce]['click']();
             }
-            await _0x73378f(0x258), await _0x4c9be7['click']('#cookieChoiceDismiss'), await _0x73378f(0x3e8), await _0x4c9be7['type']('#instagram-account', '' + _0x3b3fac[_0x483d81]['Follower']), await _0x73378f(0x28a), await _0x4c9be7['click']('#book-btn'), await _0x73378f(0xbb8), await _0x4c9be7['waitForSelector']('#recaptcha-container'), await _0x73378f(0x1f4), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20' + _0x5ecce5['cyan']('Solving\x20Captcha')), await _0x4c9be7['solveRecaptchas'](), console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x73378f(0x7d0), await _0x4c9be7['$eval']('#book-btn-for-sure', _0x12fa01 => _0x12fa01['click']()), await _0x73378f(0x12c), await _0x4c9be7['click']('#book-btn-for-sure'), await _0x73378f(0xdac);
-            const _0xc508ca = await _0x4c9be7['$eval']('.reservation-popup\x20>\x20.title', _0x57af20 => {
-                return _0x57af20['innerHTML'];
+            await _0x491ae3(0x258), await _0x599dec['click']('#cookieChoiceDismiss'), await _0x491ae3(0x3e8), await _0x599dec['type']('#instagram-account', '' + _0x3b3e75[_0x6e4fe5]['Follower']), await _0x491ae3(0x28a), await _0x599dec['click']('#book-btn'), await _0x491ae3(0xbb8), await _0x599dec['waitForSelector']('#recaptcha-container\x20>\x20div\x20>\x20div\x20>\x20iframe'), await _0x491ae3(0x1f4), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20' + _0x1818b9['cyan']('Solving\x20Captcha')), await _0x599dec['solveRecaptchas'](), console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x491ae3(0x7d0), await _0x599dec['$eval']('#book-btn-for-sure', _0x17a148 => _0x17a148['click']()), await _0x491ae3(0x12c), await _0x599dec['click']('#book-btn-for-sure'), await _0x491ae3(0xdac);
+            const _0x580b03 = await _0x599dec['$eval']('.reservation-popup\x20>\x20.title', _0x17f520 => {
+                return _0x17f520['innerHTML'];
             });
-            if (_0xc508ca) {
-                console['log'](_0x5ecce5['green'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
-                var _0x3c0303 = await _0x3553d9(_0x3b3fac[_0x483d81], _0x2d6ecd, 'dev', ![]), _0x48febf = await _0x3553d9(_0x3b3fac[_0x483d81], _0x2d6ecd, 'pub', ![]);
-                const _0x1ff091 = {
-                    'succesDEVMSG': { 'embeds': [_0x3c0303] },
-                    'succesPUBMSG': { 'embeds': [_0x48febf] }
+            if (_0x580b03) {
+                console['log'](_0x1818b9['green'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                var _0x3217e5 = await _0x344cc9(_0x3b3e75[_0x6e4fe5], _0x5c6052, 'dev', ![]), _0x5e4932 = await _0x344cc9(_0x3b3e75[_0x6e4fe5], _0x5c6052, 'pub', ![]);
+                const _0x2ab738 = {
+                    'succesDEVMSG': { 'embeds': [_0x3217e5] },
+                    'succesPUBMSG': { 'embeds': [_0x5e4932] }
                 };
                 try {
-                    _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x1ff091['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x4c279b, _0x1ff091['succesDEVMSG']), await _0x73378f(0xc8), await _0x278fc0(_0x319480, _0x1ff091['succesPUBMSG']);
-                } catch (_0x221192) {
-                    console['log'](_0x5ecce5['yellow'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x221192));
+                    _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x2ab738['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0xc8def8, _0x2ab738['succesDEVMSG']), await _0x491ae3(0xc8), await _0xafb19d(_0x45ab34, _0x2ab738['succesPUBMSG']);
+                } catch (_0x5c244d) {
+                    console['log'](_0x1818b9['yellow'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x5c244d));
                 }
             } else
                 throw new Error('Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.');
-        } catch (_0x882611) {
-            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20' + _0x882611)), _0x52f65f = '' + _0x882611;
-            var _0x2facbf = await _0x3553d9(_0x3b3fac[_0x483d81], _0x2d6ecd, 'dev', !![], _0x52f65f), _0x3c0303 = await _0x3553d9(_0x3b3fac[_0x483d81], _0x2d6ecd, 'dev', ![]), _0x48febf = await _0x3553d9(_0x3b3fac[_0x483d81], _0x2d6ecd, 'pub', ![]);
-            const _0x22a025 = {
-                'succesDEVMSG': { 'embeds': [_0x3c0303] },
-                'succesPUBMSG': { 'embeds': [_0x48febf] }
+        } catch (_0x3e21f6) {
+            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20' + _0x3e21f6)), _0x559188 = '' + _0x3e21f6;
+            var _0x3e1757 = await _0x344cc9(_0x3b3e75[_0x6e4fe5], _0x5c6052, 'dev', !![], _0x559188), _0x3217e5 = await _0x344cc9(_0x3b3e75[_0x6e4fe5], _0x5c6052, 'dev', ![]), _0x5e4932 = await _0x344cc9(_0x3b3e75[_0x6e4fe5], _0x5c6052, 'pub', ![]);
+            const _0x738c40 = {
+                'succesDEVMSG': { 'embeds': [_0x3217e5] },
+                'succesPUBMSG': { 'embeds': [_0x5e4932] }
             };
-            _0x22a025['errorDEV'] = { 'embeds': [_0x2facbf] }, _0x5690b2['webhook'] != undefined && _0x5690b2['webhook'] != '' && await _0x278fc0(_0x5690b2['webhook'], _0x22a025['errorDEV']), await _0x278fc0(_0x51b669, _0x22a025['errorDEV']), _0x882611 != 'Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.' && (_0xee1c26 = 'yes');
+            _0x738c40['errorDEV'] = { 'embeds': [_0x3e1757] }, _0x401d1c['webhook'] != undefined && _0x401d1c['webhook'] != '' && await _0xafb19d(_0x401d1c['webhook'], _0x738c40['errorDEV']), await _0xafb19d(_0x51c252, _0x738c40['errorDEV']), _0x3e21f6 != 'Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.' && (_0x1d4290 = 'yes');
         } finally {
-            _0x488a97['close']();
-            if (_0xee1c26 == 'yes' && _0x58d12b != 0x5 && _0x52f65f != 'Size\x20Not\x20Found') {
-                console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Task\x20' + (_0x483d81 + 0x1) + '\x20:\x20Retrying')), _0x483d81 = _0x483d81 - 0x1, _0x58d12b = _0x58d12b + 0x1;
+            _0x46f6a1['close']();
+            if (_0x1d4290 == 'yes' && _0x43dbb8 != 0x5 && _0x559188 != 'Size\x20Not\x20Found') {
+                console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Task\x20' + (_0x6e4fe5 + 0x1) + '\x20:\x20Retrying')), _0x6e4fe5 = _0x6e4fe5 - 0x1, _0x43dbb8 = _0x43dbb8 + 0x1;
                 continue;
             }
-            console['log'](_0x18cf54() + '\x20[' + _0x2d6ecd['name'] + ']\x20Waiting\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+            console['log'](_0x1e4ea5() + '\x20[' + _0x5c6052['name'] + ']\x20Waiting\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
         }
     }
 }
-async function _0x29a997() {
-    await _0x21e85f(), console['clear']();
-    if (_0x2f0e91 != 'devkey') {
-        let _0x37157a = await _0x434fd7['autoUpdate']();
-        if (_0x37157a === 'yes')
-            return _0x5cdc19('node\x20JRaffles.js');
+async function _0x59ed76() {
+    await _0x45abb1(), console['clear']();
+    if (_0x431e19 != 'devkey') {
+        let _0x5b91cc = await _0xf2c255['autoUpdate']();
+        if (_0x5b91cc === 'yes')
+            return _0x1747e3('node\x20JRaffles.js');
         console['clear']();
     }
-    if (_0x51e3af == '') {
+    if (_0x1d3112 == '') {
         console['log']('No\x20key\x20found\x20in\x20settings.json');
-        return await _0x73378f(0x2710);
+        return await _0x491ae3(0x2710);
         ;
     }
-    await _0x35d023(_0x51e3af);
-    if (_0x2f3a5c === ![])
-        return console['log']('Closing\x20Browser'), await _0x73378f(0xbb8);
+    await _0x5f1152(_0x1d3112);
+    if (_0x51818c === ![])
+        return console['log']('Closing\x20Browser'), await _0x491ae3(0xbb8);
     else
         try {
-            var _0x3ae4a7 = [{
+            var _0x198eda = [{
                 'type': 'rich',
                 'title': 'User\x20Opened\x20JRaffles',
                 'description': '',
@@ -2525,257 +2525,257 @@ async function _0x29a997() {
                 'fields': [
                     {
                         'name': 'User',
-                        'value': '' + _0x5746a9
+                        'value': '' + _0x54444c
                     },
                     {
                         'name': 'Version',
-                        'value': '' + _0x2f0e91
+                        'value': '' + _0x431e19
                     }
                 ]
             }];
-            const _0xdb29e1 = { 'embeds': _0x3ae4a7 };
-            var _0x451293 = await _0x3553d9(null, null, 'open', ![]);
-            const _0x35c9e1 = { 'openDEVMSG': { 'embeds': [_0x451293] } };
-            await _0x278fc0(_0x4dc254, _0x35c9e1['openDEVMSG']);
-            async function _0x3598ab() {
-                _0x992352('JRaffles\x20' + _0x2f0e91), console['clear'](), console['log']('Welcome\x20to\x20' + _0x5ecce5['cyan']('JRaffles();') + '\x20' + _0x2f0e91), console['log']('Choose\x20a\x20Module\x20to\x20run..\x0a');
-                for (var _0x24afd1 = 0x0; _0x24afd1 < _0x49a3de['length'] - 0x3; _0x24afd1++) {
-                    if (_0x49a3de[_0x24afd1]['name'] === 'Reload\x20Settings' || _0x49a3de[_0x24afd1]['name'] === 'Change\x20Settings')
+            const _0x22c0ee = { 'embeds': _0x198eda };
+            var _0x52db70 = await _0x344cc9(null, null, 'open', ![]);
+            const _0x5c75e8 = { 'openDEVMSG': { 'embeds': [_0x52db70] } };
+            await _0xafb19d(_0x3d6b43, _0x5c75e8['openDEVMSG']);
+            async function _0x43d34b() {
+                _0x57f604('JRaffles\x20' + _0x431e19), console['clear'](), console['log']('Welcome\x20to\x20' + _0x1818b9['cyan']('JRaffles();') + '\x20' + _0x431e19), console['log']('Choose\x20a\x20Module\x20to\x20run..\x0a');
+                for (var _0x320a09 = 0x0; _0x320a09 < _0x461b58['length'] - 0x3; _0x320a09++) {
+                    if (_0x461b58[_0x320a09]['name'] === 'Reload\x20Settings' || _0x461b58[_0x320a09]['name'] === 'Change\x20Settings')
                         continue;
                     else
-                        console['log']('\x20(' + _0x24afd1 + ')\x20[' + _0x49a3de[_0x24afd1]['name'] + ']');
+                        console['log']('\x20(' + _0x320a09 + ')\x20[' + _0x461b58[_0x320a09]['name'] + ']');
                 }
                 ;
-                console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('\x20(' + (_0x49a3de['length'] - 0x3) + ')\x20Paypal\x20Verification'), console['log']('\x20(' + (_0x49a3de['length'] - 0x2) + ')\x20Change\x20Settings'), console['log']('\x20(' + (_0x49a3de['length'] - 0x1) + ')\x20Reload\x20Settings'), console['log'](''), taskModule = await _0x502364();
-                if (taskModule > _0x49a3de['length'] - 0x1 || isNaN(taskModule) == !![])
-                    return console['log']('Invalid\x20selection'), await _0x73378f(0x3e8), _0x3598ab();
-                if (_0x49a3de[taskModule]['name'] == 'BSTN') {
-                    taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                    var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('\x20(' + (_0x461b58['length'] - 0x3) + ')\x20Paypal\x20Verification'), console['log']('\x20(' + (_0x461b58['length'] - 0x2) + ')\x20Change\x20Settings'), console['log']('\x20(' + (_0x461b58['length'] - 0x1) + ')\x20Reload\x20Settings'), console['log'](''), taskModule = await _0x36de3b();
+                if (taskModule > _0x461b58['length'] - 0x1 || isNaN(taskModule) == !![])
+                    return console['log']('Invalid\x20selection'), await _0x491ae3(0x3e8), _0x43d34b();
+                if (_0x461b58[taskModule]['name'] == 'BSTN') {
+                    taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                    var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                     console['clear']();
                     if (taskFunction == 0x2) {
-                        var _0x414054 = await _0xaeb791(), _0x389044 = await _0x54b010();
-                        await _0x3f49ef(_0x389044, _0x414054, _0x90e721);
+                        var _0x5c9e21 = await _0x5c29d8(), _0x53d18f = await _0x4ba3ca();
+                        await _0x2194b5(_0x53d18f, _0x5c9e21, _0x518498);
                     } else {
                         if (taskFunction == 0x0) {
-                            var _0x414054 = await _0xaeb791(), _0x389044 = await _0x54b010();
-                            await _0x4cfe38(_0x389044, _0x414054, _0x90e721);
+                            var _0x5c9e21 = await _0x5c29d8(), _0x53d18f = await _0x4ba3ca();
+                            await _0x4daae3(_0x53d18f, _0x5c9e21, _0x518498);
                         } else {
                             if (taskFunction == 0x1) {
-                                var _0x414054 = await _0xaeb791(), _0x3c37c8 = await _0x3bf6be(), _0x263a6a = _0x3c37c8['split'](';');
-                                await _0x9f879(_0x263a6a, _0x414054, _0x90e721);
+                                var _0x5c9e21 = await _0x5c29d8(), _0x436edf = await _0x5213c7(), _0x38192f = _0x436edf['split'](';');
+                                await _0x452980(_0x38192f, _0x5c9e21, _0x518498);
                             }
                         }
                     }
-                    return _0x3598ab();
+                    return _0x43d34b();
                 }
-                if (_0x49a3de[taskModule]['name'] == 'FENOM') {
+                if (_0x461b58[taskModule]['name'] == 'FENOM') {
                     try {
-                        taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                        var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                        taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                        var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                         console['clear']();
                         if (taskFunction == 0x1) {
-                            var _0x414054 = await _0xaeb791(), _0x57f58c = await _0x54b010();
-                            await _0x478ef8(_0x57f58c, _0x414054, _0x90e721);
+                            var _0x5c9e21 = await _0x5c29d8(), _0xf1918 = await _0x4ba3ca();
+                            await _0x283add(_0xf1918, _0x5c9e21, _0x518498);
                         } else {
                             if (taskFunction == 0x0) {
-                                var _0x414054 = await _0xaeb791(), _0x57f58c = await _0x54b010();
-                                await _0x1ed827(_0x57f58c, _0x414054, _0x90e721);
+                                var _0x5c9e21 = await _0x5c29d8(), _0xf1918 = await _0x4ba3ca();
+                                await _0xa1d532(_0xf1918, _0x5c9e21, _0x518498);
                             }
                         }
-                    } catch (_0x17ecdc) {
-                        console['log'](_0x17ecdc), await _0x73378f(0xfa0);
+                    } catch (_0x555edd) {
+                        console['log'](_0x555edd), await _0x491ae3(0xfa0);
                     }
-                    return _0x3598ab();
+                    return _0x43d34b();
                 }
-                if (_0x49a3de[taskModule]['name'] == 'AFEW\x20Store') {
-                    taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                    var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                if (_0x461b58[taskModule]['name'] == 'AFEW\x20Store') {
+                    taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                    var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                     console['clear']();
-                    var _0x414054 = await _0xaeb791(), _0x37f27d = await _0x54b010();
-                    if (_0x37f27d[0x0]['Url'] == '' || _0x37f27d[0x0]['Url'] == undefined) {
-                        await _0x1c2fb2(_0x414054);
-                        var _0x198734 = await _0x1feb93();
-                        return await afewFunction('' + _0x1752eb[_0x198734], 'nor', _0x90e721, _0x37f27d, _0x414054), _0x3598ab();
+                    var _0x5c9e21 = await _0x5c29d8(), _0x45f3a9 = await _0x4ba3ca();
+                    if (_0x45f3a9[0x0]['Url'] == '' || _0x45f3a9[0x0]['Url'] == undefined) {
+                        await _0x48b206(_0x5c9e21);
+                        var _0x456b64 = await _0x251601();
+                        return await afewFunction('' + _0x444382[_0x456b64], 'nor', _0x518498, _0x45f3a9, _0x5c9e21), _0x43d34b();
                     }
-                    return await afewFunction(_0x37f27d[0x0]['Url'], 'nor', _0x90e721, _0x37f27d, _0x414054), _0x3598ab();
+                    return await afewFunction(_0x45f3a9[0x0]['Url'], 'nor', _0x518498, _0x45f3a9, _0x5c9e21), _0x43d34b();
                 } else {
-                    if (_0x49a3de[taskModule]['name'] == 'MAHA\x20Amsterdam') {
-                        taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                        var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                    if (_0x461b58[taskModule]['name'] == 'MAHA\x20Amsterdam') {
+                        taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                        var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                         if (taskFunction == 0x0) {
-                            var _0x414054 = await _0xaeb791(), _0x18837c = await _0x54b010();
-                            console['log']('Starting\x20' + _0x18837c['length'] + '\x20MAHA\x20Tasks');
-                            for (var _0x2cd003 = 0x0; _0x2cd003 < _0x18837c['length']; _0x2cd003++) {
-                                console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Getting\x20Session');
+                            var _0x5c9e21 = await _0x5c29d8(), _0x2dff57 = await _0x4ba3ca();
+                            console['log']('Starting\x20' + _0x2dff57['length'] + '\x20MAHA\x20Tasks');
+                            for (var _0xfb9e19 = 0x0; _0xfb9e19 < _0x2dff57['length']; _0xfb9e19++) {
+                                console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Getting\x20Session');
                                 try {
-                                    await _0x4ba913(_0x2cd003, 'nor', _0x90e721, _0x18837c, _0x414054), console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Sleeping\x20for\x20' + _0x5690b2['MahaDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['MahaDelay']);
-                                } catch (_0x2104a5) {
-                                    console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Error\x20' + _0x2104a5));
+                                    await _0x56bfed(_0xfb9e19, 'nor', _0x518498, _0x2dff57, _0x5c9e21), console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Sleeping\x20for\x20' + _0x401d1c['MahaDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['MahaDelay']);
+                                } catch (_0x332bae) {
+                                    console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Error\x20' + _0x332bae));
                                 }
                             }
                             ;
-                            return _0x3598ab();
+                            return _0x43d34b();
                         } else {
                             if (taskFunction == 0x1) {
-                                var _0x414054 = await _0xaeb791();
-                                console['log']('Use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20copy\x20your\x20links\x20here..'), _0x3c37c8 = await _0x3bf6be(), _0x263a6a = _0x3c37c8['split'](';'), console['log'](_0x263a6a['length'] + '\x20links\x20found!'), console['log']('Starting\x20verification..');
-                                for (var _0x2cd003 = 0x0; _0x2cd003 < _0x263a6a['length']; _0x2cd003++) {
-                                    _0x90e721['url'] = _0x263a6a[_0x2cd003], console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Getting\x20Session');
+                                var _0x5c9e21 = await _0x5c29d8();
+                                console['log']('Use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20copy\x20your\x20links\x20here..'), _0x436edf = await _0x5213c7(), _0x38192f = _0x436edf['split'](';'), console['log'](_0x38192f['length'] + '\x20links\x20found!'), console['log']('Starting\x20verification..');
+                                for (var _0xfb9e19 = 0x0; _0xfb9e19 < _0x38192f['length']; _0xfb9e19++) {
+                                    _0x518498['url'] = _0x38192f[_0xfb9e19], console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Getting\x20Session');
                                     try {
-                                        await _0x4ba913(_0x2cd003, 'ver', _0x90e721, _0x18837c, _0x414054), console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Sleeping\x20for\x20' + _0x5690b2['verificationDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['verificationDelay']);
-                                    } catch (_0x27a74c) {
-                                        console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Error\x20' + _0x27a74c));
+                                        await _0x56bfed(_0xfb9e19, 'ver', _0x518498, _0x2dff57, _0x5c9e21), console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Sleeping\x20for\x20' + _0x401d1c['verificationDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['verificationDelay']);
+                                    } catch (_0x353c1d) {
+                                        console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Error\x20' + _0x353c1d));
                                     }
                                 }
                                 ;
-                                return _0x3598ab();
+                                return _0x43d34b();
                             }
                         }
                     } else {
-                        if (_0x49a3de[taskModule]['name'] == 'FOOTSHOP') {
-                            taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                            var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction], _0x414054 = await _0xaeb791(), _0x2caab4 = await _0x54b010();
-                            return await _0x5309d5(_0x2caab4, _0x414054, _0x90e721), await _0x73378f(0x1388), _0x3598ab();
+                        if (_0x461b58[taskModule]['name'] == 'FOOTSHOP') {
+                            taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                            var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction], _0x5c9e21 = await _0x5c29d8(), _0x5a21c4 = await _0x4ba3ca();
+                            return await _0x585537(_0x5a21c4, _0x5c9e21, _0x518498), await _0x491ae3(0x1388), _0x43d34b();
                         } else {
-                            if (_0x49a3de[taskModule]['name'] == 'OQIUM\x20Store') {
-                                taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                            if (_0x461b58[taskModule]['name'] == 'OQIUM\x20Store') {
+                                taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                 console['clear']();
                                 if (taskFunction == 0x0) {
-                                    var _0x414054 = await _0xaeb791(), _0x98db2a = await _0x54b010();
-                                    console['log']('Starting\x20' + _0x5ecce5['yellow']('OQIUM') + '\x20Tasks');
-                                    for (var _0x2cd003 = 0x0; _0x2cd003 < _0x98db2a['length']; _0x2cd003++) {
-                                        console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Getting\x20Session');
+                                    var _0x5c9e21 = await _0x5c29d8(), _0x1aa1ca = await _0x4ba3ca();
+                                    console['log']('Starting\x20' + _0x1818b9['yellow']('OQIUM') + '\x20Tasks');
+                                    for (var _0xfb9e19 = 0x0; _0xfb9e19 < _0x1aa1ca['length']; _0xfb9e19++) {
+                                        console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Getting\x20Session');
                                         try {
-                                            await _0x14f394(_0x2cd003, 'nor', _0x90e721, _0x98db2a, _0x414054);
-                                        } catch (_0xc5fb2f) {
-                                            console['log'](_0x5ecce5['red'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Task\x20failed\x20' + _0xc5fb2f));
+                                            await _0x164a5f(_0xfb9e19, 'nor', _0x518498, _0x1aa1ca, _0x5c9e21);
+                                        } catch (_0x21e7e8) {
+                                            console['log'](_0x1818b9['red'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Task\x20failed\x20' + _0x21e7e8));
                                         }
-                                        console['log'](_0x18cf54() + '\x20[' + _0x90e721['name'] + ']\x20Sleeping\x20for\x20' + _0x5690b2['delay'] + '\x20ms'), await _0x73378f(_0x5690b2['delay']);
+                                        console['log'](_0x1e4ea5() + '\x20[' + _0x518498['name'] + ']\x20Sleeping\x20for\x20' + _0x401d1c['delay'] + '\x20ms'), await _0x491ae3(_0x401d1c['delay']);
                                     }
-                                    return _0x3598ab();
+                                    return _0x43d34b();
                                 } else {
                                     if (taskFunction == 0x1) {
-                                        var _0x414054 = await _0xaeb791();
-                                        console['log']('Use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20copy\x20your\x20links\x20here..'), _0x3c37c8 = await _0x3bf6be(), _0x263a6a = _0x3c37c8['split'](';'), console['log'](_0x263a6a['length'] + '\x20links\x20found!'), console['log']('Starting\x20verification..');
-                                        for (var _0x2cd003 = 0x0; _0x2cd003 < _0x263a6a['length']; _0x2cd003++) {
+                                        var _0x5c9e21 = await _0x5c29d8();
+                                        console['log']('Use\x20the\x20JRaffles\x20Chrome\x20Extension\x20to\x20copy\x20your\x20links\x20here..'), _0x436edf = await _0x5213c7(), _0x38192f = _0x436edf['split'](';'), console['log'](_0x38192f['length'] + '\x20links\x20found!'), console['log']('Starting\x20verification..');
+                                        for (var _0xfb9e19 = 0x0; _0xfb9e19 < _0x38192f['length']; _0xfb9e19++) {
                                             try {
-                                                _0x90e721['url'] = _0x263a6a[_0x2cd003], console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Task\x20' + (_0x2cd003 + 0x1) + ':\x20Getting\x20Session'), await _0x14f394(_0x2cd003, 'ver', _0x90e721, null, _0x414054), console['log'](_0x18cf54() + '\x20[' + _0x49a3de[taskModule]['name'] + ']\x20Sleeping\x20for\x20' + _0x5690b2['verificationDelay'] + '\x20ms'), await _0x73378f(_0x5690b2['verificationDelay']);
-                                            } catch (_0x19ecb8) {
-                                                console['log'](_0x19ecb8), await _0x73378f(0x1388);
+                                                _0x518498['url'] = _0x38192f[_0xfb9e19], console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Task\x20' + (_0xfb9e19 + 0x1) + ':\x20Getting\x20Session'), await _0x164a5f(_0xfb9e19, 'ver', _0x518498, null, _0x5c9e21), console['log'](_0x1e4ea5() + '\x20[' + _0x461b58[taskModule]['name'] + ']\x20Sleeping\x20for\x20' + _0x401d1c['verificationDelay'] + '\x20ms'), await _0x491ae3(_0x401d1c['verificationDelay']);
+                                            } catch (_0x2ca8a3) {
+                                                console['log'](_0x2ca8a3), await _0x491ae3(0x1388);
                                             }
                                             ;
                                         }
                                         ;
-                                        return _0x3598ab();
+                                        return _0x43d34b();
                                     }
                                 }
                                 ;
                             } else {
-                                if (_0x49a3de[taskModule]['name'] == 'BOUNCEWEAR') {
-                                    taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                    var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                                if (_0x461b58[taskModule]['name'] == 'BOUNCEWEAR') {
+                                    taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                    var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                     console['clear']();
                                     if (taskFunction == 0x0)
-                                        await _0x5de0be('https://bouncewear.com/nl/account/register', _0x90e721);
+                                        await _0x54f966('https://bouncewear.com/nl/account/register', _0x518498);
                                     else {
                                         if (taskFunction == 0x1) {
                                         }
                                     }
                                     ;
                                 } else {
-                                    if (_0x49a3de[taskModule]['name'] == 'PATTA') {
-                                        taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                        var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                                    if (_0x461b58[taskModule]['name'] == 'PATTA') {
+                                        taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                        var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                         console['clear']();
                                         if (taskFunction == 0x0) {
-                                            var _0x414054 = await _0xaeb791(), _0x24c52f = await _0x54b010();
-                                            return await _0x32eccf('https://patta.nl/account/register', _0x90e721, _0x24c52f, _0x414054), _0x3598ab();
+                                            var _0x5c9e21 = await _0x5c29d8(), _0x358b6a = await _0x4ba3ca();
+                                            return await _0x1662c3('https://patta.nl/account/register', _0x518498, _0x358b6a, _0x5c9e21), _0x43d34b();
                                         } else {
                                             if (taskFunction == 0x1) {
-                                                var _0x414054 = await _0xaeb791(), _0x24c52f = await _0x54b010();
-                                                return await _0x45785c('', _0x90e721, _0x24c52f, _0x414054), _0x3598ab();
+                                                var _0x5c9e21 = await _0x5c29d8(), _0x358b6a = await _0x4ba3ca();
+                                                return await _0x5015ef('', _0x518498, _0x358b6a, _0x5c9e21), _0x43d34b();
                                             }
                                         }
                                         ;
                                     } else {
-                                        if (_0x49a3de[taskModule]['name'] == 'SLAM\x20JAM') {
-                                            taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                            var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                                        if (_0x461b58[taskModule]['name'] == 'SLAM\x20JAM') {
+                                            taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                            var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                             console['clear']();
                                             if (taskFunction == 0x0) {
-                                                var _0x414054 = await _0xaeb791(), _0x4c49ed = await _0x54b010();
-                                                return await _0x3d8232('https://slamjam.nl/account/register', _0x90e721, _0x4c49ed, _0x414054), _0x3598ab();
+                                                var _0x5c9e21 = await _0x5c29d8(), _0x2a0619 = await _0x4ba3ca();
+                                                return await _0x4085e5('https://slamjam.nl/account/register', _0x518498, _0x2a0619, _0x5c9e21), _0x43d34b();
                                             } else {
                                                 if (taskFunction == 0x1) {
-                                                    var _0x414054 = await _0xaeb791(), _0x4c49ed = await _0x54b010();
-                                                    return await _0x4c1e3c('', _0x90e721, _0x4c49ed, _0x414054), _0x3598ab();
+                                                    var _0x5c9e21 = await _0x5c29d8(), _0x2a0619 = await _0x4ba3ca();
+                                                    return await _0x1cc55b('', _0x518498, _0x2a0619, _0x5c9e21), _0x43d34b();
                                                 }
                                             }
                                             ;
                                         } else {
-                                            if (_0x49a3de[taskModule]['name'] == 'KICKZ') {
-                                                taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                                var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                                            if (_0x461b58[taskModule]['name'] == 'KICKZ') {
+                                                taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                                var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                                 console['clear']();
                                                 if (taskFunction == 0x0) {
-                                                    var _0x414054 = await _0xaeb791(), _0x554605 = await _0x54b010();
-                                                    return await _0x441c87('https://www.kickz.com/nl/login/', _0x90e721, _0x554605, _0x414054), _0x3598ab();
+                                                    var _0x5c9e21 = await _0x5c29d8(), _0x10dcc1 = await _0x4ba3ca();
+                                                    return await _0x5b6e3c('https://www.kickz.com/nl/login/', _0x518498, _0x10dcc1, _0x5c9e21), _0x43d34b();
                                                 } else {
                                                     if (taskFunction == 0x1) {
-                                                        var _0x414054 = await _0xaeb791(), _0x554605 = await _0x54b010();
-                                                        return await _0x147c4d(_0x90e721, _0x554605, _0x414054), _0x3598ab();
+                                                        var _0x5c9e21 = await _0x5c29d8(), _0x10dcc1 = await _0x4ba3ca();
+                                                        return await _0x36008b(_0x518498, _0x10dcc1, _0x5c9e21), _0x43d34b();
                                                     }
                                                 }
                                                 ;
                                             } else {
-                                                if (_0x49a3de[taskModule]['name'] == 'JD') {
-                                                    taskFunction = await _0x58a2a4(_0x49a3de[taskModule]['modules']);
-                                                    var _0x90e721 = _0x49a3de[taskModule]['modules'][taskFunction];
+                                                if (_0x461b58[taskModule]['name'] == 'JD') {
+                                                    taskFunction = await _0x11fa5a(_0x461b58[taskModule]['modules']);
+                                                    var _0x518498 = _0x461b58[taskModule]['modules'][taskFunction];
                                                     console['clear']();
                                                     if (taskFunction == 0x0) {
-                                                        var _0x414054 = await _0xaeb791(), _0x4ad5f9 = await _0x54b010();
-                                                        return await _0x1e19cb(_0x90e721, _0x4ad5f9, _0x414054), _0x3598ab();
+                                                        var _0x5c9e21 = await _0x5c29d8(), _0x509612 = await _0x4ba3ca();
+                                                        return await _0x2084d5(_0x518498, _0x509612, _0x5c9e21), _0x43d34b();
                                                     }
                                                 } else {
-                                                    if (_0x49a3de[taskModule]['name'] == 'Seven\x20Store')
-                                                        return console['log']('returning\x20to\x20menu'), await _0x73378f(0x3e8), _0x3598ab();
+                                                    if (_0x461b58[taskModule]['name'] == 'Seven\x20Store')
+                                                        return console['log']('returning\x20to\x20menu'), await _0x491ae3(0x3e8), _0x43d34b();
                                                     else {
-                                                        if (_0x49a3de[taskModule]['name'] == 'Paypal\x20Verification') {
-                                                            var _0xe8b7c = _0x49a3de[taskModule]['name'], _0x414054 = await _0xaeb791();
-                                                            const _0x4dc58e = await _0x3bf6be();
-                                                            var _0x263a6a = _0x4dc58e['split'](';');
-                                                            await _0x409f21(_0x263a6a, _0xe8b7c, _0x414054);
+                                                        if (_0x461b58[taskModule]['name'] == 'Paypal\x20Verification') {
+                                                            var _0x3bcc6f = _0x461b58[taskModule]['name'], _0x5c9e21 = await _0x5c29d8();
+                                                            const _0x2086eb = await _0x5213c7();
+                                                            var _0x38192f = _0x2086eb['split'](';');
+                                                            await _0x4b6c5f(_0x38192f, _0x3bcc6f, _0x5c9e21);
                                                         } else {
-                                                            if (_0x49a3de[taskModule]['name'] == 'Change\x20Settings') {
+                                                            if (_0x461b58[taskModule]['name'] == 'Change\x20Settings') {
                                                                 console['log']('Choose\x20a\x20Setting\x20to\x20change\x20:\x0a');
-                                                                var _0x5419f2 = 0x0;
-                                                                for (const _0x528a74 in _0x5690b2) {
-                                                                    console['log']('(' + _0x5419f2 + ')\x20' + _0x528a74 + '\x20:\x20' + _0x5690b2[_0x528a74]), _0x5419f2++;
+                                                                var _0x38038d = 0x0;
+                                                                for (const _0x1ce051 in _0x401d1c) {
+                                                                    console['log']('(' + _0x38038d + ')\x20' + _0x1ce051 + '\x20:\x20' + _0x401d1c[_0x1ce051]), _0x38038d++;
                                                                 }
-                                                                console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('(' + _0x5419f2 + ')\x20Return\x20to\x20Main\x20Menu');
-                                                                var _0x981ef9 = await _0x4f1171();
-                                                                if (_0x981ef9 == _0x5419f2)
-                                                                    return _0x3598ab();
+                                                                console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('(' + _0x38038d + ')\x20Return\x20to\x20Main\x20Menu');
+                                                                var _0x25878d = await _0xdd8676();
+                                                                if (_0x25878d == _0x38038d)
+                                                                    return _0x43d34b();
                                                                 console['clear'];
-                                                                var _0x456331 = 0x0;
-                                                                for (var _0xf5141 in _0x5690b2) {
-                                                                    if (_0x981ef9 == _0x456331) {
-                                                                        console['log']('Changing:\x20\x0a\x20\x0a\x20' + _0xf5141 + '\x20:'), _0x5690b2[_0xf5141] = await _0x37d15c(), _0x536860['writeFileSync']('../settings.json', JSON['stringify'](_0x5690b2));
+                                                                var _0x109a03 = 0x0;
+                                                                for (var _0x3d355c in _0x401d1c) {
+                                                                    if (_0x25878d == _0x109a03) {
+                                                                        console['log']('Changing:\x20\x0a\x20\x0a\x20' + _0x3d355c + '\x20:'), _0x401d1c[_0x3d355c] = await _0x493ea4(), _0x550d6b['writeFileSync']('../settings.json', JSON['stringify'](_0x401d1c));
                                                                         break;
                                                                     } else
-                                                                        _0x456331++;
+                                                                        _0x109a03++;
                                                                 }
-                                                                return console['log']('Settings\x20Saved!'), await _0x73378f(0xbb8), _0x3598ab();
+                                                                return console['log']('Settings\x20Saved!'), await _0x491ae3(0xbb8), _0x43d34b();
                                                             } else {
-                                                                if (_0x49a3de[taskModule]['name'] == 'Reload\x20Settings')
-                                                                    return console['log']('Reloading\x20settings'), await _0x21e85f(), _0x3598ab();
+                                                                if (_0x461b58[taskModule]['name'] == 'Reload\x20Settings')
+                                                                    return console['log']('Reloading\x20settings'), await _0x45abb1(), _0x43d34b();
                                                                 else {
                                                                     if (taskModule == 0x45) {
-                                                                        _0x49a3de[0x45] = { 'name': 'AFEW\x20SECRET' };
-                                                                        var _0x4352c8 = await _0x33f141();
-                                                                        _0x4352c8 == 'ModuleVoorDeBoys' ? (await _0x1c2fb2(), await _0x1feb93(), await afewFunction(_0x1752eb[_0x198734], 'sec')) : (console['log']('Wrong\x20password,\x20closing\x20in\x2010\x20seconds...'), await _0x73378f(0xbb8));
+                                                                        _0x461b58[0x45] = { 'name': 'AFEW\x20SECRET' };
+                                                                        var _0x3e9a9f = await _0x1db984();
+                                                                        _0x3e9a9f == 'ModuleVoorDeBoys' ? (await _0x48b206(), await _0x251601(), await afewFunction(_0x444382[_0x456b64], 'sec')) : (console['log']('Wrong\x20password,\x20closing\x20in\x2010\x20seconds...'), await _0x491ae3(0xbb8));
                                                                     } else {
                                                                     }
                                                                 }
@@ -2792,17 +2792,17 @@ async function _0x29a997() {
                     }
                 }
             }
-            await _0x3598ab();
-        } catch (_0x2f1ab0) {
-            return console['log'](_0x2f1ab0), await _0x73378f(0x3a98);
+            await _0x43d34b();
+        } catch (_0xbdffa6) {
+            return console['log'](_0xbdffa6), await _0x491ae3(0x3a98);
         }
 }
 ;
-_0x992352('JRaffles\x20' + _0x2f0e91), _0x21e85f();
+_0x57f604('JRaffles\x20' + _0x431e19), _0x45abb1();
 try {
-    _0x29a997();
-} catch (_0x1f19ab) {
-    var _0x315429 = [{
+    _0x59ed76();
+} catch (_0x3e82ab) {
+    var _0x5c8863 = [{
         'type': 'rich',
         'title': 'Main\x20Menu\x20Error',
         'description': '',
@@ -2810,18 +2810,18 @@ try {
         'fields': [
             {
                 'name': 'User',
-                'value': '' + _0x5746a9
+                'value': '' + _0x54444c
             },
             {
                 'name': 'Version',
-                'value': '' + _0x2f0e91
+                'value': '' + _0x431e19
             },
             {
                 'name': 'Error',
-                'value': '' + _0x1f19ab
+                'value': '' + _0x3e82ab
             }
         ]
     }];
-    const _0x457fa9 = { 'embeds': _0x315429 };
-    _0x278fc0(_0x51b669, _0x457fa9);
+    const _0x59bffb = { 'embeds': _0x5c8863 };
+    _0xafb19d(_0x51c252, _0x59bffb);
 }
