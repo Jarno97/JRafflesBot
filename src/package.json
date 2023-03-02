@@ -15,6 +15,7 @@
     "exe": "^1.0.2",
     "hwid": "^0.4.1",
     "javascript-obfuscator": "^4.0.0",
+    "mailparser": "^3.6.3",
     "nexe": "^4.0.0-rc.1",
     "node-bash-title": "^0.0.2",
     "node-fetch": "^2.6.1",
