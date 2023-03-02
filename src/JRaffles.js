@@ -1,5 +1,5 @@
 process['env']['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-var _0x40f5d4 = require('node-imap'), _0x463531 = require('util')['inspect'];
+var _0x40f5d4 = require('node-imap');
 const _0xc3daf = require('mailparser')['simpleParser'], { EmbedBuilder: _0x2b6a9d } = require('discord.js');
 var _0x460daf = require('exe');
 const { execFile: _0x3d6587 } = require('child_process'), _0x3cc012 = require('puppeteer-extra'), _0x4cda3c = require('puppeteer-extra-plugin-recaptcha'), _0x28795e = require('puppeteer-extra-plugin-stealth'), _0x195a86 = require('chalk'), _0x3d4687 = require('node-bash-title'), _0x5b0582 = require('fs'), _0xdd74b5 = require('axios'), _0x2f49f0 = require('papaparse');
