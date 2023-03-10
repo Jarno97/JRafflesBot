@@ -1,0 +1,150 @@
+{
+    "men": [
+        {
+            "size": "4.5",
+            "EUsize": "36.5"
+        },
+        {
+            "size": "5",
+            "EUsize": "37.5"
+        },
+        {
+            "size": "5.5",
+            "EUsize": "38"
+        },
+        {
+            "size": "6",
+            "EUsize": "38.5"
+        },
+        {
+            "size": "6.5",
+            "EUsize": "39"
+        },
+        {
+            "size": "7",
+            "EUsize": "40"
+        },
+        {
+            "size": "7.5",
+            "EUsize": "40.5"
+        },
+        {
+            "size": "8",
+            "EUsize": "41"
+        },
+        {
+            "size": "8.5",
+            "EUsize": "42"
+        },
+        {
+            "size": "9",
+            "EUsize": "42.5"
+        },
+        {
+            "size": "9.5",
+            "EUsize": "43"
+        },
+        {
+            "size": "10",
+            "EUsize": "44"
+        },
+        {
+            "size": "10.5",
+            "EUsize": "44.5"
+        },
+        {
+            "size": "11",
+            "EUsize": "45"
+        },
+        {
+            "size": "11.5",
+            "EUsize": "45.5"
+        },
+        {
+            "size": "12",
+            "EUsize": "46"
+        },
+        {
+            "size": "12.5",
+            "EUsize": "47"
+        },
+        {
+            "size": "13",
+            "EUsize": "47.5"
+        },
+        {
+            "size": "14",
+            "EUsize": "48.5"
+        },
+        {
+            "size": "15",
+            "EUsize": "49.5"
+        },
+        {
+            "size": "16",
+            "EUsize": "50.5"
+        }
+    ],
+    "women": [
+        {
+            "size": "5W",
+            "EUsize": "35.5"
+        },
+        {
+            "size": "5.5W",
+            "EUsize": "36"
+        },
+        {
+            "size": "6W",
+            "EUsize": "36.5"
+        },
+        {
+            "size": "6.5W",
+            "EUsize": "37.5"
+        },
+        {
+            "size": "7W",
+            "EUsize": "38"
+        },
+        {
+            "size": "7.5W",
+            "EUsize": "38.5"
+        },
+        {
+            "size": "8W",
+            "EUsize": "39"
+        },
+        {
+            "size": "8.5W",
+            "EUsize": "40"
+        },
+        {
+            "size": "9W",
+            "EUsize": "40.5"
+        },
+        {
+            "size": "9.5W",
+            "EUsize": "41"
+        },
+        {
+            "size": "10W",
+            "EUsize": "42"
+        },
+        {
+            "size": "10.5W",
+            "EUsize": "42.5"
+        },
+        {
+            "size": "11W",
+            "EUsize": "43"
+        },
+        {
+            "size": "11.5W",
+            "EUsize": "44"
+        },
+        {
+            "size": "12W",
+            "EUsize": "44.5"
+        }
+    ]
+}
