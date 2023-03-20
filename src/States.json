@@ -1,0 +1,282 @@
+[
+  {
+    "Province": "Álava",
+    "Code": "VI"
+  },
+  {
+    "Province": "Albacete",
+    "Code": "AB"
+  },
+  {
+    "Province": "Alicante",
+    "Code": "A"
+  },
+  {
+    "Province": "Almería",
+    "Code": "AL"
+  },
+  {
+    "Province": "Asturias",
+    "Code": "O"
+  },
+  {
+    "Province": "Ávila",
+    "Code": "AV"
+  },
+  {
+    "Province": "Badajoz",
+    "Code": "BA"
+  },
+  {
+    "Province": "Barcelona",
+    "Code": "B"
+  },
+  {
+    "Province": "Burgos",
+    "Code": "BU"
+  },
+  {
+    "Province": "Cáceres",
+    "Code": "CC"
+  },
+  {
+    "Province": "Cádiz",
+    "Code": "CA"
+  },
+  {
+    "Province": "Cantabria",
+    "Code": "S"
+  },
+  {
+    "Province": "Castellón",
+    "Code": "CS"
+  },
+  {
+    "Province": "Ciudad Real",
+    "Code": "CR"
+  },
+  {
+    "Province": "Córdoba",
+    "Code": "CO"
+  },
+  {
+    "Province": "Cuenca",
+    "Code": "CU"
+  },
+  {
+    "Province": "Gerona",
+    "Code": "GI"
+  },
+  {
+    "Province": "Granada",
+    "Code": "GR"
+  },
+  {
+    "Province": "Guadalajara",
+    "Code": "GU"
+  },
+  {
+    "Province": "Guipúzcoa",
+    "Code": "SS"
+  },
+  {
+    "Province": "Huelva",
+    "Code": "H"
+  },
+  {
+    "Province": "Huesca",
+    "Code": "HU"
+  },
+  {
+    "Province": "Islas Baleares",
+    "Code": "PM"
+  },
+  {
+    "Province": "Jaén",
+    "Code": "J"
+  },
+  {
+    "Province": "La Coruña",
+    "Code": "C"
+  },
+  {
+    "Province": "La Rioja",
+    "Code": "LO"
+  },
+  {
+    "Province": "Las Palmas",
+    "Code": "GC"
+  },
+  {
+    "Province": "León",
+    "Code": "LE"
+  },
+  {
+    "Province": "Lérida",
+    "Code": "L"
+  },
+  {
+    "Province": "Lugo",
+    "Code": "LU"
+  },
+  {
+    "Province": "Madrid",
+    "Code": "M"
+  },
+  {
+    "Province": "Málaga",
+    "Code": "MA"
+  },
+  {
+    "Province": "Murcia",
+    "Code": "MU"
+  },
+  {
+    "Province": "Navarra",
+    "Code": "NA"
+  },
+  {
+    "Province": "Orense",
+    "Code": "OR"
+  },
+  {
+    "Province": "Palencia",
+    "Code": "P"
+  },
+  {
+    "Province": "Pontevedra",
+    "Code": "PO"
+  },
+  {
+    "Province": "Salamanca",
+    "Code": "SA"
+  },
+  {
+    "Province": "Santa Cruz de Tenerife",
+    "Code": "TF"
+  },
+  {
+    "Province": "Segovia",
+    "Code": "SG"
+  },
+  {
+    "Province": "Sevilla",
+    "Code": "SE"
+  },
+  {
+    "Province": "Soria",
+    "Code": "SO"
+  },
+  {
+    "Province": "Tarragona",
+    "Code": "T"
+  },
+  {
+    "Province": "Teruel",
+    "Code": "TE"
+  },
+  {
+    "Province": "Toledo",
+    "Code": "TO"
+  },
+  {
+    "Province": "Valencia",
+    "Code": "V"
+  },
+  {
+    "Province": "Valladolid",
+    "Code": "VA"
+  },
+  {
+    "Province": "Vizcaya",
+    "Code": "BI"
+  },
+  {
+    "Province": "Zamora",
+    "Code": "ZA"
+  },
+  {
+    "Province": "Zaragoza",
+    "Code": "Z"
+  },
+  {
+    "Province": "Abruzzo",
+    "Code": "AB"
+  },
+  {
+    "Province": "Basilicata",
+    "Code": "BA"
+  },
+  {
+    "Province": "Calabria",
+    "Code": "CA"
+  },
+  {
+    "Province": "Campania",
+    "Code": "CE"
+  },
+  {
+    "Province": "Emilia-Romagna",
+    "Code": "ER"
+  },
+  {
+    "Province": "Friuli-Venezia Giulia",
+    "Code": "FG"
+  },
+  {
+    "Province": "Lazio",
+    "Code": "LA"
+  },
+  {
+    "Province": "Liguria",
+    "Code": "LI"
+  },
+  {
+    "Province": "Lombardia",
+    "Code": "LO"
+  },
+  {
+    "Province": "Marche",
+    "Code": "MA"
+  },
+  {
+    "Province": "Molise",
+    "Code": "MB"
+  },
+  {
+    "Province": "Piemonte",
+    "Code": "TO"
+  },
+  {
+    "Province": "Puglia",
+    "Code": "PU"
+  },
+  {
+    "Province": "Sardegna",
+    "Code": "SA"
+  },
+  {
+    "Province": "Sicilia",
+    "Code": "SI"
+  },
+  {
+    "Province": "Toscana",
+    "Code": "TO"
+  },
+  {
+    "Province": "Trentino-Alto Adige/Südtirol",
+    "Code": "TN"
+  },
+  {
+    "Province": "Umbria",
+    "Code": "UM"
+  },
+  {
+    "Province": "Valle d'Aosta/Vallée d'Aoste",
+    "Code": "VA"
+  },
+  {
+    "Province": "Veneto",
+    "Code": "VE"
+  }
+]
