@@ -1,11 +1,12 @@
 {
-    "licenseKey": "",
-    "captchaKey": "",
-    "delay": 100000,
-    "AfewDelay": 300000,
-    "MahaDelay": 3000,
-    "footshopDelay": 300000,
-    "verificationDelay": 2000,
-    "catchall": "",
-    "webhook": ""
+  "licenseKey": "",
+  "captchaKey": "",
+  "delay": 100000,
+  "verificationDelay": 2000,
+  "catchall": "",
+  "webhook": "",
+  "masterMail": "yourmail@gmail.com",
+  "masterPassword": "read the guide on how to get an APP PASSWORD",
+  "useRandomProxy": true,
+  "shuffleTasks": false
 }
