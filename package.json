@@ -1,6 +1,6 @@
 {
   "name": "jraffles",
-  "version": "0.2.50",
+  "version": "0.2.51",
   "description": "CLI based Rafflebot",
   "dependencies": {
     "auto-git-update": "^2.1.2"
