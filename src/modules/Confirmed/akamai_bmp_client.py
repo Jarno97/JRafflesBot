@@ -10,7 +10,7 @@ with open('../settings.json', 'r') as settings:
 
 class AkamaiBMPClient:
     def get_sensor():
-        deviceId = uuid.uuid4().upper()
+        deviceId = uuid.uuid4()
         s = requests.Session()
 
         headers = {
