@@ -489,20 +489,14 @@ def InitiatePayment(self):
                     self.proddict["pid"],
                     "payment_info": {
                         "amount": self.proddict['price'],
-                        'payment_card_encrypted': {
-                            'encrypted_card_number': self.enc_card['card'],
-                            'encrypted_security_code': self.enc_card['cvv'],
-                            'encrypted_expiry_month': self.enc_card['month'],
-                            'encrypted_expiry_year': self.enc_card['year']
-                        },
+                        'payment_card_encrypted': self.enc_card['card']+self.enc_card['cvv']+self.enc_card['month']+self.enc_card['year'],
                         "payment_card_type": 'MASTER',
                         "event_id": self.proddict["pid"],
                         "save_payment_card": True,
                         "currency": self.currency,
                         "payment_method_id": "CREDIT_CARD"
-                    },
-                    "selected_payment_method_id":
-                    "CREDIT_CARD"
+                    }
+                    
                 }
             ordersubmit = self.session.post(
                 f"https://api.3stripes.net/gw-api/v2/hype/basket/{self.basketid}/order/",
