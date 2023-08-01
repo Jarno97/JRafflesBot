@@ -23,6 +23,7 @@ class AkamaiBMPClient:
                 "type": "AntiAkamaiBMPTask",
                 "packageName": "com.adidas.confirmed.app",
                 "country": "DE",
+                "AppID": "AF928354-B915-442E-AAB2-B6106BB35F30",
                 "version": "3.2.3",
                 "deviceId": deviceId,
                 "deviceName": "iPhone14,3/16.4.1",
